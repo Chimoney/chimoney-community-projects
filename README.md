@@ -32,7 +32,7 @@ Make Crypto Tokens & NFTs spendable. Integrate your own platform tokens also and
  
  You will need `keys` to interface with our products. To do so, follow these simple steps below:
 
- - Create a organization on [Chimoney Dashboard](dash.chimoney.io).
+ - Create a organization on [Chimoney Dashboard](https://dash.chimoney.io).
  - Send [us](mailto:support@chimoney.io) the name of the organization, we will approve it!
 - Switch to the organization (top right) and go to dev page, you’d see your keys. It’s `live keys`, for now. No test keys yet.
  - We will add $10 for testing. You can always send $1 to yourself to test and redeem it back to the organization. That way, you always have funds.
