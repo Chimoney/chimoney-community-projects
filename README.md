@@ -50,7 +50,7 @@ Make Crypto Tokens & NFTs spendable. Integrate your own platform tokens also and
 -  `ChiConnect`: For [ChiConnect](https://chimoney.readme.io) click [here](https://github.com/Chimoney/chimoney-api-community-projects/issues?q=is%3Aopen+is%3Aissue+label%3AChiConnect).
 -  `ChiSpend`: For [ChiSpend](https://chimoney.readme.io) click [here](https://github.com/Chimoney/chimoney-api-community-projects/issues?q=is%3Aopen+is%3Aissue+label%3AChiSpend).
 
-__P.S__: Add `hacktoberfest` to your pull-requests, those pr's get first priority.
+__P.S__: Add `hacktoberfest` to your pull-requests, those pr's get first priority, your code/submission should be contained in the [submissions](submissions) folder.
 
 __NOTE:__
 For guidelines checkout [Contribution guidelines](CONTRIBUTING.md).
