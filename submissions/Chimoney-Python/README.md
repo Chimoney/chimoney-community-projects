@@ -34,3 +34,4 @@ pychimoney is a python wrapper for <a href="https://chimoney.io"> Chimoney </a>
 - [ ] Package the Library
 - [ ] Add to Pip
 - [ ] Add Pytest and Covrage for Test
+- [ ] Documentation
