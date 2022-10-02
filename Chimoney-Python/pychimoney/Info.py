@@ -10,13 +10,13 @@ class Info(BaseAPI):
         """
         This function returns a list of countries that supports airtime.
         """
-        return self._handle_request("GET", "info/airtime/countries")
+        return self._handle_request("GET", "/v0.2/info/airtime-countries")
 
     def assets(self):
         """
         This function returns a list of supported assets.
         """
-        return self._handle_request("GET", "info/assets")
+        return self._handle_request("GET", "/v0.2/info/assets")
 
     def banks(self, country="NG"):
         """
@@ -29,24 +29,25 @@ class Info(BaseAPI):
             raise ValueError("Country is required.")
 
         return self._handle_request(
-            "GET", "info/banks", params={"countryCode": country}
+            "GET", "/v0.2/info/banks", params={"countryCode": country}
         )
 
     def currencies(self):
         """
         This function returns a list of supported currencies.
         """
-        return self._handle_request("GET", "info/currencies")
+        return self._handle_request("GET", "/v0.2/info/currencies")
 
     def mobile_money_codes(self):
         """
         This function returns a list of supported mobile money codes.
         """
-        return self._handle_request("GET", "info/mobile-money-codes")
+        return self._handle_request("GET", "/v0.2/info/mobile-money-codes")
 
     def usd_to_local(self, destination_currency, ammount_in_usd):
         """
-        This function returns the equivalent of USD in the destination currency.
+        This function returns the equivalent of USD in the destination
+        currency.
         """
 
         if not isinstance(ammount_in_usd, int):
@@ -60,7 +61,7 @@ class Info(BaseAPI):
 
         return self._handle_request(
             "GET",
-            "info/usd-to-local",
+            "/v0.2/info/usd-to-local",
             params={
                 "destinationCurrency": destination_currency,
                 "amountInUSD": ammount_in_usd,

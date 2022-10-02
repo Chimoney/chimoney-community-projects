@@ -8,8 +8,9 @@ from pychimoney.Errors import MissingAuthKeyError
 
 
 class BaseAPI(object):
-    _BASE_URL = "https://api.chimoney.io/v0.2/"
+    _BASE_URL = "https://api.chimoney.io"
     _CONTENT_TYPE = "application/json"
+    _ACCEPT = "application/json"
 
     def __init__(self):
         self._CHIMONEY_AUTH_KEY = os.environ.get("CHIMONEY_AUTH_KEY")
@@ -19,7 +20,8 @@ class BaseAPI(object):
     def headers(self):
         return {
             "Content-Type": self._CONTENT_TYPE,
-            "Authorization": self._CHIMONEY_AUTH_KEY,
+            "Accept": self._ACCEPT,
+            "Authorization": "Bearer {}".format(self._CHIMONEY_AUTH_KEY),
         }
 
     def parse_json(self, response):
