@@ -1,7 +1,7 @@
 import os
 from pychimoney import Chimoney
 
-os.environ["CHIMONEY_AUTH_KEY"] = "YOUR_API_KEY"
+os.environ["CHIMONEY_AUTH_KEY"] = "API_KEY"
 
 chimoney = Chimoney()
 

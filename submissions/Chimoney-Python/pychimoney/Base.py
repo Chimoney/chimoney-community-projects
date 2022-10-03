@@ -18,10 +18,11 @@ class BaseAPI(object):
             raise MissingAuthKeyError("CHIMONEY_AUTH_KEY is not set.")
 
     def headers(self):
+        print(self._CHIMONEY_AUTH_KEY)
         return {
             "Content-Type": self._CONTENT_TYPE,
             "Accept": self._ACCEPT,
-            "Authorization": "Bearer {}".format(self._CHIMONEY_AUTH_KEY),
+            "X-API-KEY": self._CHIMONEY_AUTH_KEY,
         }
 
     def parse_json(self, response):
@@ -40,7 +41,12 @@ class BaseAPI(object):
         This function handles the requests to the API.
         """
 
-        payload = json.dumps({"code": data})
+        if data:
+            payload = json.dumps(data)
+        else:
+            payload = None
+        print(payload)
+        print(self._url(path))
 
         try:
             response = requests.request(
@@ -55,6 +61,9 @@ class BaseAPI(object):
                 return self.parse_json(response)
             elif response.status_code in [200, 201]:
                 return self.parse_json(response)
+            elif response.status_code == 404:
+                response = {"error": "BUG FIX ME", "status": 404}
+                return response
             else:
                 return self.parse_json(response)
         except ConnectTimeout:

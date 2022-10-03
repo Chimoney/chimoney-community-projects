@@ -1,10 +1,15 @@
-import requests
-from .Info import Info
-from .Account import Account
+from pychimoney import Info, Account, Payouts, SubAccount, Wallet, Redeem, BaseAPI
 
 
-class Chimoney(Account, Info):
-    """ """
+class Chimoney(BaseAPI):
+    def __init__(self):
+        super().__init__()
+        self.info = Info()
+        self.account = Account()
+        self.payouts = Payouts()
+        self.subaccount = SubAccount()
+        self.wallet = Wallet()
+        self.redeem = Redeem()
 
     def ping(self):
         """

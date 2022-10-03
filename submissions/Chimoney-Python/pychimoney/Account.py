@@ -26,11 +26,13 @@ class Account(BaseAPI):
         """
         This function returns a list of transactions by account.
         """
-        payload = {"subAccount": sub_account}
+        payload = {}
+        if sub_account:
+            payload["subAccount"] = sub_account
 
         return self._handle_request(
-            "GET",
-            "/v0.2/account/transactions",
+            "POST",
+            "v0.2/accounts/transactions",
             data=payload,
         )
 
