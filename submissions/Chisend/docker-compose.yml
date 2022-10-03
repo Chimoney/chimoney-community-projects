@@ -1,0 +1,26 @@
+services:
+  bot:  
+    build: ./bot
+
+  redis:
+    image: redis:alpine
+
+  celery:
+    build: ./bot
+    command: celery -A bot.celery worker -l info
+    volumes:
+      - ./bot:/bot
+    depends_on:
+      - redis
+    
+  celerybeat:
+    build: ./bot
+    command: celery -A bot.celery beat -l info
+    volumes:
+      - ./bot:/bot
+    depends_on:
+      - redis
+
+  # web:
+  #   build: ./web
+  #   command: python manage.py runserver
