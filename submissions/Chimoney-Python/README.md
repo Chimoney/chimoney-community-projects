@@ -4,11 +4,11 @@ pychimoney is a python wrapper for <a href="https://chimoney.io"> Chimoney </a>
 
     - Account (Done)
     - Info (Done)
-    - Payout(Work in Progress)
-    - Mobile Money (Work in Progress)
-    - Wallet (Work in Progress)
-    - Sub-Account (Work in Progress)
-    - Redeem (Work in Progress)
+    - Payout(Done)
+    - Mobile Money (Done)
+    - Wallet (Done)
+    - Sub-Account (Done)
+    - Redeem (Done)
 
 ## Getting Started
     - Register with <a href="https://chimoney.io"> Chimoney </a>
