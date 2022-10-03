@@ -31,15 +31,15 @@ It Uses the pychimoney library to send the chimoney.
     - Docker run -d chisend
 
 ## TODO 
-    [ ] Get a developer Twitter Account to test 
-    [ ] Intergrate with pychimoney
+[ ] Get a developer Twitter Account to test 
+[ ] Intergrate with pychimoney
     [ ] Test the bot
-    [ ] Deploy the bot
-    [ ] Add a web interface to the bot
-    [ ] Make sending Asynchronous using celery
-    [ ] Add multi-user send 
-    [ ] Add More features
+[ ] Deploy the bot
+[ ] Add a web interface to the bot
+[ ] Make sending Asynchronous using celery
+[ ] Add multi-user send 
+[ ] Add More features
 
 ## BLOCKERS
-    - [ ] Get a developer Twitter Account to test 
-    - [ ] Intergrate with pychimoney(WIP 80% done by @thelimeskies)
+[ ] Get a developer Twitter Account to test 
+[ ] Intergrate with pychimoney(WIP 80% done by @thelimeskies)

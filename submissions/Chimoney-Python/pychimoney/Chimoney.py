@@ -2,6 +2,12 @@ from pychimoney import Info, Account, Payouts, SubAccount, Wallet, Redeem, BaseA
 
 
 class Chimoney(BaseAPI):
+    """
+    Root API
+
+    This is the root API for the Chi Money API.
+    """
+
     def __init__(self):
         super().__init__()
         self.info = Info()
@@ -14,5 +20,8 @@ class Chimoney(BaseAPI):
     def ping(self):
         """
         Ping the API to check if it is up and running.
+
+        :return: The response from the Chi Money API.
+        :rtype: dict
         """
         return self._handle_request("GET", "")

@@ -1,24 +1,33 @@
 import json
 import os
-
 import requests
-from requests.exceptions import ConnectTimeout, ConnectionError, ReadTimeout
-
+from requests.exceptions import ConnectTimeout, ConnectionError
 from pychimoney.Errors import MissingAuthKeyError
 
 
 class BaseAPI(object):
+    """
+    This function handles the requests to the API.
+    """
+
     _BASE_URL = "https://api.chimoney.io"
     _CONTENT_TYPE = "application/json"
     _ACCEPT = "application/json"
 
     def __init__(self):
+        """
+        Initialise the API.
+        """
         self._CHIMONEY_AUTH_KEY = os.environ.get("CHIMONEY_AUTH_KEY")
         if self._CHIMONEY_AUTH_KEY is None:
             raise MissingAuthKeyError("CHIMONEY_AUTH_KEY is not set.")
 
     def headers(self):
-        print(self._CHIMONEY_AUTH_KEY)
+        """
+        This function returns the headers for the API request.
+
+        :return: The headers for the API request.
+        """
         return {
             "Content-Type": self._CONTENT_TYPE,
             "Accept": self._ACCEPT,
@@ -28,17 +37,38 @@ class BaseAPI(object):
     def parse_json(self, response):
         """
         This function parses the JSON response from the API.
+
+        :param response: The response from the API.
+        :type response: dict
+        :return: The parsed JSON response.
         """
 
         data = response.json()
         return data, response.status_code
 
     def _url(self, path):
+        """
+        This function returns the URL for the API request.
+
+        :param path: The path for the API request.
+        :type path: str
+        :return: The URL for the API request.
+        """
         return self._BASE_URL + path
 
     def _handle_request(self, method_type, path, data=None, params=None):
         """
         This function handles the requests to the API.
+
+        :param method_type: The type of request to make.
+        :type method_type: str
+        :param path: The path to the API endpoint.
+        :type path: str
+        :param data: The data to send to the API.
+        :type data: dict
+        :param params: The parameters to send to the API
+        :type params: dict
+        :return: The response from the Chi Money API.
         """
 
         if data:
