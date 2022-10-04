@@ -25,7 +25,7 @@ Make Crypto Tokens & NFTs spendable. Integrate your own platform tokens also and
 <br></br>
 ![ChiConnect](images/chiconnect.png)
 <br></br>
-- [ChiConnect](https://chimoney.readme.io) Powerful api that enables moving payouts of non dimishing value across banks, giftcards, airtime, momo, etc.
+- [ChiConnect](https://chimoney.readme.io) Powerful API that enables moving payouts of non dimishing value across banks, giftcards, airtime, momo, etc.
 <br></br>
 
 ### **Get Started**
