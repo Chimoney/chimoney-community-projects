@@ -14,13 +14,16 @@ class BaseAPI(object):
     _CONTENT_TYPE = "application/json"
     _ACCEPT = "application/json"
 
-    def __init__(self):
+    def __init__(self, auth_key):
         """
         Initialise the API.
+
+        :param auth_key: The API key for the Chi Money API.
+        :type auth_key: str
         """
-        self._CHIMONEY_AUTH_KEY = os.environ.get("CHIMONEY_AUTH_KEY")
-        if self._CHIMONEY_AUTH_KEY is None:
-            raise MissingAuthKeyError("CHIMONEY_AUTH_KEY is not set.")
+        self._CHIMONEY_AUTH_KEY = auth_key
+        if not self._CHIMONEY_AUTH_KEY:
+            raise MissingAuthKeyError("Missing auth key.")
 
     def headers(self):
         """
@@ -75,8 +78,6 @@ class BaseAPI(object):
             payload = json.dumps(data)
         else:
             payload = None
-        print(payload)
-        print(self._url(path))
 
         try:
             response = requests.request(

@@ -224,8 +224,6 @@ class Payouts(BaseAPI):
         if subaccount:
             payload["subaccount"] = subaccount
 
-        print(payload)
-
         return self._handle_request(
             "POST", "/v0.2/payouts/initiate-chimoney", data=payload
         )
