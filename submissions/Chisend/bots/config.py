@@ -24,3 +24,4 @@ def create_api():
         raise e
     logger.info("API created")
     return api
+
