@@ -38,11 +38,8 @@ chimoney = Chimoney()
     from pychimoney import Chimoney
     import os
 
-    # Set your Chimoney Auth Key
-    os.environ['CHIMONEY_AUTH_KEY'] = 'YOUR_CHIMONEY_AUTH_KEY'
-
     # Initialize Chimoney
-    chimoney = Chimoney()
+    chimoney = Chimoney.set_api_key("CHIMONEY_AUTH_KEY")
 
     # ping Chimoney
     chimoney.ping()
