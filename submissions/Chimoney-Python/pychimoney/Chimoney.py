@@ -1,7 +1,8 @@
+import os 
 from pychimoney import Info, Account, Payouts, SubAccount, Wallet, Redeem, BaseAPI
 
 
-class Chimoney(BaseAPI):
+class Chimoney():
     """
     Root API
 
@@ -9,7 +10,6 @@ class Chimoney(BaseAPI):
     """
 
     def __init__(self):
-        super().__init__()
         self.info = Info()
         self.account = Account()
         self.payouts = Payouts()
@@ -17,11 +17,26 @@ class Chimoney(BaseAPI):
         self.wallet = Wallet()
         self.redeem = Redeem()
 
-    def ping(self):
+    @classmethod
+    def set_api_key(self, auth_key):
         """
-        Ping the API to check if it is up and running.
+        This function sets the API key for the Chi Money API.
 
-        :return: The response from the Chi Money API.
-        :rtype: dict
+        :param auth_key: The API key for the Chi Money API.
+        :type auth_key: str
+        :return: The Chi Money API object.
+        :rtype: Chimoney
         """
-        return self._handle_request("GET", "")
+        os.environ["CHIMONEY_AUTH_KEY"] = auth_key
+        # return an instance of the Chimoney class
+        return Chimoney()
+
+
+    # def ping(self):
+    #     """
+    #     Ping the API to check if it is up and running.
+
+    #     :return: The response from the Chi Money API.
+    #     :rtype: dict
+    #     """
+    #     return self._handle_request("GET", "")

@@ -14,16 +14,10 @@ class BaseAPI(object):
     _CONTENT_TYPE = "application/json"
     _ACCEPT = "application/json"
 
-    def __init__(self, auth_key):
-        """
-        Initialise the API.
-
-        :param auth_key: The API key for the Chi Money API.
-        :type auth_key: str
-        """
-        self._CHIMONEY_AUTH_KEY = auth_key
-        if not self._CHIMONEY_AUTH_KEY:
-            raise MissingAuthKeyError("Missing auth key.")
+    def __init__(self):
+        self._CHIMONEY_AUTH_KEY = os.getenv("CHIMONEY_AUTH_KEY")
+        if self._CHIMONEY_AUTH_KEY is None:
+            raise MissingAuthKeyError("Missing CHIMONEY_AUTH_KEY environment variable.")
 
     def headers(self):
         """

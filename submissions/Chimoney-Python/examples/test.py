@@ -1,16 +1,16 @@
 import os
-import pychimoney
+from pychimoney import Chimoney
 
-os.environ[
-    "CHIMONEY_AUTH_KEY"
-] = "API_KEY"
-
-chimoney = pychimoney.Chimoney()
+chimoney = Chimoney.set_api_key("API_KEY")
 
 chimoneys = [
-    {"email": "sammyboy.as@gmail.com", "valueInUSD": 1, "twitter": "@thelimeskies"}
+    {
+        "email": "test@email.com",
+        "valueInUSD": 1,
+        "twitter": "@thelimeskies"
+    }
 ]
 
 if __name__ == "__main__":
-    print(chimoney.ping())
+    # print(chimoney.ping()) # TODO: Add ping function to pychimoney
     print(chimoney.payouts.initiate_chimoney(chimoneys=chimoneys))
