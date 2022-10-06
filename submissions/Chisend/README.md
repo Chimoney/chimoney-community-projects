@@ -51,15 +51,15 @@ OR
     - Run the ```python  ./main.py ``` command
 
 ## TODO 
-[-] Get a developer Twitter Account to test 
-[-] Intergrate with pychimoney
-    [-] Test the bot
-[ ] Deploy the bot
-[ ] Add a web interface to the bot
-[ ] Make sending Asynchronous using celery
-[ ] Add multi-user send 
-[ ] Add More features
+- [x] Get a developer Twitter Account to test 
+- [x] Intergrate with pychimoney
+    - [x] Test the bot
+- [ ] Deploy the bot
+- [ ] Add a web interface to the bot
+- [ ] Make sending Asynchronous using celery
+- [ ] Add multi-user send 
+- [ ] Add More features
 
 ## BLOCKERS
-[-] Get a developer Twitter Account to test 
-[ ] Intergrate with pychimoney(WIP 80% done by @thelimeskies)
+- [x] Get a developer Twitter Account to test 
+- [ ] Intergrate with pychimoney(WIP 80% done by @thelimeskies)
