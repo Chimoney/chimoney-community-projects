@@ -1,10 +1,3 @@
-import tweepy
-import time
-from dotenv import load_dotenv
-from pychimoney import Chimoney
-
-load_dotenv()
-
 MESSAGE_TEMP = "Hello, I am Chisend Bot. I was mentioned by you. \
                 To proceed to payout click this link: {}, Thank you.\
                 This is an automated message.\
@@ -15,7 +8,7 @@ api_key = ""
 api_secret = ""
 bearer_token = ""
 access_key = ""
-access_secret = "LXDhgPqag9nPoz2aDVX7WKJaqNK6vPzm643UgWQMl8fkK"
+access_secret = ""
 
 client = tweepy.Client(bearer_token, api_key, api_secret, access_key, access_secret)
 
@@ -97,11 +90,11 @@ class MyStream(tweepy.StreamingClient):
 
         Args:
             tweet (dict): The tweet that passed the stream
-        
+
         Returns:
             None
 
-        TODO: 
+        TODO:
             - Check if the user is following the bot
             - Check if the tweet is a reply
             - Check if the tweet is a mention
@@ -113,7 +106,7 @@ class MyStream(tweepy.StreamingClient):
             - Check if the tweet is a reply to a reply
         """
 
-        # check if the tweet is not a created by 
+        # check if the tweet is not a created by
 
         if tweet.referenced_tweets == None:
             # Reply to the tweet with a Check your DM message
@@ -154,3 +147,4 @@ for term in search_terms:
 
 # Starting stream
 stream.filter(tweet_fields=["referenced_tweets", "author_id", "id"])
+
