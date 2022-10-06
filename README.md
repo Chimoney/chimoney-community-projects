@@ -25,7 +25,7 @@ Make Crypto Tokens & NFTs spendable. Integrate your own platform tokens also and
 <br></br>
 ![ChiConnect](images/chiconnect.png)
 <br></br>
-- [ChiConnect](https://chimoney.readme.io) Powerful api that enables moving payouts of non dimishing value across banks, giftcards, airtime, momo, etc.
+- [ChiConnect](https://chimoney.readme.io) Powerful API that enables moving payouts of non dimishing value across banks, giftcards, airtime, momo, etc.
 <br></br>
 
 ### **Get Started**
@@ -44,6 +44,8 @@ Make Crypto Tokens & NFTs spendable. Integrate your own platform tokens also and
 👻 Each contributor can get this gift up to four times ( 25 * 4 ) = $100
 
 🔮 Bonus! A contributor completing 4 merged PRs gets a T-shirt.
+![Chimoney T-shirt](https://user-images.githubusercontent.com/114580325/194017532-9ea71bb8-7d37-4613-9ed3-d108290c3541.png)
+![Chimoney T-shirt](https://user-images.githubusercontent.com/114580325/194017557-ce401eef-610d-4e6a-a34c-410317ae9c79.png)
 
 
 ### **Start contributing🍾** 
