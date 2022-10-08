@@ -1,4 +1,4 @@
-from pychimoney import BaseAPI
+from chimoney import BaseAPI
 
 
 class Info(BaseAPI):
