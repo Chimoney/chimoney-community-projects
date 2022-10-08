@@ -1,5 +1,5 @@
-import os 
-from pychimoney import Info, Account, Payouts, SubAccount, Wallet, Redeem, BaseAPI
+import os
+from chimoney import Info, Account, Payouts, SubAccount, Wallet, Redeem
 
 
 class Chimoney():
@@ -30,7 +30,6 @@ class Chimoney():
         os.environ["CHIMONEY_AUTH_KEY"] = auth_key
         # return an instance of the Chimoney class
         return Chimoney()
-
 
     # def ping(self):
     #     """

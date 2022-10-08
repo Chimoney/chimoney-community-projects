@@ -2,7 +2,7 @@ import json
 import os
 import requests
 from requests.exceptions import ConnectTimeout, ConnectionError
-from pychimoney.Errors import MissingAuthKeyError
+from chimoney.Errors import MissingAuthKeyError
 
 
 class BaseAPI(object):
