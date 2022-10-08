@@ -1,5 +1,5 @@
 import os
-from pychimoney import Chimoney
+from chimoney import Chimoney
 
 chimoney = Chimoney.set_api_key("API_KEY")
 
