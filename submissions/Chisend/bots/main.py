@@ -3,6 +3,7 @@
 from dotenv import load_dotenv
 import os
 import argparse
+from chisend import ChiSend
 
 load_dotenv()
 
@@ -22,6 +23,7 @@ KEYS = {
     "bearer_token": "",
     "access_key": "",
     "access_secret": "",
+    "chimoney_api_key": "",
 }
 
 # check if the user wants to use environment variables
@@ -34,10 +36,7 @@ if parser.parse_args().use_env:
     KEYS["bearer_token"] = os.getenv("BEARER_TOKEN")
     KEYS["access_key"] = os.getenv("ACCESS_KEY")
     KEYS["access_secret"] = os.getenv("ACCESS_SECRET")
-
-
-# import ChiSend from the chisend.py file
-from chisend import ChiSend
+    KEYS["chimoney_api_key"] = os.getenv("CHIMONEY_API_KEY")
 
 # create an instance of ChiSend
 chisend = ChiSend(**KEYS)

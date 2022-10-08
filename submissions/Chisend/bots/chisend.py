@@ -1,9 +1,17 @@
 import tweepy
-from pychimoney import Chimoney
+from chimoney import Chimoney
 
 
 class ChiSend(object):
-    def __init__(self, api_key, api_secret, bearer_token, access_key, access_secret):
+    def __init__(
+        self,
+        api_key,
+        api_secret,
+        bearer_token,
+        access_key,
+        access_secret,
+        chimoney_api_key,
+    ):
         self.search_terms = ["@chisendtest"]
         self.client = self.MyStream(
             bearer_token=bearer_token,
@@ -11,6 +19,7 @@ class ChiSend(object):
             api_secret=api_secret,
             access_key=access_key,
             access_secret=access_secret,
+            chimoney_api_key=chimoney_api_key,
         )
 
     def clear_search_terms(self):
@@ -43,7 +52,13 @@ class ChiSend(object):
 
     class MyStream(tweepy.StreamingClient):
         def __init__(
-            self, api_key, api_secret, bearer_token, access_key, access_secret
+            self,
+            api_key,
+            api_secret,
+            bearer_token,
+            access_key,
+            access_secret,
+            chimoney_api_key,
         ):
 
             super().__init__(bearer_token=bearer_token)
@@ -56,6 +71,7 @@ class ChiSend(object):
                 api_key, api_secret, access_key, access_secret
             )
             self.api = tweepy.API(self.auth)
+            self.chimoney_api_key = chimoney_api_key
 
             # Set up the message template
             self.MESSAGE_TEMP = (
@@ -125,7 +141,7 @@ class ChiSend(object):
             # Perform the task
             if task_name == "send":
                 # Call pychimoney payout initiate function
-                chimoney = Chimoney()
+                chimoney = Chimoney.set_api_key(self.chimoney_api_key)
                 checkout_value = []
 
                 # check if ammount contains a dollar sign
