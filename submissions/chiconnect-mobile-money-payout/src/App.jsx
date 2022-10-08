@@ -1,10 +1,13 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+
 import chimoneyLogo from './assets/chimoney-logo.svg'
+import { API_KEY, getMomoCodes } from './service/fetchApi'
 
 function App() {
 
   const [error, setError] = useState('')
   const [info, setInfo] = useState('')
+  const [momoCodes, setMomoCodes] = useState(null)
 
   const [paymentData, setPaymentData] = useState({
     country: '',
@@ -12,6 +15,15 @@ function App() {
     amount: '',
     momoCode: ''
   })
+
+  useEffect(() => {
+    const fetchMomoCodes = async () => {
+      const data = await getMomoCodes()
+      setMomoCodes(data)
+    }
+
+    fetchMomoCodes()
+  }, [])
 
   const handleFormChange = (event) => {
     const { name, value } = event.target
@@ -21,12 +33,11 @@ function App() {
         [name]: value
       }
     })
-    console.log(paymentData)
   }
 
   const handlePayClick = (event) => {
     if (paymentData.country.length === 0) {
-      setError('Invalid country')
+      setError('Select your momo code')
       return
     }
 
@@ -36,7 +47,7 @@ function App() {
     }
 
     if (paymentData.momoCode.length === 0) {
-      setError('Invalid account number')
+      setError('Invalid momo code')
       return
     }
 
@@ -51,6 +62,28 @@ function App() {
     setError('')
     setInfo('Please wait...')
 
+    fetch('https://api.chimoney.io/v0.2/payouts/mobile-money', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-API-KEY': API_KEY
+      },
+      body: JSON.stringify({
+        momos: [{
+          countryToSend: `${paymentData.country}`,
+          phoneNumber: `${paymentData.phoneNumber}`,
+          momoCode: `${paymentData.momoCode}`,
+          valueInUSD: Number(paymentData.amount)
+        }]
+      })
+    })
+      .then(response => response.json())
+      .then(data => {
+        const successInfo = `${data.data.chimoneys[0].valueInUSD} USD has been successfully sent to the MoMo wallet: ${data.data.chimoneys[0].phoneNumber}`
+        setInfo(successInfo)
+      })
+      .catch(err => console.error(err))
+
   }
 
   return (
@@ -62,24 +95,42 @@ function App() {
           src={chimoneyLogo}
           alt={'Chimoney Logo'} />
 
-        <div className='w-full flex flex-row mt-4 justify-between items-center'>
+        <h1 className='my-5 mx-auto text-2xl font-semibold text-slate-700'>
+          Pay with Mobile Money
+        </h1>
 
-          <div className='pr-2'>
-            <span className='mt-4 block text-md font-medium text-slate-700'>
-              Country
-            </span>
-            <input name='country' placeholder='Nigeria'
-              value={paymentData.country}
-              onChange={handleFormChange}
-              className='mt-1 px-3 py-2 bg-white border shadow-sm 
-          border-slate-300 focus:outline-none focus:border-purple-500
-          w-full rounded-md sm:text-sm focus:ring-1' />
-          </div>
+        <span className='block text-md font-medium text-slate-700'>
+          Momo code
+        </span>
 
-          <div className='pl-2'>
-            <span className='mt-4 block text-md font-medium text-slate-700'>
+        <select name='momoCode' placeholder='MPS'
+          value={paymentData.momoCode} onChange={handleFormChange}
+          className='mt-1 px-3 py-2 bg-white border shadow-sm 
+            border-slate-300 focus:outline-none focus:border-purple-500
+            w-full rounded-md sm:text-sm focus:ring-1'>
+          {
+            momoCodes?.data?.map((momoCode) => (
+              <option
+                key={`${momoCode.name}-${momoCode.code}`}
+                value={momoCode.code}
+                onClick={() => setPaymentData(prevData => (
+                  {
+                    ...prevData,
+                    country: momoCode.country
+                  }
+                ))}>
+                {`${momoCode.code} — ${momoCode.name}`}
+              </option>
+            ))
+          }
+        </select>
+
+        <div className='w-full flex flex-row mt-6 justify-between items-center'>
+          <div className='pr-4'>
+            <span className='block text-md font-medium text-slate-700'>
               Phone number
             </span>
+
             <input name='phoneNumber' placeholder='+234912345678'
               value={paymentData.phoneNumber}
               onChange={handleFormChange}
@@ -88,22 +139,7 @@ function App() {
           w-full rounded-md sm:text-sm focus:ring-1' />
           </div>
 
-        </div>
-
-        <div className='w-full flex flex-row mt-4 justify-between items-center'>
-          <div className='pr-2'>
-            <span className='block text-md font-medium text-slate-700'>
-              Momo code
-            </span>
-
-            <input name='momoCode' placeholder='MPS'
-              value={paymentData.momoCode} onChange={handleFormChange}
-              className='mt-1 px-3 py-2 bg-white border shadow-sm 
-            border-slate-300 focus:outline-none focus:border-purple-500
-            w-full rounded-md sm:text-sm focus:ring-1' />
-          </div>
-
-          <div className='pl-2'>
+          <div className='pl-4'>
             <span className='block text-md font-medium text-slate-700'>
               Amount (USD)
             </span>
@@ -117,7 +153,6 @@ function App() {
         </div>
 
         <div className='w-full flex flex-col justify-center items-center'>
-
           {
             error.length > 0 &&
             <span className='text-red-500 text-sm font-semibold mt-8'>
@@ -126,8 +161,8 @@ function App() {
           }
 
           {
-            info.length > 0 &&
-            <span className='text-purple-500 text-sm font-semibold mt-8'>
+            info.length >= 0 &&
+            <span className='text-purple-500 text-center max-w-md text-sm font-semibold mt-8'>
               {info}
             </span>
           }
@@ -139,11 +174,9 @@ function App() {
             PAY NOW
           </button>
 
-          <p className='mt-2 text-xs'>Powered by <span className='font-semibold text-purple-500'>Chimoney</span></p>
-
+          <p className='mt-2 text-xs'>Powered by <span className='font-semibold text-purple-500'>ChiConnect</span></p>
         </div>
       </div>
-
     </div>
   )
 }
