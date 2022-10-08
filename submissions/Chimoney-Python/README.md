@@ -2,21 +2,21 @@
 
 pychimoney is a python wrapper for <a href="https://chimoney.io"> Chimoney </a>
 
-    - Account (Done)
-    - Info (Done)
-    - Payout(Done)
-    - Mobile Money (Done)
-    - Wallet (Done)
-    - Sub-Account (Done)
-    - Redeem (Done)
+    - Account
+    - Info
+    - Payout
+    - Mobile Money 
+    - Wallet
+    - Sub-Account
+    - Redeem
 
 ## Getting Started
-    - Register with <a href="https://chimoney.io"> Chimoney </a>
-    - Request for API KEY from support
-    - set Your "CHIMONEY_AUTH_KEY" environment variable
+- Register with <a href="https://chimoney.io"> Chimoney </a>
+- Request for API KEY from support
+- set Your "CHIMONEY_AUTH_KEY" environment variable
 
 ## Installing 
-    - pip install pychimoney
+    - pip install chimoney-py
 ### OR
     - git clone "the repo"
     - cd pychimoney
@@ -26,11 +26,11 @@ pychimoney is a python wrapper for <a href="https://chimoney.io"> Chimoney </a>
 ## Usage
 #### Importing the package
 ```python
-from pychimoney import Chimoney
+from chimoney import Chimoney
 ```
 #### Creating an instance of the Chimoney class
 ```python
-chimoney = Chimoney()
+chimoney = Chimoney.set_api_key("API-KEY")
 ```
 
 #### Full Example
@@ -40,9 +40,6 @@ chimoney = Chimoney()
 
     # Initialize Chimoney
     chimoney = Chimoney.set_api_key("CHIMONEY_AUTH_KEY")
-
-    # ping Chimoney
-    chimoney.ping()
 ```
  #### Using the Account API
  ```python
@@ -52,9 +49,9 @@ chimoney = Chimoney()
 
 ## TODO
 
-- [ ] Add all Endpoints
+- [x] Add all Endpoints
 - [ ] Write Unit Tests
-- [ ] Package the Library
-- [ ] Add to Pip
+- [x] Package the Library
+- [x] Add to Pip
 - [ ] Add Pytest and Covrage for Test
 - [ ] Documentation
