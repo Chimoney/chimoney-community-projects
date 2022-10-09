@@ -161,7 +161,7 @@ function App() {
           }
 
           {
-            info.length >= 0 &&
+            info.length > 0 &&
             <span className='text-purple-500 text-center max-w-md text-sm font-semibold mt-8'>
               {info}
             </span>
