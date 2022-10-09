@@ -2,10 +2,11 @@
 
 The Chisend Twitter Bot that send chimoney to a user when called by a tweet.
 
-NOTE: This is a work in progress and is not yet ready for use. Need pychimoney to be released first.
-But it could still be setup 
+Live Demo: https://twitter.com/send_chimoney
 
 Docker is supported.
+
+
 
 ## INFO
 
@@ -37,12 +38,25 @@ Example of a tweet to the bot
 ## How to run
     - Clone the repo
     - Create a .env file with the following variables
-        - CONSUMER_KEY
-        - CONSUMER_SECRET
+        - API_KEY
+        - API_SECRET
+        - BEARER_TOKEN
         - ACCESS_TOKEN
         - ACCESS_TOKEN_SECRET
+        - CHIMONEY_API_KEY
+        - SCREEN_NAME (is the twitter handle of the bot)
     - Docker build -t chisend .
-    - Docker run -d chisend
+    - Docker run -d chisend -e API_KEY= -e API_SECRET=   -e BEARER_TOKEN= -e ACCESS_TOKEN= -e ACCESS_TOKEN_SECRET= -e CHIMONEY_API_KEY= -e SCREEN_NAME=
+
+    if the bot is not a developer account, you will need to use oauth-key-gen to get the keys
+
+    - cd into bots folder
+    - pip install -r requirements.txt
+    - set access_token, access_token_secret(get from twitter developer dashboard)
+    - python oauth-key-gen.py
+    - click the link and get the pin
+    - paste the pin in the terminal
+    - copy the access_token and access_token_secret and paste in the .env file
 OR
     - Create a virtual environment
     - Install the requirements
@@ -52,7 +66,7 @@ OR
 
 ## TODO 
 - [x] Get a developer Twitter Account to test 
-- [x] Intergrate with pychimoney
+- [x] Intergrate with chimoney-py
     - [x] Test the bot
 - [ ] Deploy the bot
 - [ ] Add a web interface to the bot
@@ -62,4 +76,5 @@ OR
 
 ## BLOCKERS
 - [x] Get a developer Twitter Account to test 
-- [ ] Intergrate with pychimoney(WIP 80% done by @thelimeskies)
+- [x] Intergrate with chimoney-py
+    - [x] Test the bot
