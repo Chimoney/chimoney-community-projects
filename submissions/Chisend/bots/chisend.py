@@ -1,5 +1,18 @@
+import re
 import tweepy
+from utils import is_following
 from chimoney import Chimoney
+import logging
+
+
+# Set up logging
+logging.basicConfig(
+    filename="logs/bot.log",
+    filemode="a",
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    level=logging.INFO,
+)
+logger = logging.getLogger(__name__)
 
 
 class ChiSend(object):
@@ -11,15 +24,17 @@ class ChiSend(object):
         access_key,
         access_secret,
         chimoney_api_key,
+        screen_name,
     ):
         self.search_terms = ["@chisendtest"]
-        self.client = self.MyStream(
+        self.stream = self.MyStream(
             bearer_token=bearer_token,
             api_key=api_key,
             api_secret=api_secret,
             access_key=access_key,
             access_secret=access_secret,
             chimoney_api_key=chimoney_api_key,
+            screen_name=screen_name,
         )
 
     def clear_search_terms(self):
@@ -43,10 +58,10 @@ class ChiSend(object):
         # stopped running).
 
         for term in self.search_terms:
-            self.client.add_rules(tweepy.StreamRule(term))
+            self.stream.add_rules(tweepy.StreamRule(term))
 
         # Starting stream
-        self.client.filter(
+        self.stream.filter(
             tweet_fields=["referenced_tweets", "author_id", "id", "text"]
         )
 
@@ -59,10 +74,8 @@ class ChiSend(object):
             access_key,
             access_secret,
             chimoney_api_key,
+            screen_name
         ):
-
-            super().__init__(bearer_token=bearer_token)
-
             self.client = tweepy.Client(
                 bearer_token, api_key, api_secret, access_key, access_secret
             )
@@ -71,7 +84,11 @@ class ChiSend(object):
                 api_key, api_secret, access_key, access_secret
             )
             self.api = tweepy.API(self.auth)
+
+            super().__init__(bearer_token=bearer_token)
             self.chimoney_api_key = chimoney_api_key
+            self.account_id = self.api.get_user(screen_name=screen_name).id
+            self.screen_name = screen_name
 
             # Set up the message template
             self.MESSAGE_TEMP = (
@@ -88,12 +105,15 @@ class ChiSend(object):
                     Ref: {}"""
 
         def on_connect(self):
-            print("Connected")
+            logging.info("Stream Started")
 
         def on_error(self, error):
-            print(error)
+            logging.error(error)
             if error == 420:
                 return False  # returning False in on_error disconnects the stream
+
+        def on_disconnect(self):
+            logging.info("Stream Stopped")
 
         def send_tweet(self, tweet, reply_id):
             """
@@ -110,6 +130,7 @@ class ChiSend(object):
                 in_reply_to_status_id=reply_id,
                 auto_populate_reply_metadata=True,
             )
+            logging.info("Tweet sent to {}".format(reply_id))
 
         def send_dm(self, user_id, message):
             """
@@ -124,8 +145,9 @@ class ChiSend(object):
             # Send a direct message to the user who mentioned the bot
             try:
                 self.api.send_direct_message(user_id, message)
+                logging.info("Direct Message sent to {}".format(user_id))
             except:
-                print("Error sending message")
+                logging.error("Error sending direct message")
 
         def perform_task(self, tweet_content):
             # Split the tweet content
@@ -136,7 +158,12 @@ class ChiSend(object):
 
             # Get the amount and recipients
             amount = tweet_content[2]
-            recipients = tweet_content[4:]
+
+            # Get the recipients
+            if "to" in tweet_content:
+                recipients = tweet_content[tweet_content.index("to")+1:]
+            else:
+                recipients = tweet_content[3:]
 
             # Perform the task
             if task_name == "send":
@@ -181,32 +208,54 @@ class ChiSend(object):
                 None
             """
 
-            print(type(tweet))
-            print(tweet.keys())
-            print(tweet["referenced_tweets"])
-            print(tweet["author_id"])
+            logging.info("Tweet received: {}".format(tweet["text"]))
 
-            if not tweet["referenced_tweets"]:
-                user_id = tweet["author_id"]
+            # regex to check if the tweet is a reply
+            # replace @send_chimoney with the value of your bot's screen name
 
-                # Get the tweet content
-                tweet_content = tweet["text"]
+            reply_regex = re.compile(rf"^\@{re.escape(self.screen_name)}")
 
-                # Perform the task
-                task_status = self.perform_task(tweet_content)
-                print(task_status)
+            # regex to check if the tweet follows the correct format for the bot
+            # @chisendtest send 10 @user1 @user2 @user3
+            # @chisendtest send $10 to @user1 @user2 @user3
+            # @chisendtest send 10 to @user1 @user2 @user3
+            # @chisendtest send $10 @user1 @user2 @user3
 
-                # Check if the task was successful
-                if task_status:
-                    # Get the payment link
-                    payment_link = task_status["paymentLink"]
-                    chiRef = task_status["chiRef"]
+            correct_regex = re.compile(
+                rf"^\@{re.escape(self.screen_name)}\s+send\s+\$?\d+\s+to\s+\@\w+(\s+\@\w+)*"
+            )
+            # if it's a reply check if it follows the correct format
+            if reply_regex.match(tweet["text"]):
+                if correct_regex.match(tweet["text"]):
+                    logging.info("Tweet is in the correct format")
+                    if is_following(
+                        self.api, tweet["author_id"], self.account_id
+                    ):  # check if the user is following the bot
 
-                    # Send the payment link to the user
-                    message = self.MESSAGE_TEMP.format(payment_link, chiRef)
-                    self.send_dm(user_id, message)
-                    self.send_tweet("Check Your DM", tweet["id"])
+                        user_id = tweet["author_id"]
+                        tweet_content = tweet["text"]
+                        # Perform the task
+                        task_status = self.perform_task(tweet_content)
+                        # Check if the task was successful
+                        if task_status:
+                            # Get the payment link
+                            payment_link = task_status["paymentLink"]
+                            chiRef = task_status["chiRef"]
+
+                            # Send the payment link to the user
+                            message = self.MESSAGE_TEMP.format(payment_link, chiRef)
+                            self.send_dm(user_id, message)
+                            self.send_tweet("Check Your DM", tweet["id"])
+                        else:
+                            # Send a message to the user
+                            message = "There was an error performing the task"
+                            self.send_dm(user_id, message)
+                            self.send_tweet("Check Your DM", tweet["id"])
+                    elif not is_following(
+                        self.api, tweet["author_id"], self.account_id
+                    ):
+                        self.send_tweet("Please follow me to continue", tweet["id"])
                 else:
-                    # Send a message to the user
-                    message = "There was an error performing the task"
-                    self.send_dm(user_id, message)
+                    self.send_tweet("Incorrect format, Try Again", tweet["id"])
+            else:
+                logging.info("Tweet is not a reply")

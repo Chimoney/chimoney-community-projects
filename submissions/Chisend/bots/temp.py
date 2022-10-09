@@ -1,3 +1,8 @@
+# this is a code playground for testing things out
+
+
+
+
 # MESSAGE_TEMP = "Hello, I am Chisend Bot. I was mentioned by you. \
 #                 To proceed to payout click this link: {}, Thank you.\
 #                 This is an automated message.\
@@ -150,22 +155,44 @@
 
 # check if a user is following my account 
 
-import os
-import tweepy
-from dotenv import load_dotenv
-load_dotenv()
 
-api_key = os.getenv("API_KEY")
-api_secret = os.getenv("API_SECRET")
-bearer_token = os.getenv("BEARER_TOKEN")
-access_key = os.getenv("ACCESS_KEY")
-access_secret = os.getenv("ACCESS_SECRET")
 
-client = tweepy.Client(bearer_token, api_key, api_secret, access_key, access_secret)
+# import os
+# import tweepy
+# from dotenv import load_dotenv
+# load_dotenv()
 
-auth = tweepy.OAuth1UserHandler(api_key, api_secret, access_key, access_secret)
-api = tweepy.API(auth)
+# api_key = os.getenv("API_KEY")
+# api_secret = os.getenv("API_SECRET")
+# bearer_token = os.getenv("BEARER_TOKEN")
+# access_key = os.getenv("ACCESS_KEY")
+# access_secret = os.getenv("ACCESS_SECRET")
 
-# Get My ID
-my_id = api.get_user(screen_name="chisendtest").id
-id_2 = api.get_user(screen_name="thelimeskies").id
+# #client = tweepy.Client(bearer_token, api_key, api_secret, access_key, access_secret)
+
+# #auth = tweepy.OAuth1UserHandler(api_key, api_secret, access_key, access_secret)
+# #api = tweepy.API(auth)
+
+# # Stream class that inherits from tweepy.StreamingClient
+# class MyStream(tweepy.StreamingClient):
+#     def on_connect(self):
+#         print("Connected")
+
+#     def on_tweet(self, tweet):
+#         print(tweet)
+    
+
+# # Creating Stream object
+# stream = MyStream(bearer_token=bearer_token)
+
+# # Adding terms to search rules
+# # It's important to know that these rules don't get deleted when you stop the
+# # program, so you'd need to use stream.get_rules() and stream.delete_rules()
+# # to change them, or you can use the optional parameter to stream.add_rules()
+# # called dry_run (set it to True, and the rules will get deleted after the bot
+# # stopped running).
+
+# stream.add_rules(tweepy.StreamRule("chimoney"))
+
+# # Starting stream
+# stream.filter(tweet_fields=["referenced_tweets", "author_id", "id"])

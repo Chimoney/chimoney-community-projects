@@ -1,3 +1,0 @@
-services:
-  bot:  
-    build: ./bots
