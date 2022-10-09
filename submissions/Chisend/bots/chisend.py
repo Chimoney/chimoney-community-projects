@@ -7,7 +7,7 @@ import logging
 
 # Set up logging
 logging.basicConfig(
-    filename="logs/bot.log",
+    filename="bot.log",
     filemode="a",
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO,
