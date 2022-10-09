@@ -1,4 +1,4 @@
-<img width="200px" height="200px" src="images/header-image.png" alt="Image">
+![img](images/header-image.png)
 CHICONNECT is a payment infrastructure API for businesses, Developers, Fintechs and startups created by [CHIMONEY](https://chimoney.io) to move non-diminishing rewards between banks, redeem giftcards, airtime, mobile money and so-on.
 
 
