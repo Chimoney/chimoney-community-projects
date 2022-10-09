@@ -1,6 +1,6 @@
 import requests
 
-url = "https://api.chimoney.io/v0.2/accounts/transactions"
+url = "https://api.chimoney.io/v0.2/accounts/transactions?id=(transaction_id)"
 
 headers = {
     "accept": "application/json",
