@@ -14,17 +14,17 @@ The bot is written in Python and uses the [Tweepy](https://www.tweepy.org/) libr
 It Uses the pychimoney library to send the chimoney.
 
 ## How to use
-    - Follow the bot on twitter
-    - Tweet the bot with the following format
-        - @chisendtest send ammount to @username
-    - The bot will you a direct message for confirmation and checkout
-    - ChiSpend will send the amount to the user
+- Follow the bot on twitter
+- Tweet the bot with the following format
+    - @chisendtest send ammount to @username
+- The bot will you a direct message for confirmation and checkout
+- ChiSpend will send the amount to the user
 
-    FOR EXAMPLE
-    @chisendtest send 100 to @chisendtest
+FOR EXAMPLE
+@chisendtest send 100 to @chisendtest
 
-    FOR multiple users
-    @chisendtest send 100 to @chisendtest, @chisendtest2
+FOR multiple users
+@chisendtest send 100 to @chisendtest, @chisendtest2
 
 ## DEMO PICTURES
 Example of a tweet to the bot
