@@ -97,13 +97,13 @@ This endpoint shows the list of the various service offers: URL:```https://api.c
  - To convert usd amount to your Local Currency: ```URL/usd-amount-in-local?destinationCurrency=NGN&amountInUSD=3000```.
  Sends a GET request with the queries "destinationCurrency" as string & "amountInUSD" as Integer both as params in the URL, the response shows the conversion of currency from USD to to your local currency.
  
- ![img](images/responseLocal.png)
+ ![img](images/responsetoLocal.png)
  
  
  ### Mobile Money(MOMO)
  The endpoints allows you perform momo transactions: URL:```https://api.chimoney.io/v0.2/collections/mobile-money/```.
  
- -To get the list of all mobile money transaction: ```URL/all```.
+- To get the list of all mobile money transaction: ```URL/all```.
  This sends a POST request and returns the list of all mobile money(MOMO) transactions.
  
 - To make payment through mobile money: ```URL/collect```.
