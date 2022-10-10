@@ -7,10 +7,9 @@ import logging
 
 # Set up logging
 logging.basicConfig(
-    filename="bot.log",
-    filemode="a",
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO,
+    handlers=[logging.FileHandler("chisend.log"), logging.StreamHandler()],
 )
 logger = logging.getLogger(__name__)
 
@@ -74,7 +73,7 @@ class ChiSend(object):
             access_key,
             access_secret,
             chimoney_api_key,
-            screen_name
+            screen_name,
         ):
             self.client = tweepy.Client(
                 bearer_token, api_key, api_secret, access_key, access_secret
@@ -98,6 +97,17 @@ class ChiSend(object):
                 "Payment Link: {}\n"
                 "ChiRef: {}"
             )
+            self.messages = {
+                "not_following": f"Please follow @{self.screen_name} to use this bot",
+                "check_dm": "Please check your DMs for the payment link",
+                "wrong_format": (
+                    "Please use the correct format to use this bot\n e.g."
+                    "@{} send $10 to @thelimeskies \n"
+                    "(see pin tweet for more info)"
+                ),
+                "donation": "Thank you for your donation!",
+                "bot_error": "Sorry, there was an error with the bot. Please try again later",
+            }
 
         MESSAGE_TEMP = """Hello, I am Chisend Bot. I was mentioned by you.
                     To proceed to payout click this link: {}, Thank you.
@@ -161,7 +171,7 @@ class ChiSend(object):
 
             # Get the recipients
             if "to" in tweet_content:
-                recipients = tweet_content[tweet_content.index("to")+1:]
+                recipients = tweet_content[tweet_content.index("to") + 1 :]
             else:
                 recipients = tweet_content[3:]
 
@@ -221,12 +231,26 @@ class ChiSend(object):
             # @chisendtest send 10 to @user1 @user2 @user3
             # @chisendtest send $10 @user1 @user2 @user3
 
-            correct_regex = re.compile(
-                rf"^\@{re.escape(self.screen_name)}\s+send\s+\$?\d+\s+to\s+\@\w+(\s+\@\w+)*"
-            )
+            correct_regex = [
+                re.compile(
+                    rf"^\@{re.escape(self.screen_name)}\s+send\s+\$?\d+\s+to\s+\@\w+(\s+\@\w+)*"
+                ),
+                re.compile(
+                    rf"^\@{re.escape(self.screen_name)}\s+send\s+\$?\d+\s+\@\w+(\s+\@\w+)*"
+                ),
+                re.compile(
+                    rf"^\@{re.escape(self.screen_name)}\s+send\s+\$?\d+\s+to\s+\@\w+(\s+\@\w+)*"
+                ),
+                re.compile(
+                    rf"^\@{re.escape(self.screen_name)}\s+send\s+\$?\d+\s+\@\w+(\s+\@\w+)*"
+                ),
+            ]
+
             # if it's a reply check if it follows the correct format
             if reply_regex.match(tweet["text"]):
-                if correct_regex.match(tweet["text"]):
+                if correct_regex[0].match(tweet["text"]) or correct_regex[1].match(
+                    tweet["text"]
+                ):
                     logging.info("Tweet is in the correct format")
                     if is_following(
                         self.api, tweet["author_id"], self.account_id
@@ -254,8 +278,11 @@ class ChiSend(object):
                     elif not is_following(
                         self.api, tweet["author_id"], self.account_id
                     ):
-                        self.send_tweet("Please follow me to continue", tweet["id"])
+                        self.send_tweet(self.messages["not_following"], tweet["id"])
                 else:
-                    self.send_tweet("Incorrect format, Try Again", tweet["id"])
+                    self.send_tweet(
+                        self.messages["wrong_format"].format(self.screen_name),
+                        tweet["id"],
+                    )
             else:
                 logging.info("Tweet is not a reply")
