@@ -1,17 +1,40 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components';
-import {CHI_REF} from '../SecretKeys';
 
 const Home = () => {
+    const [ChiREF, setChiREF] = useState('');
+    const [errorMsg, setErrorMsg] = useState('');
+
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        const {value} = e.currentTarget;
+        setChiREF(value);
+    }
+
+    const handleSubmit = (e) => { 
+        if (!ChiREF) {
+            setErrorMsg('input cannot be empty')
+        } else {
+           navigate(`/redeem-airtime/${ChiREF}`)
+        }
+    }
+
+    const clearErrorMsg = () => {
+        setErrorMsg('')
+    }
+
   return (
     <HomeContainer>
-        <img src="" alt="" />
-        <h1>Congratulations.. </h1>
-        <p> You have just received 1000 Chimoney ($1USD) from Keeplite!</p>
-        <Box>
-            <StyledLink  to={`/redeem-airtime/${CHI_REF}`}>Redeem Now as Airtime</StyledLink>
-        </Box>
+        <h1>Welcome To Keeplite </h1>
+          <p> To redeem your Chimoney as Airtime, Enter your <span>Ticket ID</span> or <span>Chi-REF</span> in the input below </p>
+          
+          <Box onMouseDown={clearErrorMsg} onKeyDown={clearErrorMsg}>
+          <input type="text" name="ChiREF" onChange={handleChange}/>
+            <Button  onClick={handleSubmit}>Submit</Button>
+          </Box>
+          {errorMsg ? <p className='error'>{errorMsg}</p> : ''}
     </HomeContainer>
   )
 }
@@ -29,42 +52,54 @@ h1{
     font-size: 4rem;
 }
 p{
-    margin: 3rem auto;
     font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
+input{
+    width: 50%;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border: 1px solid #f8f8f8;
+    background-color: #f8f8f8;
+    margin-right: 1rem;
+}
+span{
+    background-color: #00000078;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+.error{
+    font-size: 1.5rem;
+    color: #1a04048f;
+    text-transform: capitalize;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    }
 `
 
 const Box = styled.div`
-@keyframes float {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(255,255,255,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 25px 15px 0px rgba(255,255,255,0.2);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px rgba(255,255,255,0.6);
-		transform: translatey(0px);
-	}
-}
-box-shadow: 0 5px 5px 0px #70dfd6e4;
-background-color: white;
-transform: translatey(0px);
-animation: float 6s ease-in-out infinite;
-text-align: center;
-padding: 1rem;
-
+display: flex;
+justify-content: center;
+align-items: center;
 `
 
-const StyledLink = styled(Link)`
-padding: 1rem;
-font-size: 1.5rem;
-font-weight: 700;
-text-decoration: none;
-:active{
-    color: purple;
+const Button = styled.button`
+padding: 1rem 2rem;
+box-shadow: 0 5px 5px 0px #70dfd6e4; 
+background: linear-gradient(135deg, rgba(142, 68, 173, 1)  0%, rgba(26, 188, 156, 1) 100%);
+border: none;
+text-transform: uppercase;
+color: white;
+font-size: 1rem;
+transition: all ease-in 0.5secs;
+font-weight: 600;
+:hover{
+    cursor: pointer;
+    font-size: 1.05rem;
 }
 `
 

@@ -13,8 +13,6 @@ Run the following commands in the project directory
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Project Live Preview
-<img src="assets/preview.gif" alt="recorded-preview" title="recorded-preview">
 
 ## Screenshots of the the project
 <img src="assets/screenshot-1.PNG" alt="screenshot" title="screenshot">

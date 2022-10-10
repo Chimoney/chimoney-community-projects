@@ -11,14 +11,17 @@ import {API_KEY} from '../SecretKeys'
 const Redeem = () => {
     const [errorMsg, seterrorMsg] = useState('');
     const [loading, setLoading] = useState(false);
-    const [formDetails, setformDetails] = useState({});
-    const [ticketExist, setTicketExist] = useState(false)
+    const [formDetails, setformDetails] = useState({
+        chiRef: '',
+        countryToSend: '',
+        phoneNumber:''
+    });
 
     const { id } = useParams();
+    let validated = false;
 
     useEffect(() => {
         if (id) {
-            setTicketExist(true);
             setformDetails({
                 ...formDetails,
                chiRef: id
@@ -36,8 +39,7 @@ const Redeem = () => {
         console.log(formDetails)
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const validateFormInput = () => {
         let Phone = formDetails.phoneNumber;
 
         if (!formDetails.chiRef || !formDetails.countryToSend || !formDetails.phoneNumber) {
@@ -57,42 +59,49 @@ const Redeem = () => {
                 //remove unneccessary symbols from phone number and
                 // concatenate it with '+' to form a perfect phone number
                 Phone = '+' + Phone.replace(/\D/g, '');
-
-                let config = {
-                    method: 'POST',
-                    url: 'https://api.chimoney.io/v0.2/redeem/airtime',
-                    headers: {'X-API-Key': API_KEY },
-                    data: formDetails
-                  };
-                  
-                  axios(config)
-                    .then(function (response) {
-                        // console.log(JSON.stringify(response.data));
-                        setLoading(false);
-                        setformDetails({});
-                        setTicketExist(false)
-                        swal({
-                            title: 'Airtime Redeemed Successfully!',
-                            showClass: {
-                              popup: 'animate__animated animate__fadeInDown'
-                            },
-                            hideClass: {
-                              popup: 'animate__animated animate__fadeOutUp'
-                            }
-                          })
-                    })
-                      .catch(function (error) {
-                        setLoading(false);
-                        seterrorMsg('confirm ticket has not been used');
-                        setTicketExist(false)
-                        console.log(error)
-                    });
+                validated = true;
             } else {
                 setLoading(false);
                 seterrorMsg('make sure your phone number follows the correct format')
             }
         }
     }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        validateFormInput();
+   
+        if (validated) {
+            let config = {
+                method: 'POST',
+                url: 'https://api.chimoney.io/v0.2/redeem/airtime',
+                headers: {'X-API-Key': API_KEY },
+                data: formDetails
+            };
+            axios(config)
+              .then(function (response) {
+                  // console.log(JSON.stringify(response.data));
+                  setLoading(false);
+                  setformDetails({});
+                  swal({
+                      title: 'Airtime Redeemed Successfully!',
+                      showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                      },
+                      hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                      }
+                    })
+              })
+                .catch(function (error) {
+                  setLoading(false);
+                  seterrorMsg('confirm the ticket is still valid');
+                  console.log(error)
+              });
+        }
+    }
+        
     const clearErrorMsg = () => {
         seterrorMsg('')
     }
@@ -105,7 +114,7 @@ const Redeem = () => {
             
               <div>
               <p>Ticket ID</p>
-                  <input type="text" value={formDetails.chiRef} name="chiRef" onChange={handleChange} id="country" placeholder='enter ticket  id' disabled={ticketExist} />
+                  <input type="text" value={formDetails.chiRef} name="chiRef" onChange={handleChange} id="country" placeholder='enter ticket  id'  disabled/>
               </div>
               <div>
               <p>Phone number (+2349023..)</p>
