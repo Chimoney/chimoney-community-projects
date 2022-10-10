@@ -141,9 +141,9 @@ const Redeem = () => {
                   <p>Country</p>
                   <select name="countryToSend" value={formDetails.countryToSend} id="country" onChange={handleChange} >
                         <option value=''>Select Your Country</option>
-                        {countries.map((country, index) => (       
+                        {countries.length !== 0 ? countries.map((country, index) => (       
                             <option key={index} value={country}>{country}</option>
-                        ))}
+                        )): <option value=''>Loading..</option>}
                     </select>
                 {/* <input type="text" name="countryToSend" onChange={handleChange} id="country" placeholder='e.g: nigeria' /> */}
               </div>
