@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import swal from 'sweetalert';
-import countries from '../countries';
 import {API_KEY} from '../SecretKeys' 
 
 
@@ -11,6 +10,7 @@ import {API_KEY} from '../SecretKeys'
 const Redeem = () => {
     const [errorMsg, seterrorMsg] = useState('');
     const [loading, setLoading] = useState(false);
+    const [countries, setCountries] = useState([]);
     const [formDetails, setformDetails] = useState({
         chiRef: '',
         countryToSend: '',
@@ -20,13 +20,30 @@ const Redeem = () => {
     const { id } = useParams();
     let validated = false;
 
+    const getCountries = () => {
+        let config = {
+            method: 'GET',
+            url: 'https://api.chimoney.io/v0.2/info/airtime-countries',
+            headers: {'X-API-Key': API_KEY }
+        };
+        axios(config)
+          .then(function (response) {
+              setCountries(response.data.data)
+            //   console.log(JSON.stringify(response.data.data));
+          })
+            .catch(function (error) {
+              console.log(error)
+          });
+    }
+
     useEffect(() => {
         if (id) {
             setformDetails({
                 ...formDetails,
-               chiRef: id
-           })
+                chiRef: id
+            })
         }
+        getCountries()
     }, [id])
     
 
@@ -124,8 +141,8 @@ const Redeem = () => {
                   <p>Country</p>
                   <select name="countryToSend" value={formDetails.countryToSend} id="country" onChange={handleChange} >
                         <option value=''>Select Your Country</option>
-                        {countries.map(({name, value}) => (       
-                            <option key={value} value={name}>{name}</option>
+                        {countries.map((country, index) => (       
+                            <option key={index} value={country}>{country}</option>
                         ))}
                     </select>
                 {/* <input type="text" name="countryToSend" onChange={handleChange} id="country" placeholder='e.g: nigeria' /> */}
@@ -162,7 +179,7 @@ const FormContainer = styled.div`
         margin-bottom: 0.3rem;
     }
     .error{
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         color: #1a04048f;
         text-transform: capitalize;
         padding: 1rem;
