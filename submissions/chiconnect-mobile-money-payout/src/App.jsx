@@ -109,9 +109,9 @@ function App() {
             border-slate-300 focus:outline-none focus:border-purple-500
             w-full rounded-md sm:text-sm focus:ring-1'>
           {
-            momoCodes?.data?.map((momoCode) => (
+            momoCodes?.data?.map((momoCode, index) => (
               <option
-                key={`${momoCode.name}-${momoCode.code}`}
+                key={index}
                 value={momoCode.code}
                 onClick={() => setPaymentData(prevData => (
                   {
@@ -119,7 +119,7 @@ function App() {
                     country: momoCode.country
                   }
                 ))}>
-                {`${momoCode.code} — ${momoCode.name}`}
+                {`${momoCode.name}`}
               </option>
             ))
           }
