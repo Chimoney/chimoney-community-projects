@@ -7,6 +7,8 @@ const Giftcards = () => {
     const [searchTerm, setSearchTerm] = useState('')
     const [giftcards, setGiftcards] = useState([])
     const [originalCards, setOriginalCards] = useState([])
+    const [productId, setProductId] = useState(null)
+    const [selected, setSelected] = useState(null)
 
     const handleChange = (event) => {
         const searchQuery = event.target.value
@@ -20,6 +22,11 @@ const Giftcards = () => {
         } else {
             setGiftcards(originalCards)
         }
+    }
+
+    const handleClick = (productId) => {
+        setProductId(productId)
+        setSelected(productId)
     }
 
     useEffect(() => {
@@ -49,7 +56,7 @@ const Giftcards = () => {
                         Pay with Gift Card
                     </h3>
                     <p className='text-slate-500 text-sm max-w-[250px]'>
-                        Specify what kind of gift card would you like to pay to
+                        Specify what kind of gift card you like to pay to
                     </p>
                 </div>
 
@@ -60,6 +67,8 @@ const Giftcards = () => {
                                 key={item.productId}
                                 cardImg={item.logoUrls[0]}
                                 name={item.name}
+                                selected={item.productId === selected ? true : false}
+                                handleClick={() => handleClick(item.productId)}
                             />
                         )
                     }
