@@ -16,7 +16,7 @@ const Giftcards = () => {
         setSearchTerm(searchQuery)
         let filteredCards = []
         if (searchQuery.length > 0) {
-            filteredCards = giftcards.filter((item) =>
+            filteredCards = originalCards.filter((item) =>
                 item.name.toLowerCase().includes(searchQuery.toLowerCase()))
             setGiftcards(filteredCards)
         } else {
