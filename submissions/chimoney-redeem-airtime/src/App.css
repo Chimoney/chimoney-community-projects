@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica', sans-serif;
+}
+body{
+  background: rgb(26, 188, 156);
+  background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+}
+
