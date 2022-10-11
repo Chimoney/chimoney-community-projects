@@ -42,8 +42,15 @@ function App() {
     }
 
     if (paymentData.phoneNumber.length === 0) {
-      setError('Invalid phone number')
+      setError('Phone cannot be empty')
       return
+    } else {
+      const phoneNumberPattern = new RegExp(/^\+?[0-9]{3}\d{10}$/)
+      const isMatch = paymentData.phoneNumber.match(phoneNumberPattern)
+      if (!isMatch) {
+        setError('Invalid phone number')
+        return
+      }
     }
 
     if (paymentData.momoCode.length === 0) {
