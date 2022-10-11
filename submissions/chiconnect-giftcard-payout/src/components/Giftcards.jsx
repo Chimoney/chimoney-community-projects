@@ -4,7 +4,23 @@ import Giftcard from './Giftcard'
 
 const Giftcards = () => {
 
+    const [searchTerm, setSearchTerm] = useState('')
     const [giftcards, setGiftcards] = useState([])
+    const [originalCards, setOriginalCards] = useState([])
+
+    const handleChange = (event) => {
+        const searchQuery = event.target.value
+        console.log(searchQuery)
+        setSearchTerm(searchQuery)
+        let filteredCards = []
+        if (searchQuery.length > 0) {
+            filteredCards = giftcards.filter((item) =>
+                item.name.toLowerCase().includes(searchQuery.toLowerCase()))
+            setGiftcards(filteredCards)
+        } else {
+            setGiftcards(originalCards)
+        }
+    }
 
     useEffect(() => {
         const fetchGiftcards = async () => {
@@ -12,8 +28,8 @@ const Giftcards = () => {
             const newData = data.data.benefitsList.filter(
                 (asset) => asset.code === 'giftcard'
             )
-            console.log(newData)
             setGiftcards(newData)
+            setOriginalCards(newData)
         }
 
         fetchGiftcards()
@@ -21,7 +37,8 @@ const Giftcards = () => {
 
     return (
         <div className='flex flex-col'>
-            <input placeholder='Filter gift cards'
+            <input placeholder='Filter gift cards' onChange={handleChange}
+                value={searchTerm}
                 className='ml-auto mt-3 px-3 py-2 max-w-xs bg-white border shadow-sm 
                 border-slate-300 focus:outline-none focus:border-purple-500
                 w-full rounded-md sm:text-sm focus:ring-1' />
