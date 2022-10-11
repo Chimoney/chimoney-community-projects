@@ -3,7 +3,7 @@ import useInfo from '../hooks/getInfo'
 import GlobalMap from '../components/map/global.map'
 import countryData from '../utils/countries.json'
 import { useEffect, useState } from 'react'
-import { filterByCountry } from '../helpers/query'
+import { filterByCountry, filterByType, parseAssetType } from '../helpers/query'
 
 export default function Home() {
 
@@ -15,20 +15,23 @@ export default function Home() {
   const data = useInfo()
 
   const [filteredData, setFilteredData] = useState([])
+  const [filteredType, setFilteredType] = useState([])
 
 
   const apiStatus = data.status == "success" ? true : false
 
 
   useEffect(() => {
-    const benefits = data.data?.benefitList
+    const benefits = data.data?.benefitsList
+    
     setStatus(apiStatus)
 
     if (status) {
       setFilteredData(filterByCountry(country, benefits))
+      setFilteredType(parseAssetType(filteredData))
     }
 
-  }, [apiStatus, country, data.data?.benefitList, status])
+  }, [apiStatus, country, data.data?.benefitsList, filteredData, status])
 
 
 
@@ -43,7 +46,7 @@ export default function Home() {
         <div className='w-full lg:h-screen flex flex-col lg:flex-row'>
           {/* map */}
           <div className='lg:w-3/5 h-64 lg:h-full w-full lg:border-r'><GlobalMap /></div>
-          <div className='lg:w-2/5 w-full p-2'>
+          <div className='lg:w-2/5 lg:h-screen lg:overflow-y-auto w-full p-2'>
             <label className='mr-4 ' htmlFor='country'>
               Country
             </label>
@@ -60,7 +63,18 @@ export default function Home() {
               {!status ?
                 <div className='text-center mt-4'>Loading...</div>
                 :
-                <div>{console.log(filteredData)}</div>
+                <div>{
+                  filteredType.map((i,index)=>(
+                    <div key={index}><div className='font-bold border-l-8 px-2 border-black text-lg my-4'>{i}</div>
+                    {filterByType(i,filteredData).map((i,index)=>(
+                      <div key={index}>{i.name}</div>
+                      
+                    ))}
+                    
+                    </div>
+                  ))
+                  
+                  }</div>
               }
             </div>
           </div>

@@ -25,36 +25,18 @@ const GlobalMap = (props) => {
       initialViewState={{
         longitude: props.longitude,
         latitude: props.latitude,
-        zoom: 18,
-        bearing: 90,
-        pitch: 90,
+        zoom: 1.5,
+       
       }}
       style={{ width: '100%', height: '100%' }}
-      mapStyle="mapbox://styles/mapbox/streets-v10"
+      projection='globe'
+      mapStyle="mapbox://styles/mapbox/streets-v11"
+      onClick={(i)=>console.log(i)}
     >
-      
-      {props.places?.map((place,i) => {
-if(i!=0){ return(
-{/* <Marker  key={place?._id}
-   
-          longitude={place?.location?.coordinates[1].toFixed(2)}
-          latitude={place?.location?.coordinates[0].toFixed(2)}
-          >
-            <div className="cursor-pointer bg-white border border-white rounded-full" onClick={()=>router.push(`/place/${place._id}/profile`)}><img className={'rounded-full w-10 h-10 '} src={place?.image || '/images/avatar.jpeg'} /></div>
-           
-        </Marker>
-           */}
-         )
-   
-}
-       
-      }
-      )}
+      <NavigationControl/>
+    
 
-      {/* your location */}
-      {/* <Marker color="rgb(250 204 21)" longitude={props.longitude ? props.longitude : 0} latitude={props.latitude ? props.latitude : 0} anchor="bottom" /> */}
-      {/* <NavigationControl /> */}
-      {/* <GeolocateControl trackUserLocation showUserHeading ref={geolocateControlRef} /> */}
+     
     </Map>
   )
 }

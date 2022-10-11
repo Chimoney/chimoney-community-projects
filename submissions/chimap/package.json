@@ -1,6 +1,5 @@
 {
-  "name": "chimap",
-  "version": "0.1.0",
+  "name": "nearyu",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,18 +8,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "12.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-map-gl": "^7.0.19",
-    "leaflet": "^1.8.0",
+    "@next/swc-linux-x64-gnu": "^11.1.2",
+    "axios": "^0.26.1",
+    "country-locator": "^2.1.1",
     "mapbox-gl": "^2.10.0",
-    "axios": "^0.26.1"
+    "next": "12.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-map-gl": "^7.0.19"
   },
   "devDependencies": {
-    "eslint": "8.25.0",
-    "eslint-config-next": "12.3.1",
     "autoprefixer": "^10.4.4",
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23"
   }
