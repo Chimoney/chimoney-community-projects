@@ -14,9 +14,8 @@ const GlobalMap = (props) => {
       onLoad={props.onload}
       mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_KEY}
       initialViewState={{
-        longitude: props.longitude,
-        latitude: props.latitude,
-        zoom: 1.5,
+        
+        zoom: 1,
        
       }}
       style={{ width: '100%', height: '100%' }}

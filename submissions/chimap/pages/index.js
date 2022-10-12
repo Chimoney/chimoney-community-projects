@@ -44,7 +44,7 @@ export default function Home() {
       setFilteredType(parseAssetType(filteredData))
     }
 
-  }, [apiStatus, country, data.data?.benefitsList, filteredData, status])
+  }, [data?.data?.benefitsList, apiStatus, status, country, filteredData])
 
 
 
@@ -81,6 +81,7 @@ export default function Home() {
                   // render filtered data and types
                   filteredType.map((i, index) => (
                     <div key={index}><div className='font-bold border-l-8 px-2 border-black text-lg my-4'>{i}</div>
+                     
                       {filterByType(i, filteredData).map((i, index) => (
                         <div key={index}>{i.name}</div>
 
