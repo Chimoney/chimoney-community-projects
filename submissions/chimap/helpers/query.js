@@ -1,3 +1,4 @@
+// filters data by country param
 export function filterByCountry(param,data) {
     let filter = data?.filter((i) => i.countries ? (i.countries.includes(param) || i.countries.length == 0) : i.country.name == param);
     
@@ -7,7 +8,7 @@ export function filterByCountry(param,data) {
 
 
 
-
+// parses all the supported types
 export function parseAssetType(data) {
     let supportedType = []
     data?.map(i => {
@@ -18,7 +19,7 @@ export function parseAssetType(data) {
 return supportedType
 
 }
-
+// filters/group data by type passed as param
 export function filterByType(param,data) {
     let filter = data?.filter((i) => i.type == param);
     return filter
