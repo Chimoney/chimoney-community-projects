@@ -1,0 +1,28 @@
+{
+  "name": "chimoney.js",
+  "version": "1.0.0",
+  "description": "node sdk for Chimoney api by the community. Maintained by Awe Ayomidipupo\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chimoney/chimoney-community-projects.git"
+  },
+  "keywords": [
+    "chimoney",
+    "chimoney.js",
+    "chimoney-js"
+  ],
+  "author": "Awe Ayomidipupo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chimoney/chimoney-community-projects/issues"
+  },
+  "homepage": "https://github.com/Chimoney/chimoney-community-projects#readme",
+  "dependencies": {
+    "axios": "^1.1.2",
+    "dotenv": "^16.0.3"
+  }
+}
