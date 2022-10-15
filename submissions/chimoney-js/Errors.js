@@ -13,6 +13,14 @@ class ValueError extends ChiMoneyError {
   }
 }
 
+class TypeError extends ChiMoneyError {
+  constructor(message, errors) {
+    super(message);
+    this.errors = errors;
+    this.name = this.constructor.name;
+  }
+}
+
 class AuthKeyError extends ChiMoneyError {
   constructor(message) {
     super(message);
@@ -24,4 +32,5 @@ module.exports = {
   ChiMoneyError,
   ValueError,
   AuthKeyError,
+  TypeError,
 };
