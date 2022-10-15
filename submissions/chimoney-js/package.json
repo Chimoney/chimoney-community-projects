@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Chimoney/chimoney-community-projects#readme",
   "dependencies": {
     "axios": "^1.1.2",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "joi": "^17.6.3"
   }
 }
