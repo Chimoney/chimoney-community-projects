@@ -76,7 +76,7 @@ async function localAmountInUSD(originCurrency, amountInOriginCurrency) {
   return handleRequest({
     method: HTTPMETHODS.GET,
     params: { ...value },
-    path: "/v0.2/info/local-to-usd",
+    path: "/v0.2/info/local-amount-in-usd",
   });
 }
 
@@ -119,7 +119,7 @@ async function usdInLocalAmount(destinationCurrency, amountInUSD) {
   return handleRequest({
     method: HTTPMETHODS.GET,
     params: { ...value },
-    path: "/v0.2/info/usd-to-local",
+    path: "/v0.2/info/usd-amount-in-local",
   });
 }
 
