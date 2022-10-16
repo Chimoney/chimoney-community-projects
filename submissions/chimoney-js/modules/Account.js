@@ -8,18 +8,18 @@ const {
 
 /**
  * This function gets all transactions by IssueID
- * @param {string} issueId The issueID of the transaction
+ * @param {string} issueID The issueID of the transaction
  * @param {string?} subAccount The subAccount of the transaction
  * @returns The response from the Chi Money API
  */
-async function getTransactionsByIssueID(issueId, subAccount = null) {
-  if (!issueId) throw new ValueError("issueId is required");
+async function getTransactionsByIssueID(issueID, subAccount = null) {
+  if (!issueID) throw new ValueError("issueId is required");
 
-  if (typeof issueId !== "string")
+  if (typeof issueID !== "string")
     throw new TypeError("issueId must be a string");
 
   const payload = {};
-  const params = { issueId };
+  const params = { issueID };
 
   if (subAccount) payload.subAccount = subAccount;
 
@@ -89,24 +89,22 @@ async function accountTransfer(receiver, amount, wallet, subAccount = null) {
 
 /**
  * This function deletes an unpaid transaction
- * @param {string} transactionId The ID of the transaction
+ * @param {string} chiRef The ID of the transaction
  * @param {string?} subAccount The subAccount of the transaction
  * @returns The response from the ChiMoney API
  */
-async function deleteUnpaidTransaction(transactionId, subAccount = null) {
-  if (!transactionId) throw new ValueError("transactionId is required");
+async function deleteUnpaidTransaction(chiRef, subAccount = null) {
+  if (!chiRef) throw new ValueError("transactionId is required");
 
-  if (typeof transactionId !== "string")
+  if (typeof chiRef !== "string")
     throw new TypeError("transactionId must be a string");
 
-  const payload = {};
-  const params = { id: transactionId };
+  const payload = { chiRef };
 
   if (subAccount) payload.subAccount = subAccount;
 
   return handleRequest({
     method: HTTPMETHODS.DELETE,
-    params,
     payload,
     path: "/v0.2/accounts/delete-unpaid-transaction",
   });
