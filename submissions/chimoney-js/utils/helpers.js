@@ -1,7 +1,12 @@
 require("dotenv").config();
-const { default: axios } = require("axios");
+const {
+  AuthKeyError,
+  ValueError,
+  TypeError,
+  ChiMoneyError,
+} = require("../Errors");
+const axios = require("axios");
 const Joi = require("joi");
-const APIKEY = process.env.APIKEY;
 
 const BASEURL = "https://api.chimoney.io";
 
@@ -11,28 +16,32 @@ const HTTPMETHODS = {
   DELETE: "DELETE",
 };
 
-const schema = Joi.object({
-  method: Joi.valid(Object.values(HTTPMETHODS)).default(HTTPMETHODS.GET),
-  path: Joi.string().default(""),
-  payload: Joi.object().default({}),
-  params: Joi.object().default({}),
-});
-
 /**
  * This function handles requests to the Chi Money API
  * @param {{method: String, path: String, payload: {}, params: {any} }} requestOptions
  * @returns The response from the Chi Money API
  */
 const handleRequest = async (requestOptions) => {
+  const APIKEY = process.env.CHIMONEY_API_KEY;
+
+  // Define validation schema for requestOptions
+  const schema = Joi.object({
+    method: Joi.valid(...Object.values(HTTPMETHODS)).default(HTTPMETHODS.GET),
+    path: Joi.string().default(""),
+    payload: Joi.object().default({}),
+    params: Joi.object().default({}),
+  });
+
   try {
     // Check if api key is set
-    if (!APIKEY) throw Error("API key is required");
+    if (!APIKEY) throw new AuthKeyError("Missing auth key");
 
-    // Validate request options
+    // Validate request options using validation schema
     const { value, error } = schema.validate(requestOptions);
 
     // Throw error if requestOptions fails validator checks
-    if (error) throw Error(error.details);
+    if (error)
+      throw new TypeError("Invalid type provided", formatJoiErrors(error));
 
     const { method, path, payload, params } = value;
 
@@ -54,20 +63,31 @@ const handleRequest = async (requestOptions) => {
       headers,
     });
 
-    // Handle Response
+    // On success, send responses
     if ([200, 201].includes(response.status)) return response.data;
   } catch (error) {
     // If server responded with status code that falls out of 2xx
     if (error.response) {
-      return response.data;
-    } else {
-      // Throw other errors
-      throw error;
+      // Handle Chimoney error
+      if (error.response.data.status?.toLowerCase() === "error")
+        throw new ChiMoneyError(error.response.data.error);
     }
+    // Throw other errors
+    throw error;
   }
 };
 
+function formatJoiErrors(error) {
+  console.log(error);
+  return error.details.reduce((prev, current) => {
+    return {
+      ...prev,
+      [current.path]: current.message,
+    };
+  }, {});
+}
 module.exports = {
   handleRequest,
   HTTPMETHODS,
+  formatJoiErrors,
 };
