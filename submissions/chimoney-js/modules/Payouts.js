@@ -218,7 +218,11 @@ async function status(chiRef, subAccount = null) {
  * @param {string?} subAccount The subAccount of the transaction
  * @returns The response from the Chi Money API
  */
-async function initiateChimoney(chimoneys, crypto_payments, subAccount = null) {
+async function initiateChimoney(
+  chimoneys = [],
+  crypto_payments,
+  subAccount = null
+) {
   // Define validation schema
   const schema = Joi.object({
     crypto_payments: Joi.array().optional().default([]),
