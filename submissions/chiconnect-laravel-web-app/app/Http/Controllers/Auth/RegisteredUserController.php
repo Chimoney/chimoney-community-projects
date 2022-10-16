@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
+use App\Support\Chiconnect\SubAccount;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -39,16 +40,7 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
-
-        $response = Http::withHeaders([
-            'X-API-KEY' => config('chimoney.api_key'),
-            'accept' => 'application/json',
-            'content-type' => 'application/json',
-        ])->post('https://api.chimoney.io/v0.2/sub-account/create', [
-            'name' => $request->name,
-            'email' => $request->email
-        ]);
+        ]);;
 
         $user = User::create([
             'name' => $request->name,
@@ -57,9 +49,10 @@ class RegisteredUserController extends Controller
             'uuid' => Str::uuid(),
         ]);
 
-        if ($response->status() == 200) {
-            $user->sub_account_id = json_decode($response->body())->data->uid;
-            $user->update();
+        if ($sub_account_id = SubAccount::create($request->name, $request->email)) {
+            $user->update([
+                'sub_account_id' => $sub_account_id
+            ]);
         }
 
         event(new Registered($user));
