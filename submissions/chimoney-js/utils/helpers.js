@@ -78,7 +78,6 @@ const handleRequest = async (requestOptions) => {
 };
 
 function formatJoiErrors(error) {
-  console.log(error);
   return error.details.reduce((prev, current) => {
     return {
       ...prev,
