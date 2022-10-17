@@ -4,18 +4,28 @@ import heroTwo from '../assets/hero-two.png'
 import heroThree from '../assets/hero-three.png'
 import heroFour from '../assets/hero-four.png'
 import heroFive from '../assets/hero-five.png'
+import paperPlane from '../assets/paper-plane.png'
 
 const Hero = () => {
+
     return (
         <div className='container mx-auto px-12 flex flex-row justify-center items-center'>
 
             {/* first column */}
-            <div className='flex flex-col items-start'>
+            <div className='relative flex flex-col items-start'>
                 <img
                     src={heroOne}
                     alt={''}
                     className='rounded-lg p-2 shadow-inner shadow-pink-300/50 drop-shadow-md w-32'
                 />
+
+                <div className='absolute top-40 left-4 -rotate-45 w-16 opacity-95'>
+                    <img
+                        src={paperPlane}
+                        alt={''}
+                    />
+                </div>
+
                 <img
                     src={heroThree}
                     alt={''}
@@ -26,25 +36,36 @@ const Hero = () => {
             {/* second column */}
             <div className='flex flex-col justify-between items-center space-y-6'>
                 <h1 className='text-center text-5xl max-w-3xl font-epilogue font-semibold'>
-                    Make hassle-free payments across Africa
+                    Make <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500'>hassle-free </span>
+                    payments across Africa
                 </h1>
                 <p className='text-center font-epilogue max-w-md'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vero
                     quas cupiditate iste! Maiores harum, Quis saepe cum placeat
                 </p>
-                <button className='font-epilogue font-medium rounded-lg py-2 px-6 ring-2 ring-gray-400
+                <button className='font-epilogue font-medium rounded-lg py-2 px-6 group ring-2 ring-gray-400
                              hover:ring-purple-500 hover:shadow-lg hover:scale-105 transition-all'>
-                    Get Started
+                    <span className='group-hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500'>
+                        Get Started
+                    </span>
                 </button>
             </div>
 
             {/* third column */}
-            <div className='flex flex-col items-end'>
+            <div className='relative flex flex-col items-end'>
                 <img
                     src={heroFour}
                     alt={''}
                     className='rounded-lg p-2 shadow-inner shadow-purple-300/50 drop-shadow-md w-32'
                 />
+
+                <div className='absolute top-32 right-4 -rotate-180 w-16 opacity-95'>
+                    <img
+                        src={paperPlane}
+                        alt={''}
+                    />
+                </div>
+
                 <img
                     src={heroFive}
                     alt={''}
