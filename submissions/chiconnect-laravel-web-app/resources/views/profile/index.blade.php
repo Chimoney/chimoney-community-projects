@@ -13,6 +13,7 @@
                         <table class="table table-auto w-full text-center">
                             <thead>
                                 <tr class="border-b">
+                                    <th class="p-2">#</th>
                                     <th class="p-2">Name</th>
                                     <th class="p-2">Email</th>
                                     <th class="p-2">User ID</th>
@@ -23,11 +24,15 @@
                             </thead>
                             <tbody>
                                 @forelse($users as $user)
-                                    <tr class="hover:bg-gray-200 hover:cursor-pointer" onclick="document.location = '{{route('user.profile.show', $user->uuid)}}';">
+                                    <tr class="hover:bg-gray-200 hover:cursor-pointer"
+                                        onclick="document.location = '{{ route('user.profile.show', $user->uuid) }}';">
+                                        <td class="p-2">
+                                            {{ ($users->currentPage() - 1) * $users->perPage() + $loop->iteration }}
+                                        </td>
                                         <td class="p-2">{{ ucwords($user->name) }}</td>
                                         <td class="p-2">{{ $user->email }}</td>
                                         <td class="p-2">{{ $user->uuid }}</td>
-                                        <td class="p-2">{{ $user->sub_account_id ?? 'null'}}</td>
+                                        <td class="p-2">{{ $user->sub_account_id ?? 'null' }}</td>
                                         <td class="p-2">{{ ucfirst($user->type) }}</td>
                                         <td class="p-2">{{ $user->created_at }}</td>
                                     </tr>
@@ -40,7 +45,9 @@
                                 @endforelse
                             </tbody>
                         </table>
-                        {{ $users->links() }}
+                        <div class="my-3">
+                            {{ $users->links() }}
+                        </div>
                     </div>
                 </div>
             </div>
