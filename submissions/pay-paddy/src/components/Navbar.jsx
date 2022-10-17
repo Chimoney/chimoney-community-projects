@@ -8,13 +8,17 @@ const Navbar = () => {
 
                 <div className='flex flex-row justify-evenly items-center space-x-12'>
                     <button aria-label='login button'
-                        className='font-epilogue font-medium py-1.5 hover:text-purple-500 
+                        className='font-epilogue font-medium py-1.5 hover:text-purple-500 group
                         transition-all hover:border-b-[3px] hover:border-purple-500'>
-                        Login
+                        <span className='group-hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500'>
+                            Login
+                        </span>
                     </button>
-                    <button className='font-epilogue font-medium rounded-lg py-2 px-6 ring-2 ring-gray-400
+                    <button className='font-epilogue font-medium rounded-lg py-2 px-6 group ring-2 ring-gray-400
                              hover:ring-purple-500 hover:shadow-lg hover:scale-105 transition-all'>
-                        Signup
+                        <span className='group-hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500'>
+                            Signup
+                        </span>
                     </button>
                 </div>
             </div>
