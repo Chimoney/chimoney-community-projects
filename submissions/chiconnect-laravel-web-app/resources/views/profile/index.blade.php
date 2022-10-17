@@ -16,6 +16,7 @@
                                     <th class="p-2">#</th>
                                     <th class="p-2">Name</th>
                                     <th class="p-2">Email</th>
+                                    <th class="p-2">Username</th>
                                     <th class="p-2">User ID</th>
                                     <th class="p-2">Sub Account ID</th>
                                     <th class="p-2">Type</th>
@@ -31,6 +32,7 @@
                                         </td>
                                         <td class="p-2">{{ ucwords($user->name) }}</td>
                                         <td class="p-2">{{ $user->email }}</td>
+                                        <td class="p-2">{{ $user->username }}</td>
                                         <td class="p-2">{{ $user->uuid }}</td>
                                         <td class="p-2">{{ $user->sub_account_id ?? 'null' }}</td>
                                         <td class="p-2">{{ ucfirst($user->type) }}</td>

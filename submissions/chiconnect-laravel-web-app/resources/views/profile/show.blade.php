@@ -29,10 +29,17 @@
                     <h3 class="text-xl font-bold text-indigo-800">Wallet</h3>
                     <div class="grid grid-cols-3 justify-between space-x-4 mt-2">
                         @foreach ($wallets as $wallet)
-                            <div class="rounded-lg shadow-lg p-3 space-y-4 {{$wallet->type == 'chi' ? 'order-first' : ''}} ">
+                            <div
+                                class="rounded-lg shadow-lg p-3 space-y-4 {{ $wallet->type == 'chi' ? 'order-first' : '' }} ">
                                 <h4 class="font-bold text-lg">{{ $wallet_type[$wallet->type] }}</h4>
                                 <p class="text-lg">${{ $wallet->balance }}</p>
-                                <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold p-2 px-3 rounded-full">Top Up User</button>
+                                @if (isAdmin() && $wallet->type == 'chi')
+                                    <div>
+                                        <a href="{{ route('user.account.top-up-form', $user->uuid) }}"
+                                            class="bg-purple-600 hover:bg-purple-700 text-white font-bold p-2 px-3 rounded-full">Top
+                                            Up User</a>
+                                    </div>
+                                @endif
                             </div>
                         @endforeach
                     </div>

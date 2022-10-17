@@ -18,6 +18,11 @@
                 <x-input-error :messages="$errors->get('name')" class="mt-2" />
             </div>
 
+            <!-- Username -->
+            <livewire:styles />
+            <livewire:auth.register-user />
+            <livewire:scripts />
+            
             <!-- Email Address -->
             <div class="mt-4">
                 <x-input-label for="email" :value="__('Email')" />
