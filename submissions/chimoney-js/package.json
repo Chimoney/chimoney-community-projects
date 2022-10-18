@@ -1,6 +1,6 @@
 {
   "name": "chimoneyjs",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "node sdk for Chimoney api by the community. Maintained by Awe Ayomidipupo\"",
   "main": "index",
   "scripts": {
