@@ -14,4 +14,9 @@ class Transaction extends Model
     protected $fillable = [
         'sender', 'wallet', 'amount', 'tnxID', 'receiver'
     ];
+
+    public function recipient()
+    {
+        return $this->belongsTo(User::class, 'receiver', 'sub_account_id');
+    }
 }

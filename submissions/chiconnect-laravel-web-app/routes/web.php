@@ -3,6 +3,7 @@
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\WalletController;
 use App\Support\Chiconnect\Account;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +40,11 @@ Route::middleware('auth')->group(function () {
         Route::get('send/money', [AccountController::class, 'sendMoneyForm'])->name('account.send-money-form');
         Route::post('send/money', [AccountController::class, 'sendMoney'])->name('account.send-money');
     });
+
+    /**
+     * Transactions
+     */
+    Route::get('transaction/wallet/{wallet}', [TransactionController::class, 'wallet'])->name('transaction.wallet');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

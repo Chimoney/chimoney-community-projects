@@ -12,17 +12,19 @@
                     <div class="w-full flex justify-between">
                         <h3 class="text-xl font-bold text-indigo-800">Wallet</h3>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-between space-x-4 mt-2">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between mt-2">
                         @foreach ($wallets as $wallet)
                             <div
-                                class="rounded-lg shadow-lg p-3 space-y-4 {{ $wallet->type == 'chi' ? 'order-first' : '' }} ">
+                                class="m-2 mt-4 rounded-lg shadow-lg p-3 space-y-4 {{ $wallet->type == 'chi' ? 'order-first' : '' }} ">
                                 <h4 class="font-bold text-lg">{{ $wallet_type[$wallet->type] }}</h4>
-                                <p class="text-lg">${{ $wallet->balance }}</p>
+                                <p class="text-lg">${{ number_format($wallet->balance ?? 0, 2) }}</p>
                                 @if ($wallet->type == 'chi')
-                                    <div>
+                                    <div class="grid grid-cols-2 justify-between space-x-2">
                                         <a href="{{ route('user.account.send-money-form') }}"
-                                            class="bg-purple-600 hover:bg-purple-700 text-white font-bold p-2 px-3 rounded-full">Send
+                                            class="text-center bg-purple-600 hover:bg-purple-700 text-white font-bold p-1 px-2 rounded-lg">Send
                                             Money</a>
+                                        <a href="{{ route('transaction.wallet', 'flexible') }}"
+                                            class="text-center bg-slate-600 hover:bg-slate-700 text-white font-bold p-1 px-2 rounded-lg">Transactions</a>
                                     </div>
                                 @endif
                             </div>
