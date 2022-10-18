@@ -54,6 +54,6 @@ class Account
             return false;
         }
 
-        return collect(self::getWallets($sub_account))->where('type', 'he')->first() ?? false;
+        return collect(self::getWallets($sub_account))->where('type', $type)->first() ?? false;
     }
 }
