@@ -6,7 +6,7 @@ const issuerId = "f7d68f1f-3637-47a7-8db5-d69091986b27";
 const unpaidTransactionChiRef = "bcb71e77-b33d-4fc2-879e-52adb61e65f0";
 const receiverId = "qkCUiLgevEhUYbGenSiZgVisjLc2";
 
-describe("Test Account module", () => {
+describe("Account", () => {
   test("getAllTransactions: should successfully return all transactions on account from Chi Money API", async () => {
     const response = await account.getAllTransactions();
 

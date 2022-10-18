@@ -3,7 +3,7 @@ const { ValueError } = require("../Errors");
 require("dotenv").config();
 const { info } = require("../index")(process.env.TEST_API_KEY);
 
-describe("Test Info module", () => {
+describe("Info", () => {
   test("assets: should successfully return assests from Chi Money API", async () => {
     const response = await info.assets();
 
