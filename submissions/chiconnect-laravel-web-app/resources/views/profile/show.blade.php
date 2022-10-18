@@ -36,7 +36,7 @@
                                 @if (isAdmin() && $wallet->type == 'chi')
                                     <div class="flex w-full justify-end">
                                         <a href="{{ route('user.account.top-up-form', $user->uuid) }}"
-                                            class="flex-end text-base text-center bg-purple-600 hover:bg-purple-700 text-white font-bold px-3 py-2 rounded-lg">Top
+                                            class="flex-end text-base text-center hover:bg-purple-600 bg-purple-700 text-white font-bold px-3 py-2 rounded-lg">Top
                                             Up</a>
                                     </div>
                                 @endif

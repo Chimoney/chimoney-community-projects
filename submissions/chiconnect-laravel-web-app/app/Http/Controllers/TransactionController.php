@@ -9,11 +9,16 @@ class TransactionController extends Controller
 {
     public function wallet($wallet)
     {
+        $user = auth()->user();
         $wallet_type = $this->wallet_type($wallet);
 
         $transactions = Transaction::query()
             ->where('wallet', $wallet_type)
-            ->with('recipient')
+            ->where(function ($query) use ($user) {
+                $query->where('receiver', $user->sub_account_id)
+                    ->orWhere('sender', $user->sub_account_id);
+            })
+            ->with(['from', 'to'])
             ->latest()
             ->paginate(10);
 

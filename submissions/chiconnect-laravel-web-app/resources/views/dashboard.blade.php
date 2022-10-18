@@ -21,10 +21,10 @@
                                 @if ($wallet->type == 'chi')
                                     <div class="grid grid-cols-2 justify-between space-x-2">
                                         <a href="{{ route('user.account.send-money-form') }}"
-                                            class="text-center bg-purple-600 hover:bg-purple-700 text-white font-bold p-1 px-2 rounded-lg">Send
+                                            class="text-center hover:bg-purple-600 bg-purple-700 text-white font-bold p-1 px-2 rounded-lg">Send
                                             Money</a>
                                         <a href="{{ route('transaction.wallet', 'flexible') }}"
-                                            class="text-center bg-slate-600 hover:bg-slate-700 text-white font-bold p-1 px-2 rounded-lg">Transactions</a>
+                                            class="text-center hover:bg-slate-600 bg-slate-700 text-white font-bold p-1 px-2 rounded-lg">Transactions</a>
                                     </div>
                                 @endif
                             </div>

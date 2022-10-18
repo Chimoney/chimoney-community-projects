@@ -16,7 +16,8 @@
                                     <th class="p-2">#</th>
                                     <th class="p-2">Transaction ID</th>
                                     <th class="p-2">Amount ($)</th>
-                                    <th class="p-2">Receiver</th>
+                                    <th class="p-2">From</th>
+                                    <th class="p-2">To</th>
                                     <th class="p-2">Date</th>
                                 </tr>
                             </thead>
@@ -28,12 +29,23 @@
                                         </td>
                                         <td class="p-2">{{ $transaction->tnxID }}</td>
                                         <td class="p-2">{{ number_format($transaction->amount ?? 0, 2) }}</td>
-                                        <td class="p-2">{{ $transaction->recipient->username }}</td>
+                                        <td class="p-2">
+                                            @php
+                                                $from = $transaction->from->username ?? 'unknown';
+                                                echo $from == auth()->user()->username ? 'me' : $from;
+                                            @endphp
+                                        </td>
+                                        <td class="p-2">
+                                            @php
+                                                $from = $transaction->to->username ?? 'unknown';
+                                                echo $from == auth()->user()->username ? 'me' : $from;
+                                            @endphp
+                                        </td>
                                         <td class="p-2">{{ $transaction->created_at }}</td>
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td class="p-2" colspan="5">
+                                        <td class="p-2" colspan="6">
                                             <center>No transactions yet!</center>
                                         </td>
                                     </tr>

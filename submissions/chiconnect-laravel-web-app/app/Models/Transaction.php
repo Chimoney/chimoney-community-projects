@@ -15,8 +15,13 @@ class Transaction extends Model
         'sender', 'wallet', 'amount', 'tnxID', 'receiver'
     ];
 
-    public function recipient()
+    public function to()
     {
         return $this->belongsTo(User::class, 'receiver', 'sub_account_id');
+    }
+
+    public function from()
+    {
+        return $this->belongsTo(User::class, 'sender', 'sub_account_id');
     }
 }

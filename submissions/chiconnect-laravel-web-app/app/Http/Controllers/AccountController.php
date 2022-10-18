@@ -42,7 +42,9 @@ class AccountController extends Controller
 
     public function sendMoneyForm()
     {
-        return view('account.send-money');
+        return view('account.send-money', [
+            'balance' => Account::getWalletByType('chi', auth()->user()->sub_account_id)->balance ?? 0
+        ]);
     }
 
     public function sendMoney(Request $request)
