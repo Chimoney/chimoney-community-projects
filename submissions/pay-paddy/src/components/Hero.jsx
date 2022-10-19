@@ -1,6 +1,4 @@
-
 import heroOne from '../assets/hero-one.png'
-import heroTwo from '../assets/hero-two.png'
 import heroThree from '../assets/hero-three.png'
 import heroFour from '../assets/hero-four.png'
 import heroFive from '../assets/hero-five.png'
@@ -9,7 +7,7 @@ import paperPlane from '../assets/paper-plane.png'
 const Hero = () => {
 
     return (
-        <div className='container mx-auto px-12 flex flex-row justify-center items-center'>
+        <div className='container mx-auto px-20 flex flex-row justify-center items-center'>
 
             {/* first column */}
             <div className='relative flex flex-col items-start'>
@@ -43,7 +41,7 @@ const Hero = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vero
                     quas cupiditate iste! Maiores harum, Quis saepe cum placeat
                 </p>
-                <button className='font-epilogue font-medium rounded-lg py-2 px-6 group ring-2 ring-gray-400
+                <button aria-label='signup button' className='font-epilogue font-medium rounded-lg py-2 px-6 group ring-2 ring-gray-400
                              hover:ring-purple-500 hover:shadow-lg hover:scale-105 transition-all'>
                     <span className='group-hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500'>
                         Get Started

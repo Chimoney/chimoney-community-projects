@@ -1,6 +1,6 @@
 const Navbar = () => {
     return (
-        <nav className='container mx-auto p-12'>
+        <nav className='container mx-auto px-20 py-12'>
             <div className='flex flex-row justify-between items-center'>
                 <p className='font-epilogue text-xl font-medium'>
                     PayPaddy
@@ -14,7 +14,8 @@ const Navbar = () => {
                             Login
                         </span>
                     </button>
-                    <button className='font-epilogue font-medium rounded-lg py-2 px-6 group ring-2 ring-gray-400
+                    <button aria-label='Signup button'
+                        className='font-epilogue font-medium rounded-lg py-2 px-6 group ring-2 ring-gray-400
                              hover:ring-purple-500 hover:shadow-lg hover:scale-105 transition-all'>
                         <span className='group-hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500'>
                             Signup
