@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Transaction;
 use App\Models\User;
 use App\Support\Chiconnect\Account;
+use App\Support\Chiconnect\Wallet;
 use Illuminate\Http\Request;
 
 class AccountController extends Controller
@@ -40,14 +41,16 @@ class AccountController extends Controller
         return redirect()->back()->with('error', 'Oops, something went wrong')->withInput($request->input());
     }
 
-    public function sendMoneyForm()
+    public function createTransfer()
     {
-        return view('account.send-money', [
-            'balance' => Account::getWalletByType('chi', auth()->user()->sub_account_id)->balance ?? 0
+        $user = auth()->user();
+
+        return view('transfer.create', [
+            'balance' => Wallet::fetchBalance($user->chi_wallet_id, $user->sub_account_id)
         ]);
     }
 
-    public function sendMoney(Request $request)
+    public function processTransfer(Request $request)
     {
         $request->validate([
             'username' => ['required', 'string', 'exists:users'],
@@ -72,5 +75,24 @@ class AccountController extends Controller
         }
 
         return redirect()->back()->with('error', 'Oops, something went wrong')->withInput($request->input());
+    }
+
+    public function transferHistory()
+    {
+        $user = auth()->user();
+
+        $transfers = Transaction::query()
+            ->where('wallet', 'chi')
+            ->where(function ($query) use ($user) {
+                $query->where('receiver', $user->sub_account_id)
+                    ->orWhere('sender', $user->sub_account_id);
+            })
+            ->with(['from', 'to'])
+            ->latest()
+            ->paginate(10);
+
+        return view('transfer.history', [
+            'transfers' => $transfers
+        ]);
     }
 }

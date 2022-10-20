@@ -19,12 +19,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Route::get('/dashboard', [ProfileController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    /* Admin Routes*/
     Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
         /**
          * Profiles
@@ -37,14 +38,15 @@ Route::middleware('auth')->group(function () {
          */
         Route::get('{user:uuid}/top-up', [AccountController::class, 'topUpForm'])->name('account.top-up-form');
         Route::post('top-up', [AccountController::class, 'topUp'])->name('account.top-up');
-        Route::get('send/money', [AccountController::class, 'sendMoneyForm'])->name('account.send-money-form');
-        Route::post('send/money', [AccountController::class, 'sendMoney'])->name('account.send-money');
     });
 
+    /* USER ROUTES */
     /**
-     * Transactions
+     * Payments
      */
-    Route::get('transaction/wallet/{wallet}', [TransactionController::class, 'wallet'])->name('transaction.wallet');
+    Route::get('payment/transfer/create', [AccountController::class, 'createTransfer'])->name('payment.transfer.create');
+    Route::post('payment/transfer/process', [AccountController::class, 'processTransfer'])->name('payment.transfer.process');
+    Route::get('payment/transfer/history', [AccountController::class, 'transferHistory'])->name('payment.transfer.history');
 });
 
 require __DIR__ . '/auth.php';

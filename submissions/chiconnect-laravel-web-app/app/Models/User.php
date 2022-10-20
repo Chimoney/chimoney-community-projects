@@ -23,7 +23,8 @@ class User extends Authenticatable
         'password',
         'uuid',
         'sub_account_id',
-        'username'
+        'username',
+        'chi_wallet_id'
     ];
 
     /**

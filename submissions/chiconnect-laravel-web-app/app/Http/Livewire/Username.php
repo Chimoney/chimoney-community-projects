@@ -25,9 +25,11 @@ class Username extends Component
 
     public function updatedSearch()
     {
+        unset($this->username);
         $this->users = User::query()
             ->where('username', 'LIKE', '%' . $this->search . '%')
             ->where('id', '!=', auth()->id())
+            ->orderBy('username', 'asc')
             ->get();
     }
 

@@ -9,26 +9,25 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <div class="w-full flex justify-between">
-                        <h3 class="text-xl font-bold text-indigo-800">Wallet</h3>
+                    <div class="w-full flex justify-end space-x-1">
+                        <a href="{{ route('payment.transfer.history') }}"
+                            class="text-center hover:bg-slate-600 bg-slate-700 text-white font-bold p-1 px-2 rounded-lg">Transfers</a>
+                        {{-- <a href="#"
+                            class="text-center hover:bg-slate-600 bg-slate-700 text-white font-bold p-1 px-2 rounded-lg">Payouts</a> --}}
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between mt-2">
-                        @foreach ($wallets as $wallet)
-                            <div
-                                class="m-2 mt-4 rounded-lg shadow-lg p-3 space-y-4 {{ $wallet->type == 'chi' ? 'order-first' : '' }} ">
-                                <h4 class="font-bold text-lg">{{ $wallet_type[$wallet->type] }}</h4>
-                                <p class="text-lg">${{ number_format($wallet->balance ?? 0, 2) }}</p>
-                                @if ($wallet->type == 'chi')
-                                    <div class="grid grid-cols-2 justify-between space-x-2">
-                                        <a href="{{ route('user.account.send-money-form') }}"
-                                            class="text-center hover:bg-purple-600 bg-purple-700 text-white font-bold p-1 px-2 rounded-lg">Send
-                                            Money</a>
-                                        <a href="{{ route('transaction.wallet', 'flexible') }}"
-                                            class="text-center hover:bg-slate-600 bg-slate-700 text-white font-bold p-1 px-2 rounded-lg">Transactions</a>
-                                    </div>
-                                @endif
+                    <div class="mt-4 w-full flex justify-center">
+                        <div
+                            class="mx-auto w-full sm:w-1/2 lg:w-1/3 mt-4 rounded-lg shadow-lg px-2 py-4 space-y-6 text-center">
+                            <h4 class="font-bold text-lg">Balance</h4>
+                            <p class="text-3xl text-slate-600">${{ number_format($balance ?? 0, 2) }}</p>
+                            <div class="self-center">
+                                <div>
+                                    <a href="{{ route('payment.transfer.create') }}"
+                                        class="text-center hover:bg-purple-600 bg-purple-700 text-white font-bold p-1 px-2 rounded-lg">Send
+                                        Money</a>
+                                </div>
                             </div>
-                        @endforeach
+                        </div>
                     </div>
                 </div>
             </div>

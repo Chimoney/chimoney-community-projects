@@ -29,7 +29,7 @@
                 @endif
             </div>
 
-            <form method="POST" action="{{ route('user.account.send-money') }}" autocomplete="off">
+            <form method="POST" action="{{ route('payment.transfer.process') }}" autocomplete="off">
                 @csrf
                 <!-- Receiver -->
                 <livewire:styles />
