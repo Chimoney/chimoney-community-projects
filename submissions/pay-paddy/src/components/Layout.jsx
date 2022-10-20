@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
                 <Hero />
             </header>
 
-            <main className=''>
+            <main className='flex flex-col'>
                 {children}
             </main>
 

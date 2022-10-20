@@ -2,8 +2,8 @@ const Navbar = () => {
     return (
         <nav className='container mx-auto px-20 py-12'>
             <div className='flex flex-row justify-between items-center'>
-                <p className='font-epilogue text-xl font-medium'>
-                    PayPaddy
+                <p className='font-epilogue text-md font-medium tracking-wider'>
+                    PAYPADDY
                 </p>
 
                 <div className='flex flex-row justify-evenly items-center space-x-12'>
