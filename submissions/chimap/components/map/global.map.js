@@ -46,7 +46,7 @@ const GlobalMap = (props) => {
     }
     else {
       const flag=CountryList.findFlag(data[0]["alpha-2"].toLowerCase())
-      console.log(flag)
+    
       setCountry(`${flag?.flag} ${data[0]?.name}`)
       const filter = filterByCountry(data[0]?.name, benefits)
       setFilteredData(filter)
