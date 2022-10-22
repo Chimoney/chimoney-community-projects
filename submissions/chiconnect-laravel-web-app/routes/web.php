@@ -1,10 +1,8 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\PayoutController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\TransactionController;
-use App\Http\Controllers\WalletController;
-use App\Support\Chiconnect\Account;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,6 +45,8 @@ Route::middleware('auth')->group(function () {
     Route::get('payment/transfer/create', [AccountController::class, 'createTransfer'])->name('payment.transfer.create');
     Route::post('payment/transfer/process', [AccountController::class, 'processTransfer'])->name('payment.transfer.process');
     Route::get('payment/transfer/history', [AccountController::class, 'transferHistory'])->name('payment.transfer.history');
+    Route::get('payment/payout/history', [PayoutController::class, 'history'])->name('payment.payout.history');
+    Route::get('payment/payout/airtime/create', [PayoutController::class, 'createAirtime'])->name('payment.payout.airtime.create');
 });
 
 require __DIR__ . '/auth.php';
