@@ -9,10 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^9.12.1",
     "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.2"
+    "react-redux": "^8.0.4",
+    "react-redux-firebase": "^3.11.0",
+    "react-router-dom": "^6.4.2",
+    "redux": "^4.2.0",
+    "redux-firestore": "^1.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
