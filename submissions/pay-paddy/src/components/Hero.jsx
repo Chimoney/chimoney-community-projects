@@ -32,14 +32,14 @@ const Hero = () => {
             </div>
 
             {/* second column */}
-            <div className='flex flex-col justify-between items-center space-y-6'>
+            <div className='flex flex-col justify-between items-center space-y-8'>
                 <h1 className='text-center text-5xl max-w-3xl font-epilogue font-semibold'>
                     Make <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500'>hassle-free </span>
-                    payments across Africa
+                    payments across the globe
                 </h1>
-                <p className='text-center font-epilogue max-w-md'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vero
-                    quas cupiditate iste! Maiores harum, Quis saepe cum placeat
+                <p className='text-center font-epilogue text-slate-700 max-w-lg'>
+                    PayPaddy serves as your personal payment assistant, allowing you to make rapid
+                    transactions ranging from bank transfers to bulk airtime payments and more.
                 </p>
                 <button aria-label='signup button' className='font-epilogue font-medium rounded-lg py-2 px-6 group ring-2 ring-gray-400
                              hover:ring-purple-500 hover:shadow-lg hover:scale-105 transition-all'>

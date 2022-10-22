@@ -89,8 +89,7 @@ const MoreInfo = () => {
                     </div>
 
                     <p className='font-epilogue font-sm text-slate-600 max-w-md'>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        ea enim omnis repudiandae qui officia consectetur repellat pariatur in recusandae inventore voluptate.
+                        Supercharge your payment capabilites
                     </p>
 
                     <button aria-label='signup button' className='font-epilogue font-medium rounded-lg py-2 px-6 group ring-2 ring-gray-400

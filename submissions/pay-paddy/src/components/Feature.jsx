@@ -8,7 +8,7 @@ const Feature = () => {
                     Make frictionless payments now
                 </h3>
                 <p className='font-epilogue text-sm text-slate-600 text-center mt-4'>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Instantly unlock access to varieties of payment possibilites
                 </p>
 
                 {/* FEATURE DATA */}
@@ -25,8 +25,8 @@ const Feature = () => {
                             Bank
                         </h4>
 
-                        <p className='font-epilogue text-sm text-slate-600 text-center mt-2'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <p className='font-epilogue text-base text-slate-600 text-center mt-2'>
+                            Supercharge bank transfers with our bank payout option
                         </p>
                     </div>
 
@@ -42,8 +42,8 @@ const Feature = () => {
                             Airtime
                         </h4>
 
-                        <p className='font-epilogue text-sm text-slate-600 text-center mt-2'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <p className='font-epilogue text-base text-slate-600 text-center mt-2'>
+                            Supercharge airtime transfers with our airtime payout option
                         </p>
                     </div>
 
@@ -59,8 +59,8 @@ const Feature = () => {
                             Mobile Money
                         </h4>
 
-                        <p className='font-epilogue text-sm text-slate-600 text-center mt-2'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <p className='font-epilogue text-base text-slate-600 text-center mt-2'>
+                            Conveniently make mobile money payouts across Africa
                         </p>
                     </div>
 
@@ -76,8 +76,8 @@ const Feature = () => {
                             Giftcard
                         </h4>
 
-                        <p className='font-epilogue text-sm text-slate-600 text-center mt-2'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <p className='font-epilogue text-base text-slate-600 text-center mt-2'>
+                            Send giftcards as payments or rewards to anyone with ease. 
                         </p>
                     </div>
 
@@ -93,8 +93,8 @@ const Feature = () => {
                             Account
                         </h4>
 
-                        <p className='font-epilogue text-sm text-slate-600 text-center mt-2'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <p className='font-epilogue text-base text-slate-600 text-center mt-2'>
+                            Transfer payment to another paypaddy user
                         </p>
                     </div>
                     
@@ -110,8 +110,8 @@ const Feature = () => {
                             Escrow
                         </h4>
 
-                        <p className='font-epilogue text-sm text-slate-600 text-center mt-2'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <p className='font-epilogue text-base text-slate-600 text-center mt-2'>
+                            Ease the friction when making payments to merchants
                         </p>
                     </div>
                 </div>
