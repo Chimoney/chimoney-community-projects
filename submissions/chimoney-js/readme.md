@@ -414,11 +414,12 @@ This function handles the initiate chimoney API
 
 _Returns_: The response from the Chi Money API
 
-| Param           | Type                              | Default           | Description                                               |
-| --------------- | --------------------------------- | ----------------- | --------------------------------------------------------- |
-| chimoneys       | <code>Array.&lt;object&gt;</code> |                   | An array of objects containing the chimoney details       |
-| crypto_payments | <code>Array.&lt;object&gt;</code> |                   | An array of objects containing the crypto payment details |
-| subAccount      | <code>string</code>               | <code>null</code> | The subAccount of the transaction                         |
+| Param               | Type                              | Default            | Description                                                |
+| ------------------- | --------------------------------- | ------------------ | ---------------------------------------------------------- |
+| chimoneys           | <code>Array.&lt;object&gt;</code> |                    | An array of objects containing the chimoney details        |
+| turnOffNotification | <code>boolean</code>              | <code>false</code> | If set to true turns of email notification for this payout |
+| crypto_payments     | <code>Array.&lt;object&gt;</code> |                    | An array of objects containing the crypto payment details  |
+| subAccount          | <code>string</code>               | <code>null</code>  | The subAccount of the transaction                          |
 
 **Example**
 
