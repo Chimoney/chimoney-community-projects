@@ -7,7 +7,7 @@ const Feature = () => {
                 <h3 className='font-epilogue font-semibold text-4xl text-slate-900'>
                     Make frictionless payments now
                 </h3>
-                <p className='font-epilogue text-sm text-slate-600 text-center mt-4'>
+                <p className='font-epilogue text-base text-slate-600 text-center mt-2'>
                     Instantly unlock access to varieties of payment possibilites
                 </p>
 
@@ -77,7 +77,7 @@ const Feature = () => {
                         </h4>
 
                         <p className='font-epilogue text-base text-slate-600 text-center mt-2'>
-                            Send giftcards as payments or rewards to anyone with ease. 
+                            Send giftcards as payments or rewards to anyone with ease
                         </p>
                     </div>
 

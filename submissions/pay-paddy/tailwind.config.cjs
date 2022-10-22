@@ -8,6 +8,9 @@ module.exports = {
     extend: {
       fontFamily: {
         epilogue: 'Epilogue, sans-serif'
+      },
+      colors: {
+        'veryDarkBlue': 'hsl(240, 12%, 13%)'
       }
     },
   },
