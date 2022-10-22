@@ -23,30 +23,43 @@ Route::get('/', function () {
 Route::get('/dashboard', [ProfileController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    /* Admin Routes*/
+    /**
+     * 
+     *  ADMIN ROUTES
+     * 
+     * 
+     */
     Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
-        /**
-         * Profiles
-         */
+        /* Profiles */
         Route::get('profile', [ProfileController::class, 'index'])->name('profile.index');
         Route::get('profile/{user:uuid}', [ProfileController::class, 'show'])->name('profile.show');
 
-        /**
-         * Account
-         */
+        /* Account */
         Route::get('{user:uuid}/top-up', [AccountController::class, 'topUpForm'])->name('account.top-up-form');
         Route::post('top-up', [AccountController::class, 'topUp'])->name('account.top-up');
     });
 
-    /* USER ROUTES */
     /**
-     * Payments
+     * 
+     *  USER ROUTES
+     * 
      */
-    Route::get('payment/transfer/create', [AccountController::class, 'createTransfer'])->name('payment.transfer.create');
-    Route::post('payment/transfer/process', [AccountController::class, 'processTransfer'])->name('payment.transfer.process');
-    Route::get('payment/transfer/history', [AccountController::class, 'transferHistory'])->name('payment.transfer.history');
-    Route::get('payment/payout/history', [PayoutController::class, 'history'])->name('payment.payout.history');
-    Route::get('payment/payout/airtime/create', [PayoutController::class, 'createAirtime'])->name('payment.payout.airtime.create');
+    /* Payments */
+    Route::group(['prefix' => 'payment', 'as' => 'payment.'], function () {
+        /* Transfer */
+        Route::group(['prefix' => 'transfer', 'as' => 'transfer.'], function () {
+            Route::get('create', [AccountController::class, 'createTransfer'])->name('create');
+            Route::post('process', [AccountController::class, 'processTransfer'])->name('process');
+            Route::get('history', [AccountController::class, 'transferHistory'])->name('history');
+        });
+
+        /* Payout */
+        Route::group(['prefix' => 'payout', 'as' => 'payout.'], function () {
+            Route::get('history', [PayoutController::class, 'history'])->name('history');
+            Route::get('airtime', [PayoutController::class, 'createAirtime'])->name('airtime.create');
+            Route::get('bank', [PayoutController::class, 'createBank'])->name('bank.create');
+        });
+    });
 });
 
 require __DIR__ . '/auth.php';

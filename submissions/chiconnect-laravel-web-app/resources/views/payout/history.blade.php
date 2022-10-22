@@ -20,11 +20,11 @@
                                     class="hidden absolute text-base z-50 py-2 list-none rounded-lg border mt-1 m-0 w-full text-center bg-white">
                                     <li>
                                         <a class="dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                            href="{{route('payment.payout.airtime.create')}}">Airtime</a>
+                                            href="{{ route('payment.payout.airtime.create') }}">Airtime</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                            href="#">Bank</a>
+                                            href="{{ route('payment.payout.bank.create') }}">Bank</a>
                                     </li>
                                 </ul>
                             </div>

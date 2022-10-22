@@ -23,15 +23,16 @@ class Payout
             ]
         ]);
 
-        if($response->status() == 200){
+        if ($response->status() == 200) {
             return json_decode($response)->data->data;
         }
 
         return false;
     }
 
-    public static function Bank(string $sub_account, string $country, string $bank_code, string $account_number, string $valueInUSD)
+    public static function Bank(string $sub_account, string $country, string $bank_code, string $account_number, string $valueInUSD, string $reference)
     {
+        // dd($sub_account, $country, $bank_code, $account_number, $valueInUSD, $reference);
         $response =  Http::withHeaders([
             'X-API-KEY' => config('chimoney.api_key'),
             'accept' => 'application/json',
@@ -44,73 +45,17 @@ class Payout
                     'account_bank' => $bank_code,            // 058 for Guaranty Trust Bank
                     'account_number' => $account_number,     // 0234567890
                     'valueInUSD' => $valueInUSD,             // >= 1
+                    'reference' => $reference                //{generated uuid}
+
                 ]
             ]
         ]);
 
-        if($response->status() == 200){
-            return json_decode($response)->data;
+        if ($response->status() == 200) {
+            return json_decode($response)->data->chimoneys;
         }
 
         return false;
-
-        // RESPONSE SAMPLE
-        // {
-        //     "status": "success",
-        //     "data": {
-        //       "chimoneys": [
-        //         {
-        //           "id": "mWpLOCfjSnaJKsQzksUx",
-        //           "account_number": "0234567890",
-        //           "issueDate": "2022-10-20T20:16:51.359Z",
-        //           "integration": {
-        //             "appID": "pIsRyLXuKHBVlWzdVAYb"
-        //           },
-        //           "type": "bank",
-        //           "chiRef": "b7f64d59-c521-4fe3-a756-26ac83d55002",
-        //           "account_bank": "058",
-        //           "countryToSend": "Nigeria",
-        //           "enabledToRedeem": [
-        //             "bank"
-        //           ],
-        //           "chimoney": 1000,
-        //           "issuer": "d6e267f7-c4c5-435a-8f2a-0ee413026dfc",
-        //           "issueID": "d6e267f7-c4c5-435a-8f2a-0ee413026dfc_1_1666297006803",
-        //           "valueInUSD": 1,
-        //           "fee": 0,
-        //           "status": "redeemed"
-        //         }
-        //       ],
-        //       "payouts": [
-        //         {
-        //           "payoutLink": "https://dash.chimoney.io/pay/?issueID=d6e267f7-c4c5-435a-8f2a-0ee413026dfc_1_1666297006803",
-        //           "error": "None",
-        //           "id": 35627209,
-        //           "account_number": "0234567890",
-        //           "bank_code": "058",
-        //           "full_name": "lAST_NAME, FIRST_NAME OTHER_NAME",
-        //           "created_at": "2022-10-20T20:16:50.000Z",
-        //           "currency": "NGN",
-        //           "debit_currency": "NGN",
-        //           "amount": 550,
-        //           "fee": 10.75,
-        //           "status": "NEW",
-        //           "reference": "b7f64d59-c521-4fe3-a756-26ac83d55002_1666297009694",
-        //           "meta": {
-        //             "valueInUSD": 1,
-        //             "chiRef": "b7f64d59-c521-4fe3-a756-26ac83d55002",
-        //             "country": "NG",
-        //             "currency": "NGN",
-        //             "type": "bank"
-        //           },
-        //           "complete_message": "",
-        //           "requires_approval": 0,
-        //           "is_approved": 1,
-        //           "bank_name": "GTBANK PLC"
-        //         }
-        //       ]
-        //     }
-        //   }
     }
 
     public static function Status(string $sub_account, string $chiRef)
@@ -124,14 +69,14 @@ class Payout
             'chiRef' => $chiRef
         ]);
 
-        if($response->status() == 200){
+        if ($response->status() == 200) {
             return json_decode($response)->data;
         }
 
         return false;
 
         // SAMPLE RESPONSE
-        
+
         // AIRTIME
         // {
         //     "status": "success",

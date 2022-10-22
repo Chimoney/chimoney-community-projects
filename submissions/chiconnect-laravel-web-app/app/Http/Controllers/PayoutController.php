@@ -23,4 +23,13 @@ class PayoutController extends Controller
             'balance' => Wallet::fetchBalance($user->chi_wallet_id, $user->sub_account_id)
         ]);
     }
+
+    public function createBank()
+    {
+        $user = auth()->user();
+
+        return view('payout.bank', [
+            'balance' => Wallet::fetchBalance($user->chi_wallet_id, $user->sub_account_id)
+        ]);
+    }
 }

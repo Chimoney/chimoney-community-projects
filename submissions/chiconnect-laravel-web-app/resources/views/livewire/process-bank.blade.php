@@ -25,37 +25,59 @@
             @endif
         </div>
 
-        <form method="POST" wire:submit.prevent="submit()" autocomplete="off">
+        <form method="POST" wire:submit.prevent="submit()" autocomplete="off" wire:loading.attr="disable">
             @csrf
             <!-- Select a country -->
             <div class="mt-4">
                 <x-input-label for="country" :value="__('Country')" />
-                <select wire:model.lazy="country" name="country" class="block mt-1 w-full" required autofocus>
+                <select wire:loading.attr="disabled" wire:model="country" name="country" class="block mt-1 w-full"
+                    required autofocus>
                     <option>-- Select a country --</option>
-                    @foreach ($countries as $airtime_country)
-                        <option value="{{ $airtime_country }}">{{ $airtime_country }}</option>
+                    @foreach ($countries as $code => $name)
+                        <option value="{{ $code }}">{{ $name }}</option>
                     @endforeach
                 </select>
-                <x-input-error :messages="$errors->get('country')" class="mt-2" />
+                <p wire:loading wire:target="country" class="my-1 font-bold text-sm text-green-900">Fetching supported
+                    banks...</p>
+                <x-input-error wire:loading.remove wire:target="country" :messages="$errors->get('country')" class="mt-2" />
             </div>
-            @if ($country)
-                <!-- Phone number -->
+
+            @if (count($country_banks))
+                <!-- Select a bank -->
                 <div class="mt-4">
-                    <x-input-label for="phone" :value="__('Phone number')" />
-
-                    <input wire:model.lazy="phone" type="tel" id="phone" class="block mt-1 w-full"
-                        name="phone" value="{{ old('phone') }}" required placeholder="+12388888888" />
-
-                    <x-input-error :messages="$errors->get('phone')" class="mt-2" />
+                    <x-input-label for="Bank" :value="__('Bank')" />
+                    <select wire:model="bank" name="bank" class="block mt-1 w-full" required autofocus>
+                        <option>-- Select a bank --</option>
+                        @foreach ($country_banks as $country_bank)
+                            @php $country_bank = (array)$country_bank; @endphp
+                            <option value="{{ $country_bank['code'] }}">{{ $country_bank['name'] }}</option>
+                        @endforeach
+                    </select>
+                    <p wire:loading wire:target="bank" class="my-1 font-bold text-sm text-green-900">Processing ...</p>
+                    <x-input-error wire:loading.remove wire:target="bank" :messages="$errors->get('bank')" class="mt-2" />
                 </div>
+            @endif
 
+
+            @if ($bank)
+                <!-- Account Number -->
+                <div class="mt-4">
+                    <x-input-label for="account" :value="__('Account number')" />
+                    <input wire:model.debounce.750ms="account" type="text" id="account" class="block mt-1 w-full"
+                        name="account" value="{{ old('account') }}" required placeholder="0234566789" />
+                    <p class="my-1 font-bold text-sm text-green-900">{{ $account_holder }}</p>
+                    <p wire:loading wire:target="account" class="my-1 font-bold text-sm text-green-900">Verifying
+                        account...</p>
+                    <x-input-error wire:loading.remove wire:target="account" :messages="$errors->get('account')" class="mt-2" />
+                </div>
+            @endif
+
+            @if ($account_holder)
                 <!-- Amount in USD -->
                 <div class="mt-4">
                     <x-input-label for="amount" :value="__('Amount (in USD)')" />
-
                     <input wire:model="amount" type="number" id="amount" class="block mt-1 w-full" name="amount"
-                        value="{{ old('amount') }}" required />
-
+                        value="{{ old('amount') }}" max="{{ $balance }}" required />
                     <x-input-error :messages="$errors->get('amount')" class="mt-2" />
                 </div>
             @endif
