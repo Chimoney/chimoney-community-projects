@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
+    "deployCommands": "node deploy-commands.js",
     "dev": "nodemon index.js"
   },
   "author": "",
