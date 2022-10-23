@@ -29,7 +29,7 @@
                 @endif
             </div>
 
-            <form method="POST" action="{{ route('payment.transfer.process') }}" autocomplete="off">
+            <form id="submit-form" method="POST" action="{{ route('payment.transfer.process') }}" autocomplete="off">
                 @csrf
                 <!-- Receiver -->
                 <livewire:styles />
@@ -48,15 +48,22 @@
                 </div>
 
                 <div class="flex items-center justify-end mt-4">
-                    <a class="justify-self-end underline text-sm text-gray-600 hover:text-gray-900"
+                    <a id="go-back" class="justify-self-end underline text-sm text-gray-600 hover:text-gray-900"
                         href="{{ route('dashboard') }}">
                         {{ __('Go back') }}
                     </a>
 
                     @if ($balance)
-                        <x-primary-button class="ml-4">
+                        <x-primary-button type="submit" id="send-button" class="ml-4">
                             {{ __('Send') }}
                         </x-primary-button>
+                        <script>
+                            document.getElementById("submit-form").addEventListener('submit', (event) => {
+                                document.getElementById("send-button").disabled = true;
+                                document.getElementById("send-button").innerHTML = "Processing...";
+                                document.getElementById("go-back").innerHTML = '';
+                            });
+                        </script>
                     @endif
                 </div>
             </form>
