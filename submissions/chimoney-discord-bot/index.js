@@ -1,7 +1,9 @@
 require("dotenv").config();
 const { Client, Events, GatewayIntentBits } = require("discord.js");
 const { loadCommands } = require("./utils/helpers");
+const app = require("./app");
 
+// Instantiate new client
 const client = new Client({ intents: GatewayIntentBits.Guilds });
 loadCommands(client);
 
@@ -29,4 +31,9 @@ client.on(Events.InteractionCreate, async (interaction) => {
   }
 });
 
-client.login(process.env.BOT_TOKEN);
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => {
+  console.log(`Listening for requests on port ${port}`);
+  client.login(process.env.BOT_TOKEN);
+});
