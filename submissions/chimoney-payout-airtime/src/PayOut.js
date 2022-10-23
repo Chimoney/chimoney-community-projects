@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import { API_KEY } from "../SecretKeys";
+import { API_KEY } from "./SecretKeys";
 import { FormContainer, Table } from "./style.js";
 
 const PayOut = () => {

@@ -5,7 +5,7 @@ import {
   Routes, 
   Route
 } from 'react-router-dom';
-import PayOut from './components/PayOut';
+import PayOut from './PayOut';
 
 function App() {
   return (
