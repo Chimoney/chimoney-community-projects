@@ -24,7 +24,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   try {
     // Execute command action
-    await command.execute(interaction);
+    await command.execute(interaction, client);
   } catch (error) {
     console.error(`Error executing ${interaction.commandName}`);
     console.error(error);

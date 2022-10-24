@@ -22,13 +22,14 @@ module.exports = {
     .setDMPermission(true),
 
   // Code to execute when command is initiated
-  async execute(interaction) {
+  async execute(interaction, client) {
     // Get amount and user parameters from command option
     const amount = interaction.options.get("amount");
     const beneficiary = interaction.options.get("beneficiary");
 
-    // Discord interaction are only valid for a few seconds, longer tasks require you to deferReply
-    await interaction.deferReply({ ephemeral: true }); // Ephemeral replies can only be seen by the sender
+    await interaction.reply({
+      content: `Check your DM <@${interaction.user.id}>`,
+    }); // Ephemeral replies can only be seen by the sender
 
     // Metadata to be sent in payload
     const meta = {
@@ -48,9 +49,12 @@ module.exports = {
       true
     );
 
-    // Send link to the sender
-    await interaction.editReply({
-      content: `To complete this transaction click [here](${data.paymentLink}) `,
+    // Send payment link in a DM to the user
+    await client.send(interaction.user.id, {
+      content: `Hello, this is a payment link for you. Please pay the amount specified to the address specified. If you have any questions, please contact
+      support@chimoney.io.
+      [Payment Link](${data.paymentLink})
+      ChiRef: ${data.chiRef}`,
     });
   },
 };
