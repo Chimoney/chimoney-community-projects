@@ -16,9 +16,9 @@ function App() {
     'name': '',
     'countryCode': 'US',
     'amount': '',
-    'max': 0,
-    'min': 0,
-    'denominations': []
+    'max': null,
+    'min': null,
+    'denominations': null
   })
 
   const setProduct = (id, name, countryCode, max, min, denominations) => {
@@ -31,6 +31,7 @@ function App() {
       'min': min,
       'denominations': denominations
     }))
+    denominations && setPaymentData(prevData => ({...prevData, 'amount': denominations[0]}))
   }
 
   const handleFormChange = (event) => {
@@ -43,31 +44,21 @@ function App() {
 
   const sendGiftcard = async () => {
     const baseUrl = 'https://api.chimoney.io/v0.2/'
-    const valueInLocalCurrency = await
-      fetch(`${baseUrl}/info/usd-amount-in-local?destinationCurrency=NGN&amountInUSD=${paymentData.amount}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-API-KEY': API_KEY
-        }
-      }).then(response => response.json())
-        .then(jsonData => jsonData.data.amountInDestinationCurrency)
 
-    fetch(`${baseUrl}/payouts/gift-card`, {
+    fetch(`${baseUrl}/payouts/initiate-chimoney`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'X-API-KEY': API_KEY
       },
       body: JSON.stringify({
-        giftcards: [
+        chimoneys: [
           {
             email: paymentData.email,
             valueInUSD: Number(paymentData.amount),
             redeemData: {
               productId: Number(paymentData.productId),
-              countryCode: paymentData.countryCode,
-              valueInLocalCurrency: valueInLocalCurrency
+              countryCode: paymentData.countryCode
             }
           }
         ]
@@ -79,11 +70,8 @@ function App() {
           setError(result.error)
           setInfo('')
         } else {
-          const payObj = result.data.chimoneys[0]
-          const successMsg = `${paymentData.name} giftcard worth ${payObj.valueInUSD}
-              has been successfully sent to ${payObj.email} for a fee of ${payObj.fee}. 
-              Chiref: ${payObj.chiRef}; Date: ${payObj.issueDate}; Thank you for using Chimoney`
-          setInfo(successMsg)
+          const paymentLink = result.data.paymentLink
+          window.open(paymentLink)  // redirect to chimoney redeem payment page
         }
       })
       .catch(err => console.error(err.message))
@@ -100,6 +88,11 @@ function App() {
         setError('Invalid email')
         return
       }
+    }
+
+    if (paymentData.denominations === null && paymentData.max === null && paymentData.min === null) {
+      setError('Select a giftcard')
+      return
     }
 
     if (paymentData.amount.length === 0) {
