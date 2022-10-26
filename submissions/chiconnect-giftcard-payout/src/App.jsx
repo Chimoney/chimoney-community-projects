@@ -14,17 +14,24 @@ function App() {
     'email': '',
     'productId': '',
     'name': '',
-    'countryCode': '',
-    'amount': ''
+    'countryCode': 'US',
+    'amount': '',
+    'max': null,
+    'min': null,
+    'denominations': null
   })
 
-  const setProductId = (id, name) => {
+  const setProduct = (id, name, countryCode, max, min, denominations) => {
     setPaymentData(prevData => ({
       ...prevData,
       'productId': id,
-      'name': name
+      'name': name,
+      'countryCode': countryCode,
+      'max': max,
+      'min': min,
+      'denominations': denominations
     }))
-    console.log(paymentData)
+    denominations && setPaymentData(prevData => ({...prevData, 'amount': denominations[0]}))
   }
 
   const handleFormChange = (event) => {
@@ -33,37 +40,25 @@ function App() {
       ...prevData,
       [name]: value
     }))
-
-    console.log(paymentData)
   }
 
   const sendGiftcard = async () => {
     const baseUrl = 'https://api.chimoney.io/v0.2/'
-    const valueInLocalCurrency = await
-      fetch(`${baseUrl}/info/usd-amount-in-local?destinationCurrency=NGN&amountInUSD=${paymentData.amount}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-API-KEY': API_KEY
-        }
-      }).then(response => response.json())
-        .then(jsonData => jsonData.data.amountInDestinationCurrency)
 
-    fetch(`${baseUrl}/payouts/gift-card`, {
+    fetch(`${baseUrl}/payouts/initiate-chimoney`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'X-API-KEY': API_KEY
       },
       body: JSON.stringify({
-        giftcards: [
+        chimoneys: [
           {
             email: paymentData.email,
             valueInUSD: Number(paymentData.amount),
             redeemData: {
               productId: Number(paymentData.productId),
-              countryCode: paymentData.countryCode,
-              valueInLocalCurrency: valueInLocalCurrency
+              countryCode: paymentData.countryCode
             }
           }
         ]
@@ -75,11 +70,8 @@ function App() {
           setError(result.error)
           setInfo('')
         } else {
-          const payObj = result.data.chimoneys[0]
-          const successMsg = `${paymentData.name} giftcard worth ${payObj.valueInUSD}
-              has been successfully sent to ${payObj.email} for a fee of ${payObj.fee}. 
-              Chiref: ${payObj.chiRef}; Date: ${payObj.issueDate}; Thank you for using Chimoney`
-          setInfo(successMsg)
+          const paymentLink = result.data.paymentLink
+          window.open(paymentLink)  // redirect to chimoney redeem payment page
         }
       })
       .catch(err => console.error(err.message))
@@ -98,9 +90,23 @@ function App() {
       }
     }
 
+    if (paymentData.denominations === null && paymentData.max === null && paymentData.min === null) {
+      setError('Select a giftcard')
+      return
+    }
+
     if (paymentData.amount.length === 0) {
       setError('Amount cannot be empty')
       return
+    } else if (paymentData.denominations === null) {
+      const amount = paymentData.amount
+      if (amount < paymentData.min) {
+        setError(`Amount cannot be below $${paymentData.min}`)
+        return
+      } else if (amount > paymentData.max) {
+        setError(`Amount cannot be above $${paymentData.max}`)
+        return
+      }
     }
 
     if (paymentData.countryCode.length === 0) {
@@ -121,15 +127,16 @@ function App() {
   }
 
   return (
-    <div className='container mx-auto px-32 py-12 flex flex-col justify-evenly items-start'>
+    <div className='container mx-auto px-8 py-12 flex flex-col justify-evenly items-start lg:px-24'>
       <img
         src={chimoneyLogo}
         alt='Chimoney Logo' />
 
       <div className='w-full divide-y space-y-8 flex flex-col justify-center'>
-        <Giftcards handleCardClick={(id, name) => setProductId(id, name)} />
+        <Giftcards handleCardClick={(id, name, countryCode, max, min, denominations) =>
+          setProduct(id, name, countryCode, max, min, denominations)} />
 
-        <div className='grid grid-cols-2 gap-x-1 pt-8'>
+        <div className='grid grid-cols-1 pt-8 md:grid-cols-2 md:gap-x-1'>
 
           <div className='flex flex-col justify-start'>
             <h3 className='text-2xl text-slate-700 font-medium'>
@@ -140,9 +147,9 @@ function App() {
             </p>
           </div>
 
-          <div className='flex flex-col items-end space-y-5'>
-            <div className='w-full flex flex-row space-x-5 mr-3'>
-              <div className='w-full flex flex-col'>
+          <div className='flex flex-col items-end space-y-2 md:space-y-5'>
+            <div className='w-full flex flex-col md:space-x-5 md:mr-3 md:flex-row'>
+              <div className='w-full flex flex-col mt-2 md:mt-0'>
                 <span className='block text-md font-medium text-slate-700'>
                   Recipient email
                 </span>
@@ -154,42 +161,71 @@ function App() {
                 w-full rounded-md sm:text-sm focus:ring-1' />
               </div>
 
-              <div className='w-full flex flex-col'>
+              <div className='w-full flex flex-col mt-2 md:mt-0'>
                 <span className='block text-md font-medium text-slate-700'>
                   Amount (USD)
                 </span>
 
-                <input placeholder='10' name={'amount'} onChange={handleFormChange}
-                  className='px-3 py-2 bg-white border shadow-sm 
-                border-slate-300 focus:outline-none focus:border-purple-500
-                w-full rounded-md sm:text-sm focus:ring-1' />
+                {
+                  paymentData.denominations ?
+                    <select name='amount' value={paymentData.bank}
+                      onChange={handleFormChange}
+                      className='mt-1 px-3 py-2 bg-white border shadow-sm 
+                      border-slate-300 focus:outline-none focus:border-purple-500
+                      w-full rounded-md sm:text-sm focus:ring-1' >
+                      {
+                        paymentData.denominations.map((denomination, index) => (
+                          <option
+                            key={index}
+                            value={denomination}>
+                            {denomination}
+                          </option>
+                        ))
+                      }
+                    </select>
+                    :
+                    <>
+                      <input placeholder='10' name='amount' onChange={handleFormChange}
+                        className='px-3 py-2 bg-white border shadow-sm 
+                    border-slate-300 focus:outline-none focus:border-purple-500
+                      w-full rounded-md sm:text-sm focus:ring-1' />
+                      <div className='flex flex-row justify-between'>
+                        <p className='text-slate-700 text-sm'>
+                          <span className='font-semibold'>${paymentData.min}</span> min
+                        </p>
+
+                        <p className='text-slate-700 text-sm'>
+                          <span className='font-semibold'>${paymentData.max}</span> max
+                        </p>
+                      </div>
+                    </>
+                }
               </div>
 
             </div>
 
-            <div className='w-full flex flex-row space-x-5 mr-3'>
+            <div className='w-full flex flex-col md:space-x-5 md:mr-3 md:flex-row'>
               <div className='w-full flex flex-col'>
                 <span className='block text-md font-medium text-slate-700'>
                   Country code
                 </span>
 
-                <input placeholder='US' name={'countryCode'} onChange={handleFormChange}
+                <input placeholder='US' name={'countryCode'}
+                  value={paymentData.countryCode} disabled
                   className='px-3 py-2 bg-white border shadow-sm 
-                border-slate-300 focus:outline-none focus:border-purple-500
-                w-full rounded-md sm:text-sm focus:ring-1' />
+                border-slate-300 disabled:bg-slate-100 disabled:text-slate-500 
+                disabled:border-slate-200 disabled:shadow-none w-full rounded-md sm:text-sm focus:ring-1' />
               </div>
 
-              <div className='w-full flex flex-col'>
+              <div className='w-full flex flex-col mt-2 md:mt-0'>
                 <span className='block text-md font-medium text-slate-700'>
                   Product ID
                 </span>
 
                 <input placeholder='12345' disabled
                   value={paymentData.productId} name={'productId'}
-                  onChange={handleFormChange}
                   className='px-3 py-2 bg-white border shadow-sm 
-                border-slate-300 focus:outline-none focus:border-purple-500
-                w-full rounded-md sm:text-sm focus:ring-1 disabled:bg-slate-100 disabled:text-slate-500 
+                border-slate-300 w-full rounded-md sm:text-sm disabled:bg-slate-100 disabled:text-slate-500 
                 disabled:border-slate-200 disabled:shadow-none' />
               </div>
 
@@ -213,11 +249,11 @@ function App() {
               <button onClick={() => handleClick()}
                 disabled={loading ? true : false}
                 className={`${error.length === 0 || info.length === 0 ? 'mt-2' : 'mt-4'} 
-                px-12 py-2 border self-center shadow-sm text-white rounded-xl inline-flex items-center
-                font-semibold max-w-sm bg-purple-500 hover:border-purple-500 tracking-wider
+                px-12 py-2 border self-center shadow-sm text-white rounded-xl inline-flex justify-center items-center
+                font-semibold w-full mt-5 bg-purple-500 hover:border-purple-500 tracking-wider
               hover:bg-purple-50 hover:text-purple-500 hover:scale-95 transition-all
               disabled:bg-slate-100 disabled:text-slate-500 disabled:border-slate-200 
-                disabled:hover:scale-100 disabled:hover:cursor-wait`}>
+                disabled:hover:scale-100 disabled:hover:cursor-wait md:w-1/4 md:mt-0`}>
                 {
                   loading &&
                   <svg className="inline mr-2 w-4 h-4 text-gray-200 animate-spin dark:text-gray-500 fill-purple-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
