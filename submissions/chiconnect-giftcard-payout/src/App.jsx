@@ -31,7 +31,6 @@ function App() {
       'min': min,
       'denominations': denominations
     }))
-    console.log(paymentData)
   }
 
   const handleFormChange = (event) => {
@@ -40,8 +39,6 @@ function App() {
       ...prevData,
       [name]: value
     }))
-
-    console.log(paymentData)
   }
 
   const sendGiftcard = async () => {
@@ -137,7 +134,7 @@ function App() {
   }
 
   return (
-    <div className='container mx-auto px-32 py-12 flex flex-col justify-evenly items-start'>
+    <div className='container mx-auto px-8 py-12 flex flex-col justify-evenly items-start lg:px-24'>
       <img
         src={chimoneyLogo}
         alt='Chimoney Logo' />
@@ -146,7 +143,7 @@ function App() {
         <Giftcards handleCardClick={(id, name, countryCode, max, min, denominations) =>
           setProduct(id, name, countryCode, max, min, denominations)} />
 
-        <div className='grid grid-cols-2 gap-x-1 pt-8'>
+        <div className='grid grid-cols-1 pt-8 md:grid-cols-2 md:gap-x-1'>
 
           <div className='flex flex-col justify-start'>
             <h3 className='text-2xl text-slate-700 font-medium'>
@@ -157,9 +154,9 @@ function App() {
             </p>
           </div>
 
-          <div className='flex flex-col items-end space-y-5'>
-            <div className='w-full flex flex-row space-x-5 mr-3'>
-              <div className='w-full flex flex-col'>
+          <div className='flex flex-col items-end space-y-2 md:space-y-5'>
+            <div className='w-full flex flex-col md:space-x-5 md:mr-3 md:flex-row'>
+              <div className='w-full flex flex-col mt-2 md:mt-0'>
                 <span className='block text-md font-medium text-slate-700'>
                   Recipient email
                 </span>
@@ -171,7 +168,7 @@ function App() {
                 w-full rounded-md sm:text-sm focus:ring-1' />
               </div>
 
-              <div className='w-full flex flex-col'>
+              <div className='w-full flex flex-col mt-2 md:mt-0'>
                 <span className='block text-md font-medium text-slate-700'>
                   Amount (USD)
                 </span>
@@ -214,7 +211,7 @@ function App() {
 
             </div>
 
-            <div className='w-full flex flex-row space-x-5 mr-3'>
+            <div className='w-full flex flex-col md:space-x-5 md:mr-3 md:flex-row'>
               <div className='w-full flex flex-col'>
                 <span className='block text-md font-medium text-slate-700'>
                   Country code
@@ -227,7 +224,7 @@ function App() {
                 disabled:border-slate-200 disabled:shadow-none w-full rounded-md sm:text-sm focus:ring-1' />
               </div>
 
-              <div className='w-full flex flex-col'>
+              <div className='w-full flex flex-col mt-2 md:mt-0'>
                 <span className='block text-md font-medium text-slate-700'>
                   Product ID
                 </span>
@@ -259,11 +256,11 @@ function App() {
               <button onClick={() => handleClick()}
                 disabled={loading ? true : false}
                 className={`${error.length === 0 || info.length === 0 ? 'mt-2' : 'mt-4'} 
-                px-12 py-2 border self-center shadow-sm text-white rounded-xl inline-flex items-center
-                font-semibold max-w-sm bg-purple-500 hover:border-purple-500 tracking-wider
+                px-12 py-2 border self-center shadow-sm text-white rounded-xl inline-flex justify-center items-center
+                font-semibold w-full mt-5 bg-purple-500 hover:border-purple-500 tracking-wider
               hover:bg-purple-50 hover:text-purple-500 hover:scale-95 transition-all
               disabled:bg-slate-100 disabled:text-slate-500 disabled:border-slate-200 
-                disabled:hover:scale-100 disabled:hover:cursor-wait`}>
+                disabled:hover:scale-100 disabled:hover:cursor-wait md:w-1/4 md:mt-0`}>
                 {
                   loading &&
                   <svg className="inline mr-2 w-4 h-4 text-gray-200 animate-spin dark:text-gray-500 fill-purple-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">

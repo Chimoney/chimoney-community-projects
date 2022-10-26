@@ -3,8 +3,8 @@ const Giftcard = ({ cardImg, name, selected, handleClick }) => {
         <div
             onClick={() => handleClick()}
             className={`${selected ? 'bg-slate-200 scale-105' : 'scale-100'} flex flex-col overflow-hidden justify-between
-             rounded-lg w-[200px] min-h-[200px] border hover:bg-purple-50/0.9
-             hover:cursor-pointer hover:bg-slate-200 shadow-sm animate-slideup transition-all`}>
+             rounded-lg  w-full min-h-[200px] border hover:bg-purple-50/0.9
+             hover:cursor-pointer hover:bg-slate-200 shadow-sm animate-slideup transition-all md:w-[200px]`}>
             <img
                 src={cardImg}
                 alt={name}
