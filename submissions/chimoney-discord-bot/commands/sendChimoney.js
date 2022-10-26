@@ -5,7 +5,7 @@ const { payouts } = require("chimoneyjs")();
 module.exports = {
   // Create new discord slash command for bot i.e /payout
   data: new SlashCommandBuilder()
-    .setName("payout")
+    .setName("send_chimoney")
     .setDescription("Lets you send $x to @user")
     .addNumberOption((option) =>
       option
@@ -15,7 +15,7 @@ module.exports = {
     )
     .addUserOption((option) =>
       option
-        .setName("beneficiary")
+        .setName("to")
         .setDescription("Receiver of the funds")
         .setRequired(true)
     )
@@ -25,7 +25,7 @@ module.exports = {
   async execute(interaction, client) {
     // Get amount and user parameters from command option
     const amount = interaction.options.get("amount");
-    const beneficiary = interaction.options.get("beneficiary");
+    const beneficiary = interaction.options.get("to");
 
     await interaction.reply({
       content: `Check your DM <@${interaction.user.id}>`,
@@ -50,11 +50,8 @@ module.exports = {
     );
 
     // Send payment link in a DM to the user
-    await client.send(interaction.user.id, {
-      content: `Hello, this is a payment link for you. Please pay the amount specified to the address specified. If you have any questions, please contact
-      support@chimoney.io.
-      [Payment Link](${data.paymentLink})
-      ChiRef: ${data.chiRef}`,
+    await client.users.send(interaction.user.id, {
+      content: `Hi <@${interaction.user.id}>, this is a payment link for you. You've requested to pay $${amount.value} to <@${beneficiary.user.id}>. Please pay the amount specified to the address specified. If you have any questions, please contact support@chimoney.io.\nPayment-Link: ${data.paymentLink}\nChiRef: ${data.data[0].chiRef}`,
     });
   },
 };
