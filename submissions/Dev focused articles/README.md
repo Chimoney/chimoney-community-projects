@@ -1,1 +1,1 @@
-Dev focused article on sending and receiving payment using Chimoney. Link to the article on Hashnode https://hauwa.hashnode.dev/sending-and-receiving-payments-with-chimoney
+- Dev focused article on sending and receiving payment using Chimoney. Link to the article on Hashnode https://hauwa.hashnode.dev/sending-and-receiving-payments-with-chimoney
