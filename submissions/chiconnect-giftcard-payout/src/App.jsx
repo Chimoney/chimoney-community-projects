@@ -14,15 +14,22 @@ function App() {
     'email': '',
     'productId': '',
     'name': '',
-    'countryCode': '',
-    'amount': ''
+    'countryCode': 'US',
+    'amount': '',
+    'max': 0,
+    'min': 0,
+    'denominations': []
   })
 
-  const setProductId = (id, name) => {
+  const setProduct = (id, name, countryCode, max, min, denominations) => {
     setPaymentData(prevData => ({
       ...prevData,
       'productId': id,
-      'name': name
+      'name': name,
+      'countryCode': countryCode,
+      'max': max,
+      'min': min,
+      'denominations': denominations
     }))
     console.log(paymentData)
   }
@@ -101,6 +108,15 @@ function App() {
     if (paymentData.amount.length === 0) {
       setError('Amount cannot be empty')
       return
+    } else if (paymentData.denominations === null) {
+      const amount = paymentData.amount
+      if (amount < paymentData.min) {
+        setError(`Amount cannot be below $${paymentData.min}`)
+        return
+      } else if (amount > paymentData.max) {
+        setError(`Amount cannot be above $${paymentData.max}`)
+        return
+      }
     }
 
     if (paymentData.countryCode.length === 0) {
@@ -127,7 +143,8 @@ function App() {
         alt='Chimoney Logo' />
 
       <div className='w-full divide-y space-y-8 flex flex-col justify-center'>
-        <Giftcards handleCardClick={(id, name) => setProductId(id, name)} />
+        <Giftcards handleCardClick={(id, name, countryCode, max, min, denominations) =>
+          setProduct(id, name, countryCode, max, min, denominations)} />
 
         <div className='grid grid-cols-2 gap-x-1 pt-8'>
 
@@ -159,10 +176,40 @@ function App() {
                   Amount (USD)
                 </span>
 
-                <input placeholder='10' name={'amount'} onChange={handleFormChange}
-                  className='px-3 py-2 bg-white border shadow-sm 
-                border-slate-300 focus:outline-none focus:border-purple-500
-                w-full rounded-md sm:text-sm focus:ring-1' />
+                {
+                  paymentData.denominations ?
+                    <select name='amount' value={paymentData.bank}
+                      onChange={handleFormChange}
+                      className='mt-1 px-3 py-2 bg-white border shadow-sm 
+                      border-slate-300 focus:outline-none focus:border-purple-500
+                      w-full rounded-md sm:text-sm focus:ring-1' >
+                      {
+                        paymentData.denominations.map((denomination, index) => (
+                          <option
+                            key={index}
+                            value={denomination}>
+                            {denomination}
+                          </option>
+                        ))
+                      }
+                    </select>
+                    :
+                    <>
+                      <input placeholder='10' name='amount' onChange={handleFormChange}
+                        className='px-3 py-2 bg-white border shadow-sm 
+                    border-slate-300 focus:outline-none focus:border-purple-500
+                      w-full rounded-md sm:text-sm focus:ring-1' />
+                      <div className='flex flex-row justify-between'>
+                        <p className='text-slate-700 text-sm'>
+                          <span className='font-semibold'>${paymentData.min}</span> min
+                        </p>
+
+                        <p className='text-slate-700 text-sm'>
+                          <span className='font-semibold'>${paymentData.max}</span> max
+                        </p>
+                      </div>
+                    </>
+                }
               </div>
 
             </div>
@@ -173,10 +220,11 @@ function App() {
                   Country code
                 </span>
 
-                <input placeholder='US' name={'countryCode'} onChange={handleFormChange}
+                <input placeholder='US' name={'countryCode'}
+                  value={paymentData.countryCode} disabled
                   className='px-3 py-2 bg-white border shadow-sm 
-                border-slate-300 focus:outline-none focus:border-purple-500
-                w-full rounded-md sm:text-sm focus:ring-1' />
+                border-slate-300 disabled:bg-slate-100 disabled:text-slate-500 
+                disabled:border-slate-200 disabled:shadow-none w-full rounded-md sm:text-sm focus:ring-1' />
               </div>
 
               <div className='w-full flex flex-col'>
@@ -186,10 +234,8 @@ function App() {
 
                 <input placeholder='12345' disabled
                   value={paymentData.productId} name={'productId'}
-                  onChange={handleFormChange}
                   className='px-3 py-2 bg-white border shadow-sm 
-                border-slate-300 focus:outline-none focus:border-purple-500
-                w-full rounded-md sm:text-sm focus:ring-1 disabled:bg-slate-100 disabled:text-slate-500 
+                border-slate-300 w-full rounded-md sm:text-sm disabled:bg-slate-100 disabled:text-slate-500 
                 disabled:border-slate-200 disabled:shadow-none' />
               </div>
 

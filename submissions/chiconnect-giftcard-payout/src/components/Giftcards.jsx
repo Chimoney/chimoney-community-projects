@@ -25,10 +25,10 @@ const Giftcards = ({ handleCardClick }) => {
         }
     }
 
-    const handleClick = (productId, name) => {
+    const handleClick = (productId, name, countryCode, max, min, denominations) => {
         setProductId(productId)
         setSelected(productId)
-        handleCardClick(productId, name)
+        handleCardClick(productId, name, countryCode, max, min, denominations)
     }
 
     const fetchGiftcards = async (countryCode = 'US') => {
@@ -102,7 +102,14 @@ const Giftcards = ({ handleCardClick }) => {
                                 cardImg={item.logoUrls[0]}
                                 name={item.name}
                                 selected={item.productId === selected ? true : false}
-                                handleClick={() => handleClick(item.productId, item.name)}
+                                handleClick={() => 
+                                    handleClick(
+                                        item.productId, 
+                                        item.name,
+                                        item.countryCode,
+                                        item.maxSenderDenomination,
+                                        item.minSenderDenomination,
+                                        item.fixedSenderDenominations)}
                             />
                         )
                     }
