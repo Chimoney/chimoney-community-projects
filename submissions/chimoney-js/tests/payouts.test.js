@@ -2,7 +2,7 @@ const { ValueError, ChiMoneyError } = require("../Errors");
 require("dotenv").config();
 const { payouts } = require("../index")(process.env.TEST_API_KEY);
 
-describe("Test Payouts module", () => {
+describe("Payouts", () => {
   test("airtime: should return error from Chi Money", async () => {
     try {
       await payouts.airtime();

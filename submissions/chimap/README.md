@@ -1,4 +1,5 @@
-Mapbox implementation for chimoney services
+Mapbox implementation for chimoney services.
+[Demo](https://chimoney-map.vercel.app/)
 
 ## Getting Started
 

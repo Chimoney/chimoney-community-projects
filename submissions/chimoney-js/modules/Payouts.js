@@ -215,23 +215,26 @@ async function status(chiRef, subAccount = null) {
  * 		}
  * 	]
  *
+ * @param {boolean?} turnOffNotification if true, it turns off email notification
  * @param {string?} subAccount The subAccount of the transaction
  * @returns The response from the Chi Money API
  */
 async function initiateChimoney(
   chimoneys = [],
+  turnOffNotification = false,
   crypto_payments,
   subAccount = null
 ) {
   // Define validation schema
   const schema = Joi.object({
+    turnOffNotification: Joi.boolean().default(false),
     crypto_payments: Joi.array().optional().default([]),
     chimoneys: Joi.array().required(),
   });
 
   // Validate input
   const { value, error } = schema.validate(
-    { crypto_payments, chimoneys },
+    { turnOffNotification, crypto_payments, chimoneys },
     { abortEarly: false }
   );
 

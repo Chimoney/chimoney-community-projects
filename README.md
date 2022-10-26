@@ -4,7 +4,7 @@ This repository houses projects worked on by the [Chimoney](https://chimoney.io)
 
 
 ## [HacktoberFest](https://hacktoberfest.com) 🎉🎉🎉
-![Hacktober](images/hacktober.png)
+<a href="https://hacktoberfest.com">![Hacktober](images/hacktober.png)</a>
 Hacktoberfest is a month-long celebration of open-source projects, their maintainers, and the entire community of contributors. This event is all about giving back to the community and celebrating all things open source.
 
 ## [Chimoney x HacktoberFest](https://twitter.com/chimoney_io/status/1576286913723596803?s=48&t=JCGsKCKdKEB_sVfGml2m6w) 🎉🎉🎉
