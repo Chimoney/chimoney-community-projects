@@ -9,13 +9,13 @@ const MoreInfo = () => {
     const dispatch = useDispatch()
 
     return (
-        <section className='container mx-auto px-20 flex flex-col py-14 justify-between items-center'>
-            <h3 className='font-epilogue font-semibold text-4xl text-slate-900'>
+        <section className='container mx-auto px-5 flex flex-col py-14 justify-between items-center md:px-12 lg:px-20'>
+            <h3 className='font-epilogue font-semibold text-center text-xl text-slate-900 md:text-4xl'>
                 Why should you choose us?
             </h3>
 
-            <div className='w-full flex flex-row mt-14 justify-between items-center'>
-                <div className='flex flex-row items-center'>
+            <div className='w-full flex flex-col mt-7 justify-between items-center md:flex-row md:mt-14'>
+                <div className='flex flex-row justify-center items-center md:justify-start'>
                     <img
                         src={globe}
                         alt={'The globe'}
@@ -29,11 +29,11 @@ const MoreInfo = () => {
                     />
                 </div>
 
-                <div className='flex flex-col justify-between items-start space-y-10'>
-                    <div className='grid grid-cols-2 gap-x-2 gap-y-5'>
+                <div className='flex flex-col justify-between items-start space-y-5 mt-4 md:mt-0'>
+                    <div className='grid grid-cols-1 gap-x-2 gap-y-5 md:grid-cols-2'>
                         {/* ITEM 1 */}
                         <div className='flex flex-row justify-start items-center space-x-4'>
-                            <div className='rounded-full bg-gray-200 p-6'>
+                            <div className='rounded-full bg-gray-200 p-4 lg:p-6'>
                                 <Bank weight='duotone'
                                     color='hsl(214, 100%, 48%)'
                                     size={36}
@@ -42,7 +42,7 @@ const MoreInfo = () => {
                             </div>
 
                             <div className='flex flex-col justify-between items-start'>
-                                <h3 className='font-epilogue font-semibold text-3xl text-slate-900'>
+                                <h3 className='font-epilogue font-semibold text-md text-slate-900 md:text-xl lg:text-3xl'>
                                     1000+
                                 </h3>
                                 <p className='font-epilogue text-slate-600 text-sm'>
@@ -53,7 +53,7 @@ const MoreInfo = () => {
 
                         {/* ITEM 2 */}
                         <div className='flex flex-row justify-start items-center space-x-4'>
-                            <div className='rounded-full bg-gray-200 p-6'>
+                            <div className='rounded-full bg-gray-200 p-4 lg:p-6'>
                                 <Cards weight='duotone'
                                     color='hsl(214, 100%, 48%)'
                                     size={36}
@@ -62,7 +62,7 @@ const MoreInfo = () => {
                             </div>
 
                             <div className='flex flex-col justify-between items-start'>
-                                <h3 className='font-epilogue font-semibold text-3xl text-slate-900'>
+                                <h3 className='font-epilogue font-semibold text-md text-slate-900 md:text-xl lg:text-3xl'>
                                     500+
                                 </h3>
                                 <p className='font-epilogue text-slate-600 text-sm'>
@@ -73,7 +73,7 @@ const MoreInfo = () => {
 
                         {/* ITEM 3 */}
                         <div className='flex flex-row justify-start items-center space-x-4'>
-                            <div className='rounded-full bg-gray-200 p-6'>
+                            <div className='rounded-full bg-gray-200 p-4 lg:p-6'>
                                 <DeviceMobile weight='duotone'
                                     color='hsl(214, 100%, 48%)'
                                     size={36}
@@ -82,7 +82,7 @@ const MoreInfo = () => {
                             </div>
 
                             <div className='flex flex-col justify-between items-start'>
-                                <h3 className='font-epilogue font-semibold text-3xl text-slate-900'>
+                                <h3 className='font-epilogue font-semibold text-md text-slate-900 md:text-xl lg:text-3xl'>
                                     10+
                                 </h3>
                                 <p className='font-epilogue text-slate-600 text-sm'>
@@ -92,7 +92,7 @@ const MoreInfo = () => {
                         </div>
                     </div>
 
-                    <p className='font-epilogue font-sm text-slate-600 max-w-md'>
+                    <p className='font-epilogue text-sm text-slate-600 max-w-md'>
                         Fund your wallet and get ready to supercharge your payment capabilites
                     </p>
 
