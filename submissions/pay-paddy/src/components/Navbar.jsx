@@ -1,3 +1,4 @@
+import { Hamburger, List } from "phosphor-react"
 import { useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
 import { showSignInModal, showSignUpModal } from "../store/modalReducer"
@@ -18,13 +19,13 @@ const Navbar = () => {
     const dispatch = useDispatch()
 
     return (
-        <nav className='container mx-auto px-20 py-12'>
+        <nav className='container mx-auto px-5 py-6 md:px-12 md:py-8 lg:px-20 lg:py-12'>
             <div className='flex flex-row justify-between items-center'>
-                <p className='font-epilogue text-md font-medium tracking-widest'>
+                <p className='font-epilogue text-xs  font-medium tracking-widest md:text-md'>
                     PAYPADDY
                 </p>
 
-                <div className='flex flex-row justify-between items-center space-x-10 -mr-20'>
+                <div className='hidden justify-between items-center space-x-10 -mr-20 lg:flex lg:flex-row '>
                     <Link to={'/'}>
                         <ButtonLink title={'Home'} />
                     </Link>
@@ -39,7 +40,8 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                <div className='flex flex-row justify-evenly items-center space-x-6'>
+                {/* LOGIN/SIGNUP FOR LARGE SCREENS */}
+                <div className='hidden lg:flex lg:flex-row lg:justify-evenly lg:items-center lg:space-x-6'>
                     <button aria-label='login button' onClick={() => dispatch(showSignInModal(true))}
                         className='font-epilogue font-medium py-1.5 hover:text-purple-500 group
                         transition-all hover:border-b-[3px] hover:border-purple-500'>
@@ -56,6 +58,11 @@ const Navbar = () => {
                         </span>
                     </button>
                 </div>
+
+                {/* HAMBURGER TO TOGGLE LOGIN/SIGNUP MODAL */}
+                <button className='lg:hidden'>
+                    <List size={24} weight={'duotone'} />
+                </button>
             </div>
         </nav>
     )
