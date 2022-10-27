@@ -1,16 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import firebase from 'firebase/compat/app'
-import { createFirestoreInstance } from 'redux-firestore'
-import { createStore } from 'redux'
+import 'firebase/compat/auth'
+import 'firebase/compat/firestore'
+import { createFirestoreInstance, firestoreReducer } from 'redux-firestore'
 import { Provider } from 'react-redux'
-import { ReactReduxFirebaseProvider } from 'react-redux-firebase'
+import { firebaseReducer, ReactReduxFirebaseProvider } from 'react-redux-firebase'
+import { BrowserRouter } from 'react-router-dom'
 
 import App from './App'
 import Layout from './components/Layout'
 import './index.css'
-import { rootReducer } from './store/reducers'
+import userReducer from './store/userReducer'
+import modalReducer from './store/modalReducer'
 import { firebaseConfig } from './firebase/firebase-config'
+import { configureStore } from '@reduxjs/toolkit'
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig)
@@ -20,8 +24,18 @@ const rrfConfig = {
   useFirestoreForProfile: true
 }
 
-const initialState = {}
-const store = createStore(rootReducer, initialState)
+const store = configureStore({
+  reducer: {
+      firebaseReducer,
+      firestoreReducer,
+      userReducer,
+      modal: modalReducer
+  },
+  middleware: getDefaultMiddleware =>
+      getDefaultMiddleware({
+          serializableCheck: false,
+      })
+})
 
 const rrfProps = {
   firebase,
@@ -34,9 +48,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <ReactReduxFirebaseProvider {...rrfProps}>
-        <Layout >
-          <App />
-        </Layout>
+        <BrowserRouter>
+          <Layout>
+            <App />
+          </Layout>
+        </BrowserRouter>
       </ReactReduxFirebaseProvider>
     </Provider>
   </React.StrictMode>
