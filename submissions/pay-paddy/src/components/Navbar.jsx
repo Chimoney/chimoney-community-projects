@@ -1,5 +1,18 @@
 import { useDispatch } from "react-redux"
+import { Link } from "react-router-dom"
 import { showSignInModal, showSignUpModal } from "../store/modalReducer"
+
+const ButtonLink = ({ title }) => {
+    return (
+        <button aria-label={title} onClick={''}
+            className='font-epilogue font-medium py-1.5 hover:text-purple-500 group
+                        transition-all hover:border-b-[3px] hover:border-purple-500'>
+            <span className='group-hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500'>
+                {title}
+            </span>
+        </button>
+    )
+}
 
 const Navbar = () => {
     const dispatch = useDispatch()
@@ -11,7 +24,22 @@ const Navbar = () => {
                     PAYPADDY
                 </p>
 
-                <div className='flex flex-row justify-evenly items-center space-x-12'>
+                <div className='flex flex-row justify-between items-center space-x-10 -mr-20'>
+                    <Link to={'/'}>
+                        <ButtonLink title={'Home'} />
+                    </Link>
+                    <Link>
+                        <ButtonLink title={'Features'} />
+                    </Link>
+                    <Link>
+                        <ButtonLink title={'About'} />
+                    </Link>
+                    <Link>
+                        <ButtonLink title={'Contact'} />
+                    </Link>
+                </div>
+
+                <div className='flex flex-row justify-evenly items-center space-x-6'>
                     <button aria-label='login button' onClick={() => dispatch(showSignInModal(true))}
                         className='font-epilogue font-medium py-1.5 hover:text-purple-500 group
                         transition-all hover:border-b-[3px] hover:border-purple-500'>

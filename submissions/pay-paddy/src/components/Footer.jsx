@@ -42,7 +42,7 @@ const Footer = () => {
                         </a>
                         <a href='#' className='hover:text-transparent bg-clip-text bg-gradient-to-r
                          from-purple-600 to-blue-500'>
-                            Products
+                            Features
                         </a>
                         <a href='#' className='hover:text-transparent bg-clip-text bg-gradient-to-r
                          from-purple-600 to-blue-500'>
@@ -51,6 +51,11 @@ const Footer = () => {
                     </div>
 
                     <div className='flex flex-col space-y-3 text-white'>
+                    <a href='#' className='hover:text-transparent bg-clip-text bg-gradient-to-r 
+                        from-purple-600 to-blue-500'>
+                            Contact
+                        </a>
+
                         <a href='#' className='hover:text-transparent bg-clip-text bg-gradient-to-r 
                         from-purple-600 to-blue-500'>
                             Privacy Policy
