@@ -1,4 +1,9 @@
+import { useDispatch } from "react-redux"
+import { showSignUpModal } from "../store/modalReducer"
+
 const Banner = () => {
+    const dispatch = useDispatch()
+
     return (
         <section className='bg-gradient-to-r from-purple-600 to-blue-500'>
             <div className='container mx-auto flex flex-row justify-between items-center px-20 py-14'>
@@ -9,7 +14,8 @@ const Banner = () => {
                 <div className='flex flex-col justify-between items-center'>
                     <button aria-label='Signup button'
                         className='font-epilogue font-medium rounded-3xl group py-3 px-8 bg-white
-                             hover:bg-white hover:shadow-lg hover:scale-105 transition-all'>
+                             hover:bg-white hover:shadow-lg hover:scale-105 transition-all'
+                        onClick={() => dispatch(showSignUpModal(true))}>
                         <span className='group-hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500'>
                             Get started
                         </span>

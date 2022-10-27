@@ -2,8 +2,12 @@ import { Bank, Cards, DeviceMobile } from 'phosphor-react'
 
 import heroTwo from '../assets/hero-two.png'
 import globe from '../assets/globe.png'
+import { useDispatch, useSelector } from 'react-redux'
+import { showSignUpModal } from '../store/modalReducer'
 
 const MoreInfo = () => {
+    const dispatch = useDispatch()
+
     return (
         <section className='container mx-auto px-20 flex flex-col py-14 justify-between items-center'>
             <h3 className='font-epilogue font-semibold text-4xl text-slate-900'>
@@ -89,18 +93,19 @@ const MoreInfo = () => {
                     </div>
 
                     <p className='font-epilogue font-sm text-slate-600 max-w-md'>
-                        Supercharge your payment capabilites
+                        Fund your wallet and get ready to supercharge your payment capabilites
                     </p>
 
                     <button aria-label='signup button' className='font-epilogue font-medium rounded-lg py-2 px-6 group ring-2 ring-gray-400
-                             hover:ring-purple-500 hover:shadow-lg hover:scale-105 transition-all'>
+                                focus:ring-4 focus:outline-none focus:ring-purple-500/50
+                             hover:ring-purple-500 hover:shadow-lg hover:scale-105 transition-all'
+                        onClick={() => dispatch(showSignUpModal(true))}>
                         <span className='group-hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500'>
                             Get Started
                         </span>
                     </button>
                 </div>
             </div>
-
         </section>
     )
 }

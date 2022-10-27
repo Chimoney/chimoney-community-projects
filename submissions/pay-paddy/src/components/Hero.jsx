@@ -3,8 +3,12 @@ import heroThree from '../assets/hero-three.png'
 import heroFour from '../assets/hero-four.png'
 import heroFive from '../assets/hero-five.png'
 import paperPlane from '../assets/paper-plane.png'
+import { showSignUpModal } from '../store/modalReducer'
+import { useDispatch } from 'react-redux'
 
 const Hero = () => {
+
+    const dispatch = useDispatch()
 
     return (
         <div className='container mx-auto px-20 flex flex-row justify-center items-center'>
@@ -42,7 +46,9 @@ const Hero = () => {
                     transactions ranging from bank transfers to bulk airtime payments and more.
                 </p>
                 <button aria-label='signup button' className='font-epilogue font-medium rounded-lg py-2 px-6 group ring-2 ring-gray-400
-                             hover:ring-purple-500 hover:shadow-lg hover:scale-105 transition-all'>
+                                focus:ring-4 focus:outline-none focus:ring-purple-500/50
+                             hover:ring-purple-500 hover:shadow-lg hover:scale-105 transition-all'
+                    onClick={() => dispatch(showSignUpModal(true))}>
                     <span className='group-hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500'>
                         Get Started
                     </span>
@@ -70,7 +76,10 @@ const Hero = () => {
                     className='rounded-lg p-2 mr-20 mt-16 shadow-inner shadow-blue-300/50 drop-shadow-md w-32'
                 />
             </div>
+            
         </div>
+
+
     )
 }
 
