@@ -6,8 +6,9 @@ const Banner = () => {
 
     return (
         <section className='bg-gradient-to-r from-purple-600 to-blue-500'>
-            <div className='container mx-auto flex flex-row justify-between items-center px-20 py-14'>
-                <h3 className='font-epilogue font-semibold text-3xl max-w-md text-white'>
+            <div className='container mx-auto flex flex-col px-5 py-14 justify-between items-center space-y-4 
+                md:space-y-0 md:items-center md:flex-row md:px-12 lg:px-20'>
+                <h3 className='font-epilogue font-semibold text-2xl text-white text-center md:text-start md:text-3xl md:max-w-md'>
                     Start making seamless transactions with us today.
                 </h3>
 
