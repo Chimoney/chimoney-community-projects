@@ -11,6 +11,15 @@ module.exports = {
       },
       colors: {
         'veryDarkBlue': 'hsl(240, 12%, 13%)'
+      },
+      animation: {
+        modalopen: 'fadein .2s ease-in'
+      },
+      keyframes: {
+        fadein: {
+          from: { opacity: 0 },
+          to: { opacity: 1 }
+        }
       }
     },
   },

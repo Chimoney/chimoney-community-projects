@@ -51,7 +51,7 @@ const LoginModal = () => {
     }
 
     return (
-        <div className='bg-black/80 top-0 left-0 fixed z-10 
+        <div className='bg-black/80 top-0 left-0 fixed z-10 animate-modalopen
             w-full h-full flex flex-row justify-center items-center backdrop-blur-md'
             onClick={() => dispatch(showSignInModal(false))}>
             <div className='relative mx-auto w-[400px] py-5 z-50 font-epilogue flex flex-col justify-center items-center
