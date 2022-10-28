@@ -4,8 +4,8 @@ const Footer = () => {
     return (
         <div className='bg-veryDarkBlue'>
             {/* <!-- Flex Container --> */}
-            <div className='container flex flex-col-reverse font-epilogue justify-between px-20 py-14 mx-auto space-y-8 
-                md:flex-row md:space-y-0'>
+            <div className='container flex flex-col-reverse font-epilogue justify-between px-5 py-14 mx-auto space-y-4
+                md:flex-row md:space-y-0 md:space-x-8 md:px-12 lg:px-20'>
                 {/* <!-- Logo and social links container --> */}
                 <div className='flex flex-col-reverse items-center justify-between space-y-12 md:flex-col 
                 md:space-y-0 md:items-start'>
@@ -33,7 +33,7 @@ const Footer = () => {
                     </div>
                 </div>
                 {/* <!-- List Container --> */}
-                <div className='flex justify-around space-x-32'>
+                <div className='flex flex-col justify-center items-center text-center space-y-3 md:space-y-0 md:items-start md:text-start md:flex-row md:space-x-12 lg:space-x-32'>
                     <div className='flex flex-col space-y-3 text-white'>
                         {/* <Link to={'/'} className='hover:text-brightRed'>Home</Link> */}
                         <a href='#' className='hover:text-transparent bg-clip-text bg-gradient-to-r
@@ -63,7 +63,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className='hidden text-white md:block'>
+                <div className='hidden text-white md:block md:max-w-sm lg:max-w-full'>
                     Copyright &copy; 2022, All Rights Reserved
                 </div>
             </div>
