@@ -1,4 +1,4 @@
-const API_KEY = `${import.meta.env.VITE_API_KEY}`
+const API_KEY = `${process.env.API_KEY}`
 
 export const createAccount = async (name, email) => {
     const response = await fetch('https://api.chimoney.io/v0.2/sub-account/create', {
