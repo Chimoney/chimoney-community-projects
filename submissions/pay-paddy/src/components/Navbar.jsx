@@ -1,4 +1,4 @@
-import { Hamburger, List } from "phosphor-react"
+import { List, X } from "phosphor-react"
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
@@ -63,11 +63,14 @@ const Navbar = () => {
 
                 {/* HAMBURGER TO TOGGLE LOGIN/SIGNUP MODAL */}
                 <button className='lg:hidden' onClick={() => setShowNav((prev) => !prev)}>
-                    <List size={24} weight={'duotone'} />
+                    {   !showNav ? 
+                        <List size={24} weight={'duotone'} /> :
+                        <X size={24} weight={'duotone'} />
+                    }
                 </button>
 
                 {/* NAV LINKS FOR MEDIUM SCREENS & BELOW */}
-                <div className={`${showNav ? 'md:flex': 'hidden'} absolute top-8 px-6 py-5 container flex-row bg-white/60
+                <div className={`${showNav ? 'md:flex' : 'hidden'} absolute top-8 px-6 py-5 container flex-row bg-white/60
                     backdrop-blur-md shadow-md rounded-xl z-10 animate-slidedown
                      md:flex-row md:justify-between md:items-center lg:hidden`}>
                     <div className='flex flex-col space-y-2 justify-between items-center md:space-x-6 md:space-y-0 md:flex-row'>
