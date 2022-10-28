@@ -55,8 +55,8 @@ const SignUpModal = () => {
         <div className='bg-black/80 top-0 left-0 fixed z-10 animate-modalopen
             w-full h-full flex flex-row justify-center items-center backdrop-blur-md'
             onClick={() => dispatch(showSignUpModal(false))}>
-            <div className='relative mx-auto w-[400px] py-5 z-50 font-epilogue flex flex-col justify-center items-center
-                bg-white rounded-lg' onClick={(e) => e.stopPropagation()}>
+            <div className='relative mx-auto w-[350px] py-5 z-50 font-epilogue flex flex-col justify-center items-center
+                bg-white rounded-lg md:w-[400px]' onClick={(e) => e.stopPropagation()}>
                 <h3 className='font-semibold text-2xl px-12 text-center text-slate-900'>
                     Supercharge your payments now
                 </h3>
@@ -79,7 +79,7 @@ const SignUpModal = () => {
                     or sign up with email
                 </h3>
 
-                <form className='w-full px-12 mt-2'>
+                <form className='w-full px-8 mt-2 md:px-12'>
                     <div className='flex flex-col w-full'>
                         <span className='block text-sm font-medium text-slate-700'>
                             Full name
