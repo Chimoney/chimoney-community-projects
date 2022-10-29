@@ -1,3 +1,4 @@
+import { X } from 'phosphor-react'
 import { useState } from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import { useFirebase } from 'react-redux-firebase'
@@ -11,8 +12,8 @@ const LoginModal = () => {
         email: '',
         password: ''
     })
-    // const loginModalState = useSelector(state => state.modal.showSignInModal)
-    // console.log('state:', loginModalState)
+    const [error, setError] = useState(false)
+    const [errorTip, setErrorTip] = useState(false)
     const firebase = useFirebase()
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -25,28 +26,57 @@ const LoginModal = () => {
         }))
     }
 
+    const validateUserData = (email, password) => {
+        if (password.length === 0) {
+            setError('Please enter your password')
+            setErrorTip(true)
+            return false
+        } else if (password.length < 8) {
+            setError('Password must have a min of 8 characters')
+            setErrorTip(true)
+            return false
+        } else if (email.length === 0) {
+            setError('Please enter your email')
+            setErrorTip(true)
+            return false
+        }
+        const emailPattern = new RegExp(/^[a-zA-Z0-9]+@[a-z]+\.[a-z]{2,3}$/)
+        const isMatch = email.match(emailPattern)
+        if (!isMatch) {
+            setError('Invalid email')
+            setErrorTip(true)
+            return false
+        }
+
+        return true
+    }
+
     const signInWithGoogle = () => {
         firebase.login({
             provider: 'google',
             type: 'popup'
         }).then((result) => {
-            console.log(result)
+            alert('Login successful')
         }).catch(err => {
             console.error(err)
         })
     }
 
     const signInWithEmail = ({ email, password }) => {
+        if (!validateUserData(email, password))
+            return
         setLoading(true)
         firebase.login({
             email, password
         }).then((result) => {
             setLoading(false)
             console.log(result)
+            alert('Login successful')
         })
             .catch(err => {
                 setLoading(false)
-                console.error('Error: ', err)
+                setError('Invalid email or password')
+                setErrorTip(true)
             })
     }
 
@@ -77,6 +107,15 @@ const LoginModal = () => {
                 <h3 className='font-epilogue font-medium text-sm text-slate-700'>
                     or sign in with email
                 </h3>
+
+                <div className={`${errorTip ? 'block' : 'hidden'} w-[80%] flex flex-row justify-between bg-red-100 mx-8 ring-2 ring-red-400
+                    rounded-lg p-3 my-3`}>
+                    <p className='text-center text-sm'>{error}</p>
+                    <button
+                        onClick={() => setErrorTip((prev) => !prev)}>
+                        <X size={16} weight={'bold'} />
+                    </button>
+                </div>
 
                 <form className='w-full px-8 mt-2 md:px-12'>
                     <div className='flex flex-col w-full'>

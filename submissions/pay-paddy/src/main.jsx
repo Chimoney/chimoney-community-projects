@@ -15,6 +15,7 @@ import userReducer from './store/userReducer'
 import modalReducer from './store/modalReducer'
 import { firebaseConfig } from './firebase/firebase-config'
 import { configureStore } from '@reduxjs/toolkit'
+import { paypaddyApi } from './service/createAccount'
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig)
@@ -28,7 +29,7 @@ const store = configureStore({
   reducer: {
       firebaseReducer,
       firestoreReducer,
-      userReducer,
+      [paypaddyApi.reducerPath]: paypaddyApi.reducer,
       modal: modalReducer
   },
   middleware: getDefaultMiddleware =>

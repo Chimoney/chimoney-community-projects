@@ -1,18 +1,26 @@
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+
 const API_KEY = `${process.env.API_KEY}`
 
-export const createAccount = async (name, email) => {
-    const response = await fetch('https://api.chimoney.io/v0.2/sub-account/create', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-API-KEY': API_KEY
-        },
-        body: JSON.stringify({
-            'name': name,
-            'email': email
+// 'https://api.chimoney.io/v0.2/sub-account/create'
+export const paypaddyApi = createApi({
+    reducerPath: 'paypaddyApiCore',
+    baseQuery: fetchBaseQuery({
+        baseUrl: 'https://api.chimoney.io/v0.2/',
+        prepareHeaders: (headers) => {
+            headers.set('X-API-KEY', API_KEY)
+            return headers
+        }
+    }),
+    endpoints: (builder) => ({
+        createAccount: builder.mutation({
+            query: (payload) => ({
+                url: 'sub-account/create',
+                method: 'POST',
+                body: payload
+            })
         })
     })
+})
 
-    const data = await response.json()
-    return data
-}
+export const { useCreateAccountMutation } = paypaddyApi
