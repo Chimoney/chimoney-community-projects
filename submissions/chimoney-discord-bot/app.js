@@ -1,11 +1,8 @@
 const express = require("express");
 const app = express();
+const webhookRouter = require("./routes/webhooks");
 
-app.use(express.json());
-
-// Handle webhook here
-app.post("/", (req, res) => {
-  res.status(200);
-});
+// Router handlers
+app.use("/webhooks", webhookRouter);
 
 module.exports = app;

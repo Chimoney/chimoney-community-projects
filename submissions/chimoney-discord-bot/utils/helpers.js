@@ -27,6 +27,23 @@ function loadCommands(client) {
   }
 }
 
+/**
+ * This function creates a redeemLink from a chi reference
+ * @param {string} chiRef This represents the
+ * @returns a redeem
+ */
+function buildRedeemLink(chiRef) {
+  if (!chiRef) throw Error("chiRef is required");
+
+  // Get redeem base url from environment variable
+  const baseLink = "https://dash.chimoney.io/redeem";
+
+  // Append chiRef to base redeem url
+  const redeemLink = baseLink + `?chi=${chiRef}`;
+
+  return redeemLink;
+}
 module.exports = {
   loadCommands,
+  buildRedeemLink,
 };

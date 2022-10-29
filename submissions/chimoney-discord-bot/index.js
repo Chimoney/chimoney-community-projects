@@ -1,11 +1,7 @@
 require("dotenv").config();
-const { Client, Events, GatewayIntentBits } = require("discord.js");
-const { loadCommands } = require("./utils/helpers");
+const { Events } = require("discord.js");
+const client = require("./bot-client");
 const app = require("./app");
-
-// Instantiate new client
-const client = new Client({ intents: GatewayIntentBits.Guilds });
-loadCommands(client);
 
 client.once("ready", () => {
   console.log("bot logged in");
@@ -35,5 +31,6 @@ const port = process.env.PORT || 8080;
 
 app.listen(port, () => {
   console.log(`Listening for requests on port ${port}`);
+  // Start chimoney bot
   client.login(process.env.BOT_TOKEN);
 });
