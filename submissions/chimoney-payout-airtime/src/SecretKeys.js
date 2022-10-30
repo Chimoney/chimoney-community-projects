@@ -1,1 +1,0 @@
-export const API_KEY = "get_your_own_key"

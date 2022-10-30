@@ -5,14 +5,14 @@ import {
   Routes, 
   Route
 } from 'react-router-dom';
-import PayOut from './PayOut';
+import PayChimoney from './PayChimoney';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path='/' element={<PayOut />} exact />
+          <Route path='/' element={<PayChimoney/>} exact />
         </Routes>
       </Router>
     </div>

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const FormContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -13,27 +12,32 @@ export const FormContainer = styled.div`
   color: white;
   margin-top: 4rem;
   margin-bottom: 10rem;
+
   h1 {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     font-size: 2.5rem;
   }
 
   form {
     padding: 1rem;
-    margin: 0 auto;
+    margin: 2rem auto;
     width: 40vw;
     p {
       font-size: 1.2rem;
       margin-bottom: 0.3rem;
     }
+    @media (max-width: 1050px) {
+      width: 70vw;
+    }
 
-    .error-container{
+    .error-container {
       width: 90%;
       margin: 1rem;
-      p{
+      p {
         font-size: 1.2rem;
-        color: #e8a84c;
+        color: white;
+        text-decoration: wavy;
         text-transform: capitalize;
         padding: 1rem;
         text-align: center;
@@ -56,45 +60,62 @@ export const FormContainer = styled.div`
     width: 90%;
   }
   .button-container {
-    text-align: center;
-    width: 90%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 1050px) {
+      flex-direction: column;
+    }
   }
   button {
-      padding: 1rem 2rem;
-      box-shadow: 0 5px 5px 0px #70dfd6e4;
-      background: linear-gradient(
-        135deg,
-        rgba(43, 123, 191) 0%,
-        rgba(43, 123, 191) 100%
-      );
-      border: none;
-      text-transform: uppercase;
-      color: white;
-      font-size: 1rem;
-      transition: all ease-in 0.5secs;
-      font-weight: 600;
-      :hover {
-        cursor: pointer;
-        font-size: 1.05rem;
-      }
+    width: 220px;
+    height: 60px;
+    box-shadow: 0 5px 5px 0px #70dfd6e4;
+    background: linear-gradient(
+      135deg,
+      rgba(43, 123, 191) 0%,
+      rgba(43, 123, 191) 100%
+    );
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1rem;
+    transition: all ease-in 0.5secs;
+    font-weight: 600;
+    :hover {
+      cursor: pointer;
+      font-size: 1.05rem;
     }
-    button + button {
-      margin-left: 4rem;
+  }
+  button + button {
+    margin-left: 2rem;
+    @media (max-width: 1050px) {
+      margin-left: 0 !important;
+      margin-top: 1rem;
     }
+  }
 
-.last-btn{
-  box-shadow: none;
-  margin-top: 1rem;
-}
+  .last-btn {
+    box-shadow: none;
+    margin-top: 1rem;
+  }
+
+  .sub-class {
+    overflow-x: scroll;
+  }
 `;
 
 export const Table = styled.table`
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  margin-top: 2rem;
   text-align: center;
-  background-color: #f8f8f8;
+  width: 100%;
   color: black;
+
+  tr{
+    background-color: #f8f8f8;
+  }
 
   td,
   th {
@@ -103,6 +124,7 @@ export const Table = styled.table`
   }
   td {
     font-size: 1rem;
+    text-overflow: ellipsis;
   }
   tr {
     padding: 1rem;
@@ -121,17 +143,89 @@ export const Table = styled.table`
     background-color: rgb(43, 123, 191);
     color: white;
   }
+ 
   .edit,
   .delete {
-    padding: 0.5rem 2rem;
+    width: 120px;
+    height: 40px;
+    /* padding: 0.5rem 2rem; */
     background: #e8a84c;
     box-shadow: none;
     border: none;
   }
   .delete {
-    background: #B92A25;
-
+    background: #b92a25;
     color: #f8f8f8;
+    /* margin-left: 1rem; */
+  }
+  .edit+.delete{
+    margin-left: 1rem !important;
+  }
+
+  @media only screen and (max-width: 860px){
+    width: 90vw;
+    text-align: left;
+
+    .edit+.delete{
     margin-left: 1rem;
+  }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+     thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tr {
+      border: 1px solid #ccc;
+    }
+    tr+tr{
+      margin-top: 2rem;
+    }
+
+    td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 45%;
+      overflow: hidden;
+    }
+
+    td:before {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 40%;
+      padding-right: 10px;
+      white-space: nowrap;
+    }
+
+    /*
+	Label the data
+	*/
+    td:nth-of-type(1):before {
+      content: "id";
+    }
+    td:nth-of-type(2):before {
+      content: "Email";
+    }
+    td:nth-of-type(3):before {
+      content: "Amount in USD";
+    }
+    td:nth-of-type(4):before {
+      content: "Twitter Handle";
+    }
+    td:nth-of-type(5):before {
+      content: "Action";
+    }
   }
 `;
