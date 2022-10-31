@@ -35,6 +35,7 @@ module.exports = {
     const meta = {
       discordSender: interaction.user.id,
       discordReceiver: beneficiary.user.id,
+      isDiscord: true,
     };
 
     // Get payment link from chimoney API
