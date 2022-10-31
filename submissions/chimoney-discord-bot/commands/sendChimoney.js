@@ -27,8 +27,18 @@ module.exports = {
     const amount = interaction.options.get("amount");
     const beneficiary = interaction.options.get("to");
 
+    console.log(beneficiary.user);
+    if (beneficiary.user.bot) {
+      await interaction.reply({
+        content: `Cannot send funds to bot`,
+        ephemeral: true,
+      }); // Ephemeral replies can only be seen by the sender
+      return;
+    }
+
     await interaction.reply({
       content: `Check your DM <@${interaction.user.id}>`,
+      ephemeral: true,
     }); // Ephemeral replies can only be seen by the sender
 
     // Metadata to be sent in payload
