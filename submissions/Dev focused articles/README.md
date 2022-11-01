@@ -1,1 +1,2 @@
 - Dev focused article on sending and receiving payment using Chimoney. Link to the article on [Hashnode](https://hauwa.hashnode.dev/sending-and-receiving-payments-with-chimoney)
+- Dev focused article on integrating mobile apps with Chimoney and explained in detail with Chimoney web hooks . Link to article on [Medium](https://medium.com/@shahneel2409/how-to-integrate-mobile-apps-with-chimoney-c1d3e15fda2b)
