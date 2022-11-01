@@ -20,7 +20,7 @@ const GlobalMap = (props) => {
   const [filteredData, setFilteredData] = useState([])
   const [filteredType, setFilteredType] = useState([])
   const [filteredMobileMoney,setFilteredMobileMoney]=useState([])
-  const [filteredGiftCard,setFilteredGiftCard]=useState([])
+  // const [filteredGiftCard,setFilteredGiftCard]=useState([])
 
   // hook to call api
   const apiData = useInfo()
@@ -57,7 +57,7 @@ const GlobalMap = (props) => {
       const filter = filterByCountry(data[0]?.name, benefits)
       const filterMobileMoney=filterByCountry(data[0]?.name,mobileMoney)
       const filterGiftCard=filterGiftCardByCountry(data[0]?.["alpha-2"],giftCards)
-      setFilteredGiftCard(filterGiftCard)
+      // setFilteredGiftCard(filterGiftCard)
       setFilteredMobileMoney(filterMobileMoney)
       // combines two array of benefits and giftcard
       const giftCard_filter=filter.concat(filterGiftCard)
