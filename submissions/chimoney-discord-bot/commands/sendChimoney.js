@@ -62,7 +62,7 @@ module.exports = {
 
     // Send payment link in a DM to the user
     await client.users.send(interaction.user.id, {
-      content: `Hi <@${interaction.user.id}>, this is a payment link for you. You've requested to pay $${amount.value} to <@${beneficiary.user.id}>. Please pay the amount specified to the address specified. If you have any questions, please contact support@chimoney.io.\nPayment-Link: ${data.paymentLink}\nChiRef: ${data.data[0].chiRef}`,
+      content: `Hi <@${interaction.user.id}>, this is a payment link for you. You've requested to pay $${amount.value} to <@${beneficiary.user.id}>. Please pay the amount specified to the address specified. If you have any questions, please contact support@chimoney.io.\nPayment-Link: ${data.paymentLink}`,
     });
   },
 };
