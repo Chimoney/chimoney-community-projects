@@ -23,7 +23,7 @@ def is_valid_command(client, event, bot_id=None):
     return event["text"].startswith(f"<@{bot_id}> send")
 
 
-def send_chimoney(client, text, amount):
+def send_chimoney(client, text):
     # Split the tweet content
     tweet_content = text.split()
 
@@ -33,24 +33,23 @@ def send_chimoney(client, text, amount):
     # remove <@ and > from the string
     if "to" in tweet_content:
         recipients = [recipient[2:-1] for recipient in tweet_content[4:]]
-    recipients = [recipient[2:-1] for recipient in tweet_content[3:]]
-
-    # Get the recipients
-    if "to" in tweet_content:
-        recipients = tweet_content[tweet_content.index("to") + 1 :]
     else:
-        recipients = tweet_content[3:]
+        recipients = [recipient[2:-1] for recipient in tweet_content[3:]]
 
     checkout_value = []
     for user_id in recipients:
+        print(user_id)
         temp = {
             "email": get_user_email(client, user_id),
-            "amount": amount,
+            "valueInUSD": int(amount),
         }
         checkout_value.append(temp)
 
+    print(checkout_value)
+
     chimoney = Chimoney.set_api_key(os.getenv("CHIMONEY_API_KEY"))
     task_status = chimoney.payouts.initiate_chimoney(checkout_value)
+    print(task_status)
 
     if task_status[1] == 200:
         # Get the payout link from the task status
