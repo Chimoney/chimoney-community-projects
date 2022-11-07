@@ -7,6 +7,7 @@ export default function useInfo() {
     const [data, setData] = useState([])
     const url = 'https://api.chimoney.io/v0.2/info/assets'
 
+
     useEffect(() => {
         async function fetchInfo() {
             axios.get(url, {
