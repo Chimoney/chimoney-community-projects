@@ -62,7 +62,16 @@ const GlobalMap = (props) => {
       // combines two array of benefits and giftcard
       const giftCard_filter=filter.concat(filterGiftCard)
       setFilteredData( giftCard_filter)
-      setFilteredType(parseAssetType( giftCard_filter))
+      // sorts type of assets
+      let allTypes=parseAssetType( giftCard_filter)
+      if(allTypes.includes("Gift Cards")){
+        
+        let gc=allTypes[allTypes.indexOf("Gift Cards")]
+        allTypes.pop()
+        allTypes.splice(2,0,gc)
+      }
+      setFilteredType(allTypes)
+      
     }
 
 
