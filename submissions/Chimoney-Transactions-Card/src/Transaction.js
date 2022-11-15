@@ -98,7 +98,7 @@ export const TransactionCard = () => {
       dispatch(getTransactionAsync(id));
     }
     console.log(data);
-    })
+    }, [])
 
   return (
     <CardWrapper>
@@ -116,15 +116,15 @@ export const TransactionCard = () => {
                 <div className="card-circle"></div>
                 <div className="details">
                   <p>Chi money</p>
-                  <h1>1,000</h1>
-                  <p className="usd">(1 USD)</p>
+                  <h1>{item.chimoney}</h1>
+                  <p className="usd">({item.valueInUSD} USB)</p>
                 </div> 
               </div>
               <div className="footer">
                 {item.twitter ? 
               <div className="title">
                 <span>{Twitter}</span>
-                <h2>@oyindawodu</h2>
+                <h2>{item.twitter}</h2>
                 </div>
                 : 
                 <div className="title">
