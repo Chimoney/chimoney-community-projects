@@ -3,7 +3,7 @@ Reward UI that takes a Chimoney issueID and renders a list of Pretty cards
 
 view the deployed project [here](https://chimoney-transactions.netlify.app/)view the deployed project [here](https://pay-chimoney.vercel.app/)
 
-## Getting Started with Chimoney-Redeem-Airtime Project
+## Getting Started with Chimoney-Transaction Project
 Run the following commands in the project directory
 
 - `npm install`
