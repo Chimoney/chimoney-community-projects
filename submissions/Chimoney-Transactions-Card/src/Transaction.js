@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { Outlet, useNavigate, useParams } from "react-router-dom";
 import { Twitter, Mail, Check, Cancel } from "./assets/icons";
@@ -18,8 +17,6 @@ export const Transactions = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   
-  const data = useSelector((state) => state.transaction.data);
-
   const handleChange = (e) => {
     const { name, value } = e.currentTarget;
     if (name === "issueID") {
@@ -101,7 +98,7 @@ export const TransactionCard = () => {
       dispatch(getTransactionAsync(id));
     }
     console.log(data);
-    }, [])
+    })
 
   return (
     <CardWrapper>
@@ -146,8 +143,11 @@ export const TransactionCard = () => {
                 <div class="block">
                   <p>Status</p>
                   <div className="white-bg">
-                    {/* <p>{Check} Paid</p> */}
+                    {item.status === "paid" ? 
+                    <p>{Check} {item.status}</p>
+                    :
                     <p>{Cancel} {item.status}</p>
+                    }
                   </div>
                 </div>
                 <div class="block">
