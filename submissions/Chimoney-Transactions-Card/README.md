@@ -1,7 +1,7 @@
 # Chimoney-Transactions
 Reward UI that takes a Chimoney issueID and renders a list of Pretty cards
 
-view the deployed project [here](https://chimoney-transactions.netlify.app/)view the deployed project [here](https://pay-chimoney.vercel.app/)
+view the deployed project [here](https://chimoney-transactions.netlify.app/)
 
 ## Getting Started with Chimoney-Transaction Project
 Run the following commands in the project directory
