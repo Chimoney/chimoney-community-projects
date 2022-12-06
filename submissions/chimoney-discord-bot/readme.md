@@ -14,7 +14,7 @@ BOT_TOKEN = "your bot token"
 CLIENTID = "your client id"
 CHIMONEY_API_KEY = "your chimoney api key"
 CHIMONEY_BOT_EMAIL = "a placeholder email address for initiate payout request to chimoney api"
-CHIMONEY_WEBHOOK_SIGNATURE = "webhook signature from the chimoney developer dashboard"
+MONGO_URI = "mongo_uri"
 ```
 
 ## Commands
