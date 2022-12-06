@@ -14,7 +14,7 @@ const TransactionSchema = new Schema({
     type: String,
     required: true,
   },
-  isPaid: {
+  isRedeemed: {
     type: Boolean,
     default: false,
   },
