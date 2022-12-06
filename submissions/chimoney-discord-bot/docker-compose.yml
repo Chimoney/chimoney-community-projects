@@ -2,5 +2,9 @@ version: "3.8"
 services:
   bot:
     build: ./bot
+    env_file:
+      - .env
   worker:
     build: ./worker
+    env_file:
+      - .env
