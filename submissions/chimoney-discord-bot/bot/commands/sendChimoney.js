@@ -1,6 +1,6 @@
 require("dotenv").config();
 const { SlashCommandBuilder } = require("discord.js");
-const { createTransaction } = require("../../Services/transaction.service");
+const { createTransaction } = require("../Services/transaction.service");
 
 const { payouts } = require("chimoneyjs")();
 

@@ -1,7 +1,7 @@
 require("dotenv").config();
 const { Events } = require("discord.js");
-const client = require("../bot-client");
-const { connectDB } = require("../Database");
+const client = require("./bot-client");
+const { connectDB } = require("./Database");
 
 client.once("ready", async () => {
   console.log("bot logged in");

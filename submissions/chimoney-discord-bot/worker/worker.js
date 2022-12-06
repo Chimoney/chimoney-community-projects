@@ -1,17 +1,16 @@
 require("dotenv").config();
-const mongoConnectionString = process.env.MONGO_URI;
-const Transaction = require("../Models/transaction");
-const bot = require("../bot-client");
+const Transaction = require("./Models/transaction");
+const { Client, GatewayIntentBits } = require("discord.js");
 const { account } = require("chimoneyjs")();
 const Agenda = require("agenda");
-const { connectDB } = require("../Database");
-const {
-  buildReceiverMessage,
-  buildSenderMessage,
-} = require("../utils/helpers");
+const { connectDB } = require("./Database");
+const { buildReceiverMessage, buildSenderMessage } = require("./utils/helpers");
+
+// Instantiate new client
+const bot = new Client({ intents: GatewayIntentBits.Guilds });
 
 const agenda = new Agenda({
-  db: { address: mongoConnectionString },
+  db: { address: process.env.MONGO_URI },
 });
 
 agenda.define("send-redeem-links", async (job) => {
