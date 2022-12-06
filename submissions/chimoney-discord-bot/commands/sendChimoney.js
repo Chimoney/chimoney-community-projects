@@ -1,5 +1,7 @@
 require("dotenv").config();
 const { SlashCommandBuilder } = require("discord.js");
+const { createTransaction } = require("../Services/transaction.service");
+
 const { payouts } = require("chimoneyjs")();
 
 module.exports = {
@@ -27,7 +29,6 @@ module.exports = {
     const amount = interaction.options.get("amount");
     const beneficiary = interaction.options.get("to");
 
-    console.log(beneficiary.user);
     if (beneficiary.user.bot) {
       await interaction.reply({
         content: `Cannot send funds to bot`,
@@ -41,10 +42,14 @@ module.exports = {
       ephemeral: true,
     }); // Ephemeral replies can only be seen by the sender
 
+    // Declare discordSender and receiver
+    const discordSender = interaction.user.id;
+    const discordReceiver = beneficiary.user.id;
+
     // Metadata to be sent in payload
     const meta = {
-      discordSender: interaction.user.id,
-      discordReceiver: beneficiary.user.id,
+      discordSender,
+      discordReceiver,
       isDiscord: true,
     };
 
@@ -59,6 +64,12 @@ module.exports = {
       ],
       true
     );
+
+    // Get transaction id from intiate chimoney response
+    const transactionId = data.data[0].id;
+
+    // Create new transaction
+    await createTransaction({ discordReceiver, discordSender, transactionId });
 
     // Send payment link in a DM to the user
     await client.users.send(interaction.user.id, {
