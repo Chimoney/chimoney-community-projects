@@ -1,11 +1,14 @@
 require("dotenv").config();
 const mongoConnectionString = process.env.MONGO_URI;
-const Transaction = require("./Models/transaction");
-const bot = require("./bot-client");
+const Transaction = require("../Models/transaction");
+const bot = require("../bot-client");
 const { account } = require("chimoneyjs")();
 const Agenda = require("agenda");
-const { connectDB } = require("./Database");
-const { buildReceiverMessage, buildSenderMessage } = require("./utils/helpers");
+const { connectDB } = require("../Database");
+const {
+  buildReceiverMessage,
+  buildSenderMessage,
+} = require("../utils/helpers");
 
 const agenda = new Agenda({
   db: { address: mongoConnectionString },

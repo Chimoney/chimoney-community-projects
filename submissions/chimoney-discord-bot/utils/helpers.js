@@ -1,7 +1,6 @@
 require("dotenv").config();
 const { Collection } = require("discord.js");
 const fs = require("node:fs");
-const { Webhook } = require("svix");
 const path = require("node:path");
 const secret = process.env.CHIMONEY_WEBHOOK_SIGNATURE;
 
@@ -9,7 +8,7 @@ function loadCommands(client) {
   // Append commands property to client object
   client.commands = new Collection();
 
-  const commandsPath = path.join(path.dirname(__dirname), "commands");
+  const commandsPath = path.join(path.dirname(__dirname), "/bot/commands");
 
   const commandFiles = fs
     .readdirSync(commandsPath)
@@ -53,24 +52,6 @@ function buildRedeemLink(chiRef) {
  * @param {object} headers Http request headers
  * @returns payload on success and error e.g {payload, error}
  */
-function verifyWebhook(body, headers) {
-  const wh = new Webhook(secret);
-  /**
-   * Returning payload and error this way would allow you to
-   * check for errors more efficiently i.e
-   * const {error, payload} = verifyWebhook(body,headers)
-   * if (error) handle error appropriately
-   */
-  try {
-    // throws an error if verification failed thus the need for a try catch
-    const payload = wh.verify(body, headers);
-
-    return { payload };
-  } catch (error) {
-    // return an object containing error
-    return { error };
-  }
-}
 
 /**
  * This function returns the message that is sent to the beneficiary of a discord payout
@@ -98,7 +79,6 @@ function buildSenderMessage(valueInUSD, discordReceiver) {
 module.exports = {
   loadCommands,
   buildRedeemLink,
-  verifyWebhook,
   buildReceiverMessage,
   buildSenderMessage,
 };

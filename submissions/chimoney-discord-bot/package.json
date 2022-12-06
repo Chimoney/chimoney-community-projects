@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-bot": "node index.js",
-    "start-worker": "node worker.js",
-    "deployCommands": "node deploy-commands.js"
+    "start-bot": "node ./bot/bot.js",
+    "start-worker": "node ./worker/worker.js",
+    "deployCommands": "node ./bot/deploy-commands.js"
   },
   "author": "",
   "license": "ISC",
