@@ -3,11 +3,12 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 const helmet = require("helmet");
+const { connectDB } = require("./Database");
 
 // Setup middleware
 app.use(express.json());
 app.use(helmet());
-app.use(morgan());
+app.use(morgan("tiny"));
 
 // 404 route handler
 app.use((req, res, next) => {
@@ -18,5 +19,8 @@ app.use((req, res, next) => {
 });
 
 // Start express server
-const port = process.env.port;
-app.listen(port, () => console.log(`Listening on port ${port}`));
+const port = process.env.PORT || 8080;
+app.listen(port, async () => {
+  console.log(`Listening on port ${port}`);
+  await connectDB();
+});
