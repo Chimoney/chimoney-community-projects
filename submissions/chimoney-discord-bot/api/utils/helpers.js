@@ -15,7 +15,7 @@ const handleAsync = (callback) => {
       await callback(req, res, next);
     } catch (error) {
       res
-        .status(500 || error.apiErrorCode)
+        .status(error.apiErrorCode || 500)
         .json({ message: error.message, success: false });
     }
   };
