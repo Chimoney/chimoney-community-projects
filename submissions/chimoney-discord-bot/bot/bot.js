@@ -1,6 +1,7 @@
 require("dotenv").config();
 const { Events } = require("discord.js");
 const { Client, GatewayIntentBits } = require("discord.js");
+const { connectDB } = require("./Database");
 const { loadCommands } = require("./utils/helpers");
 
 // Instantiate new client
@@ -9,6 +10,8 @@ loadCommands(client);
 
 client.once("ready", async () => {
   console.log("bot logged in");
+  // Connect to database
+  await connectDB();
 });
 
 client.on(Events.InteractionCreate, async (interaction) => {
