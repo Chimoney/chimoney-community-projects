@@ -10,7 +10,7 @@ const TransactionSchema = new Schema({
     type: String,
     required: true,
   },
-  transactionId: {
+  _id: {
     type: String,
     required: true,
   },

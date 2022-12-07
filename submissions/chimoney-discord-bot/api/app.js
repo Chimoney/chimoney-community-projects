@@ -4,11 +4,15 @@ const app = express();
 const morgan = require("morgan");
 const helmet = require("helmet");
 const { connectDB } = require("./Database");
+const apiRouter = require("./routes/index");
 
 // Setup middleware
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("tiny"));
+
+// Routes
+app.use("/api", apiRouter);
 
 // 404 route handler
 app.use((req, res, next) => {
