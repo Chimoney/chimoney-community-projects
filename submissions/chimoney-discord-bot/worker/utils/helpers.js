@@ -1,6 +1,5 @@
 require("dotenv").config();
-const path = require("node:path");
-const secret = process.env.CHIMONEY_WEBHOOK_SIGNATURE;
+const axios = require("axios");
 
 /**
  * This function creates a redeemLink from a chi reference
@@ -49,8 +48,17 @@ function buildReceiverMessage(chimoney, valueInUSD, discordSenderId, chiRef) {
 function buildSenderMessage(valueInUSD, discordReceiver) {
   return `You have successfully sent $${valueInUSD} to <@${discordReceiver}>`;
 }
+
+// create instance of axios with base api url
+const apiBaseURL = process.env.API_BASE_URL;
+
+const axiosPrivate = axios.create({
+  baseURL: apiBaseURL,
+});
+
 module.exports = {
   buildRedeemLink,
   buildReceiverMessage,
   buildSenderMessage,
+  axiosPrivate,
 };

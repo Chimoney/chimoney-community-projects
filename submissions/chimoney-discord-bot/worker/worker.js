@@ -1,12 +1,14 @@
 require("dotenv").config();
-const Transaction = require("./Models/transaction");
-const { Client, GatewayIntentBits } = require("discord.js");
-const { account } = require("chimoneyjs")();
 const Agenda = require("agenda");
-const { connectDB } = require("./Database");
+const { account } = require("chimoneyjs")();
+const { Client, GatewayIntentBits } = require("discord.js");
+const {
+  getAllTransactions,
+  updateTransaction,
+} = require("./services/transaction.service");
 const { buildReceiverMessage, buildSenderMessage } = require("./utils/helpers");
 
-// Instantiate new client
+// Instantiate new bot client
 const bot = new Client({ intents: GatewayIntentBits.Guilds });
 
 const agenda = new Agenda({
@@ -15,53 +17,57 @@ const agenda = new Agenda({
 
 agenda.define("send-redeem-links", async (job) => {
   try {
-    // Get all unpaid transactions
-    const transactions = await Transaction.find({ isRedeemed: false });
+    // Get all unredeemed transactions
+    const transactions = await getAllTransactions({ isRedeemed: false });
 
+    // Send redeem link for each paid unredeemed transaction
     transactions.forEach(async (transaction) => {
-      // Get transaction from chimoney
-      const chimoneyTransaction = await account.getTransactionByID(
-        transaction.transactionId
-      );
+      try {
+        // Get transaction from chimoney
+        const chimoneyTransaction = await account.getTransactionByID(
+          transaction._id
+        );
 
-      const { status, meta, chiRef, valueInUSD, chimoney } =
-        chimoneyTransaction.data;
-      const { isDiscord, discordSender, discordReceiver } = meta;
+        const { status, meta, chiRef, valueInUSD, chimoney } =
+          chimoneyTransaction.data;
 
-      // Check if transaction was initiated by discordBot
-      if (!isDiscord) return;
+        // Check if meta is defined
+        if (!meta) return;
 
-      // Check if transaction is paid
-      if (status !== "paid") return;
+        const { isDiscord, discordSender, discordReceiver } = meta;
 
-      // Reply to discordSender
-      await bot.users.send(
-        discordSender,
-        buildSenderMessage(valueInUSD, discordReceiver)
-      );
+        // Check if transaction was initiated by discordBot
+        if (!isDiscord) return;
 
-      // Send Redeem Link to discord receiver
-      await bot.users.send(
-        discordReceiver,
-        buildReceiverMessage(chimoney, valueInUSD, discordSender, chiRef)
-      );
+        // Check if transaction is paid
+        if (status !== "paid") return;
 
-      // Update transaction in database to be redeemed
-      await Transaction.findByIdAndUpdate(transaction._id, {
-        isRedeemed: true,
-      });
+        // Reply to discordSender
+        await bot.users.send(
+          discordSender,
+          buildSenderMessage(valueInUSD, discordReceiver)
+        );
+
+        // Send Redeem Link to discord receiver
+        await bot.users.send(
+          discordReceiver,
+          buildReceiverMessage(chimoney, valueInUSD, discordSender, chiRef)
+        );
+
+        // Update transaction in database via api be redeemed
+        await updateTransaction(transaction._id, { isRedeemed: true });
+      } catch (error) {
+        console.log("Error: " + error.message);
+      }
     });
   } catch (error) {
-    console.log(error.message);
+    console.log("Error: " + error.message);
   }
 });
 
 // This fired when the bot starts
 bot.once("ready", async () => {
   console.log("bot logged in");
-
-  // Connect to database
-  await connectDB();
 
   // Start scheduler
   await agenda.start();
