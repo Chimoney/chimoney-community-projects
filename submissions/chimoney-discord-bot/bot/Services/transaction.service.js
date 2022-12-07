@@ -1,4 +1,4 @@
-const Transaction = require("../Models/transaction");
+const { axiosPrivate } = require("../utils/helpers");
 
 const createTransaction = async (payload) => {
   const { discordSender, discordReceiver, transactionId } = payload;
@@ -8,15 +8,14 @@ const createTransaction = async (payload) => {
       "discordSender, discordReceiver and transactionId are required"
     );
 
-  // Create new transaction
-  const transaction = new Transaction({
+  // Send API request to create new transaction
+  const response = await axiosPrivate.post("/transactions", {
     discordReceiver,
     discordSender,
     transactionId,
   });
 
-  // Save new transaction
-  await transaction.save();
+  const { transaction } = response.data;
 
   return transaction;
 };

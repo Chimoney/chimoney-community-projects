@@ -2,7 +2,7 @@ require("dotenv").config();
 const { Collection } = require("discord.js");
 const fs = require("node:fs");
 const path = require("node:path");
-const secret = process.env.CHIMONEY_WEBHOOK_SIGNATURE;
+const axios = require("axios");
 
 function loadCommands(client) {
   // Append commands property to client object
@@ -29,6 +29,14 @@ function loadCommands(client) {
   }
 }
 
+// create instance of axios with base api url
+const apiBaseURL = process.env.API_BASE_URL;
+
+const axiosPrivate = axios.create({
+  baseURL: apiBaseURL,
+});
+
 module.exports = {
   loadCommands,
+  axiosPrivate,
 };
