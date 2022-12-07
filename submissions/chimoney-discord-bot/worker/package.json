@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node worker.js",
+    "dev": "nodemon worker.js"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +17,8 @@
     "discord.js": "^14.7.1",
     "dotenv": "^16.0.3",
     "mongoose": "^6.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
