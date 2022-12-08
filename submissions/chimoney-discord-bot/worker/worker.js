@@ -16,6 +16,8 @@ const agenda = new Agenda({
 });
 
 agenda.define("send-redeem-links", async (job) => {
+  // Reset count for number of redeem links set in current job
+  let redeemCount = 0;
   try {
     // Get all unredeemed transactions
     const transactions = await getAllTransactions({ isRedeemed: false });
@@ -56,10 +58,16 @@ agenda.define("send-redeem-links", async (job) => {
 
         // Update transaction in database via api be redeemed
         await updateTransaction(transaction._id, { isRedeemed: true });
+
+        redeemCount++;
       } catch (error) {
         console.log("Error: " + error.message);
       }
     });
+    // Log total number redeem links sent in current job execution
+    console.log(
+      `${redeemCount} redeem links sent @${new Date().toDateString()}`
+    );
   } catch (error) {
     console.log("Error: " + error.message);
   }
