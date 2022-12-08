@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+  bot:
+    build: ./bot
+    environment:
+      - API_BASE_URL=http://api:8080/api
+    env_file:
+      - .env
+    depends_on:
+      - api
+    networks:
+      - chimoney-discord
+  worker:
+    build: ./worker
+    environment:
+      - API_BASE_URL=http://api:8080/api
+    env_file:
+      - .env
+    depends_on:
+      - api
+    networks:
+      - chimoney-discord
+  api:
+    build: ./api
+    env_file:
+      - .env
+    ports:
+      - 8080:8080
+    networks:
+      - chimoney-discord
+networks:
+  chimoney-discord:
+    driver: bridge
