@@ -2,30 +2,11 @@
 
 This repository houses projects worked on by the [Chimoney](https://chimoney.io) community.
 
-
-## [HacktoberFest](https://hacktoberfest.com) 🎉🎉🎉
-<a href="https://hacktoberfest.com">![Hacktober](images/hacktober.png)</a>
-Hacktoberfest is a month-long celebration of open-source projects, their maintainers, and the entire community of contributors. This event is all about giving back to the community and celebrating all things open source.
-
-## [Chimoney x HacktoberFest](https://twitter.com/chimoney_io/status/1576286913723596803?s=48&t=JCGsKCKdKEB_sVfGml2m6w) 🎉🎉🎉
-![Chimoney Hacktober](images/chimoney_hacktober.jpeg)
-
-In light of the month long celebration of hacking for people in tech [HacktoberFest](https://hacktoberfest.com), [Chimoney](https://chimoney.io) is awarding contributors with exciting gifts (cash rewards, Swags). _Excited already 😁😁?_
-<br></br>
-### **What will you be working on for HactoberFest?**
-
 You will mainly be interfacing with `two(2)` of our products.
 
-- [ChiSpend](https://chispend.com)
-
-![ChiSpend](images/chispend.png)
+![Developers API](images/chiconnect.png)
 <br></br>
- Unlock utility.
-Make Crypto Tokens & NFTs spendable. Integrate your own platform tokens also and build out your custom spend experience.
-<br></br>
-![ChiConnect](images/chiconnect.png)
-<br></br>
-- [ChiConnect](https://chimoney.readme.io) Powerful API that enables moving payouts of non dimishing value across banks, giftcards, airtime, momo, etc.
+- [Developers API](https://chimoney.readme.io) Powerful API that enables moving payouts of non-dimishing value across banks, giftcards, airtime, momo, etc.
 <br></br>
 
 ### **Get Started**
@@ -39,13 +20,6 @@ Make Crypto Tokens & NFTs spendable. Integrate your own platform tokens also and
 
  _We can't wait to see your contribution!!!_
 
-### **Rewards💸💸**
-🎃 Each merged PR gets $25
-👻 Each contributor can get this gift up to four times ( 25 * 4 ) = $100
-
-🔮 Bonus! A contributor completing 4 merged PRs gets a T-shirt.
-![Chimoney T-shirt](https://user-images.githubusercontent.com/114580325/194017532-9ea71bb8-7d37-4613-9ed3-d108290c3541.png)
-![Chimoney T-shirt](https://user-images.githubusercontent.com/114580325/194017557-ce401eef-610d-4e6a-a34c-410317ae9c79.png)
 
 
 ### **Start contributing🍾** 
