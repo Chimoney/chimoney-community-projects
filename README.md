@@ -5,8 +5,6 @@ This repository houses projects worked on by the [Chimoney](https://chimoney.io)
 
 You will mainly be interfacing with:
 
-![Developers API](images/chiconnect.png)
-<br></br>
 - [Developers API](https://chimoney.readme.io) Powerful API that enables moving payouts of non-diminishing value across banks, giftcards, airtime, momo, etc.
 <br></br>
 
@@ -23,7 +21,7 @@ You will mainly be interfacing with:
 
 
 ### **Start contributing🍾** 
--  `ChiConnect`: For [Developer API](https://chimoney.readme.io) click [here](https://github.com/Chimoney/chimoney-api-community-projects/issues?q=is%3Aopen+is%3Aissue+label%3AChiConnect).
+-  `Developer API`: For [Developer API](https://chimoney.readme.io) click [here](https://github.com/Chimoney/chimoney-api-community-projects/issues?q=is%3Aopen+is%3Aissue+label%3AChiConnect).
 
 __NOTE:__
 For guidelines checkout [Contribution guidelines](CONTRIBUTING.md).
