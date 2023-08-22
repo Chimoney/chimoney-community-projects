@@ -23,7 +23,7 @@ You will mainly be interfacing with:
 
 
 ### **Start contributing🍾** 
--  `ChiConnect`: For [Developer API](https://chimoney.readme.io) click [here](https://github.com/Chimoney/chimoney-api-community-projects/issues?q=is%3Aopen+is%3Aissue+label%3AChiConnect).
+-  `Developer API`: For [Developer API](https://chimoney.readme.io) click [here](https://github.com/Chimoney/chimoney-api-community-projects/issues?q=is%3Aopen+is%3Aissue+label%3AChiConnect).
 
 __NOTE:__
 For guidelines checkout [Contribution guidelines](CONTRIBUTING.md).
