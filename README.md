@@ -58,15 +58,11 @@ Here are some helpful resources to get you started:
 
 ## Obtaining API Keys
 
-1. **Sign up for a Chimoney Developer Account:** If you don't already have one, you'll need to sign up for a Chimoney developer account at [developer.chimoney.com](https://developer.chimoney.com).
+1. **Sign up for a Chimoney Developer Account:** If you don't already have one, you'll need to sign up for a Chimoney developer account at [sandbox.chimoney.io](sandbox.chimoney.io/developers).
 
-2. **Create a New Application:** Once logged in, navigate to your developer dashboard and create a new application. This will generate API key for you.
+2. **Create a New Application:** Once logged in, navigate to your developer dashboard and create a new application. This will generate your API key for you.
 
-3. **Secure Your API Keys:** API keys are sensitive credentials, so be sure to keep them secure. Avoid sharing them in public forums or repositories.
-
-4. **Add API Keys to Your Environment:** To use the keys in your development environment, add them as environment variables or configure them in your SDK settings.
-
-5. **Start Contributing:** With your API keys in place, you're ready to start contributing to SDKtoberfest!
+5. **Start Contributing:** With your API keys in place, you're ready to start contributing!
 
 ## Contributing
 
@@ -74,7 +70,7 @@ Contributing to Chimoney's SDKtoberfest is easy! Follow these steps:
 
 1. Fork the repository.
 2. Create a new branch with a relevant name for your work: `git checkout -b feature/my-contribution`.
-3. Make your changes and commit them to the submissions folder.
+3. Make your changes and commit them to the **submissions** folder.
 4. Push your changes to your forked repository: `git push origin feature/my-contribution`.
 
 5. Create a pull request explaining your contribution.
@@ -104,18 +100,23 @@ We have exciting prizes and recognition for top contributors!
 
 - $25 for each merged PR
 
-- SDKtoberfest t-shirts and stickers shipped to contributors with upto 4 merged PRs
-- Get a chance to be featured in our **'Contributor Spotlight Series'**
+- Exclusive Chimoney Hacktoberfest t-shirts and stickers for contributors with up to 4 merged PRs
+
+- You stand a chance of winning up to $100 plus hacktoberfest benefits if you have a total of 4 merged PRs
+
+- You also get a chance to be featured in our **'Contributor Spotlight Series'**
 
 ## Live Events
 
 Don't miss our live workshops
 
-- SDK Documentation and Best Practices - **October 10th**
+- Intro to Open source and Chimoney Community Projects - **October 10th** at **5:30 pm EAT | 3:30 pm WAT | 10 AM EST**
+  
+- Effective Contribution To Open source - **17th October** at **5:30 pm EAT | 3:30 pm WAT | 10 AM EST**
 
-- Testing and Debugging SDKS - **17th October**
+- Weekly Office Hour Calls - **Every Tuesday (From 4th-25th)** at **5:30 pm EAT | 3:30 pm WAT | 10 AM EST**
 
-Register for these [workshops](now)
+Register for these workshops [here](https://forms.gle/aNyegaMbbuHtKoRV8)
 
 ## License
 
@@ -129,7 +130,7 @@ If you need assistance or have questions, please contact us at [community@chimon
 
 For more resources and information, visit our [website](https://chimoney.io/) and [documentation](https://chimoney.readme.io/reference/introduction).
 
-We can't wait to see your contributions for SDKtoberfest!
+We can't wait to see your contributions for Hacktoberfest 2023!
 
 Happy coding! 🚀
 
