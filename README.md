@@ -125,6 +125,8 @@ This project is licensed under the [MIT License](link-to-license).
 
 If you need assistance or have questions, please contact us at [community@chimoney.com](mailto:community@chimoney.com).
 
+
+
 ## Additional Resources
 
 For more resources and information, visit our [website](https://chimoney.io/) and [documentation](https://chimoney.readme.io/reference/introduction).
@@ -133,3 +135,5 @@ We can't wait to see your contributions for SDKtoberfest!
 
 Happy coding! 🚀
 
+## Thanking all Awesome Contributors :heart:
+![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
