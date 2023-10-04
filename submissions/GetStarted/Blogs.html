@@ -1,0 +1,181 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="body">
+    <div class="title">
+        <h2>introduction to Chimoney</h2>
+    </div>
+        <div class="description">
+        <p>Chimoney is an Automated Global Payouts Platform. The Chimoney API is designed 
+            for developers and companies, facilitating platform users to redeem airtime, cash, and more through the API. Additionally, 
+            the Chimoney API offers payout functionalities for banks, airtime, mobile 
+            money (momo), gift cards, and other services. Chimoney's Developer APIs 
+            empower businesses with a robust API platform for seamless integration of 
+            payment functionalities, enabling them to unlock global payment capabilities 
+            and enhance their financial operations.
+        </p>
+    </div>
+    
+    <div class="importance">
+            <ol>
+                <li><b>Access to Power-Packed Features:<br/><br/></b>
+                A developer account grants access to a suite of potent APIs by Chimoney. These APIs encompass functionalities vital for a wide array of applications, spanning financial transactions to seamless data retrieval.
+                </li><br/>
+            <li>
+                <b>Real-time Testing and Integration:<br/><br/></b>
+                Gain the ability to test APIs in real-time using the provided sandbox environment within the developer portal. This empowers you to comprehend API behavior, fine-tune integration, and ensure smooth functionality.
+            </li><br/><br/>
+            <li>
+                <b>Customized Solutions:<br/><br/></b>
+                With a developer account, explore Chimoney's diverse range of APIs and pinpoint those aligning with your application's unique requirements. Tailor your integration for optimal outcomes.
+            </li><br/><br/>
+            <li>                 
+                <b>In-depth Guides and Documentation:<br/><br/></b>
+                Inside the developer portal, discover comprehensive documentation and guides offering profound insights into effective API utilization. These resources empower developers, including novices, to navigate through the integration seamlessly.
+            </li> <br/><br/>
+            <li> 
+                <b>Enhanced Security and Authentication:<br/><br/></b>
+                The developer account provides a unique API key, a secure identifier linked to your account. This key is vital for authenticating your API requests, ensuring only authorized users access the APIs.
+                Efficient Error Handling and Troubleshooting:
+            </li>  <br/>
+            <li>
+                <b>Integration through a developer account streamlines error handling and troubleshooting. Detailed error messages and status codes received through API responses expedite issue diagnosis and resolution.</b>
+            </li>   <br/><br/>
+            <li>
+                <b>Community Synergy and Assistance:<br/><br/></b>
+                Engage with fellow developers, share experiences, and seek assistance within the developer community through your developer account. This collaborative environment enriches the integration process and fosters knowledge sharing.
+            </li><br/><br/>
+                <li>  
+                <b>Seamless Scalability and Growth:<br/><br/></b>
+                As your application evolves and scales, a developer account facilitates easy adaptation and integration of new features and functionalities offered by Chimoney APIs. This scalability ensures your application stays current and competitive in the market.
+            </li>     
+    </div>
+    <div class="get-started">
+    <p>for one to get started with the chimoney api one needs to create a developer account in order to access the apis and the developer portal which contains of the sandbox which allows one to test the apis 
+
+it also has documentation, 
+<a href="https://chimoney.readme.io/reference/getting-started-with-your-api">Documentation</a>    that guide the users on how to get started.</p>
+</div>
+
+<b>Developer Account Creation Process:</b><br />
+<p>create an account on this link <a href="https://dash.chimoney.io/auth/signup?next=/">create account</a><br />
+<img src="./assets/sigin.png" alt="sign in page">
+ <p>fill all the personal information then head on and fill the organisation information and also verify your organisation and personal details. you will be asked to provide either your national id or passport you can skip this part if you are a student and still doesnot have any of them</p>
+<p>Then you will be directed to this page where you will have tabs like the dashboard, payments, organisations, earn, transcations and the developers tab</p>
+<img src="./assets/dashboard.png" alt="dashboard">
+To create a developer portal click the developer pane of the side navigation bar
+<a href="https://sandbox.chimoney.io/developers?">Developer portal</a> 
+Then add a new application and give your application a name and an api key will be generated.
+</p>
+<img src="./assets/developer_portal.png" alt="">
+<br/>
+<b>API Key Usage:</b><br/>
+<p>the api key is to be used in the authorization part with the key as Header and the api key as the value</p>
+
+<b>Overview of Developer Portal:</b> <br/>
+<p>
+Inside the developer portal, you'll find comprehensive documentation and guides that provide insights into using the APIs effectively. These resources empower developers, including beginners, to navigate through the integration process seamlessly.
+Enhanced Security and Authentication: 
+<a href="https://chimoney.readme.io/reference/introduction">Introduction to chimoney apis</a>   </p> 
+
+
+<b>Endpoints give access to Powerful Features:</b><br/>
+<p>endpoints unlocks access to a suite of powerful APIs provided by Chimoney. These API endpoints offer functionalities crucial for a wide range of applications, from financial transactions to data retrieval.</p>
+<p><b>significance of the sandbox for testing APIs in a safe environment.</p></b>
+<p>Real-time Testing and Integration:</p>
+<p>the sandbox is a vital tool for developers, providing a secure, controlled, and controlled environment for testing APIs.
+It ensures that developers can validate their integration code,
+understand API behavior, and develop robust applications without any impact on real user data or transactions.
+This is instrumental in building reliable and high-quality applications that deliver value to end-users.</p>
+
+
+With a developer account, you gain the ability to test APIs in real-time using the sandbox environment provided in the developer portal. This allows you to understand API behavior, fine-tune integration, and ensure smooth functionality.
+Tailored Solutions: <a href="https://chimoney.readme.io/reference/post_v0-2-sub-account-create-1">Access the Sandbox</a> 
+and test your api endpoints 
+<img src="./assets/sandbox.png" alt="sandbox">
+
+<a href="https://chimoney.readme.io/reference/knowing-the-api">Knowing the API</a>  you can explore the diverse range of APIs Chimoney offers and identify the ones that align with your specific application needs. This allows you to tailor your integration for optimal results.
+
+<p><b>Integration Guides and Documentation: </p></b>
+<a href="https://chimoney.readme.io/reference/getting-started-with-your-api">getting started with the api</a> 
+
+<br><br><br><br><br><br>
+<p><h3>CHIMONEY APIS:</p></h3>
+<p><b>Account</b>
+    <br/>The api names are self explanatory they tell the user what they are used
+     for eg the "get list of all supported airtime Countries" this will return the
+      countrues that are airtime supported  this uses the POST method except for the
+       DELETE which uses a delete method </p>
+       <b>Endpoints:</b>
+    <p>Get transaction details by issueID. <h5>https://api.chimoney.io/v0.2/accounts/issue-id-transactions </h5></p>
+    <p>Get all transactions by account. <h5>https://api.chimoney.io/v0.2/accounts/transactions</h5>
+    <p>Get single transaction detail. <h5>https://api.chimoney.io/v0.2/accounts/transaction</h5>
+    <p>Account Transfer. <h5>https://api.chimoney.io/v0.2/accounts/transfer</h5>
+    <p>Deletes an unpaid transaction. <h5>https://api.chimoney.io/v0.2/accounts/delete-unpaid-transaction</h5>
+
+<p><b>Info</b> : uses GET method except for the one of verify bank account which is uses a post
+     method</p>
+     <b>Endpoints:</b>
+    <p>Get list of all supported airtime Countries. <h5>https://api.chimoney.io/v0.2/info/airtime-countries</h5>
+    <p>Get list of all assests. <h5>https://api.chimoney.io/v0.2/info/assets</h5>
+    <p>Get list of Supported banks and bank code. <h5>https://api.chimoney.io/v0.2/info/country-banks</h5>
+    <p>Get list of bank branches and branch code. <h5>https://api.chimoney.io/v0.2/info/bank-branches</h5>
+    <p>get exchange rates. <h5>https://api.chimoney.io/v0.2/info/exchange-rates</h5>
+    <p>convert local currency amount to USD. <h5>https://api.chimoney.io/v0.2/info/local-amount-in-usd</h5>
+        <p>sample snippet of api response in the sandbox</p>
+        <img src="./assets/sample.png" alt="sample snippet of api response in the sandbox">
+    <p>Get list of all supported mobile money code. <h5>https://api.chimoney.io/v0.2/info/mobile-money-codes</h5>
+    <p>Get usd amount in Local.<h5>https://api.chimoney.io/v0.2/info/usd-amount-in-local</h5>
+    <p>verify a bank account number or multiple bank account numbers. method- POST https://api.chimoney.io/v0.2/info/verify-bank-account-number</h5>
+
+<br/><br/><b>Payments </b><br/><br/>
+    <b>Endpoints:</b>
+    <p>Initiate a payment request <h5>https://api.chimoney.io/v0.2/payment/initiate</h5>
+    <p>verify a payment. <h5>https://api.chimoney.io/v0.2/payment/verify</h5>
+    <p>Simulate a card or other status change. Accepted include ["failed", "expired",
+         "fraud"]. Only works in staging <h5>https://api.chimoney.io/v0.2/payment/simulate</h5>
+
+
+<br/><br/><b>Payouts</b>
+    <p>method: POST
+    <p>Payout airtime. https://api.chimoney.io/v0.2/payouts/airtime</h5>
+    <p>Payout bank. <h5>https://api.chimoney.io/v0.2/payouts/bank</h5>
+    <p>Payout chimoney. <h5>https://api.chimoney.io/v0.2/payouts/chimoney</h5>
+    <p>Payout to Chimoney Wallet. <h5>https://api.chimoney.io/v0.2/payouts/wallet</h5>
+    <p>Payout giftcards. <h5>https://api.chimoney.io/v0.2/payouts/gift-card</h5>
+    <p>Payout mobile-money. <h5>https://api.chimoney.io/v0.2/payouts/mobile-money</h5>
+    <p>Check out payout status. <h5>https://api.chimoney.io/v0.2/payouts/status</h5>
+    <p>Initiate chimoney.  <h5>https://api.chimoney.io/v0.2/payouts/initiate-chimoney</h5>
+
+<br/><br/><b>Redeem :</b>
+    
+    <p>method: POST<br/><br/>
+    <b>Endpoints:</b>
+    <p>Redeem airtime. <h5>https://api.chimoney.io/v0.2/redeem/airtime</h5>
+    <p>Redeem any. <h5>https://api.chimoney.io/v0.2/redeem/any</h5>
+    <p>Redeem Chimoney. <h5>https://api.chimoney.io/v0.2/redeem/chimoney</h5>
+    <p>Redeem giftcard. <h5>https://api.chimoney.io/v0.2/redeem/gift-card</h5>
+    <p>Redeem mobile money. <h5>https://api.chimoney.io/v0.2/redeem/mobile-money</h5>
+
+<br/><br/><b>SubAccount:</b>
+    <b>Endpoints:</b>   
+    <p>Creates a new sub-account. POST <h5>https://api.chimoney.io/v0.2/sub-account/create</h5>
+    <p>Deletes an existing sub-account. DELETE <h5>https://api.chimoney.io/v0.2/sub-account/delete</h5>
+    <p>Get details of an existing sub account. GET <h5>https://api.chimoney.io/v0.2/sub-account/get</h5>
+    <p>Get all sub-accounts associated with a user. GET <h5>https://api.chimoney.io/v0.2/sub-account/list</h5>
+
+<br/><br/><b>Wallet :</b>
+    <p>method: POST</p>
+    <br/><b>Endpoints:</b>
+    <p>List associated wallets. <h5>https://api.chimoney.io/v0.2/wallets/list</h5>
+    <p>Get single wallet details. <h5>https://api.chimoney.io/v0.2/wallets/lookup</h5>
+    <p>Transfer between wallets.  <h5>https://api.chimoney.io/v0.2/wallets/transfer</h5>
+    </p> 
+</div>
+</body>
+</html>
