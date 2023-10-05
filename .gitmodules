@@ -1,0 +1,3 @@
+[submodule "submissions/topdelivr"]
+	path = submissions/topdelivr
+	url = https://github.com/KelvinNjiraini/TopDelivr.git
