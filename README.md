@@ -1,13 +1,12 @@
-# SDKtoberfest 2023
+# Chimoney Hacktoberfest 2023
 
-Welcome to SDKtoberfest 2023 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source SDKs.
+Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
 
 ## Table of Contents
 
-- [SDKtoberfest 2023](#sdktoberfest-2023)
+- [Chimoney Hacktoberfest 2023](#chimoney-hacktoberfest-2023)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
-  - [Event Dates](#event-dates)
   - [Prerequisites](#prerequisites)
   - [Getting Started](#getting-started)
   - [Resources](#resources)
@@ -25,15 +24,11 @@ Welcome to SDKtoberfest 2023 brought to you by Chimoney! This is your complete g
 
 ## Introduction
 
-Join us for a month of coding, learning, and contributing to Chimoney's open-source SDKs!
-
-## Event Dates
-
-SDKtoberfest 2023 will run from **October 3rd** to **October 31st**.
+Join us for a month of coding, learning, and contributing to Chimoney's open-source projects!
 
 ## Prerequisites
 
-To participate in SDKtoberfest, you should have:
+To contribute to the projects/issues, you should have:
 
 - Basic knowledge of programming languages (e.g. Python, JavaScript).
 - Familiarity with version control systems like Git.
@@ -55,6 +50,7 @@ Ready to dive in? Here's how to get started:
 Here are some helpful resources to get you started:
 
 - **API Documentation:** Explore Chimoney's API documentation. You can find detailed information [here](https://chimoney.readme.io/reference/introduction).
+  
 
 ## Obtaining API Keys
 
@@ -64,9 +60,10 @@ Here are some helpful resources to get you started:
 
 5. **Start Contributing:** With your API keys in place, you're ready to start contributing!
 
+
 ## Contributing
 
-Contributing to Chimoney's SDKtoberfest is easy! Follow these steps:
+Contributing to Chimoney's Hacktoberfest is easy! Follow these steps:
 
 1. Fork the repository.
 2. Create a new branch with a relevant name for your work: `git checkout -b feature/my-contribution`.
@@ -99,24 +96,19 @@ If you're new to open source, don't worry! We offer mentorship to help you get s
 We have exciting prizes and recognition for top contributors!
 
 - $25 for each merged PR
-
 - Exclusive Chimoney Hacktoberfest t-shirts and stickers for contributors with up to 4 merged PRs
 
 - You stand a chance of winning up to $100 plus hacktoberfest benefits if you have a total of 4 merged PRs
 
-- You also get a chance to be featured in our **'Contributor Spotlight Series'**
+- You also stand a chance to be featured in our **'Contributor Spotlight Series'**
 
 ## Live Events
 
-Don't miss our live workshops
-
-- Intro to Open source and Chimoney Community Projects - **October 10th** at **5:30 pm EAT | 3:30 pm WAT | 10 AM EST**
-  
-- Effective Contribution To Open source - **17th October** at **5:30 pm EAT | 3:30 pm WAT | 10 AM EST**
+Don't miss our live sessions
 
 - Weekly Office Hour Calls - **Every Tuesday (From 4th-25th)** at **5:30 pm EAT | 3:30 pm WAT | 10 AM EST**
 
-Register for these workshops [here](https://forms.gle/aNyegaMbbuHtKoRV8)
+Register for these sessions [here](https://forms.gle/aNyegaMbbuHtKoRV8)
 
 ## License
 
@@ -126,13 +118,11 @@ This project is licensed under the [MIT License](link-to-license).
 
 If you need assistance or have questions, please contact us at [community@chimoney.com](mailto:community@chimoney.com).
 
-
-
 ## Additional Resources
 
 For more resources and information, visit our [website](https://chimoney.io/) and [documentation](https://chimoney.readme.io/reference/introduction).
 
-We can't wait to see your contributions for Hacktoberfest 2023!
+We can't wait to see your contributions to Hacktoberfest 2023!
 
 Happy coding! 🚀
 
