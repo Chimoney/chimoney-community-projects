@@ -54,7 +54,9 @@ Here are some helpful resources to get you started:
 
 ## Obtaining API Keys
 
-1. **Sign up for a Chimoney Developer Account:** See the Sandbox Access Instruction [here](https://chimoney.readme.io/reference/sandbox-environment). If you don't already have one, you'll need to sign up for a Chimoney developer account sandbox access at [sandbox.chimoney.io](sandbox.chimoney.io/developers).
+1. **Sign up for a Chimoney Developer Account:** See the Sandbox Access Instruction [here](https://chimoney.readme.io/reference/sandbox-environment). If you don't already have one, you'll need to sign up for a Chimoney developer account sandbox access at [sandbox.chimoney.io](https://chimoney.readme.io/reference/sandbox-environment).
+
+- You can also checkout this article on how to obtain API keys [here](https://community-chimoney.hashnode.dev/getting-started-with-chimoneys-api-chiconnect).
 
 2. **Create a New Application:** Once logged in, navigate to your developer dashboard and create a new application. This will generate your API key for you.
 
