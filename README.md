@@ -1,62 +1,130 @@
-# Chimoney Community Projects
+# Chimoney Hacktoberfest 2023
 
-This repository houses projects worked on by the [Chimoney](https://chimoney.io) community.
+Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
+
+## Table of Contents
+
+- [Chimoney Hacktoberfest 2023](#chimoney-hacktoberfest-2023)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Prerequisites](#prerequisites)
+  - [Getting Started](#getting-started)
+  - [Resources](#resources)
+  - [Obtaining API Keys](#obtaining-api-keys)
+  - [Contributing](#contributing)
+  - [Issues](#issues)
+  - [Code of Conduct](#code-of-conduct)
+  - [Communication](#communication)
+  - [Mentorship](#mentorship)
+  - [Prizes and Recognition](#prizes-and-recognition)
+  - [Live Events](#live-events)
+  - [License](#license)
+  - [Contact Information](#contact-information)
+  - [Additional Resources](#additional-resources)
+
+## Introduction
+
+Join us for a month of coding, learning, and contributing to Chimoney's open-source projects!
+
+## Prerequisites
+
+To contribute to the projects/issues, you should have:
+
+- Basic knowledge of programming languages (e.g. Python, JavaScript).
+- Familiarity with version control systems like Git.
+- Technical Writing skills (Optional)
+
+## Getting Started
+
+Ready to dive in? Here's how to get started:
+
+1. Fork the [Chimoney SDKtoberfest repository](https://github.com/Shivamkotalia2002/chimoney-community-projects.git).
+2. Clone your forked repository to your local machine.
+3. Explore the list of available issues in Chimoney's SDK projects.
+4. Select an issue you'd like to work on and ask to be assigned to it. Tag @phyleria @adebayoileri
+5. Follow our [Contributing Guidelines](#contributing) for making changes.
+6. Create a pull request when you're ready to submit your contribution.
+
+## Resources
+
+Here are some helpful resources to get you started:
+
+- **API Documentation:** Explore Chimoney's API documentation. You can find detailed information [here](https://chimoney.readme.io/reference/introduction).
+  
+
+## Obtaining API Keys
+
+1. **Sign up for a Chimoney Developer Account:** See the Sandbox Access Instruction [here](https://chimoney.readme.io/reference/sandbox-environment). If you don't already have one, you'll need to sign up for a Chimoney developer account sandbox access at [sandbox.chimoney.io](sandbox.chimoney.io/developers).
+
+2. **Create a New Application:** Once logged in, navigate to your developer dashboard and create a new application. This will generate your API key for you.
+
+5. **Start Contributing:** With your API keys in place, you're ready to start contributing!
 
 
-## [HacktoberFest](https://hacktoberfest.com) 🎉🎉🎉
-<a href="https://hacktoberfest.com">![Hacktober](images/hacktober.png)</a>
-Hacktoberfest is a month-long celebration of open-source projects, their maintainers, and the entire community of contributors. This event is all about giving back to the community and celebrating all things open source.
+## Contributing
 
-## [Chimoney x HacktoberFest](https://twitter.com/chimoney_io/status/1576286913723596803?s=48&t=JCGsKCKdKEB_sVfGml2m6w) 🎉🎉🎉
-![Chimoney Hacktober](images/chimoney_hacktober.jpeg)
+Contributing to Chimoney's Hacktoberfest is easy! Follow these steps:
 
-In light of the month long celebration of hacking for people in tech [HacktoberFest](https://hacktoberfest.com), [Chimoney](https://chimoney.io) is awarding contributors with exciting gifts (cash rewards, Swags). _Excited already 😁😁?_
-<br></br>
-### **What will you be working on for HactoberFest?**
+1. Fork the repository.
+2. Create a new branch with a relevant name for your work: `git checkout -b feature/my-contribution`.
+3. Make your changes and commit them to the **submissions** folder.
+4. Push your changes to your forked repository: `git push origin feature/my-contribution`.
 
-You will mainly be interfacing with `two(2)` of our products.
+5. Create a pull request explaining your contribution.
 
-- [ChiSpend](https://chispend.com)
+## Issues
 
-![ChiSpend](images/chispend.png)
-<br></br>
- Unlock utility.
-Make Crypto Tokens & NFTs spendable. Integrate your own platform tokens also and build out your custom spend experience.
-<br></br>
-![ChiConnect](images/chiconnect.png)
-<br></br>
-- [ChiConnect](https://chimoney.readme.io) Powerful API that enables moving payouts of non dimishing value across banks, giftcards, airtime, momo, etc.
-<br></br>
+Browse the [list of available issues](https://github.com/Chimoney/chimoney-community-projects/issues) here to find an issue that interests you.
 
-### **Get Started**
- 
- You will need `keys` to interface with our products. To do so, follow these simple steps below:
+## Code of Conduct
 
- - Create a organization on [Chimoney Dashboard](https://dash.chimoney.io).
- - Send [us](mailto:support@chimoney.io) the name of the organization, we will approve it!
-- Switch to the organization (top right) and go to dev page, you’d see your keys. It’s `live keys`, for now. No test keys yet.
- - We will add $10 for testing. You can always send $1 to yourself to test and redeem it back to the organization. That way, you always have funds.
+We expect all contributors to abide by our [Code of Conduct](chimoney-community-projects/CODE_OF_CONDUCT.md). Please ensure your behavior is respectful and inclusive.
 
- _We can't wait to see your contribution!!!_
+## Communication
 
-### **Rewards💸💸**
-🎃 Each merged PR gets $25
-👻 Each contributor can get this gift up to four times ( 25 * 4 ) = $100
+Join the conversation! We're available on:
 
-🔮 Bonus! A contributor completing 4 merged PRs gets a T-shirt.
-![Chimoney T-shirt](https://user-images.githubusercontent.com/114580325/194017532-9ea71bb8-7d37-4613-9ed3-d108290c3541.png)
-![Chimoney T-shirt](https://user-images.githubusercontent.com/114580325/194017557-ce401eef-610d-4e6a-a34c-410317ae9c79.png)
+- Discord - [Link to discord](https://discord.gg/Q3peDrPG95)
+- Email - community@chimoney.io
 
+## Mentorship
 
-### **Start contributing🍾** 
--  `ChiConnect`: For [ChiConnect](https://chimoney.readme.io) click [here](https://github.com/Chimoney/chimoney-api-community-projects/issues?q=is%3Aopen+is%3Aissue+label%3AChiConnect).
--  `ChiSpend`: For [ChiSpend](https://chimoney.readme.io) click [here](https://github.com/Chimoney/chimoney-api-community-projects/issues?q=is%3Aopen+is%3Aissue+label%3AChiSpend).
+If you're new to open source, don't worry! We offer mentorship to help you get started. Reach out on [Discord](https://discord.gg/Q3peDrPG95) to connect with a mentor.
 
-__P.S__: Add `hacktoberfest` to your pull-requests, those pr's get first priority, your code/submission should be contained in the [submissions](submissions) folder.
+## Prizes and Recognition
 
-__NOTE:__
-For guidelines checkout [Contribution guidelines](CONTRIBUTING.md).
+We have exciting prizes and recognition for top contributors!
 
+- $25 for each merged PR
+- Exclusive Chimoney Hacktoberfest t-shirts and stickers for contributors with up to 4 merged PRs
 
-__Happy Hacking!!!__
+- You stand a chance of winning up to $100 plus hacktoberfest benefits if you have a total of 4 merged PRs
 
+- You also stand a chance to be featured in our **'Contributor Spotlight Series'**
+
+## Live Events
+
+Don't miss our live sessions
+
+- Weekly Office Hour Calls - **Every Tuesday (From 4th-25th)** at **5:30 pm EAT | 3:30 pm WAT | 10 AM EST**
+
+Register for these sessions [here](https://forms.gle/aNyegaMbbuHtKoRV8)
+
+## License
+
+This project is licensed under the [MIT License](link-to-license).
+
+## Contact Information
+
+If you need assistance or have questions, please contact us at [community@chimoney.com](mailto:community@chimoney.com).
+
+## Additional Resources
+
+For more resources and information, visit our [website](https://chimoney.io/) and [documentation](https://chimoney.readme.io/reference/introduction).
+
+We can't wait to see your contributions to Hacktoberfest 2023!
+
+Happy coding! 🚀
+
+## Thanking all Awesome Contributors :heart:
+![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)

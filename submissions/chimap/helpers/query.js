@@ -1,6 +1,12 @@
 // filters data by country param
 export function filterByCountry(param, data) {
-    let filter = data?.filter((i) => i.countries ? (i.countries.length == 0 || i.countries.includes(param)) : i.country.name == param);
+    let filter = data?.filter((i) => i.countries ? (i.countries.length == 0 || i.countries.includes(param)) : (i.country==param || i.country.name == param));
+    return filter
+}
+
+// filters giftcard by country param
+export function filterGiftCardByCountry(param, data) {
+    let filter = data?.filter((i) => i.countries ? (i.countries.length == 0 || i.countries.includes(param)) : (i.country==param || i.country.isoName == param));
     return filter
 }
 
