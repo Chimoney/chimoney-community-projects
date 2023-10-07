@@ -15,12 +15,12 @@ class Account(BaseAPI):
         - delete_unpaid_transaction
     """
 
-    def trasactions_by_issue_id(self, issue_id, sub_account=None) -> dict:
+    def transactions_by_issue_id(self, issue_id, sub_account=None) -> dict:
         """
         This function returns a list of transactions by issue ID.
 
         Args:
-            issue_id (str): The issue ID of the transaction.
+            issue_id (str): The issue ID of the transaction.(required)
             sub_account (str):  The sub account of the transaction.
 
         Returns:
@@ -32,7 +32,7 @@ class Account(BaseAPI):
         if not issue_id:
             raise ValueError("Issue ID is required.")
 
-        params = {"issueId": issue_id}
+        params = {"issueID": issue_id}
         payload = {}
         if sub_account:
             payload["subAccount"] = sub_account
@@ -43,7 +43,7 @@ class Account(BaseAPI):
 
     def all_transaction(self, sub_account=None) -> dict:
         """
-        This function returns a list of transactions by account.
+        This function returns a list of transactions by account .
 
         Args:
             sub_account(str): The sub account of the transaction.
@@ -66,7 +66,7 @@ class Account(BaseAPI):
         This function returns a transaction by ID.
 
         Args:
-            transaction_id(str): The ID of the transaction.
+            transaction_id(str): The ID of the transaction.(required)
             sub_account(str): The sub account of the transaction.
 
         Returns:
@@ -93,8 +93,8 @@ class Account(BaseAPI):
 
         Args:
             reciever(str): The receiver of the funds.
-            amount(float): The amount of the funds.
-            wallet(str): The wallet of the funds.
+            amount(float): The amount of the funds in USD.
+            wallet(str): The wallet type.[chi, momo, airtime]
             sub_aacount(str): The sub account of the transaction.
 
         Returns:
@@ -114,7 +114,7 @@ class Account(BaseAPI):
 
         payload = {
             "receiver": receiver,
-            "amount": amount,
+            "valueInUSD": amount,
             "wallet": wallet,
         }
 
@@ -132,11 +132,11 @@ class Account(BaseAPI):
         This function deletes an unpaid transaction.
 
         Args:
-            transaction_id(str): The ID of the transaction.
+            transaction_id(str): The ID of the transaction.(required)
             sub_account(str): The sub account of the transaction
 
         Returns:
-            The JSOn response from the Chimoney API
+            The JSON response from the Chimoney API
         """
         if not isinstance(transaction_id, str):
             raise TypeError("Transaction ID must be a string.")
