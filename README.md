@@ -132,4 +132,4 @@ We can't wait to see your contributions to Hacktoberfest 2023!
 Happy coding! 🚀
 
 ## Thanking all Awesome Contributors :heart:
-![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
+[![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)](https://github.com/Chimoney/chimoney-community-projects/graphs/contributors)
