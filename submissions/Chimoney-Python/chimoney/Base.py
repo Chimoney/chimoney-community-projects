@@ -23,7 +23,8 @@ class BaseAPI(object):
         """
         This function returns the headers for the API request.
 
-        :return: The headers for the API request.
+        Return:
+            The headers for the API request.
         """
         return {
             "Content-Type": self._CONTENT_TYPE,
@@ -35,9 +36,11 @@ class BaseAPI(object):
         """
         This function parses the JSON response from the API.
 
-        :param response: The response from the API.
-        :type response: dict
-        :return: The parsed JSON response.
+        Args:
+            respnse(str): The response from the API.
+
+        Returns:
+            The parsed JSON response.
         """
 
         data = response.json()
@@ -47,9 +50,11 @@ class BaseAPI(object):
         """
         This function returns the URL for the API request.
 
-        :param path: The path for the API request.
-        :type path: str
-        :return: The URL for the API request.
+        Args:
+            path(str): The path for the API request.
+
+        Returns:
+            The URL for the API request.
         """
         return self._BASE_URL + path
 
@@ -57,15 +62,14 @@ class BaseAPI(object):
         """
         This function handles the requests to the API.
 
-        :param method_type: The type of request to make.
-        :type method_type: str
-        :param path: The path to the API endpoint.
-        :type path: str
-        :param data: The data to send to the API.
-        :type data: dict
-        :param params: The parameters to send to the API
-        :type params: dict
-        :return: The response from the Chi Money API.
+        Args:
+            method_type(str): The type of request to make.
+            path(str): The path to the API endpoint.
+            data(dict): The data to send to the API.
+            params(dict): The parameters to send to the API
+
+        Returns:
+            The response from the Chi Money API.
         """
 
         if data:
@@ -91,7 +95,7 @@ class BaseAPI(object):
                 return response
             else:
                 return self.parse_json(response)
-        except ConnectTimeout:
-            raise ConnectTimeout("Connection timed out.")
-        except ConnectionError:
-            raise ConnectionError("Connection error.")
+        except (ConnectTimeout, ConnectionError) as exc:
+            raise ConnectTimeout("There was a connection timeout.") or ConnectionError(
+                "There was a connection error"
+            ) from exc

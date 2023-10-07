@@ -6,9 +6,13 @@ class Payouts(BaseAPI):
     This Wraps the Payouts API of Chi Money
     """
 
-    def airtime(self, airtimes=[], subaccount=None):
+    def airtime(self, airtimes=None, subaccount=None):
         """
         This function handles the airtime API.
+
+        Args:
+            airtimes(list): A list of dictionaries containing the airtime details.
+            subaccount(str): The subaccount to use.
 
         example:
             airtime = [
@@ -18,13 +22,12 @@ class Payouts(BaseAPI):
                 }
             ]
 
-        :param airtimes: A list of dictionaries containing the airtime details.
-        :type airtimes: list
-        :param subaccount: The subaccount to use.
-        :type subaccount: str
-        :return: The response from the Chi Money API.
-        :rtype: dict
+        Return:
+            The JSON response from the Chi Money API.
         """
+
+        if airtimes is None:
+            airtimes = []
 
         if not airtimes:
             raise ValueError("airtime must be a list of dictionaries")
@@ -35,9 +38,13 @@ class Payouts(BaseAPI):
 
         return self._handle_request("POST", "/v0.2/payouts/airtime", data=payload)
 
-    def bank(self, banks=[], subaccount=None):
+    def bank(self, banks=None, subaccount=None):
         """
         This function handles the bank API.
+
+        Args:
+            banks(list): A list of dictionaries containing the bank details.
+            subaccount(str): The subaccount to use.
 
         example:
             banks = [
@@ -50,13 +57,12 @@ class Payouts(BaseAPI):
                 }
             ]
 
-        :param banks: A list of dictionaries containing the bank details.
-        :type banks: list
-        :param subaccount: The subaccount to use.
-        :type subaccount: str
-        :return: The response from the Chi Money API.
-        :rtype: dict
+        Returns:
+            The JSON response from the Chi Money API.
         """
+
+        if banks is None:
+            banks = []
 
         if not banks:
             raise ValueError("bank must be a list of dictionaries")
@@ -67,9 +73,13 @@ class Payouts(BaseAPI):
 
         return self._handle_request("POST", "/v0.2/payouts/bank", data=payload)
 
-    def chimoney(self, chimoneys=[], subaccount=None):
+    def chimoney(self, chimoneys=None, subaccount=None):
         """
         This function handles the chimoney API.
+
+        Args:
+            chimoneys(list): A list of dictionaries containing the chimoney details.
+            subaccount(str): The subaccount to use.
 
         example:
             chimoneys = [
@@ -80,13 +90,12 @@ class Payouts(BaseAPI):
                 }
             ]
 
-        :param chimoneys: A list of dictionaries containing the chimoney details.
-        :type chimoneys: list
-        :param subaccount: The subaccount to use.
-        :type subaccount: str
-        :return: The response from the Chi Money API.
-        :rtype: dict
+        Return:
+        The response from the Chi Money API.
         """
+
+        if chimoneys is None:
+            chimoneys = []
 
         if not chimoneys:
             raise ValueError("chimoney must be a list of dictionaries")
@@ -97,9 +106,13 @@ class Payouts(BaseAPI):
 
         return self._handle_request("POST", "/v0.2/payouts/chimoney", data=payload)
 
-    def mobile_money(self, momos=[], subaccount=None):
+    def mobile_money(self, momos=None, subaccount=None):
         """
         This function handles the mobile money API.
+
+        Args:
+            momos(list): A list of dictionaries containing the mobile money details.
+            subaccount(str): The subaccount to be used.
 
         example:
             momos = [
@@ -111,13 +124,12 @@ class Payouts(BaseAPI):
                 }
             ]
 
-        :param momos: A list of dictionaries containing the mobile money details.
-        :type momos: list
-        :param subaccount: The subaccount to use.
-        :type subaccount: str
-        :return: The response from the Chi Money API.
-        :rtype: dict
+        Return:
+            The JSON response from the Chi Money API.
         """
+
+        if momos is None:
+            momos = []
 
         if not momos:
             raise ValueError("mobile_money must be a list of dictionaries")
@@ -128,9 +140,13 @@ class Payouts(BaseAPI):
 
         return self._handle_request("POST", "/v0.2/payouts/mobile-money", data=payload)
 
-    def gift_card(self, gift_cards=[], subaccount=None):
+    def gift_card(self, gift_cards=None, subaccount=None):
         """
         This function handles the gift card API.
+
+        Args:
+            gift_cards(list): A list of dictionaries containing the gift card details.
+            subaccount(str): The subaccount to use.
 
         example:
             gift_cards = [
@@ -145,13 +161,12 @@ class Payouts(BaseAPI):
                 }
             ]
 
-        :param gift_cards: A list of dictionaries containing the gift card details.
-        :type gift_cards: list
-        :param subaccount: The subaccount to use.
-        :type subaccount: str
-        :return: The response from the Chi Money API.
-        :rtype: dict
+        Return:
+            The JSON response from the Chi Money API.
         """
+
+        if gift_cards is None:
+            gift_cards = []
 
         if not gift_cards:
             raise ValueError("gift_card must be a list of dictionaries")
@@ -162,7 +177,7 @@ class Payouts(BaseAPI):
 
         return self._handle_request("POST", "/v0.2/payouts/gift-card", data=payload)
 
-    def status(self, chiRef, subaccount=None):
+    def status(self, chi_ref, subaccount=None):
         """
         This function handles the status API.
 
@@ -174,16 +189,16 @@ class Payouts(BaseAPI):
         :rtype: dict
         """
 
-        if not chiRef:
-            raise ValueError("chiRef is required")
+        if not chi_ref:
+            raise ValueError("chi_ref is required")
 
-        payload = {"chiRef": chiRef}
+        payload = {"chiRef": chi_ref}
         if subaccount:
             payload["subaccount"] = subaccount
 
         return self._handle_request("POST", "/v0.2/payouts/status", data=payload)
 
-    def initiate_chimoney(self, chimoneys=[], crypto_payments=[], subaccount=None):
+    def initiate_chimoney(self, chimoneys=None, crypto_payments=None, subaccount=None):
         """
         This function handles the initiate chimoney API.
 
@@ -206,14 +221,20 @@ class Payouts(BaseAPI):
                 }
             ]
 
-        :param chimoneys: A list of dictionaries containing the chimoney details.
-        :type chimoneys: list
-        :param crypto_payments: A list of dictionaries containing the crypto payment details.
-        :type crypto_payments: list
-        :param subaccount: The subaccount to use.
-        :type subaccount: str
-        :return: The response from the Chi Money API.
+        Args:
+            chimoneys(list): A list of dictionaries containing the chimoney details.
+            crypto_payments(list): A list of dictionaries containing the crypto payment details.
+            subaccount(str): The subaccount to be used.
+
+        Return:
+            The response from the Chi Money API.
         """
+
+        if chimoneys is None:
+            chimoneys = []
+
+        if crypto_payments is None:
+            crypto_payments = []
 
         if not chimoneys:
             raise ValueError("chimoneys must be a list of dictionaries")
