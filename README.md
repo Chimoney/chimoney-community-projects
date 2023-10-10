@@ -1,5 +1,10 @@
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Chimoney/chimoney-community-projects/issues)
+![GitHub repo size](https://img.shields.io/github/repo-size/Chimoney/chimoney-community-projects.svg?color=purple&style=flat)
+![GitHub last commit](https://img.shields.io/github/last-commit/Chimoney/chimoney-community-projects.svg?style=flat)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/Chimoney/chimoney-community-projects.svg?style=flat)
+![GitHub language count](https://img.shields.io/github/languages/count/Chimoney/chimoney-community-projects.svg?style=flat)
+[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/Chimoney/chimoney-community-projects/blob/master/LICENSE)
 # Chimoney Hacktoberfest 2023
-
 Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
 
 ## Table of Contents
@@ -129,4 +134,4 @@ We can't wait to see your contributions to Hacktoberfest 2023!
 Happy coding! 🚀
 
 ## Thanking all Awesome Contributors :heart:
-![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
+[![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)](https://github.com/Chimoney/chimoney-community-projects/graphs/contributors)
