@@ -4,16 +4,18 @@ const fs = require("fs")
 const express = require('express');
 
 
-const PORT = 3066;
-const token = "";
-const bot_url = "https://t.me/chi_amosayomide05_tg_bot"
-const api_key = ""
-const redirect_url = ""
+const PORT = process.env.PORT;
+const token = process.env.TOKEN;
+const bot_url = process.env.BOT_URL;
+const api_key = process.env.API_KEY;
+const redirect_url = process.env.REDIRECT_URL;
+const chimoney_base_url = process.env.CHIMONEY_BASE_URL;
+const chimoney_base_host = process.env.CHIMONEY_BASE_HOST;
+const default_email = process.env.DEFAULT_EMAIL;
 
 
 const bot = new Telegraf(token);
 const app = express();
-
 
 
 app.get('/confirm', (req, res) => {
@@ -40,7 +42,7 @@ app.get('/confirm', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log("http://localhost:3066")
+    console.log(`http://localhost:${PORT}`)
     console.log(`Server is running on port ${PORT}`);
 });
 
@@ -92,7 +94,7 @@ bot.start((ctx) => {
 bot.on('message', async (ctx) => {
 
     if (ctx.message.chat.type === "group" || ctx.message.chat.type === "supergroup") {
-        if (ctx.message.text.toLowerCase().startsWith('/pay ')) {
+        if (ctx.message.text.toLowerCase().startsWith('/chimoney_pay ')) {
 
             const checkUsers = JSON.parse(fs.readFileSync("users.json", "utf8"));
             var searchUser = checkUsers.find(item => item.firstName === ctx.message.from.first_name);
@@ -125,14 +127,14 @@ bot.on('message', async (ctx) => {
 
                 const config = {
                     method: 'post',
-                    url: 'https://api-v2-sandbox.chimoney.io/v0.2/payment/initiate',
+                    url: chimoney_base_url,
                     headers: {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json',
-                        'Host': 'api-v2-sandbox.chimoney.io',
+                        'Host': chimoney_base_host,
                         'X-Api-Key': api_key
                     },
-                    data: { "valueInUSD": amount, "payerEmail": "amosayomide2005@gmail.com", "redirect_url": redirect_url }
+                    data: { "valueInUSD": amount, "payerEmail": default_email, "redirect_url": redirect_url }
                 };
 
                 axios(config)
