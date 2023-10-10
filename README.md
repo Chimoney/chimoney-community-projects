@@ -55,7 +55,7 @@ To contribute to the projects/issues, you should have:
 
 Ready to dive in? Here's how to get started:
 
-1. Fork the [Chimoney SDKtoberfest repository](https://github.com/Shivamkotalia2002/chimoney-community-projects.git).
+1. Fork the [Chimoney SDKtoberfest repository](https://github.com/Chimoney/chimoney-community-projects.git).
 2. Clone your forked repository to your local machine.
 3. Explore the list of available issues in Chimoney's SDK projects.
 4. Select an issue you'd like to work on and ask to be assigned to it. Tag @phyleria @adebayoileri
@@ -71,7 +71,9 @@ Here are some helpful resources to get you started:
 
 ## Obtaining API Keys
 
-1. **Sign up for a Chimoney Developer Account:** See the Sandbox Access Instruction [here](https://chimoney.readme.io/reference/sandbox-environment). If you don't already have one, you'll need to sign up for a Chimoney developer account sandbox access at [sandbox.chimoney.io](sandbox.chimoney.io/developers).
+1. **Sign up for a Chimoney Developer Account:** See the Sandbox Access Instruction [here](https://sandbox.chimoney.io/developers). If you don't already have one, you'll need to sign up for a Chimoney developer account sandbox access at [sandbox.chimoney.io](https://chimoney.readme.io/reference/sandbox-environment).
+
+- You can also check out this article on how to obtain API keys [here](https://community-chimoney.hashnode.dev/getting-started-with-chimoneys-api-chiconnect).
 
 2. **Create a New Application:** Once logged in, navigate to your developer dashboard and create a new application. This will generate your API key for you.
 
@@ -115,7 +117,7 @@ We have exciting prizes and recognition for top contributors!
 - $25 for each merged PR
 - Exclusive Chimoney Hacktoberfest t-shirts and stickers for contributors with up to 4 merged PRs
 
-- You stand a chance of winning up to $100 plus hacktoberfest benefits if you have a total of 4 merged PRs
+- You stand a chance of winning up to $100 plus Hacktoberfest benefits if you have a total of 4 merged PRs
 
 - You also stand a chance to be featured in our **'Contributor Spotlight Series'**
 
