@@ -10,7 +10,7 @@ and practical guides to help you make the most of Chimoney's services in your pr
 
 ### 1. Sending and Receiving Payments with Chimoney
 
-Article Link:  [Hashnode](https://hauwa.hashnode.dev/sending-and-receiving-payments-with-chimoney)
+Article Link:  [Hashnode](https://hauwa.hashnode.dev/sending-and-receiving-payments-with-chimoney)</br>
 Description: Learn the ropes of handling financial transactions through Chimoney's APIs. This comprehensive
 guide walks you through the process of sending and receiving payments, covering essential concepts and
 offering real-world examples. Whether you're building a payment gateway or an e-commerce platform,
@@ -19,7 +19,7 @@ this article has you covered.
 
 ### 2. Integrating Mobile Apps with Chimoney and Web Hooks
 
-Article Link: [Medium](https://medium.com/@shahneel2409/how-to-integrate-mobile-apps-with-chimoney-c1d3e15fda2b)
+Article Link: [Medium](https://medium.com/@shahneel2409/how-to-integrate-mobile-apps-with-chimoney-c1d3e15fda2b)</br>
 Description: Dive deep into the world of mobile app integration with Chimoney's services.
 This article delves into the intricacies of connecting your mobile applications to Chimoney,
 including an in-depth exploration of Chimoney web hooks. Discover how to create seamless user
