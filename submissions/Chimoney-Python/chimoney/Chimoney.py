@@ -2,7 +2,7 @@ import os
 from chimoney import Info, Account, Payouts, SubAccount, Wallet, Redeem
 
 
-class Chimoney():
+class Chimoney:
     """
     Root API
 
@@ -18,14 +18,15 @@ class Chimoney():
         self.redeem = Redeem()
 
     @classmethod
-    def set_api_key(self, auth_key):
+    def set_api_key(cls, auth_key):
         """
         This function sets the API key for the Chi Money API.
 
-        :param auth_key: The API key for the Chi Money API.
-        :type auth_key: str
-        :return: The Chi Money API object.
-        :rtype: Chimoney
+        Args:
+            auth_key(str): The API key for the Chi Money API.
+
+        Return:
+            The Chi Money API object.
         """
         os.environ["CHIMONEY_AUTH_KEY"] = auth_key
         # return an instance of the Chimoney class
