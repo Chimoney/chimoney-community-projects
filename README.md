@@ -80,7 +80,7 @@ Browse the [list of available issues](https://github.com/Chimoney/chimoney-commu
 
 ## Code of Conduct
 
-We expect all contributors to abide by our [Code of Conduct](chimoney-community-projects/CODE_OF_CONDUCT.md). Please ensure your behavior is respectful and inclusive.
+We expect all contributors to abide by our [Code of Conduct](./CODE_OF_CONDUCT.md). Please ensure your behavior is respectful and inclusive.
 
 ## Communication
 
