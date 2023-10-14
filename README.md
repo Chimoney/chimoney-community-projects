@@ -4,7 +4,7 @@ Welcome to Chimoney Communtiy Projects brought to you by Chimoney! This is your 
 
 ## Table of Contents
 
-- [Chimoney Hacktoberfest 2023](#chimoney-hacktoberfest-2023)
+- - Chimoney Community Projects
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Prerequisites](#prerequisites)
@@ -38,7 +38,7 @@ To contribute to the projects/issues, you should have:
 
 Ready to dive in? Here's how to get started:
 
-1. Fork the [Chimoney Hacktoberfest repository](https://github.com/Chimoney/chimoney-community-projects.git).
+1. Fork the [Chimoney Community Projects repository](https://github.com/Chimoney/chimoney-community-projects.git).
 2. Clone your forked repository to your local machine.
 3. Explore the list of available issues in Chimoney's SDK projects.
 4. Select an issue you'd like to work on and ask to be assigned to it. Tag @phyleria @adebayoileri
@@ -62,7 +62,7 @@ Here are some helpful resources to get you started:
 
 ## Contributing
 
-Contributing to Chimoney's Hacktoberfest is easy! Follow these steps:
+Contributing to Chimoney's Community Project is easy! Follow these steps:
 
 1. Fork the repository.
 2. Create a new branch with a relevant name for your work: `git checkout -b feature/my-contribution`.
@@ -94,8 +94,8 @@ If you're new to open source, don't worry! We offer mentorship to help you get s
 We have exciting prizes and recognition for top contributors!
 
 - $25 for each merged PR
-- Exclusive Chimoney Hacktoberfest t-shirts and stickers for contributors with up to 4 merged PRs
-- You stand a chance of winning up to $100 plus Hacktoberfest benefits if you have a total of 4 merged PRs
+- Exclusive Chimoney Community Projects'  t-shirts and stickers for contributors with up to 4 merged PRs
+- You stand a chance of winning up to $100 plus Chimoney benefits if you have a total of 4 merged PRs
 - You also stand a chance to be featured in our **'Contributor Spotlight Series'**
 
 ## Live Events
