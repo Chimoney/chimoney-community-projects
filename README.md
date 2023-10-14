@@ -4,7 +4,7 @@ Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete 
 
 ## Table of Contents
 
-- [Chimoney Hacktoberfest 2023](#chimoney-hacktoberfest-2023)
+- [Chimoney Community Projects 2023](#chimoney-hacktoberfest-2023)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Prerequisites](#prerequisites)
