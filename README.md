@@ -103,7 +103,7 @@ We have exciting prizes and recognition for top contributors!
 
 Don't miss our live sessions
 
-- Weekly Office Hour Calls - **Every Tuesday (From 4th-25th)** at **5:30 pm EAT | 3:30 pm WAT | 10 AM EST**
+- Weekly Office Hour Calls - **Every Tuesday (From 4th-25th)** at **5:30 pm EAT | 3:30 pm WAT | 10:30 AM EST**
 
 Register for these sessions [here](https://forms.gle/aNyegaMbbuHtKoRV8)
 
