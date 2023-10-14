@@ -11,6 +11,7 @@ and practical guides to help you make the most of Chimoney's services in your pr
 ### 1. Sending and Receiving Payments with Chimoney
 
 Article Link:  [Hashnode](https://hauwa.hashnode.dev/sending-and-receiving-payments-with-chimoney)
+Updated Blog:  [Hashnode](https://community-chimoney.hashnode.dev/preview/6529a963f82454000fdd091a)
 Description: Learn the ropes of handling financial transactions through Chimoney's APIs. This comprehensive
 guide walks you through the process of sending and receiving payments, covering essential concepts and
 offering real-world examples. Whether you're building a payment gateway or an e-commerce platform,
