@@ -26,6 +26,10 @@ including an in-depth exploration of Chimoney web hooks. Discover how to create 
 experiences and streamline payment processes.
 
 
+### 3. Integrate Mobile Apps with Chimoney and Webhooks updated article
+Article Link: (https://hashnode.com/preview/6529078352cc90000f0ab5af)
+Description: Explore this comprehensive guide on integrating the Chimoney API and SDKs with mobile applications. The revamped Developer dashboard is now easier to navigate, and this article provides a step-by-step walkthrough, complete with images, on how to set up a webhook for mobile app. Learn how to seamlessly integrate Chimoney's powerful tools into your application and unlock new possibilities for users.
+
 ## Who Should Read These Articles?
 
 These articles are tailored for:
