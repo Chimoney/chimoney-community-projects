@@ -1,6 +1,6 @@
-# Chimoney Hacktoberfest 2023
+# Chimoney Community Projects
 
-Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
+Welcome to Chimoney Communtiy Projects brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
 
 ## Table of Contents
 
@@ -24,13 +24,13 @@ Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete 
 
 ## Introduction
 
-Join us for a month of coding, learning, and contributing to Chimoney's open-source projects!
+Join us for coding, learning, and contributing to Chimoney's open-source projects!
 
 ## Prerequisites
 
 To contribute to the projects/issues, you should have:
 
-- Basic knowledge of programming languages (e.g. Python, JavaScript).
+- Basic knowledge of programming lSanguages (e.g. Python, JavaScript).
 - Familiarity with version control systems like Git.
 - Technical Writing skills (Optional)
 
@@ -50,7 +50,6 @@ Ready to dive in? Here's how to get started:
 Here are some helpful resources to get you started:
 
 - **API Documentation:** Explore Chimoney's API documentation. You can find detailed information [here](https://chimoney.readme.io/reference/introduction).
-  
 
 ## Obtaining API Keys
 
@@ -59,9 +58,7 @@ Here are some helpful resources to get you started:
 - You can also check out this article on how to obtain API keys [here](https://community-chimoney.hashnode.dev/getting-started-with-chimoneys-api-chiconnect).
 
 2. **Create a New Application:** Once logged in, navigate to your developer dashboard and create a new application. This will generate your API key for you.
-
-5. **Start Contributing:** With your API keys in place, you're ready to start contributing!
-
+3. **Start Contributing:** With your API keys in place, you're ready to start contributing!
 
 ## Contributing
 
@@ -71,7 +68,6 @@ Contributing to Chimoney's Hacktoberfest is easy! Follow these steps:
 2. Create a new branch with a relevant name for your work: `git checkout -b feature/my-contribution`.
 3. Make your changes and commit them to the **submissions** folder.
 4. Push your changes to your forked repository: `git push origin feature/my-contribution`.
-
 5. Create a pull request explaining your contribution.
 
 ## Issues
@@ -99,9 +95,7 @@ We have exciting prizes and recognition for top contributors!
 
 - $25 for each merged PR
 - Exclusive Chimoney Hacktoberfest t-shirts and stickers for contributors with up to 4 merged PRs
-
 - You stand a chance of winning up to $100 plus Hacktoberfest benefits if you have a total of 4 merged PRs
-
 - You also stand a chance to be featured in our **'Contributor Spotlight Series'**
 
 ## Live Events
@@ -124,9 +118,10 @@ If you need assistance or have questions, please contact us at [community@chimon
 
 For more resources and information, visit our [website](https://chimoney.io/) and [documentation](https://chimoney.readme.io/reference/introduction).
 
-We can't wait to see your contributions to Hacktoberfest 2023!
+We can't wait to see your contributions to Chimoney!
 
 Happy coding! 🚀
 
-## Thanking all Awesome Contributors :heart:
+## Thanking all Awesome Contributors ❤️
+
 ![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
