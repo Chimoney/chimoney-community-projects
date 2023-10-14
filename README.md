@@ -30,7 +30,7 @@ Join us for coding, learning, and contributing to Chimoney's open-source project
 
 To contribute to the projects/issues, you should have:
 
-- Basic knowledge of programming lSanguages (e.g. Python, JavaScript).
+- Basic knowledge of programming languages (e.g. Python, JavaScript).
 - Familiarity with version control systems like Git.
 - Technical Writing skills (Optional)
 
@@ -94,7 +94,7 @@ If you're new to open source, don't worry! We offer mentorship to help you get s
 We have exciting prizes and recognition for top contributors!
 
 - $25 for each merged PR
-- Exclusive Chimoney Community Projects'  t-shirts and stickers for contributors with up to 4 merged PRs
+- Exclusive Chimoney Community Projects' t-shirts and stickers for contributors with up to 4 merged PRs
 - You stand a chance of winning up to $100 plus Chimoney benefits if you have a total of 4 merged PRs
 - You also stand a chance to be featured in our **'Contributor Spotlight Series'**
 
@@ -118,7 +118,7 @@ If you need assistance or have questions, please contact us at [community@chimon
 
 For more resources and information, visit our [website](https://chimoney.io/) and [documentation](https://chimoney.readme.io/reference/introduction).
 
-We can't wait to see your contributions to Chimoney!
+We can't wait to see your contributions to Chimoney Community Projects!
 
 Happy coding! 🚀
 
