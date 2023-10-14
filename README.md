@@ -1,5 +1,7 @@
 # Chimoney Hacktoberfest 2023
 
+English | [日本語](README-JP.md) |
+
 Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
 
 ## Table of Contents
