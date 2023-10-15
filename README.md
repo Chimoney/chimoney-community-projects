@@ -1,4 +1,12 @@
 # Chimoney Hacktoberfest 2023
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Chimoney/chimoney-community-projects/issues)
+![GitHub repo size](https://img.shields.io/github/repo-size/Chimoney/chimoney-community-projects.svg?color=purple&style=flat)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Flask.svg?style=flat)
+![GitHub last commit](https://img.shields.io/github/last-commit/Chimoney/chimoney-community-projects.svg?style=flat)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/Chimoney/chimoney-community-projects.svg?style=flat)
+![GitHub language count](https://img.shields.io/github/languages/count/Chimoney/chimoney-community-projects.svg?style=flat)
+[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/Chimoney/chimoney-community-projects/blob/master/LICENSE)
+
 
 Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
 
@@ -29,11 +37,11 @@ Join us for a month of coding, learning, and contributing to Chimoney's open-sou
 ## Prerequisites
 
 To contribute to the projects/issues, you should have:
-
+```
 - Basic knowledge of programming languages (e.g. Python, JavaScript).
 - Familiarity with version control systems like Git.
 - Technical Writing skills (Optional)
-
+```
 ## Getting Started
 
 Ready to dive in? Here's how to get started:
