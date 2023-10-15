@@ -1,6 +1,6 @@
 # Chimoney Community Projects
 
-Welcome to Chimoney Communty Projects brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
+Welcome to Chimoney Community Projects brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
 
 ## Table of Contents
 
