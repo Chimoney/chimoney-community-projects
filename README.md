@@ -1,4 +1,4 @@
-# Chimoney Hacktoberfest 2023
+# Chimoney Community Projects 2023
 
 Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
 
