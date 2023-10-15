@@ -37,11 +37,11 @@ Join us for a month of coding, learning, and contributing to Chimoney's open-sou
 ## Prerequisites
 
 To contribute to the projects/issues, you should have:
-```
+
 - Basic knowledge of programming languages (e.g. Python, JavaScript).
 - Familiarity with version control systems like Git.
 - Technical Writing skills (Optional)
-```
+
 ## Getting Started
 
 Ready to dive in? Here's how to get started:
