@@ -6,19 +6,21 @@ class Payouts(BaseAPI):
     This Wraps the Payouts API of Chi Money
     """
 
-    def airtime(self, airtimes=None, subaccount=None):
+    def airtime(self, airtimes, subaccount=None, turn_off_notification=None):
         """
         This function handles the airtime API.
 
         Args:
-            airtimes(list): A list of dictionaries containing the airtime details.
+            airtimes(list, required): A list of dictionaries containing the airtime details.
             subaccount(str): The subaccount to use.
+            turn_off_notificaiton(bool): None by default
 
         example:
             airtime = [
                 {
                    countryToSend: "Nigeria",
                    phoneNumber: "+2348123456789",
+                   valueInUSD: 123
                 }
             ]
 
@@ -26,25 +28,26 @@ class Payouts(BaseAPI):
             The JSON response from the Chi Money API.
         """
 
-        if airtimes is None:
-            airtimes = []
+        if not isinstance(airtimes, list):
+            raise ValueError("airtimes must be a list of dictionaries")
 
-        if not airtimes:
-            raise ValueError("airtime must be a list of dictionaries")
-
-        payload = {"airtime": airtimes}
+        payload = {"airtimes": airtimes}
         if subaccount:
-            payload["subaccount"] = subaccount
+            payload["subAccount"] = subaccount
+
+        if turn_off_notification is not None:
+            payload["turnOffNotification"] = turn_off_notification
 
         return self._handle_request("POST", "/v0.2/payouts/airtime", data=payload)
 
-    def bank(self, banks=None, subaccount=None):
+    def bank(self, banks, subaccount=None, turn_off_notification=None):
         """
         This function handles the bank API.
 
         Args:
-            banks(list): A list of dictionaries containing the bank details.
+            banks(list, required): A list of dictionaries containing the bank details.
             subaccount(str): The subaccount to use.
+            turn_off_notificaiton(bool): None by default
 
         example:
             banks = [
@@ -53,7 +56,9 @@ class Payouts(BaseAPI):
                     "account_bank": "044",
                     "account_number": "0690000031",
                     "valueInUSD": 1,
-                    reference: "1234567890"
+                    "reference": "1234567890",
+                    "fullname": "James John",
+                    "branch_code": "GH190101"
                 }
             ]
 
@@ -61,32 +66,33 @@ class Payouts(BaseAPI):
             The JSON response from the Chi Money API.
         """
 
-        if banks is None:
-            banks = []
+        if not isinstance(banks, list):
+            raise ValueError("banks must be a list of dictionaries")
 
-        if not banks:
-            raise ValueError("bank must be a list of dictionaries")
-
-        payload = {"bank": banks}
+        payload = {"banks": banks}
         if subaccount:
-            payload["subaccount"] = subaccount
+            payload["subAccount"] = subaccount
+
+        if turn_off_notification is not None:
+            payload["turnOffNotification"] = turn_off_notification
 
         return self._handle_request("POST", "/v0.2/payouts/bank", data=payload)
 
-    def chimoney(self, chimoneys=None, subaccount=None):
+    def chimoney(self, chimoneys, subaccount=None, turn_off_notification=None):
         """
         This function handles the chimoney API.
 
         Args:
-            chimoneys(list): A list of dictionaries containing the chimoney details.
+            chimoneys(list, required): A list of dictionaries containing the chimoney details.
             subaccount(str): The subaccount to use.
+            turn_off_notification(bool): None by Default
 
         example:
             chimoneys = [
                 {
                     "valueInUSD": 1,
                     "email": "test@example.com",
-                    "twitter": "@test",
+                    "phone": "+2341234567890",
                 }
             ]
 
@@ -94,25 +100,26 @@ class Payouts(BaseAPI):
         The response from the Chi Money API.
         """
 
-        if chimoneys is None:
-            chimoneys = []
-
-        if not chimoneys:
+        if not isinstance(chimoneys, list):
             raise ValueError("chimoney must be a list of dictionaries")
 
-        payload = {"chimoney": chimoneys}
+        payload = {"chimoneys": chimoneys}
         if subaccount:
-            payload["subaccount"] = subaccount
+            payload["subAccount"] = subaccount
+
+        if turn_off_notification is not None:
+            payload["turnOffNotification"] = turn_off_notification
 
         return self._handle_request("POST", "/v0.2/payouts/chimoney", data=payload)
 
-    def mobile_money(self, momos=None, subaccount=None):
+    def mobile_money(self, momos, subaccount=None, turn_off_notification=None):
         """
         This function handles the mobile money API.
 
         Args:
             momos(list): A list of dictionaries containing the mobile money details.
             subaccount(str): The subaccount to be used.
+            turn_off_notification(bool): None by Default
 
         example:
             momos = [
@@ -120,7 +127,8 @@ class Payouts(BaseAPI):
                     "countryToSend": "Nigeria",
                     "phoneNumber": "+2348123456789",
                     "valueInUSD": 1,
-                    "reference": "1234567890"
+                    "reference": "1234567890",
+                    "momoCode": "MPS"
                 }
             ]
 
@@ -128,25 +136,26 @@ class Payouts(BaseAPI):
             The JSON response from the Chi Money API.
         """
 
-        if momos is None:
-            momos = []
-
-        if not momos:
+        if not isinstance(momos, list):
             raise ValueError("mobile_money must be a list of dictionaries")
 
-        payload = {"mobile_money": momos}
+        payload = {"momos": momos}
         if subaccount:
-            payload["subaccount"] = subaccount
+            payload["subAccount"] = subaccount
+
+        if turn_off_notification is not None:
+            payload["turnOffNotification"] = turn_off_notification
 
         return self._handle_request("POST", "/v0.2/payouts/mobile-money", data=payload)
 
-    def gift_card(self, gift_cards=None, subaccount=None):
+    def gift_card(self, gift_cards, subaccount=None, turn_off_notification=None):
         """
         This function handles the gift card API.
 
         Args:
             gift_cards(list): A list of dictionaries containing the gift card details.
             subaccount(str): The subaccount to use.
+            turn_off_notification(bool): None by Default.
 
         example:
             gift_cards = [
@@ -154,7 +163,7 @@ class Payouts(BaseAPI):
                     "email": "test@example.com",
                     "valueInUSD": 1,
                     "redeemData": {
-                        "productId": "5",
+                        "productId": 5,
                         "countryCode": "NG"
                         "valueInLocalCurrency": 1000
                     }
@@ -165,15 +174,15 @@ class Payouts(BaseAPI):
             The JSON response from the Chi Money API.
         """
 
-        if gift_cards is None:
-            gift_cards = []
+        if not isinstance(gift_cards, list):
+            raise ValueError("gift_cards must be a list of dictionaries")
 
-        if not gift_cards:
-            raise ValueError("gift_card must be a list of dictionaries")
-
-        payload = {"gift_card": gift_cards}
+        payload = {"giftcards": gift_cards}
         if subaccount:
-            payload["subaccount"] = subaccount
+            payload["subAccount"] = subaccount
+
+        if turn_off_notification is not None:
+            payload["turnOffNotification"] = turn_off_notification
 
         return self._handle_request("POST", "/v0.2/payouts/gift-card", data=payload)
 
@@ -181,12 +190,12 @@ class Payouts(BaseAPI):
         """
         This function handles the status API.
 
-        :param chiRef: The Chi Money reference.
-        :type chiRef: str
-        :param subaccount: The subaccount to use.
-        :type subaccount: str
-        :return: The response from the Chi Money API.
-        :rtype: dict
+        Args:
+            chi_ref(str): The Chi Money reference.
+            subaccount(str): The subaccount to use.
+
+        Return:
+            dict: The response from the Chimoney API.
         """
 
         if not chi_ref:
@@ -194,11 +203,20 @@ class Payouts(BaseAPI):
 
         payload = {"chiRef": chi_ref}
         if subaccount:
-            payload["subaccount"] = subaccount
+            payload["subAccount"] = subaccount
 
         return self._handle_request("POST", "/v0.2/payouts/status", data=payload)
 
-    def initiate_chimoney(self, chimoneys=None, crypto_payments=None, subaccount=None):
+    def initiate_chimoney(
+        self,
+        chimoneys,
+        crypto_payments=None,
+        subaccount=None,
+        turn_off_notification=None,
+        redirect_url=None,
+        enable_xumm_payment=None,
+        enable_interledger_payment=None,
+    ):
         """
         This function handles the initiate chimoney API.
 
@@ -206,6 +224,7 @@ class Payouts(BaseAPI):
             chimoneys = [
                 {
                     "email": "test@example",
+                    "phone": "+16471112222",
                     "valueInUSD": 1,
                     "twitter": "@test"
                 }
@@ -222,29 +241,62 @@ class Payouts(BaseAPI):
             ]
 
         Args:
-            chimoneys(list): A list of dictionaries containing the chimoney details.
+            chimoneys(list, required): A list of dictionaries containing the chimoney details.
             crypto_payments(list): A list of dictionaries containing the crypto payment details.
             subaccount(str): The subaccount to be used.
+            turn_off_notification(bool): None by Default.
+            redirect_url(str): The URL to redirect to after payment is confirmed.
+            enable_xumm_payment(bool): To generate a XUMM transaction sign link.
+            enable_interledger_payment(bool): To generate an Open Payment
+              payment request to pay with Interledger.
 
         Return:
-            The response from the Chi Money API.
+            dict: The response from the Chi Money API.
         """
 
-        if chimoneys is None:
-            chimoneys = []
-
-        if crypto_payments is None:
-            crypto_payments = []
-
-        if not chimoneys:
+        if not isinstance(chimoneys, list):
             raise ValueError("chimoneys must be a list of dictionaries")
 
-        payload = {"chimoneys": chimoneys}
-        if crypto_payments:
-            payload["crypto_payments"] = crypto_payments
+        if not isinstance(crypto_payments, list):
+            raise ValueError("crypto_payments must be a list of dictionaries")
+
+        payload = {"chimoneys": chimoneys, "cryptoPayment": crypto_payments}
         if subaccount:
-            payload["subaccount"] = subaccount
+            payload["subAccount"] = subaccount
+        if turn_off_notification is not None:
+            payload["turnOffNotification"] = turn_off_notification
+        if redirect_url:
+            payload["redirect_url"] = redirect_url
+        if enable_xumm_payment:
+            payload["enableXUMMPayment"] = enable_xumm_payment
+        if enable_interledger_payment:
+            payload["enableInterledgerPayment"] = enable_interledger_payment
 
         return self._handle_request(
             "POST", "/v0.2/payouts/initiate-chimoney", data=payload
         )
+
+    def wallet(self, subaccount=None, turn_off_notifications=None, wallets=None):
+        """
+        The function handles the payout to Chimoney Wallet
+
+        Args:
+            subaccount(str): The subaccount to be used.
+            turn_off_notification(bool): None by default
+            wallets(list, required): A list of dictionaries containing wallet details
+
+        Returns:
+            dict: The response from Chimoney API
+        """
+
+        if not isinstance(wallets, list):
+            return ValueError("wallets must be a list of dictionaries")
+
+        payload = {"wallets": wallets}
+        if subaccount:
+            payload["subAccount"] = subaccount
+
+        if turn_off_notifications is not None:
+            payload["turnOffNotifications"] = turn_off_notifications
+
+        return self._handle_request("POST", "/v0.2/payouts/wallet", data=payload)

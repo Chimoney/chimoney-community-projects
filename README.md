@@ -46,7 +46,7 @@ To contribute to the projects/issues, you should have:
 
 Ready to dive in? Here's how to get started:
 
-1. Fork the [Chimoney SDKtoberfest repository](https://github.com/Chimoney/chimoney-community-projects.git).
+1. Fork the [Chimoney Hacktoberfest repository](https://github.com/Chimoney/chimoney-community-projects.git).
 2. Clone your forked repository to your local machine.
 3. Explore the list of available issues in Chimoney's SDK projects.
 4. Select an issue you'd like to work on and ask to be assigned to it. Tag @phyleria @adebayoileri
@@ -88,7 +88,7 @@ Browse the [list of available issues](https://github.com/Chimoney/chimoney-commu
 
 ## Code of Conduct
 
-We expect all contributors to abide by our [Code of Conduct](chimoney-community-projects/CODE_OF_CONDUCT.md). Please ensure your behavior is respectful and inclusive.
+We expect all contributors to abide by our [Code of Conduct](https://github.com/Chimoney/chimoney-community-projects/blob/main/CODE_OF_CONDUCT.md). Please ensure your behavior is respectful and inclusive.
 
 ## Communication
 
