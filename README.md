@@ -1,4 +1,5 @@
-# Chimoney Hacktoberfest 2023
+# Chimoney Hacktoberfest 2023 
+
 
 Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
 
@@ -88,6 +89,7 @@ Join the conversation! We're available on:
 
 - Discord - [Link to discord](https://discord.gg/Q3peDrPG95)
 - Email - community@chimoney.io
+- Twitter - [Link to Twitter](https://twitter.com/chimoney_io?lang=en)
 
 ## Mentorship
 
