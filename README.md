@@ -77,6 +77,20 @@ Contributing to Chimoney's Hacktoberfest is easy! Follow these steps:
 
 ## Project Setup
 
+Here are the links:
+
+- [Chimoney Python](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chimoney-Python)
+- [Chisend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chisend)
+- [Dev focused articles](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Dev%20focused%20articles)
+- [Get Started](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/GetStarted)
+- [Proposed Chimoney Copy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Proposed-Chimoney-Copy)
+- [Chiconnect Bank API Payout](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-bank-api-payout)
+- [Chiconnect Giftcard Payout](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-giftcard-payout)
+- [Chiconnect Laravel Web App](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-laravel-web-app)
+- [Chiconnect Mobile Money Payout](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-mobile-money-payout)
+- [Chiconnect Dev Article](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect_dev_article)
+- [Chimap](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimap)
+
 ## Issues
 
 Browse the [list of available issues](https://github.com/Chimoney/chimoney-community-projects/issues) here to find an issue that interests you.
