@@ -12,6 +12,7 @@ Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete 
   - [Resources](#resources)
   - [Obtaining API Keys](#obtaining-api-keys)
   - [Contributing](#contributing)
+  - [Project Setup](#project-setup)
   - [Issues](#issues)
   - [Code of Conduct](#code-of-conduct)
   - [Communication](#communication)
@@ -73,6 +74,8 @@ Contributing to Chimoney's Hacktoberfest is easy! Follow these steps:
 4. Push your changes to your forked repository: `git push origin feature/my-contribution`.
 
 5. Create a pull request explaining your contribution.
+
+## Project Setup
 
 ## Issues
 
