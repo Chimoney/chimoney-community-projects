@@ -1,7 +1,6 @@
 <div align="center">
   <a href="https://chimoney.io/" target="_blank">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://avatars.githubusercontent.com/u/76222385?s=200&v=4">
     <img src="https://chimoney.io/assets/icons/chimoney-purple-logo.svg" width="280" alt="Logo"/>
   </picture>
   </a>
