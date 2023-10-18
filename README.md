@@ -90,6 +90,17 @@ Here are the links:
 - [Chiconnect Mobile Money Payout](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-mobile-money-payout)
 - [Chiconnect Dev Article](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect_dev_article)
 - [Chimap](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimap)
+- [Chimoney Discord Bot](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-discord-bot)
+- [Chimoney JS](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-js)
+- [Chimoney Payout Airtime](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-payout-airtime)
+- [Chimoney Redeem Airtime](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-redeem-airtime)
+- [Chispend Presentation](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-presentation)
+- [Chispend Proposed Copy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-proposed-copy)
+- [Chispend App](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_app)
+- [Chispend Widget](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
+- [Pay Paddy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
+- [Simple Blog](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/simple_blog)
+- [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
 
 ## Issues
 
