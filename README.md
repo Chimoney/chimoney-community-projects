@@ -81,6 +81,7 @@ Here are the links:
 
 - [Get Started](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/GetStarted)
 - [Dev focused articles](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Dev%20focused%20articles)
+- [Simple Blog](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/simple_blog)
 - [Chimoney Python](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chimoney-Python)
 - [Chisend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chisend)
 - [Proposed Chimoney Copy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Proposed-Chimoney-Copy)
@@ -99,7 +100,6 @@ Here are the links:
 - [Chispend App](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_app)
 - [Chispend Widget](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
 - [Pay Paddy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
-- [Simple Blog](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/simple_blog)
 - [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
 
 ## Issues
