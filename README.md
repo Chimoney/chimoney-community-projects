@@ -7,7 +7,7 @@
   </a>
 </div>
 
-<h1 align = "center">The Open-Source Multiple Payment Rail</h1>
+<h1 align = "center">Chimoney Community Projects</h1>
 
 <p align="center">🎉 We're participating in Hacktoberfest 2023! 🎉</p>
 
