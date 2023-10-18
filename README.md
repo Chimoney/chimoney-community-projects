@@ -79,10 +79,10 @@ Contributing to Chimoney's Hacktoberfest is easy! Follow these steps:
 
 Here are the links:
 
+- [Get Started](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/GetStarted)
+- [Dev focused articles](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Dev%20focused%20articles)
 - [Chimoney Python](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chimoney-Python)
 - [Chisend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chisend)
-- [Dev focused articles](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Dev%20focused%20articles)
-- [Get Started](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/GetStarted)
 - [Proposed Chimoney Copy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Proposed-Chimoney-Copy)
 - [Chiconnect Bank API Payout](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-bank-api-payout)
 - [Chiconnect Giftcard Payout](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-giftcard-payout)
