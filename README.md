@@ -1,8 +1,36 @@
-# Chimoney Hacktoberfest 2023
+<div align="center">
+  <a href="https://chimoney.io/" target="_blank">
+  <picture>
+    <img src="https://chimoney.io/assets/icons/chimoney-purple-logo.svg" width="280" alt="Logo"/>
+  </picture>
+  </a>
+</div>
+
+<h1 align = "center">Chimoney Community Projects</h1>
+
+<p align="center">🎉 We're participating in Hacktoberfest 2023! 🎉</p>
+
+<h1 align = "center">Chimoney Hacktoberfest 2023</h1>
+
+<!-- # Chimoney Hacktoberfest 2023 -->
 
 Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
 
-## Table of Contents
+> ⭐️ If you're new to Hacktoberfest, you can learn more and register to participate [here](https://hacktoberfest.com/participation/). Registration is from **September 26th - October 31st**.
+
+ <p align="center">
+    <br />
+    <a href="https://chimoney.readme.io/reference/introduction" rel="dofollow"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://discord.gg/Q3peDrPG95">Link to Discord</a>
+    ·
+    <a href="https://twitter.com/chimoney_io">Follow us onTwitter</a>
+    ·
+    <a href="mailto:community@chimoney.com">Email</a>
+  </p>
+
+## 📚 Table of Contents
 
 - [Chimoney Hacktoberfest 2023](#chimoney-hacktoberfest-2023)
   - [Table of Contents](#table-of-contents)
@@ -22,11 +50,11 @@ Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete 
   - [Contact Information](#contact-information)
   - [Additional Resources](#additional-resources)
 
-## Introduction
+## ⭐ Introduction
 
 Join us for a month of coding, learning, and contributing to Chimoney's open-source projects!
 
-## Prerequisites
+## 📖 Prerequisites
 
 To contribute to the projects/issues, you should have:
 
@@ -34,7 +62,7 @@ To contribute to the projects/issues, you should have:
 - Familiarity with version control systems like Git.
 - Technical Writing skills (Optional)
 
-## Getting Started
+## 🚀 Getting Started
 
 Ready to dive in? Here's how to get started:
 
@@ -45,14 +73,14 @@ Ready to dive in? Here's how to get started:
 5. Follow our [Contributing Guidelines](#contributing) for making changes.
 6. Create a pull request when you're ready to submit your contribution.
 
-## Resources
+## 📂 Resources
 
 Here are some helpful resources to get you started:
 
 - **API Documentation:** Explore Chimoney's API documentation. You can find detailed information [here](https://chimoney.readme.io/reference/introduction).
   
 
-## Obtaining API Keys
+## 🔑 Obtaining API Keys
 
 1. **Sign up for a Chimoney Developer Account:** See the Sandbox Access Instruction [here](https://sandbox.chimoney.io/developers). If you don't already have one, you'll need to sign up for a Chimoney developer account sandbox access at [sandbox.chimoney.io](https://chimoney.readme.io/reference/sandbox-environment).
 
@@ -63,7 +91,7 @@ Here are some helpful resources to get you started:
 5. **Start Contributing:** With your API keys in place, you're ready to start contributing!
 
 
-## Contributing
+# 🧿 Contributing
 
 Contributing to Chimoney's Hacktoberfest is easy! Follow these steps:
 
@@ -74,26 +102,27 @@ Contributing to Chimoney's Hacktoberfest is easy! Follow these steps:
 
 5. Create a pull request explaining your contribution.
 
-## Issues
+## 🧿 Issues
 
 Browse the [list of available issues](https://github.com/Chimoney/chimoney-community-projects/issues) here to find an issue that interests you.
 
-## Code of Conduct
+## 📑 Code of Conduct
 
 We expect all contributors to abide by our [Code of Conduct](https://github.com/Chimoney/chimoney-community-projects/blob/main/CODE_OF_CONDUCT.md). Please ensure your behavior is respectful and inclusive.
 
-## Communication
+## 📞 Communication
 
 Join the conversation! We're available on:
 
 - Discord - [Link to discord](https://discord.gg/Q3peDrPG95)
 - Email - community@chimoney.io
+- Twitter - [Link to Twitter](https://twitter.com/chimoney_io)
 
-## Mentorship
+## 💻 Mentorship
 
 If you're new to open source, don't worry! We offer mentorship to help you get started. Reach out on [Discord](https://discord.gg/Q3peDrPG95) to connect with a mentor.
 
-## Prizes and Recognition
+## 🏆 Prizes and Recognition
 
 We have exciting prizes and recognition for top contributors!
 
@@ -104,7 +133,7 @@ We have exciting prizes and recognition for top contributors!
 
 - You also stand a chance to be featured in our **'Contributor Spotlight Series'**
 
-## Live Events
+## 📽 Live Events
 
 Don't miss our live sessions
 
@@ -112,15 +141,15 @@ Don't miss our live sessions
 
 Register for these sessions [here](https://forms.gle/aNyegaMbbuHtKoRV8)
 
-## License
+## ⚖ License
 
 This project is licensed under the [MIT License](link-to-license).
 
-## Contact Information
+## 📧 Contact Information
 
 If you need assistance or have questions, please contact us at [community@chimoney.com](mailto:community@chimoney.com).
 
-## Additional Resources
+## 📂 Additional Resources
 
 For more resources and information, visit our [website](https://chimoney.io/) and [documentation](https://chimoney.readme.io/reference/introduction).
 
