@@ -3,9 +3,9 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/submissions/chispend_widget/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/submissions/chispend_widget/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/submissions/chispend_widget/build" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/Unispend_widget/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/Unispend_widget/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/Unispend_widget/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(chispend_app LANGUAGES CXX)
+project(Unispend_app LANGUAGES CXX)
 
-set(BINARY_NAME "chispend_app")
+set(BINARY_NAME "Unispend_app")
 
 cmake_policy(SET CMP0063 NEW)
 

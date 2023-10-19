@@ -1,6 +1,6 @@
 {
-    "name": "chispend_app",
-    "short_name": "chispend_app",
+    "name": "Unispend_app",
+    "short_name": "Unispend_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

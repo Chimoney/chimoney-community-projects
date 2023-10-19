@@ -1,4 +1,4 @@
-A flutter package the provides a widget for [ChiSpend](https://chispend.com/) marketplace.
+A flutter package the provides a widget for [Unispend](https://Unispend.com/) marketplace.
 
 ## Requirement
 
@@ -7,20 +7,20 @@ A flutter package the provides a widget for [ChiSpend](https://chispend.com/) ma
 
 ## Feature
 
-- Access to ChiSpend marketplace using [webview](https://pub.dev/packages/webview_flutter).
+- Access to Unispend marketplace using [webview](https://pub.dev/packages/webview_flutter).
 - Full ability to customise widget theme and colour.
 
 
 ## Usage
 ```dart
-class ChiSpendExample extends StatelessWidget {
-  const ChiSpendExample({Key? key}) : super(key: key);
+class UnispendExample extends StatelessWidget {
+  const UnispendExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ChiSpendWidget(
+    return UnispendWidget(
       primaryColor: Colors.green,
-      chiSpendTheme: ChiSpendTheme.royal,
+      UnispendTheme: UnispendTheme.royal,
       maxAmountInUSD: 1000,
       onMessageReceived: (v) {
         print(v);

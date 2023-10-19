@@ -29,10 +29,10 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.1"
-  chispend_widget:
+  Unispend_widget:
     dependency: "direct main"
     description:
-      name: chispend_widget
+      name: Unispend_widget
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.1"

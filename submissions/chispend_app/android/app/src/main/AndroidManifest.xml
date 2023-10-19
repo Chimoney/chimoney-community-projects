@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chispend_app">
+    package="com.example.Unispend_app">
    <application
-        android:label="Chispend"
+        android:label="Unispend"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
