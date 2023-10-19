@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Payout;
-use App\Support\Chiconnect\Wallet;
+use App\Support\Chimoney Developer API\Wallet;
 use Illuminate\Http\Request;
 
 class PayoutController extends Controller

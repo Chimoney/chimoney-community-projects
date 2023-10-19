@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Support\Chiconnect\Wallet;
+use App\Support\Chimoney Developer API\Wallet;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller

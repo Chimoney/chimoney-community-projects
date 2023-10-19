@@ -4,9 +4,9 @@ namespace App\Http\Livewire;
 
 use App\Models\Payout as ModelsPayout;
 use App\Models\TransactionReference;
-use App\Support\Chiconnect\Info;
-use App\Support\Chiconnect\Payout;
-use App\Support\Chiconnect\Wallet;
+use App\Support\Chimoney Developer API\Info;
+use App\Support\Chimoney Developer API\Payout;
+use App\Support\Chimoney Developer API\Wallet;
 use Livewire\Component;
 use Illuminate\Support\Str;
 

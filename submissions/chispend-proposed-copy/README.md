@@ -1,4 +1,4 @@
-# Proposed change of copy for chispend website
+# Proposed change of copy for Unispend website
 
 ## 1.
 ### SECTION: CTA
@@ -17,5 +17,5 @@
 
 ## 4.
 ### SECTION: ONLY ONE INTEGRATION
-#### OLD: Accelerate your speed to market. Integrating ChiSpend is easy, with a single code snippet to get all features.
-### NEW: Accelerate your speed to market. With just a single code snippet, you can get access to lots of amazing features ChiSpend has to offer.
+#### OLD: Accelerate your speed to market. Integrating Unispend is easy, with a single code snippet to get all features.
+### NEW: Accelerate your speed to market. With just a single code snippet, you can get access to lots of amazing features Unispend has to offer.

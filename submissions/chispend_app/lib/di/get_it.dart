@@ -1,5 +1,5 @@
-import 'package:chispend/data/services/api/payout.dart';
-import 'package:chispend/data/services/api/request_helper/index.dart';
+import 'package:Unispend/data/services/api/payout.dart';
+import 'package:Unispend/data/services/api/request_helper/index.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
 

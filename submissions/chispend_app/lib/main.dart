@@ -1,5 +1,5 @@
-import 'package:chispend/di/get_it.dart';
-import 'package:chispend/presentation/ui/webview/index.dart';
+import 'package:Unispend/di/get_it.dart';
+import 'package:Unispend/presentation/ui/webview/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'data/services/navigation/index.dart';
@@ -20,14 +20,14 @@ class MyApp extends StatelessWidget {
         statusBarIconBrightness: Brightness.dark,
         statusBarColor: Colors.white));
     return MaterialApp(
-      title: 'ChiSpend',
+      title: 'Unispend',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         primarySwatch: Colors.purple
       ),
       navigatorKey: getItInstance<NavigationServiceImpl>().navigationKey,
       debugShowCheckedModeBanner: false,
-      home: const ChiSpendWebView(),
+      home: const UnispendWebView(),
     );
   }
 }

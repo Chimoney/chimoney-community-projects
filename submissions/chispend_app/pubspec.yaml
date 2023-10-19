@@ -1,4 +1,4 @@
-name: chispend
+name: Unispend
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -31,7 +31,7 @@ dependencies:
     sdk: flutter
   get_it: ^7.2.0
   http: ^0.13.4
-  chispend_widget: ^0.0.1
+  Unispend_widget: ^0.0.1
 
 
   # The following adds the Cupertino Icons font to your application.

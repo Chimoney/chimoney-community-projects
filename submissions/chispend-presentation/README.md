@@ -1,7 +1,7 @@
 
-## Chispend Presentation
-![hispend integrations](preview.png "chispend integrations")
-I created a presentation showing some wallets that chispend can be integrated with like valora and celo. 
+## Unispend Presentation
+![hispend integrations](preview.png "Unispend integrations")
+I created a presentation showing some wallets that Unispend can be integrated with like valora and celo. 
 
 Here's an embedded preview of the presentation:
 
@@ -12,4 +12,4 @@ Here's an embedded preview of the presentation:
     src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFQPJWr5rI&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
   </iframe>
 </div>
-Link to <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFQPJWr5rI&#x2F;view?utm_content=DAFQPJWr5rI&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">chispend wallets integrations</a> by Treasure @cybergenie_
+Link to <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFQPJWr5rI&#x2F;view?utm_content=DAFQPJWr5rI&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Unispend wallets integrations</a> by Treasure @cybergenie_

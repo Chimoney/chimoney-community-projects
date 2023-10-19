@@ -1,5 +1,5 @@
-# Chispend-Airtime-Payout-With-Wallet
-Buy airtime on chispend using chimoney wallet.
+# Unispend-Airtime-Payout-With-Wallet
+Buy airtime on Unispend using chimoney wallet.
 
 
 
