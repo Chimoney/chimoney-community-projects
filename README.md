@@ -17,6 +17,7 @@ Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete 
 [**Explore the docs »**](https://chimoney.readme.io/reference/introduction)
 
 [Link to Discord](https://discord.gg/Q3peDrPG95) · [Follow us on Twitter](https://twitter.com/chimoney_io) · [Email](mailto:community@chimoney.com)
+=======
 
 ## 📚 Table of Contents
 
@@ -66,7 +67,7 @@ Ready to dive in? Here's how to get started:
 Here are some helpful resources to get you started:
 
 - **API Documentation:** Explore Chimoney's API documentation. You can find detailed information [here](https://chimoney.readme.io/reference/introduction).
-  
+
 ## 🔑 Obtaining API Keys
 
 1. **Sign up for a Chimoney Developer Account:** See the Sandbox Access Instruction [here](https://sandbox.chimoney.io/developers). If you don't already have one, you'll need to sign up for a Chimoney developer account sandbox access at [sandbox.chimoney.io](https://chimoney.readme.io/reference/sandbox-environment).
@@ -102,7 +103,9 @@ We expect all contributors to abide by our [Code of Conduct](https://github.com/
 Join the conversation! We're available on:
 
 - Discord - [Link to discord](https://discord.gg/Q3peDrPG95)
+
 - Email - <community@chimoney.io>
+- Twitter - [Link to Twitter](https://twitter.com/chimoney_io)
 
 ## 💻 Mentorship
 
