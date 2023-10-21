@@ -70,7 +70,7 @@ Ready to dive in? Here's how to get started:
 2. Clone your forked repository to your local machine.
 3. Explore the list of available issues in Chimoney's SDK projects.
 4. Select an issue you'd like to work on and ask to be assigned to it. Tag @phyleria @adebayoileri
-5. Follow our [Contributing Guidelines](#contributing) for making changes.
+5. Follow our [Contributing Guidelines](https://github.com/Chimoney/chimoney-community-projects/blob/main/CONTRIBUTING.md) for making changes.
 6. Create a pull request when you're ready to submit your contribution.
 
 ## 📂 Resources
