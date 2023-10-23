@@ -143,7 +143,7 @@ Register for these sessions [here](https://forms.gle/aNyegaMbbuHtKoRV8)
 
 ## ⚖ License
 
-This project is licensed under the [MIT License](link-to-license).
+This project is licensed under the [MIT License](https://github.com/Chimoney/chimoney-community-projects/blob/main/LICENSE).
 
 ## 📧 Contact Information
 
