@@ -5,7 +5,18 @@ Before contributing to this repository, please read this [article](https://hashn
 
 ## Onboarding enhancement
 
-This aims to improve the onboarding process for new contributors to an open source project, making it more accessible and user-friendly for those who may face challenges in setting up their own coding environments.
+This aims to improve the onboarding process for new contributors to an open-source project, making it more accessible and user-friendly for those who may face challenges in setting up their own coding environments.
 To set up your development environment, you can use CodeSpaces or Gitpod:
 - [CodeSpaces](https://github.com/features/codespaces)
 - [Gitpod](https://www.gitpod.io/)
+
+   ## Contribute via Gitpod:
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Chimoney/Community-projects)
+
+
+- Check out how to get started [here](https://www.gitpod.io/docs/introduction)
+
+## Contributing via CodeSpaces:
+[![Open in Visual Studio Codespaces](https://github.com/Lymah123/chimoney-community-projects/commit/995fa27bdc463d3ddcff6bbab64c34060ec77858)](https://codespaces.new/Chimoney/Community-Website)
+
+- Check out how to get started [here](https://docs.github.com/en/codespaces)
