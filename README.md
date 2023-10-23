@@ -104,17 +104,14 @@ Contributing to Chimoney's Hacktoberfest is easy! Follow these steps:
 5. Create a pull request explaining your contribution.
 
 
-## Project Setup
+## 🛠️ Project Setup
 
-- This repo contains a bunch of small projects instead of a giant project.
-- You will find the code of the individual projects in separate directories under the `submissions` folder.
-- You can contribute to any of these projects.
-- Different projects deal with different stacks and frameworks.
-- To contribute to any of these projects, first, you have to clone the repo.
-- Then you have to go to the directory of the project of your choice which is surely in the `submissions` folder.
-- You have to follow different instructions to set up different projects according to their stacks.
-- You will find the instructions in the project directories.
-- Here is the list of the links of these projects:
+This repo contains a bunch of small projects. Different projects deal with different stacks and frameworks. The code for individual projects is located in separate directories within the `submissions` folder. You're welcome to contribute to any of these projects.
+
+- To contribute, start by cloning the repository.
+- Navigate to your chosen project's directory within the `submissions` folder.
+- Follow specific setup instructions for each project based on their stacks. Detailed instructions can be found in each project's directory.
+- Below are the links to these projects:
   - [Get Started](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/GetStarted)
   - [Dev focused articles](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Dev%20focused%20articles)
   - [Simple Blog](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/simple_blog)
@@ -137,8 +134,8 @@ Contributing to Chimoney's Hacktoberfest is easy! Follow these steps:
   - [Chispend Widget](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
   - [Pay Paddy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
   - [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
-- Other than contributing to the existing projects, you can also add a new project which must include `Chimoney`.
-- To do this you have to submit your project in the `submissions` folder.
+- In addition to contributing to existing projects, you can create a new project that includes `Chimoney`.
+- To do this, simply submit your project in the `submissions` folder.
 
 
 ## 🧿 Issues
