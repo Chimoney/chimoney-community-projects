@@ -17,6 +17,6 @@ To set up your development environment, you can use CodeSpaces or Gitpod:
 - Check out how to get started [here](https://www.gitpod.io/docs/introduction)
 
 ## Contributing via CodeSpaces:
-[![Open in Visual Studio Codespaces](https://github.com/chimoney-community-projects/commit/995fa27bdc463d3ddcff6bbab64c34060ec77858)](https://codespaces.new/Chimoney/chimoney-community-projects)
+[![Open in Visual Studio Codespaces](https://github.com/Lymah123/chimoney-community-projects/blob/main/images/VSLogo2.png)](https://codespaces.new/Chimoney/chimoney-community-projects)
 
 - Check out how to get started [here](https://docs.github.com/en/codespaces)
