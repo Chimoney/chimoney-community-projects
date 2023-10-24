@@ -84,7 +84,7 @@ Here are some helpful resources to get you started:
 
 This repo contains a bunch of small projects. Different projects deal with different stacks and frameworks. The code for individual projects is located in separate directories within the `submissions` folder. You're welcome to contribute to any of these projects. Ready to dive in? Here's how to get started:
 
-- Explore the list of available issues in Chimoney's SDK projects. You can also create a new issue.
+- Explore the list of available [issues](https://github.com/Chimoney/chimoney-community-projects/issues) in Chimoney community projects. You can also create a new issue.
 - Select an issue you'd like to work on and ask to be assigned to it. Tag @phyleria @adebayoileri.
 - Fork the [Chimoney Hacktoberfest repository](https://github.com/Chimoney/chimoney-community-projects.git).
 - Clone your forked repository to your local machine.
@@ -113,13 +113,8 @@ This repo contains a bunch of small projects. Different projects deal with diffe
   - [Chispend Widget](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
   - [Pay Paddy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
   - [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
-- In addition to contributing to existing projects, you can create a new project that includes `Chimoney`.
-- To do this, simply submit your project in the `submissions` folder.
-- Follow our [Contributing Guidelines](https://github.com/Chimoney/chimoney-community-projects/blob/main/CONTRIBUTING.md) for making changes.
-- Create a new branch with a relevant name for your work: `git checkout -b feature/my-contribution`.
-- Make your changes and commit them to the `submissions` folder.
-- Push your changes to your forked repository: `git push origin feature/my-contribution`.
-- Create a pull request explaining your contribution.
+- In addition to contributing to existing projects, you can create an issue with a project/suggestion you would like to work on that implements the Chimoney API. The issue will be reviewed and assigned to you. 
+- After working on the solution, submit it in the 'submissions' folder
 
 
 ## 🧿 Issues
