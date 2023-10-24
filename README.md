@@ -88,10 +88,10 @@ This repo contains a bunch of small projects. Different projects deal with diffe
 - Fork the [Chimoney community projects repository](https://github.com/Chimoney/chimoney-community-projects.git).
 - Clone your forked repository to your local machine.
 
-  ### ✨ Contribute By Creating New Projects:
+  ### ✨ Contribute by Creating New Projects:
     - You can contribute by developing new projects that implements the Chimoney API.
     - After working on the solution, submit it in the [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) folder.
-  ### 🔨 Contribute To The Existing Projects:
+  ### 🔨 Contribute to the Existing Projects:
     - Navigate to your chosen project's directory within the [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) folder.
     - Follow specific setup instructions for each project based on their stacks. Detailed instructions can be found in each project's directory.
     - Below are the links to these projects:
