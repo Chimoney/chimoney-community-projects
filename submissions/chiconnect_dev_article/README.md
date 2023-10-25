@@ -1,1 +1,1 @@
-Article Link: https://nrad.hashnode.dev/using-chiconnect-api-building-web-applications-with-python
+Article Link: https://nrad.hashnode.dev/using-Chimoney Developer API-api-building-web-applications-with-python

@@ -16,7 +16,7 @@ const PayOut = () => {
     valueInUSD: "",
   });
 
-  const API_KEY = process.env.REACT_APP_CHICONNECT_KEY ;
+  const API_KEY = process.env.REACT_APP_Chimoney Developer API_KEY ;
 
   let validated = false;
   let multipleUsers = receivers.length;
