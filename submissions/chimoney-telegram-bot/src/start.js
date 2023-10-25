@@ -190,4 +190,14 @@ bot.on('message', async (ctx) => {
     }
 });
 
+function isValidInteger(text) {
+    const intValue = parseInt(text, 10)
+    if (!isNaN(intValue) && intValue.toString() === text) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 bot.launch()
