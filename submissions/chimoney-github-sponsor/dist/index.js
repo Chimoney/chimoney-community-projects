@@ -53183,24 +53183,26 @@ async function main() {
     // Get input amount
     const { username, amount } = parseInputs(core);
 
-    // Resolve username into a user
+    // Resolve username into an email
     const user = await githubRestClient.users.getByUsername({ username });
 
     if (!user) {
       throw Error(`Couldn't find a user with username: ${username}`);
     }
 
-    // User's email is undefined when private
-    if (!user.data.email) {
+    const email = user.data.email;
+
+    // Email must be public to be visible
+    if (!email) {
       throw Error(`Email for ${username} is private`);
     }
 
-    const res = await chimoney.payouts.initiateChimoney([
-      { valueInUSD: amount, email: user.data.email },
+    const chiResponse = await chimoney.payouts.initiateChimoney([
+      { valueInUSD: amount, email },
     ]);
 
     // Return payment link as output
-    core.setOutput("paymentLink", res.data.paymentLink);
+    core.setOutput("paymentLink", chiResponse.data.paymentLink);
   } catch (error) {
     core.setFailed(error.message);
   }
@@ -53224,7 +53226,7 @@ function parseInputs(core) {
   }
 
   if (amount < 1 || amount > 10) {
-    throw Error("amount must be greater than 1 and less than 10");
+    throw Error("amount must be at a minimum of $1 and a maximum of $10");
   }
 
   const username = core.getInput("username", {
