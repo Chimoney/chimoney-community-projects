@@ -36,11 +36,9 @@ Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete 
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Prerequisites](#prerequisites)
-  - [Getting Started](#getting-started)
   - [Resources](#resources)
   - [Obtaining API Keys](#obtaining-api-keys)
-  - [Contributing](#contributing)
-  - [Issues](#issues)
+  - [Project Setup](#project-setup)
   - [Code of Conduct](#code-of-conduct)
   - [Communication](#communication)
   - [Mentorship](#mentorship)
@@ -62,16 +60,6 @@ To contribute to the projects/issues, you should have:
 - Familiarity with version control systems like Git.
 - Technical Writing skills (Optional)
 
-## 🚀 Getting Started
-
-Ready to dive in? Here's how to get started:
-
-1. Fork the [Chimoney Hacktoberfest repository](https://github.com/Chimoney/chimoney-community-projects.git).
-2. Clone your forked repository to your local machine.
-3. Explore the list of available issues in Chimoney's SDK projects.
-4. Select an issue you'd like to work on and ask to be assigned to it. Tag @phyleria @adebayoileri
-5. Follow our [Contributing Guidelines](https://github.com/Chimoney/chimoney-community-projects/blob/main/CONTRIBUTING.md) for making changes.
-6. Create a pull request when you're ready to submit your contribution.
 
 ## 📂 Resources
 
@@ -91,20 +79,44 @@ Here are some helpful resources to get you started:
 5. **Start Contributing:** With your API keys in place, you're ready to start contributing!
 
 
-# 🧿 Contributing
+## 🛠️ Project Setup
 
-Contributing to Chimoney's Hacktoberfest is easy! Follow these steps:
+This repo contains a bunch of small projects. Different projects deal with different stacks and frameworks. The code for individual projects is located in separate directories within the [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) folder. You're welcome to contribute to any of these projects. Ready to dive in? Here's how to get started:
 
-1. Fork the repository.
-2. Create a new branch with a relevant name for your work: `git checkout -b feature/my-contribution`.
-3. Make your changes and commit them to the **submissions** folder.
-4. Push your changes to your forked repository: `git push origin feature/my-contribution`.
+- Explore the list of available [issues](https://github.com/Chimoney/chimoney-community-projects/issues) in Chimoney community projects. You can also create an issue with a project/suggestion you would like to work on.
+- Select an issue and ask to be assigned to it. Tag @phyleria @adebayoileri.
+- Fork the [Chimoney community projects repository](https://github.com/Chimoney/chimoney-community-projects.git).
+- Clone your forked repository to your local machine.
 
-5. Create a pull request explaining your contribution.
-
-## 🧿 Issues
-
-Browse the [list of available issues](https://github.com/Chimoney/chimoney-community-projects/issues) here to find an issue that interests you.
+  ### Contribute by Creating New Projects
+    - You can contribute by developing new projects that implements the Chimoney API.
+    - After working on the solution, submit it in the [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) folder.
+  ### Contribute to the Existing Projects
+    - Navigate to your chosen project's directory within the [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) folder.
+    - Follow specific setup instructions for each project based on their stacks. Detailed instructions can be found in each project's directory.
+    - Below are the links to these projects:
+      - [Get Started](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/GetStarted)
+      - [Dev focused articles](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Dev%20focused%20articles)
+      - [Simple Blog](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/simple_blog)
+      - [Chimoney Python](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chimoney-Python)
+      - [Chisend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chisend)
+      - [Proposed Chimoney Copy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Proposed-Chimoney-Copy)
+      - [Chiconnect Bank API Payout](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-bank-api-payout)
+      - [Chiconnect Giftcard Payout](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-giftcard-payout)
+      - [Chiconnect Laravel Web App](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-laravel-web-app)
+      - [Chiconnect Mobile Money Payout](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-mobile-money-payout)
+      - [Chiconnect Dev Article](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect_dev_article)
+      - [Chimap](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimap)
+      - [Chimoney Discord Bot](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-discord-bot)
+      - [Chimoney JS](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-js)
+      - [Chimoney Payout Airtime](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-payout-airtime)
+      - [Chimoney Redeem Airtime](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-redeem-airtime)
+      - [Chispend Presentation](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-presentation)
+      - [Chispend Proposed Copy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-proposed-copy)
+      - [Chispend App](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_app)
+      - [Chispend Widget](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
+      - [Pay Paddy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
+      - [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
 
 ## 📑 Code of Conduct
 
