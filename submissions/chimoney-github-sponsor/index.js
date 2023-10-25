@@ -23,12 +23,12 @@ async function main() {
       throw Error(`Email for ${username} is private`);
     }
 
-    const { paymentLink } = await chimoney.payouts.initiateChimoney([
+    const res = await chimoney.payouts.initiateChimoney([
       { valueInUSD: amount, email: user.data.email },
     ]);
 
     // Return payment link as output
-    core.setOutput("paymentLink", paymentLink);
+    core.setOutput("paymentLink", res.data.paymentLink);
   } catch (error) {
     core.setFailed(error.message);
   }
