@@ -1,0 +1,16 @@
+name: "Chimoney Payout"
+description: "Strealines financial transactions withing GitHub Workflows using the Chimoney API"
+inputs:
+  amount:
+    description: "Amount to pay in USD. Max $10"
+    required: true
+    default: 1
+  username:
+    description: "Receipient's GitHub username"
+    required: true
+outputs:
+  paymentLink:
+    description: "Payment link"
+runs:
+  using: "node20"
+  main: "index.js"
