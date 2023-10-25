@@ -41,7 +41,7 @@ jobs:
     steps:
       - name: Reward contributor via chimoney
         id: payout
-        uses: ayo-awe/chimoney-community-projects/submissions/chimoney-github-sponsor@v1.2
+        uses: chimoney/chimoney-community-projects/submissions/chimoney-github-action@v1.0
         with:
           amount: 5
           username: ${{ github.event.pull_request.user.login }}
@@ -52,6 +52,8 @@ jobs:
       - name: Print payment link
         run: echo "Here is your payment link ${{ steps.payout.outputs.paymentLink }}"
 ```
+
+![](chimoney_action_screenshot.png)
 
 ## Limitations
 
