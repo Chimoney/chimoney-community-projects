@@ -10,7 +10,7 @@ inputs:
     required: true
 outputs:
   paymentLink:
-    description: "Payment link"
+    description: "Payment link."
 runs:
   using: "node20"
   main: "dist/index.js"
