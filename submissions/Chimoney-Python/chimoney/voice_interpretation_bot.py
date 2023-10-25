@@ -8,7 +8,7 @@ translator = Translator()
 # Function to interpret speech
 def interpret_speech():
     with sr.Microphone() as source:
-        print("Speak something.....")
+        print("Speak something......")
         audio = r.listen(source)
 
         try:
