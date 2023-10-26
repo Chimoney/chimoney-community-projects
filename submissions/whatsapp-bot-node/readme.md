@@ -9,7 +9,7 @@ The Environment variables (.env) file contains:
 - `REDIRECT_URL`: Redirect URL for Chimoney transactions.
 - `CHIMONEY_BASE_URL`: Base URL for Chimoney operations.
 - `CHIMONEY_BASE_HOST`: Chimoney base host URL.
-- `DEFAULT_EMAIL`: Default email to receive transactions updates (since telegram doesn't have emails).
+- `DEFAULT_EMAIL`: Default email to receive transactions updates (since whatsapp doesn't have emails).
 
 ## Installation
 
