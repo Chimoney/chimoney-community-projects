@@ -20,7 +20,6 @@ async function start() {
 }
 
 const PORT = process.env.PORT;
-const token = process.env.TOKEN;
 const bot_url = process.env.BOT_URL;
 const api_key = process.env.API_KEY;
 const redirect_url = process.env.REDIRECT_URL;
