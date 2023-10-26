@@ -181,7 +181,7 @@ function App() {
             PAY NOW
           </button>
 
-          <p className='mt-2 text-xs'>Powered by <span className='font-semibold text-purple-500'>Chimoney Developer API</span></p>
+          <p className='mt-2 text-xs'>Powered by <span className='font-semibold text-purple-500'>ChiConnect</span></p>
         </div>
       </div>
     </div>

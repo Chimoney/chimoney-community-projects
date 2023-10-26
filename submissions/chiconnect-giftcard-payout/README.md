@@ -1,9 +1,9 @@
-# Chimoney Developer API giftcard payout
-A mini project to demonstrate integration of Chimoney Developer API giftcard payout using React framework.
+# Chiconnect giftcard payout
+A mini project to demonstrate integration of Chiconnect giftcard payout using React framework.
 
 ## Setup
 - `git clone <project_url>`
-- `cd chimoney-api-community-projects/submissions/Chimoney Developer API-giftcard-payout`
+- `cd chimoney-api-community-projects/submissions/chiconnect-giftcard-payout`
 - `npm install`
 - create a file in root directory with `.env` as the name and add the API key in this format VITE_API_KEY='api key'`
 - `npm run dev`

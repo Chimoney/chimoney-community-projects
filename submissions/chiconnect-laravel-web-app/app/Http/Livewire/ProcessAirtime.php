@@ -3,9 +3,9 @@
 namespace App\Http\Livewire;
 
 use App\Models\Payout as ModelsPayout;
-use App\Support\Chimoney Developer API\Info;
-use App\Support\Chimoney Developer API\Payout;
-use App\Support\Chimoney Developer API\Wallet;
+use App\Support\Chiconnect\Info;
+use App\Support\Chiconnect\Payout;
+use App\Support\Chiconnect\Wallet;
 use Livewire\Component;
 
 class ProcessAirtime extends Component

@@ -23,7 +23,7 @@ const Banner = () => {
                     </button>
 
                     <p className='mt-1 text-white text-xs'>Powered by <span className='font-semibold'>
-                        Chimoney Developer API</span>
+                        ChiConnect</span>
                     </p>
                 </div>
             </div>

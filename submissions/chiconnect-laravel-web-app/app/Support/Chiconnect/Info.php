@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Support\Chimoney Developer API;
+namespace App\Support\Chiconnect;
 
 use Illuminate\Support\Facades\Http;
 

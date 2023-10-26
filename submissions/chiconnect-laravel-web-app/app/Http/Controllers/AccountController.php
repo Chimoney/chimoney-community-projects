@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Transaction;
 use App\Models\User;
-use App\Support\Chimoney Developer API\Account;
-use App\Support\Chimoney Developer API\Wallet;
+use App\Support\Chiconnect\Account;
+use App\Support\Chiconnect\Wallet;
 use Illuminate\Http\Request;
 
 class AccountController extends Controller
