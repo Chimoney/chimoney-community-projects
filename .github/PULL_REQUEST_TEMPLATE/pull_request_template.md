@@ -1,13 +1,10 @@
-Fixes #[issue number]
-
 # Changes proposed ✍️
 
-### What
+### Issue : Fixes #[issue number]
 
-### Why
+### Type:
 
-### How
-
+### Description:
 
 ## Checklist ✅
 - [ ] Label appropriately with `Feature`, `Improvement`, or `Bug`.
