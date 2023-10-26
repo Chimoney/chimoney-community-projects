@@ -13,7 +13,7 @@
 
 ## Checklist ✅ 
 
-### Please check each item that you have completed for this PR:
+#### Please check each item that you have completed for this PR:
 
 
 - [ ]  I have read and understood the project's [Contribution Guidelines](https://chimoney--community.hashnode.dev/contributing-to-chimoneys-community-projects-repository-for-hacktoberfest)
