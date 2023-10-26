@@ -1,14 +1,21 @@
 # Changes proposed ✍️
 
-### Issue : Fixes #[issue number]
+#### Issue : Fixes #[issue number]
 
-### Type:
+#### Type:
 
-### Description:
+#### Description:
 
-## Checklist ✅
-- [ ] Label appropriately with `Feature`, `Improvement`, or `Bug`.
-- [ ] Add screenshots to the PR description for relevant FE changes
-- [ ] API documentation has been updated (if necessary) (see [docs on API documentation](https://chimoney.readme.io/reference/introduction)).
-- [ ] [Contribution Guidelines](https://chimoney--community.hashnode.dev/contributing-to-chimoneys-community-projects-repository-for-hacktoberfest) have been read .
-- [ ] [Code Of Conduct](https://github.com/Chimoney/chimoney-community-projects/blob/main/CODE_OF_CONDUCT.md) standards are met.
+
+## Checklist ✅ 
+
+### Please check each item that you have completed for this PR:
+
+
+- [ ]  I have read and understood the project's [Contribution Guidelines](https://chimoney--community.hashnode.dev/contributing-to-chimoneys-community-projects-repository-for-hacktoberfest)
+- [ ]  I have tested my changes to ensure they work as expected.
+- [ ]  I have added/updated relevant documentation/screenshots (if applicable).
+- [ ]  I have included tests (if applicable).
+- [ ]  I have labeled the PR appropriately with `Feature`, `Improvement`, or `Bug`
+- [ ]  My branch is up to date with the main branch.
+- [ ]  The PR has a meaningful title and description.
