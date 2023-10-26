@@ -1,5 +1,5 @@
 # Chimoney-Initiate-Airtime
-Initiate and Payout Chimoney using chiconnect api
+Initiate and Payout Chimoney using Chimoney Developer API api
 
 view the deployed project [here](https://pay-chimoney.vercel.app/)
 

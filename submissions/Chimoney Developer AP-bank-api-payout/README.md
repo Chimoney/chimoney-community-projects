@@ -1,4 +1,4 @@
-# Chiconnect bank-api-payout
+# Chimoney Developer API bank-api-payout
 A mini project to demonstrate integration of Chiconnect bank api payout using React framework.
 
 ## Setup

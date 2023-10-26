@@ -1,6 +1,6 @@
 # PayPaddy
 
-React web app that utilizes most of Chiconnect api endpoints to enable a variety of payouts such including Bank, Airtime, Mobile Money, Giftcards payouts and more.
+React web app that utilizes most of Chimoney Developer API api endpoints to enable a variety of payouts such including Bank, Airtime, Mobile Money, Giftcards payouts and more.
 
 ## Setup
 

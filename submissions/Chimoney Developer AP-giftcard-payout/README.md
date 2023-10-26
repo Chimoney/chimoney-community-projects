@@ -1,4 +1,4 @@
-# Chiconnect giftcard payout
+# Chimoney Developer API giftcard payout
 A mini project to demonstrate integration of Chiconnect giftcard payout using React framework.
 
 ## Setup
