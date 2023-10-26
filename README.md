@@ -30,7 +30,7 @@ Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete 
     <a href="mailto:community@chimoney.com">Email</a>
   </p>
 
-## 📚 Table of Contents
+## Table of Contents
 
 - [Chimoney Hacktoberfest 2023](#chimoney-hacktoberfest-2023)
   - [Table of Contents](#table-of-contents)
@@ -48,11 +48,11 @@ Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete 
   - [Contact Information](#contact-information)
   - [Additional Resources](#additional-resources)
 
-## ⭐ Introduction
+## Introduction
 
 Join us for a month of coding, learning, and contributing to Chimoney's open-source projects!
 
-## 📖 Prerequisites
+## Prerequisites
 
 To contribute to the projects/issues, you should have:
 
@@ -61,14 +61,14 @@ To contribute to the projects/issues, you should have:
 - Technical Writing skills (Optional)
 
 
-## 📂 Resources
+## Resources
 
 Here are some helpful resources to get you started:
 
 - **API Documentation:** Explore Chimoney's API documentation. You can find detailed information [here](https://chimoney.readme.io/reference/introduction).
   
 
-## 🔑 Obtaining API Keys
+## Obtaining API Keys
 
 1. **Sign up for a Chimoney Developer Account:** See the Sandbox Access Instruction [here](https://sandbox.chimoney.io/developers). If you don't already have one, you'll need to sign up for a Chimoney developer account sandbox access at [sandbox.chimoney.io](https://chimoney.readme.io/reference/sandbox-environment).
 
@@ -79,7 +79,7 @@ Here are some helpful resources to get you started:
 5. **Start Contributing:** With your API keys in place, you're ready to start contributing!
 
 
-## 🛠️ Project Setup
+## Project Setup
 
 This repo contains a bunch of small projects. Different projects deal with different stacks and frameworks. The code for individual projects is located in separate directories within the [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) folder. You're welcome to contribute to any of these projects. Ready to dive in? Here's how to get started:
 
@@ -118,27 +118,19 @@ This repo contains a bunch of small projects. Different projects deal with diffe
       - [Pay Paddy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
       - [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
 
-## 📑 Code of Conduct
+## Code of Conduct
 
 We expect all contributors to abide by our [Code of Conduct](https://github.com/Chimoney/chimoney-community-projects/blob/main/CODE_OF_CONDUCT.md). Please ensure your behavior is respectful and inclusive.
 
-## 📞 Communication
-
-Join the conversation! We're available on:
-
-- Discord - [Link to discord](https://discord.gg/Q3peDrPG95)
-- Email - community@chimoney.io
-- Twitter - [Link to Twitter](https://twitter.com/chimoney_io)
-
-## 💻 Mentorship
+## Mentorship
 
 If you're new to open source, don't worry! We offer mentorship to help you get started. Reach out on [Discord](https://discord.gg/Q3peDrPG95) to connect with a mentor.
 
-## 🏆 Prizes and Recognition
+## Prizes and Recognition
 
 We have exciting prizes and recognition for top contributors!
 
-- $25 for each merged PR
+- $25 for each merged PR (contributions should be substantial and extend beyond minor changes like typo fixes. We encourage you to work on issues that involve bug fixes, new features/projects, or improvements to existing features/projects.)
 - Exclusive Chimoney Hacktoberfest t-shirts and stickers for contributors with up to 4 merged PRs
 
 - You stand a chance of winning up to $100 plus Hacktoberfest benefits if you have a total of 4 merged PRs
