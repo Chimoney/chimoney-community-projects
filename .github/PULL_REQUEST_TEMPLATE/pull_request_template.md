@@ -1,10 +1,14 @@
 # Pull Request Details
 
-#### Issue : Fixes #[issue number]
+#### Issue Number:
 
-#### Type:
+#### PR Type:
+- [ ]  Feature
+- [ ]  Improvement
+- [ ]  Bug
+- [ ]  New Project
 
-#### Description:
+#### PR Description:
 
 
 ## Checklist ✅ 
@@ -16,6 +20,6 @@
 - [ ]  I have tested my changes to ensure they work as expected.
 - [ ]  I have added/updated relevant documentation/screenshots (if applicable).
 - [ ]  I have included tests (if applicable).
-- [ ]  I have labeled the PR appropriately with `Feature`, `Improvement`, or `Bug`
+- [ ]  I have labeled the PR appropriately with `Feature`, `Improvement`, `Bug` or `New Project`
 - [ ]  My branch is up to date with the main branch.
 - [ ]  The PR has a meaningful title and description.
