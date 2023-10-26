@@ -25,7 +25,7 @@ Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete 
     <br />
     <a href="https://discord.gg/Q3peDrPG95">Link to Discord</a>
     ·
-    <a href="https://twitter.com/chimoney_io">Follow us onTwitter</a>
+    <a href="https://x.com/chimoney_io">Follow us on X</a>
     ·
     <a href="mailto:community@chimoney.com">Email</a>
   </p>
