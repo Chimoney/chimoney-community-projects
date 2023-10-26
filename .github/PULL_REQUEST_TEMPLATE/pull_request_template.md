@@ -1,4 +1,4 @@
-# Changes proposed ✍️
+# Pull Request Details
 
 #### Issue : Fixes #[issue number]
 
