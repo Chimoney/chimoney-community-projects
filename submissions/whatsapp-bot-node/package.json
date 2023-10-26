@@ -1,7 +1,7 @@
 {
     "name": "chimoney-tg",
     "version": "1.0.0",
-    "main": "./src/start.js",
+    "main": "index.js",
     "license": "ISC",
     "dependencies": {
         "axios": "latest",
