@@ -90,8 +90,7 @@ This repo contains a bunch of small projects. Different projects deal with diffe
 ## Onboarding enhancement
 
 This aims to improve the onboarding process for new contributors to an open-source project, making it more accessible and user-friendly for those who may face challenges in setting up their own coding environments.
-To set up your development environment, you can use CodeSpaces or Gitpod:
-- [CodeSpaces](https://github.com/features/codespaces)
+To set up your development environment, you can use Gitpod:
 - [Gitpod](https://www.gitpod.io/)
 
    ## Contribute via Gitpod:
