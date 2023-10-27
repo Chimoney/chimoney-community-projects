@@ -25,7 +25,12 @@ import { ChimoneyClientService } from './chimoney.service';
 
 import { DynamicModule, Module } from '@nestjs/common';
 import { Config } from './config';
-import { AXIOS_INSTANCE, BASEURL, CONFIG_OPTIONS } from './constants';
+import {
+  API_VERSION,
+  AXIOS_INSTANCE,
+  BASEURL,
+  CONFIG_OPTIONS,
+} from './constants';
 import { AccountService } from './services/account';
 import Axios from 'axios';
 
@@ -43,7 +48,7 @@ export class ChimoneyModule {
           provide: AXIOS_INSTANCE,
           useFactory: () => {
             const axiosInstance = Axios.create({
-              baseURL: BASEURL,
+              baseURL: `${BASEURL}/${config.apiVersion || API_VERSION}/`,
               headers: {
                 'Content-Type': 'application/json',
                 'X-API-KEY': config.apiKey,
@@ -56,7 +61,7 @@ export class ChimoneyModule {
         AccountService,
       ],
       //   global: (config?.additionalOptions?.isGlobal || false),
-     //   exports: [TransactionsService],
+      //   exports: [TransactionsService],
       exports: [ChimoneyClientService],
     };
   }

@@ -1,3 +1,5 @@
+import { HttpStatusCode } from 'axios';
+
 class HttpException extends Error {
   /**
    * Create custom error
@@ -12,6 +14,16 @@ class HttpException extends Error {
     this.status = statusCode || 400;
   }
 }
-module.exports = {
-  HttpException,
+
+const errorHandler = (error) => {
+  const message = error.response ? error.response.data : error.message;
+  const status = error?.response?.status
+    ? error.response.status
+    : error.code || HttpStatusCode.InternalServerError;
+  return {
+    error: message,
+    status,
+  };
 };
+
+export { HttpException, errorHandler };
