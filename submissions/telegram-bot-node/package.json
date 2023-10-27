@@ -1,0 +1,11 @@
+{
+    "name": "chimoney-tg",
+    "version": "1.0.0",
+    "main": "./src/start.js",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "latest",
+        "node-telegram-bot-api": "latest",
+        "telegraf": "latest"
+    }
+}
