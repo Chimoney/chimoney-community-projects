@@ -14,6 +14,8 @@
 
 <!-- # Chimoney Hacktoberfest 2023 -->
 
+English | [Spanish](README-ES.md)
+
 Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
 
 > ⭐️ If you're new to Hacktoberfest, you can learn more and register to participate [here](https://hacktoberfest.com/participation/). Registration is from **September 26th - October 31st**.
