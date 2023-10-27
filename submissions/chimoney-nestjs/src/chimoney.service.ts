@@ -7,14 +7,24 @@ import {
   TransactionByIDDto,
   TransactionsByIssueIDDto,
 } from './dto/account';
+import {
+  InitiatePaymentDto,
+  SimulatePaymentStatusDto,
+  VerifyPaymentDto,
+} from './dto/payment';
+import { WalletByIDDto, WalletTransferIDDto } from './dto/wallet';
 import { AccountService } from './services/account';
+import { PaymentsService } from './services/payment';
+import { WalletsService } from './services/wallet';
 @Injectable()
 export class ChimoneyClientService {
   constructor(
     @Inject(CONFIG_OPTIONS) private readonly config: Config,
     private readonly transactionsServices: AccountService,
+    private readonly paymentsService: PaymentsService,
+    private readonly walletsService: WalletsService,
   ) {
-    if (!config.apiKey) {
+    if (!this.config.apiKey) {
       throw new Error('Please provide api key');
     }
   }
@@ -33,5 +43,29 @@ export class ChimoneyClientService {
   }
   deleteUnpaidTransaction(data: DeleteUnpaidTransactionDto): Promise<any> {
     return this.transactionsServices.deleteUnpaidTransaction(data);
+  }
+
+  simulateStatusChanges(data: SimulatePaymentStatusDto): Promise<any> {
+    return this.paymentsService.simulateStatusChanges(data);
+  }
+
+  verifyPayment(data: VerifyPaymentDto): Promise<any> {
+    return this.paymentsService.verifyPayment(data);
+  }
+
+  initiatePayment(data: InitiatePaymentDto): Promise<any> {
+    return this.paymentsService.initiatePayment(data);
+  }
+
+  getWallets(subAccount: string | null): Promise<any> {
+    return this.walletsService.getWallets(subAccount);
+  }
+
+  getWallet(data: WalletByIDDto): Promise<any> {
+    return this.walletsService.getWallet(data);
+  }
+
+  transferWallet(data: WalletTransferIDDto): Promise<any> {
+    return this.walletsService.transferWallet(data);
   }
 }
