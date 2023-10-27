@@ -49,3 +49,12 @@ Replace `@username` with the recipient's github username and `amount` with the d
 
 ### Receiving Chimoney
 When you receive Chimoney, the bot will send recipient an email with a link to claim the Chimoney.
+
+### To run the bot
+
+```
+npm i
+```
+```
+node index
+```
