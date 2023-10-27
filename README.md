@@ -40,7 +40,6 @@ Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete 
   - [Obtaining API Keys](#obtaining-api-keys)
   - [Project Setup](#project-setup)
   - [Code of Conduct](#code-of-conduct)
-  - [Communication](#communication)
   - [Mentorship](#mentorship)
   - [Prizes and Recognition](#prizes-and-recognition)
   - [Live Events](#live-events)
@@ -137,7 +136,7 @@ We have exciting prizes and recognition for top contributors!
 
 - You also stand a chance to be featured in our **'Contributor Spotlight Series'**
 
-## 📽 Live Events
+## Live Events
 
 Don't miss our live sessions
 
@@ -145,15 +144,15 @@ Don't miss our live sessions
 
 Register for these sessions [here](https://forms.gle/aNyegaMbbuHtKoRV8)
 
-## ⚖ License
+## License
 
 This project is licensed under the [MIT License](https://github.com/Chimoney/chimoney-community-projects/blob/main/LICENSE).
 
-## 📧 Contact Information
+## Contact Information
 
 If you need assistance or have questions, please contact us at [community@chimoney.com](mailto:community@chimoney.com).
 
-## 📂 Additional Resources
+## Additional Resources
 
 For more resources and information, visit our [website](https://chimoney.io/) and [documentation](https://chimoney.readme.io/reference/introduction).
 
