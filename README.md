@@ -95,10 +95,9 @@ To set up your development environment, you can use Gitpod:
 
    ## Contribute via Gitpod:
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Chimoney/Community-projects)
-
-
 - Check out how to get started [here](https://www.gitpod.io/docs/introduction)
-  ### Contribute by Creating New Projects
+
+   ### Contribute by Creating New Projects
     - You can contribute by developing new projects that implements the Chimoney API.
     - After working on the solution, submit it in the [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) folder.
   ### Contribute to the Existing Projects
