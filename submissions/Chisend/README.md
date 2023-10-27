@@ -11,12 +11,12 @@ Docker is supported.
 ## INFO
 
 The bot is written in Python and uses the [Tweepy](https://www.tweepy.org/) library to interact with the Twitter API.
-It Uses the pychimoney library to send the chimoney.
+It uses the pychimoney library to send the chimoney.
 
 ## How to use
 - Follow the bot on twitter
 - Tweet the bot with the following format
-    - @chisendtest send ammount to @username
+    - @chisendtest send amount to @username
 - The bot will you a direct message for confirmation and checkout
 - ChiSpend will send the amount to the user
 
@@ -66,7 +66,7 @@ OR
 
 ## TODO 
 - [x] Get a developer Twitter Account to test 
-- [x] Intergrate with chimoney-py
+- [x] Integrate with chimoney-py
     - [x] Test the bot
 - [ ] Deploy the bot
 - [ ] Add a web interface to the bot
@@ -76,5 +76,5 @@ OR
 
 ## BLOCKERS
 - [x] Get a developer Twitter Account to test 
-- [x] Intergrate with chimoney-py
+- [x] Integrate with chimoney-py
     - [x] Test the bot
