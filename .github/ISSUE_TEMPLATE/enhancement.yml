@@ -1,0 +1,28 @@
+name: "✨ Enhancement"
+description: "Suggest an enhancement or improvement to the project."
+title: "Enhancement: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "Please provide a detailed description of the enhancement request."
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Screenshots"
+      description: "Please add screenshots if applicable."
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: "Additional Information"
+      description: "Provide any additional information or context related to this enhancement."
+  - type: checkboxes
+    id: ready
+    attributes:
+      label: "Ready to Work?"
+      options:
+        - label: "I want to work on this enhancement"

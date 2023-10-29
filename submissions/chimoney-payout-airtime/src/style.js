@@ -10,10 +10,10 @@ export const FormContainer = styled.div`
   justify-content: center;
   box-sizing: border-box;
   color: white;
-  margin-top: 4rem;
   margin-bottom: 10rem;
 
   h1 {
+    margin-top: 4rem;
     text-align: center;
     margin-bottom: 1rem;
     font-size: 2.5rem;
