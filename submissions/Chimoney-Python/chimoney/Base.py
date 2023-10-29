@@ -15,17 +15,17 @@ class BaseAPI(object):
     _CONTENT_TYPE = "application/json"
     _ACCEPT = "application/json"
 
-    def __init__(self, sandbox=False):
+    def __init__(self):
         """
         Initialize the BaseAPI object.
 
         Args:
             sandbox (bool): Set to True to use the sandbox environment.
         """
-        if sandbox:
-            self._BASE_URL = self._SANDBOX_BASE_URL
-        else:
-            self._BASE_URL = self._PRODUCTION_BASE_URL
+        self._sandbox = os.getenv("CHIMONEY_SANDBOX")
+        self.base_url = (
+            self._SANDBOX_BASE_URL if self._sandbox else self._PRODUCTION_BASE_URL
+        )
 
         self._CHIMONEY_AUTH_KEY = os.getenv("CHIMONEY_AUTH_KEY")
         if self._CHIMONEY_AUTH_KEY is None:
