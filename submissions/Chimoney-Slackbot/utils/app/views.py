@@ -10,7 +10,6 @@ logging.basicConfig(level=logging.DEBUG)
 
 client_id = os.environ.get("SLACK_CLIENT_ID")
 client_secret = os.environ.get("SLACK_CLIENT_SECRET")
-oauth_scope = os.environ.get("SLACK_OAUTH_SCOPE")
 
 
 @app.route("/slack/install", methods=["GET"])

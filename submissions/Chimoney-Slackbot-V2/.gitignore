@@ -1,0 +1,12 @@
+data
+.env
+ngrok.exe
+.pytest_cache
+.idea
+.vscode
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+*/__pycache__
+*.so
