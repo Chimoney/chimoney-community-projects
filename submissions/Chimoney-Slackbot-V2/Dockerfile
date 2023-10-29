@@ -1,5 +1,8 @@
 FROM python:3.11-alpine
 
+# Install PostgreSQL development tools
+RUN apk --no-cache add postgresql-dev
+
 # Path: /app
 WORKDIR /app
 
