@@ -1,7 +1,7 @@
 FROM python:3.11-alpine
 
-# Install PostgreSQL development tools
-RUN apk --no-cache add postgresql-dev
+# Install system dependencies
+RUN apk add --no-cache python3-dev libpq gcc musl-dev
 
 # Path: /app
 WORKDIR /app
