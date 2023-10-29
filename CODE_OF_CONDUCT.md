@@ -17,7 +17,7 @@ diverse, inclusive, and healthy community.
 Examples of behavior that contributes to a positive environment for our
 community include:
 
-* Demonstrating empathy and kindness toward other people
+* Demonstrating empathy and kindness towards other people
 * Being respectful of differing opinions, viewpoints, and experiences
 * Giving and gracefully accepting constructive feedback
 * Accepting responsibility and apologizing to those affected by our mistakes,
@@ -39,7 +39,7 @@ Examples of unacceptable behavior include:
 ## Enforcement Responsibilities
 
 Community leaders are responsible for clarifying and enforcing our standards of
-acceptable behavior and will take appropriate and fair corrective action in
+acceptable behavior and will take appropriate and fair corrective actions in
 response to any behavior that they deem inappropriate, threatening, offensive,
 or harmful.
 
