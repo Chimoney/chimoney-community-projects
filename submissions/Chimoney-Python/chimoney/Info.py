@@ -15,7 +15,7 @@ class Info(BaseAPI):
         """
         return self._handle_request("GET", "/v0.2/info/airtime-countries")
 
-    def assets(self, country_code: str = None) -> dict:
+    def assets(self, country_code=None) -> dict:
         """
         This function returns a list of supported assets.
 
@@ -27,8 +27,8 @@ class Info(BaseAPI):
         """
         params = {}
 
-        if country_code:
-            params["CountryCode"] = country_code
+        if country_code is not None:
+            params["countryCode"] = country_code
 
         return self._handle_request("GET", "/v0.2/info/assets", params=params)
 
@@ -76,7 +76,7 @@ class Info(BaseAPI):
 
         return self._handle_request(
             "GET",
-            "/v0.2/info/local-to-usd",
+            "/v0.2/info/local-amount-in-usd",
             params={
                 "originCurrency": source_currency,
                 "amountInOriginCurrency": ammount_in_local,
@@ -113,7 +113,7 @@ class Info(BaseAPI):
 
         return self._handle_request(
             "GET",
-            "/v0.2/info/usd-to-local",
+            "/v0.2/info/usd-amount-in-local",
             params={
                 "destinationCurrency": destination_currency,
                 "amountInUSD": ammount_in_usd,
@@ -143,6 +143,9 @@ class Info(BaseAPI):
         if bank_code:
             params["bankCode"] = bank_code
 
+        if not bank_code:
+            raise ValueError("Bank Code is required.")
+
         return self._handle_request("GET", "/v0.2/info/bank-branches", params=params)
 
     def verify_bank_account_number(self, account_number: list) -> dict:
@@ -155,6 +158,10 @@ class Info(BaseAPI):
         Returns:
             dict: The response from the Chimoney API
         """
+
+        if not account_number:
+            raise ValueError("Account Details are required.")
+
         params = {}
         if account_number:
             params["verifyAccountNumbers"] = account_number
