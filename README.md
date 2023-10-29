@@ -69,8 +69,21 @@ Contributing to Chimoney's Hacktoberfest is easy! Follow these steps:
 2. Create a new branch with a relevant name for your work: `git checkout -b feature/my-contribution`.
 3. Make your changes and commit them to the **submissions** folder.
 4. Push your changes to your forked repository: `git push origin feature/my-contribution`.
-
 5. Create a pull request explaining your contribution.
+
+To set up your development environment, you can use CodeSpaces or Gitpod:
+- [CodeSpaces](https://github.com/features/codespaces)
+- [Gitpod](https://www.gitpod.io/)
+
+   ## Contribute via Gitpod:
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Chimoney/Community-projects)
+
+- Check out how to get started [here](https://www.gitpod.io/docs/introduction)
+
+## Contributing via CodeSpaces:
+[![Open in Visual Studio Codespaces](https://github.com/Lymah123/chimoney-community-projects/blob/main/images/VSLogo2.png)](https://codespaces.new/Chimoney/chimoney-community-projects)
+
+- Check out how to get started [here](https://docs.github.com/en/codespaces)
 
 ## Issues
 
