@@ -102,7 +102,7 @@ export const FormContainer = styled.div`
   }
 
   .sub-class {
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 `;
 
@@ -144,6 +144,10 @@ export const Table = styled.table`
     color: white;
   }
  
+  .edit{
+    margin-right: 1rem;
+  }
+  
   .edit,
   .delete {
     width: 120px;
@@ -158,16 +162,13 @@ export const Table = styled.table`
     color: #f8f8f8;
     /* margin-left: 1rem; */
   }
-  .edit+.delete{
-    margin-left: 1rem !important;
-  }
-
+  
   @media only screen and (max-width: 860px){
     width: 90vw;
     text-align: left;
 
-    .edit+.delete{
-    margin-left: 1rem;
+    .edit{
+    margin-right: 1rem;
   }
 
     table,
