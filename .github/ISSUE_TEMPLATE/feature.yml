@@ -1,0 +1,24 @@
+name: "🚀 Feature Request"
+description: "Suggest a feature request"
+title: "feat:"
+labels: ["feature"]
+body:
+  - type: textarea
+    id: what-feature
+    attributes:
+      label: "Description"
+      description: "Describe your feature request"
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Screenshots"
+      description: "Please add screenshots if applicable"
+    validations:
+  - type: checkboxes
+    id: work
+    attributes:
+      label: "Ready to Work?"
+      options:
+        - label: "I want to work on this issue"
