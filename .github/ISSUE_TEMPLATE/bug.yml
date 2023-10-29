@@ -1,0 +1,36 @@
+name: "👾 Bug Report"
+description: "File a Bug here to help improve the project."
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "Please provide a detailed description of the issue."
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Screenshots"
+      description: "Please add screenshots if applicable."
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: "What browsers are you seeing the problem on?"
+      multiple: true
+      options:
+        - "Brave"
+        - "Chrome"
+        - "Firefox"
+        - "Microsoft Edge"
+        - "Opera"
+        - "Safari"
+        - "Other"
+  - type: checkboxes
+    id: work
+    attributes:
+      label: "Ready to Work?"
+      options:
+        - label: "I want to work on this issue"
