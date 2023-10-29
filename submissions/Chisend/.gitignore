@@ -1,2 +1,26 @@
 ./venv
 venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info
+*.egg
+*.egg-link
+*.dist-info
+*.egg-info
+*.egg
+*.egg-link
+*.dist-info
+*.egg-info
+
+# PyCharm
+.idea
+
+# Local settings
+settings.py
+local_settings.py
+
+# Local file 
+temp.py

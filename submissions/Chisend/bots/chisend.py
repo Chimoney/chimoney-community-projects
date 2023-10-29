@@ -3,6 +3,7 @@ import tweepy
 from utils import is_following
 from chimoney import Chimoney
 import logging
+import time
 
 
 # Set up logging
@@ -89,14 +90,7 @@ class ChiSend(object):
             self.account_id = self.api.get_user(screen_name=screen_name).id
             self.screen_name = screen_name
 
-            # Set up the message template
-            self.MESSAGE_TEMP = (
-                "Hello, this is a payment link for you. Please pay the amount "
-                "specified to the address specified. If you have any questions, "
-                "please contact @chimoney. \n"
-                "Payment Link: {}\n"
-                "ChiRef: {}"
-            )
+            # Set up the message templates
             self.messages = {
                 "not_following": f"Please follow @{self.screen_name} to use this bot",
                 "check_dm": "Please check your DMs for the payment link",
@@ -107,15 +101,28 @@ class ChiSend(object):
                 ),
                 "donation": "Thank you for your donation!",
                 "bot_error": "Sorry, there was an error with the bot. Please try again later",
+                "sucess": (
+                    "Hello, this is a payment link for you. Please pay the amount "
+                    "specified to the address specified. If you have any questions, "
+                    "please contact @chimoney. \n"
+                    "Payment Link: {}\n"
+                    "ChiRef: {}"
+                ),
             }
-
-        MESSAGE_TEMP = """Hello, I am Chisend Bot. I was mentioned by you.
-                    To proceed to payout click this link: {}, Thank you.
-                    This is an automated message.
-                    Ref: {}"""
 
         def on_connect(self):
             logging.info("Stream Started")
+
+        # handle disconnection errors
+        def on_exception(self, exception):
+            logging.error(exception)
+            return True
+
+        # wait for 20 seconds before reconnecting after an error
+        def on_timeout(self):
+            logging.error("Timeout, reconnecting")
+            time.sleep(20)
+            return True
 
         def on_error(self, error):
             logging.error(error)
@@ -267,7 +274,9 @@ class ChiSend(object):
                             chiRef = task_status["chiRef"]
 
                             # Send the payment link to the user
-                            message = self.MESSAGE_TEMP.format(payment_link, chiRef)
+                            message = self.messages["sucess"].format(
+                                payment_link, chiRef
+                            )
                             self.send_dm(user_id, message)
                             self.send_tweet("Check Your DM", tweet["id"])
                         else:
