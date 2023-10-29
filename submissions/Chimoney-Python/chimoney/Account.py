@@ -15,16 +15,16 @@ class Account(BaseAPI):
         - delete_unpaid_transaction
     """
 
-    def trasactions_by_issue_id(self, issue_id, sub_account=None) -> dict:
+    def transactions_by_issue_id(self, issue_id, sub_account=None) -> dict:
         """
         This function returns a list of transactions by issue ID.
 
-        :param issue_id: The issue ID of the transaction.
-        :type issue_id: str
-        :param sub_account: The sub account of the transaction.
-        :type sub_account: str
-        :return: The response from the Chi Money API.
-        :rtype: dict
+        Args:
+            issue_id (str): The issue ID of the transaction.(required)
+            sub_account (str):  The sub account of the transaction.
+
+        Returns:
+            The JSON response fron the Chimoney API
         """
         if not isinstance(issue_id, str):
             raise TypeError("Issue ID must be a string.")
@@ -32,7 +32,7 @@ class Account(BaseAPI):
         if not issue_id:
             raise ValueError("Issue ID is required.")
 
-        params = {"issueId": issue_id}
+        params = {"issueID": issue_id}
         payload = {}
         if sub_account:
             payload["subAccount"] = sub_account
@@ -43,12 +43,13 @@ class Account(BaseAPI):
 
     def all_transaction(self, sub_account=None) -> dict:
         """
-        This function returns a list of transactions by account.
+        This function returns a list of transactions by account .
 
-        :param sub_account: The sub account of the transaction.
-        :type sub_account: str
-        :return: The response from the Chi Money API.
-        :rtype: dict
+        Args:
+            sub_account(str): The sub account of the transaction.
+
+        Returns:
+            The JSON response from the Chimoney API
         """
         payload = {}
         if sub_account:
@@ -64,12 +65,12 @@ class Account(BaseAPI):
         """
         This function returns a transaction by ID.
 
-        :param transaction_id: The ID of the transaction.
-        :type transaction_id: str
-        :param sub_account: The sub account of the transaction.
-        :type sub_account: str
-        :return: The response from the Chi Money API.
-        :rtype: dict
+        Args:
+            transaction_id(str): The ID of the transaction.(required)
+            sub_account(str): The sub account of the transaction.
+
+        Returns:
+            The JSON response from the Chimoney API
         """
         if not isinstance(transaction_id, str):
             raise TypeError("Transaction ID must be a string.")
@@ -90,19 +91,17 @@ class Account(BaseAPI):
         """
         This function transfers funds from one account to another.
 
-        :param receiver: The receiver of the funds.
-        :type receiver: str
-        :param amount: The amount of the funds.
-        :type amount: float
-        :param wallet: The wallet of the funds.
-        :type wallet: str
-        :param sub_account: The sub account of the transaction.
-        :type sub_account: str
-        :return: The response from the Chi Money API.
-        :rtype: dict
+        Args:
+            reciever(str): The receiver of the funds.
+            amount(float): The amount of the funds in USD.
+            wallet(str): The wallet type.[chi, momo, airtime]
+            sub_aacount(str): The sub account of the transaction.
+
+        Returns:
+            The JSON response from Chimoney API
         """
-        if not isinstance(reciver, str):
-            raise TypeError("Reciver must be a string.")
+        if not isinstance(receiver, str):
+            raise TypeError("Receiver must be a string.")
 
         if not isinstance(amount, int):
             raise TypeError("Amount must be an integer.")
@@ -115,7 +114,7 @@ class Account(BaseAPI):
 
         payload = {
             "receiver": receiver,
-            "amount": amount,
+            "valueInUSD": amount,
             "wallet": wallet,
         }
 
@@ -132,12 +131,12 @@ class Account(BaseAPI):
         """
         This function deletes an unpaid transaction.
 
-        :param transaction_id: The ID of the transaction.
-        :type transaction_id: str
-        :param sub_account: The sub account of the transaction.
-        :type sub_account: str
-        :return: The response from the Chi Money API.
-        :rtype: dict
+        Args:
+            transaction_id(str): The ID of the transaction.(required)
+            sub_account(str): The sub account of the transaction
+
+        Returns:
+            The JSON response from the Chimoney API
         """
         if not isinstance(transaction_id, str):
             raise TypeError("Transaction ID must be a string.")

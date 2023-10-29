@@ -1,0 +1,1 @@
+A short article centered on testing the chimoney API and intergrating it with your webpage.can be found [here](https://elogs.hashnode.dev/how-to-get-started-with-the-chimoney-api-for-developers)  
