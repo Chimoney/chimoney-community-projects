@@ -8,13 +8,14 @@ const {
 const axios = require("axios");
 const Joi = require("joi");
 
-const BASEURL = "https://api.chimoney.io";
-
 const HTTPMETHODS = {
   POST: "POST",
   GET: "GET",
   DELETE: "DELETE",
 };
+
+const LIVE_URL = "https://api.chimoney.io";
+const SANDBOX_URL = "https://api-v2-sandbox.chimoney.io";
 
 /**
  * This function handles requests to the Chi Money API
@@ -22,6 +23,9 @@ const HTTPMETHODS = {
  * @returns The response from the Chi Money API
  */
 const handleRequest = async (requestOptions) => {
+  const BASEURL =
+    process.env.CHIMONEY_SDK_MODE === "sandbox" ? SANDBOX_URL : LIVE_URL;
+
   const APIKEY = process.env.CHIMONEY_API_KEY;
 
   // Define validation schema for requestOptions
