@@ -41,7 +41,6 @@ async function extractPayoutCommandArgs(arguments) {
   const args = arguments.split(" ");
   const amountString = args[0].trim().replace("$", "");
   const amount = Number(amountString);
-  console.log(amountString, amount);
 
   const username = args[1]?.trim().replace("@", "");
 

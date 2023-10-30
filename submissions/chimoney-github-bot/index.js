@@ -22,9 +22,11 @@ module.exports = (app) => {
 
 async function payoutCommandHandler(context, command) {
   const { amount, username } = extractPayoutCommandArgs(command.arguments);
+  console.log(amount);
 
   // Invalid amount
   if (isNaN(amount)) {
+    console.log(isNaN(amount));
     return await addComment(
       context,
       "Please provide a valid amount. Usage: /payout $10"
