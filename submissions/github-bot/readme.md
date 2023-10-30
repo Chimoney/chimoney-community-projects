@@ -56,6 +56,7 @@ It first has to be published to github action marketplace.
 
 Then it can be used like this:
 
+```yaml
 on: issue_comment 
   
  name: Chimoney 
@@ -82,7 +83,11 @@ on: issue_comment
           CHIMONEY_BASE_URL: ${{ secrets.CHIMONEY_BASE_URL }}
           CHIMONEY_BASE_HOST: ${{ secrets.CHIMONEY_BASE_HOST }}
           DEFAULT_EMAIL: ${{ secrets.DEFAULT_EMAIL }}
-           
+
+```
 In the GitHub repository, go to the "Settings" tab then select "Secrets."
 Click on the "New repository secret" button for each of the environment variables used in the workflow. Name them exactly as used in the workflow YML file.
 
+### Example 
+
+![image](https://github.com/amosayomide05/chimoney-community-projects/assets/62471060/56a6ea24-d9c0-498c-a674-9887b66d6d4d)
