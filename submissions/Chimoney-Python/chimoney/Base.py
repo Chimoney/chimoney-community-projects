@@ -7,14 +7,26 @@ from chimoney.Errors import MissingAuthKeyError
 
 class BaseAPI(object):
     """
-    This function handles the requests to the API.
+    This class handles the requests to the API.
     """
 
-    _BASE_URL = "https://api.chimoney.io"
+    _PRODUCTION_BASE_URL = "https://api.chimoney.io"
+    _SANDBOX_BASE_URL = "api-v2-sandbox.chimoney.io"
     _CONTENT_TYPE = "application/json"
     _ACCEPT = "application/json"
 
     def __init__(self):
+        """
+        Initialize the BaseAPI object.
+
+        Args:
+            sandbox (bool): Set to True to use the sandbox environment.
+        """
+        self._sandbox = os.getenv("CHIMONEY_SANDBOX")
+        self.base_url = (
+            self._SANDBOX_BASE_URL if self._sandbox else self._PRODUCTION_BASE_URL
+        )
+
         self._CHIMONEY_AUTH_KEY = os.getenv("CHIMONEY_AUTH_KEY")
         if self._CHIMONEY_AUTH_KEY is None:
             raise MissingAuthKeyError("Missing CHIMONEY_AUTH_KEY environment variable.")
@@ -60,16 +72,16 @@ class BaseAPI(object):
 
     def _handle_request(self, method_type, path, data=None, params=None):
         """
-        This function handles the requests to the API.
+        Handle requests to the API.
 
         Args:
-            method_type(str): The type of request to make.
-            path(str): The path to the API endpoint.
-            data(dict): The data to send to the API.
-            params(dict): The parameters to send to the API
+            method_type (str): The type of request to make.
+            path (str): The path to the API endpoint.
+            data (dict): The data to send to the API.
+            params (dict): The parameters to send to the API.
 
         Returns:
-            The response from the Chi Money API.
+            dict: The response from the Chi Money API.
         """
 
         if data:

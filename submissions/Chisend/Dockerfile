@@ -8,4 +8,5 @@ RUN pip install -r /tmp/requirements.txt
 
 WORKDIR /bots
 
+
 CMD ["python", "main.py", "-ue"]
