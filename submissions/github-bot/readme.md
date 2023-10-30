@@ -52,9 +52,37 @@ When you receive Chimoney, the bot will send recipient an email with a link to c
 
 ### To run the bot
 
-```
-npm i
-```
-```
-node index
-```
+It first has to be published to github action marketplace.
+
+Then it can be used like this:
+
+on: issue_comment 
+  
+ name: Chimoney 
+  
+ permissions: 
+   issues: write 
+   contents: read 
+  
+ jobs: 
+     runs-on: ubuntu-latest 
+     strategy: 
+       matrix: 
+         node-version: [18.x] 
+  
+     steps: 
+       - name: Check for Command 
+         id: command 
+         uses: chimoney/github-chimoney-bot@v1
+            env:
+          PORT: ${{ secrets.PORT }}
+          BOT_URL: ${{ secrets.BOT_URL }}
+          API_KEY: ${{ secrets.API_KEY }}
+          REDIRECT_URL: ${{ secrets.REDIRECT_URL }}
+          CHIMONEY_BASE_URL: ${{ secrets.CHIMONEY_BASE_URL }}
+          CHIMONEY_BASE_HOST: ${{ secrets.CHIMONEY_BASE_HOST }}
+          DEFAULT_EMAIL: ${{ secrets.DEFAULT_EMAIL }}
+           
+In the GitHub repository, go to the "Settings" tab then select "Secrets."
+Click on the "New repository secret" button for each of the environment variables used in the workflow. Name them exactly as used in the workflow YML file.
+
