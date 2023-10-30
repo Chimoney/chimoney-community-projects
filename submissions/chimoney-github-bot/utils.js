@@ -37,7 +37,7 @@ async function resolveUsernameToEmail(context, username) {
   return user.data.email;
 }
 
-async function extractPayoutCommandArgs(arguments) {
+function extractPayoutCommandArgs(arguments) {
   const args = arguments.split(" ");
   const amountString = args[0].trim().replace("$", "");
   const amount = Number(amountString);
