@@ -7,6 +7,8 @@ const {
   resolveUsernameToEmail,
   extractPayoutCommandArgs,
 } = require("./utils");
+const MIN_PAYOUT = 1;
+const MAX_PAYOUT = 100;
 
 /**
  * This is the main entrypoint to your Probot app
@@ -25,15 +27,17 @@ async function payoutCommandHandler(context, command) {
 
   // Invalid amount
   if (isNaN(amount)) {
-    console.log(isNaN(amount));
     return await addComment(
       context,
       "Please provide a valid amount. Usage: /payout $10"
     );
-  } else if (amount < 1 || amount > 10) {
+  }
+
+  // Amount out of range
+  if (amount < MIN_PAYOUT || amount > MAX_PAYOUT) {
     return await addComment(
       context,
-      "Minimum amount is 1 and Maximum amount is 10."
+      `Please enter an amount between ${MIN_PAYOUT} and ${MAX_PAYOUT}.`
     );
   }
 
@@ -43,17 +47,18 @@ async function payoutCommandHandler(context, command) {
     commenterUsername
   );
 
-  const hasPermission = permissions?.admin || permissions?.maintain;
+  const isAdminOrMaintainer = permissions?.admin || permissions?.maintain;
 
-  if (!hasPermission) {
+  if (!isAdminOrMaintainer) {
     return await addComment(
       context,
       "You don't have the required permissions to use this command."
     );
   }
 
-  const pullRequestAuthorUsername = context.payload.issue.user.login;
-  const recepientUsername = username || pullRequestAuthorUsername;
+  // Contributor is pull request author
+  const contributor = context.payload.issue.user.login;
+  const recepientUsername = username || contributor;
 
   const recepientEmail = await resolveUsernameToEmail(
     context,
@@ -61,30 +66,32 @@ async function payoutCommandHandler(context, command) {
   );
 
   if (!recepientEmail) {
-    return await addComment(context, "Unable to access contributor's email");
+    return await addComment(context, "Unable to retrieve contributor's email");
   }
 
   const response = await payouts.initiateChimoney([
     { valueInUSD: amount, email: recepientEmail },
   ]);
 
-  await addComment(
-    context,
-    `@${commenterUsername} here's the payment link ${response.data.paymentLink}`
-  );
+  const message = `@${commenterUsername}, you have initiated a reward payment of $${amount} using the\
+Chimoney GitHub bot.\nPlease, click on the payment link to complete the Payment using Chimoney. ${response.data.paymentLink}`;
+
+  await addComment(context, message);
 }
 
 async function pullRequestClosedHandler(context) {
   const maintainer = await findMaintainer(context);
 
   if (!maintainer) {
-    app.log.warn(context.payload, "No maintainer or admin found");
+    app.log.warn(context.payload, "No maintainer or admin found.");
     return;
   }
 
+  const contributor = context.payload.issue.user.login;
+
   // Notify maintainer that PR has been merged
   const issueComment = context.issue({
-    body: `@${maintainer.login} PR merged`,
+    body: `@${maintainer.login}, PR merged. Please send a chimoney.io reward to @${contributor}`,
   });
 
   await context.octokit.issues.createComment(issueComment);
