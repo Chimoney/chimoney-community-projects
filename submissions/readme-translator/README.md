@@ -15,3 +15,10 @@ Example
         with:
           LANG: fr
 ```
+
+## How to run
+1. Go to `Actions` in the GitHub repo
+2. At the left side click on `Chimoney Translator`
+3. Then click `Run Workflow` and `Run Workflow`
+
+The readme willl be translated to any language that was stated in the `main.yml` file
