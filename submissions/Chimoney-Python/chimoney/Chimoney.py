@@ -9,13 +9,16 @@ class Chimoney:
     This is the root API for the Chi Money API.
     """
 
-    def __init__(self):
+    def __init__(self, sandbox=False):
         self.info = Info()
         self.account = Account()
         self.payouts = Payouts()
         self.subaccount = SubAccount()
         self.wallet = Wallet()
         self.redeem = Redeem()
+
+        if sandbox:
+            os.environ["CHIMONEY_SANDBOX"] = "True"
 
     @classmethod
     def set_api_key(cls, auth_key):

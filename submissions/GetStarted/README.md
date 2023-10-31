@@ -1,0 +1,1 @@
+I have translated the blog post from HTML to Markdown.
