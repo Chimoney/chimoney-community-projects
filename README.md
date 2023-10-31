@@ -14,7 +14,7 @@
 
 <!-- # Chimoney Hacktoberfest 2023 -->
 
-English | [Spanish](README-ES.md) | [日本語](README-JP.md) |
+English | [Spanish](README-ES.md) | [日本語](README-JP.md) | [中国人](README-CN.md)
 
 Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
 
