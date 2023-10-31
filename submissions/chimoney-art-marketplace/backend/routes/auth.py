@@ -8,11 +8,11 @@ from database.database import get_db
 
 from models.user import User, TokenTable
 
-from schemas.user import UserSchema, UpdateUserSchema, TokenSchema
+from schemas.user import UserSchema, UpdateUserSchema, TokenSchema, UserLoginSchema
 
 from responses.response import ResponseClass
 
-from services.auth import create_user, create_access_token, decode_token, get_current_user, authenticate_user
+from services.auth import create_user, create_access_token, get_current_user, authenticate_user
 
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 REFRESH_TOKEN_EXPIRE_MINUTES = 60 * 24 * 7
@@ -31,16 +31,14 @@ async def signup(data: UserSchema, db: Session = Depends(get_db)):
     )
 
 @router.post("/login", response_model=TokenSchema)
-async def login(request: UserSchema, db: Session = Depends(get_db)):
-    print(request.username)
-    user = authenticate_user(get_db, username=request.username, password=request.password)
-    if not user:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect username or password",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-    access_token = create_access_token(
-        data={"sub": user.username},
-    )
-    return {"access_token": access_token, "token_type": "bearer"}
+async def login(request: UserLoginSchema = Depends(authenticate_user)):
+    print(request)
+    # user = authenticate_user(username=request.username, password=request.password)
+    # if not user:
+    #     raise HTTPException(
+    #         status_code=status.HTTP_401_UNAUTHORIZED,
+    #         detail="Incorrect username or password",
+    #         headers={"WWW-Authenticate": "Bearer"},
+    #     )
+    
+    return request

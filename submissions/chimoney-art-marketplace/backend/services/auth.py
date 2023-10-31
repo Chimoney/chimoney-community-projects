@@ -7,6 +7,7 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi.encoders import jsonable_encoder
 
+from sqlalchemy import inspect
 from sqlalchemy.orm import Session
 from jose import JWTError, jwt
 from passlib.context import CryptContext
@@ -86,7 +87,8 @@ def create_access_token(data: dict, expires_delta: int | None = None):
         expire = datetime.utcnow() + expires_delta
     else:
         expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
-    to_encode.update({'exp': expire, 'sub': str(data.id)})
+    # print(to_encode)
+    to_encode.update({'exp': expire, 'sub': str(data['id'])})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
     return encoded_jwt
@@ -98,13 +100,20 @@ def create_refresh_token(data: dict, expires_delta: int | None = None):
         expire = datetime.utcnow() + expires_delta
     else:
         expire = datetime.utcnow() + timedelta(days=REFRESH_TOKEN_EXPIRE_MINUTES)
-    to_encode.update({'exp': expire, 'sub': str(data.id)})
+    # print(to_encode)
+    to_encode.update({'exp': expire, 'sub': str(data['id'])})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
     return encoded_jwt
 
+def object_as_dict(obj):
+    return {
+        c.key: getattr(obj, c.key)
+        for c in inspect(obj).mapper.column_attrs
+    }
+
 def authenticate_user(username: str, password: str, db: Session = Depends(get_db)):
-    print(username)
+    # print(username)
     user = get_user(db, username)
     if user is None:
         raise HTTPException(
@@ -117,8 +126,13 @@ def authenticate_user(username: str, password: str, db: Session = Depends(get_db
             detail='Incorrect username or password',
         )
     
-    access = create_access_token(user)
-    refresh = create_refresh_token(user)
+    # print(object_as_dict(user))
+    access = create_access_token(
+        data=object_as_dict(user),
+    )
+    refresh = create_refresh_token(
+        data=object_as_dict(user),
+    )
 
     token_db = TokenTable(user_id=user.id, access_toke=access, refresh_toke=refresh, status=True)
     
