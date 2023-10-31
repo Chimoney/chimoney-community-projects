@@ -1,6 +1,6 @@
 # Chimoney Hacktoberfest 2023
 
-English | [日本語](README-JP.md) |
+[English](README.md) | [日本語](README-JP.md) |
 
 ChimoneyのHacktoberfest 2023へようこそ！これはChimoneyによって提供されるHacktoberfest 2023の完全なガイドです。Chimoneyのオープンソースプロジェクトへの貢献についての情報が含まれています。
 

@@ -41,9 +41,20 @@ const chimoney = require("chimoneyjs")();
 // Initialise chimoney with api key
 require("dotenv").config();
 const chimoney = require("chimoneyjs")(process.env.API_KEY);
+
+// or
+
+const chimoney = require("chimoneyjs")({ apiKey: process.env.API_KEY });
 ```
 
-The issue with the latter is that you'd have to initialise your api key whenever you import the package. For this reason we recommend exporting your apiKey as an environment variables
+You can also use the library in sandbox mode, but you'll require a sandbox API key. You can read more about chimoney sandbox ["here"](https://chimoney.readme.io/reference/sandbox-environment)
+
+```js
+const chimoney = require("chimoneyjs")({
+  apiKey: process.env.API_KEY,
+  sandbox: true,
+});
+```
 
 #### Full Example
 
