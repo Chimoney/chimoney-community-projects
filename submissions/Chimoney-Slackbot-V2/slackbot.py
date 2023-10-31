@@ -3,11 +3,12 @@ from slack_bolt.async_app import AsyncApp
 import os
 from slack_sdk.oauth.installation_store import FileInstallationStore
 from slack_sdk.oauth.state_store import FileOAuthStateStore
-from modules.validators import validate_sendchimoney_text
+from modules.validators import validate_sendchimoney_text, validate_giveaway_text
 from sqlalchemy import create_engine
 from modules.sendchimoney import (
     send_chimoney as send_chimoney_response,
 )
+from modules.giveaway import random_giveaway, giveaway_with_tagged_users
 import logging
 
 logger = logging.getLogger(__name__)
@@ -73,9 +74,74 @@ async def send_chimoney(ack, say, command, client, logger):
 
         else:
             logger.info({"text": text, "valid": valid, "text_type": text_type})
-            print({"text": text, "valid": valid, "text_type": text_type})
             await say(f"Error: {text_type}")
 
+    except Exception as e:
+        await say(f"An error occurred: {str(e)}")
+
+
+@app.command("/giveaway")
+async def giveaway(ack, say, command, client, logger):
+    await ack()
+    say("Processing your request...")
+    try:
+        text = command["text"]
+
+        valid, text_type = validate_giveaway_text(text)
+        if valid:
+            if text_type == "RG":
+                channel_id = command["channel_id"]
+                result = await random_giveaway(client, text, channel_id)
+
+                if result:
+                    # Send Payment Link to the user that requested the giveaway
+                    await client.chat_postMessage(
+                        channel=command["user_id"],
+                        text="Payment link: " + result["payment_link"],
+                    )
+                    # send a congratulatory message with all the winners tagged
+                    winners_text = "Congratulations to "
+                    for winner in result["winners"]:
+                        winners_text += f"<@{winner['user_id']}> "
+
+                    client.chat_postMessage(
+                        channel=command["channel_id"],
+                        text=winners_text,
+                    )
+                else:
+                    await client.chat_postMessage(
+                        channel=command["user_id"],
+                        text="An error occurred while processing your request.",
+                    )
+
+            elif text_type == "RGBMU":
+                result = await giveaway_with_tagged_users(client, text)
+                if result:
+                    # Send Payment Link to the user that requested the giveaway
+                    await client.chat_postMessage(
+                        channel=command["user_id"],
+                        text="Payment link: " + result["payment_link"],
+                    )
+                    # send a congratulatory message with all the winners tagged
+                    winners_text = "Congratulations to "
+                    for winner in result["winners"]:
+                        # winners are tagged with their @username
+                        winners_text += f"@{winner['user_id']} "
+
+                    client.chat_postMessage(
+                        channel=command["channel_id"],
+                        text=winners_text,
+                    )
+                else:
+                    await client.chat_postMessage(
+                        channel=command["user_id"],
+                        text="An error occurred while processing your request.",
+                    )
+            else:
+                await say(f"Error: {text_type}")
+        else:
+            logger.info({"text": text, "valid": valid, "text_type": text_type})
+            await say(f"Error: {text_type}")
     except Exception as e:
         await say(f"An error occurred: {str(e)}")
 
