@@ -121,7 +121,7 @@ To set up your development environment, you can use CodeSpaces or Gitpod:
 - [CodeSpaces](https://github.com/features/codespaces)
 - [Gitpod](https://www.gitpod.io/)
 
-   ## Contribute via Gitpod:
+## Contribute via Gitpod:
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Chimoney/Community-projects)
 
 - Check out how to get started [here](https://www.gitpod.io/docs/introduction)
