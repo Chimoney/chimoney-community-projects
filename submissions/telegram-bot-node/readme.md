@@ -16,7 +16,7 @@
 Create a .env file in the project directory and set the following environment variables:
 
 - `PORT`: Port on which the bot's HTTP server will run.
-- `BOT_URL`: Your github bot's URL.
+- `BOT_URL`: Your telegram bot's URL.
 - `API_KEY`: Your API key for Chimoney integration.
 - `REDIRECT_URL`: Redirect URL for Chimoney transactions.
 - `CHIMONEY_BASE_URL`: Base URL for Chimoney operations.
