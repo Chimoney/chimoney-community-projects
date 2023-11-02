@@ -87,14 +87,6 @@ This repo contains a bunch of small projects. Different projects deal with diffe
 - Fork the [Chimoney community projects repository](https://github.com/Chimoney/chimoney-community-projects.git).
 - Clone your forked repository to your local machine.
 
-To set up your development environment, you can use Gitpod:
-- [Gitpod](https://www.gitpod.io/)
-
-   ## Contribute via Gitpod:
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Chimoney/Community-projects)
-
-- Check out how to get started [here](https://www.gitpod.io/docs/introduction)
-
    ### Contribute by Creating New Projects
     - You can contribute by developing new projects that implement the Chimoney API.
     - After working on the solution, submit it in the [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) folder.
