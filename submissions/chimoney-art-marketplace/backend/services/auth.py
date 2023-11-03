@@ -25,7 +25,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 60
 REFRESH_TOKEN_EXPIRE_MINUTES = 60 * 24 * 7
 
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl='token')
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl='api/auth/login')
 
 pwd_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
 
@@ -94,6 +94,7 @@ def create_access_token(data: dict, expires_delta: int | None = None):
     return encoded_jwt
 
 def create_refresh_token(data: dict, expires_delta: int | None = None):
+    print(data)
     to_encode = data.copy()
 
     if expires_delta:
@@ -112,7 +113,7 @@ def object_as_dict(obj):
         for c in inspect(obj).mapper.column_attrs
     }
 
-def authenticate_user(username: str, password: str, db: Session = Depends(get_db)):
+def authenticate_user(username: str, password: str, db: Session):
     # print(username)
     user = get_user(db, username)
     if user is None:
@@ -126,6 +127,7 @@ def authenticate_user(username: str, password: str, db: Session = Depends(get_db
             detail='Incorrect username or password',
         )
     
+    return user
     # print(object_as_dict(user))
     access = create_access_token(
         data=object_as_dict(user),
@@ -146,7 +148,8 @@ def authenticate_user(username: str, password: str, db: Session = Depends(get_db
     }
 
 async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
-    user = jwt.decode(token).username
+    user = jwt.decode(token, SECRET_KEY, ALGORITHM)
+    
     if user is None:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,

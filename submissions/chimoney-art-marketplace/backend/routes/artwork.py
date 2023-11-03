@@ -18,26 +18,27 @@ router = APIRouter(prefix='/api', tags=['Artwork'])
 
 
 @router.get('/')
-async def get_art():
-    return get_artworks()
+async def get_art(db: Session = Depends(get_db)):
+    return get_artworks(db=db)
 
 @router.post('/', response_model=ResponseClass, status_code=201)
 async def create_art(data: ArtworkSchema, db: Session = Depends(get_db), artist: User = Depends(get_current_user)):
-    new_artwork = Artwork(
-        **data,
-        artist_id = artist.id,
-        owner_id = artist.id
-    )
-    create_artwork(new_artwork)
+    print(data)
+    # data = dict(data)
+    # new_artwork = Artwork(
+    #     **data,
+    #     artist_id = artist['id'],
+    # )
+    art = create_artwork(db, data, artist['id'])
     
     return ResponseClass(
         message='Artwork created successfully',
         statusCode=201,
-        data=None
+        data=dict(art)
     )
 
 @router.get('/art/{art_id}')
-async def get_art_by_id(art_id: int):
-    artwork = await get_artwork_by_id(artwork_id=art_id)
+async def get_art_by_id(art_id: int, db: Session = Depends(get_db)):
+    artwork = get_artwork_by_id(artwork_id=art_id, db=db)
 
     return artwork

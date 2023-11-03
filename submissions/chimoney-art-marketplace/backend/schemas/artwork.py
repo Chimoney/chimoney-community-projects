@@ -10,11 +10,11 @@ class ArtworkSchema(BaseModel):
     description: str
     image: str
     price: float
-    genre: List[str]
+    # genre: List[str]
     style: str
-    artist_id: int
-    owner_id: int
-    created: datetime.datetime
+    # artist_id: int
+    # owner_id: int
+    date_created: datetime.datetime
    
     class Config:
         from_attributes = True
