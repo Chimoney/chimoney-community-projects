@@ -145,6 +145,20 @@ This repo contains a bunch of small projects. Different projects deal with diffe
       - [Chispend Widget](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
       - [Pay Paddy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
       - [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
+        
+To set up your development environment, you can use CodeSpaces or Gitpod:
+- [CodeSpaces](https://github.com/features/codespaces)
+- [Gitpod](https://www.gitpod.io/)
+
+## Contribute via Gitpod:
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Chimoney/Community-projects)
+
+- Check out how to get started [here](https://www.gitpod.io/docs/introduction)
+
+## Contribute via CodeSpaces:
+[![Open in Visual Studio Codespaces](https://github.com/Lymah123/chimoney-community-projects/blob/main/images/VSLogo2.png)](https://codespaces.new/Chimoney/chimoney-community-projects)
+
+- Check out how to get started [here](https://docs.github.com/en/codespaces)
 
 ## Code of Conduct
 
