@@ -131,9 +131,6 @@ This repo contains a bunch of small projects. Different projects deal with diffe
       - [Chispend Widget](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
       - [Pay Paddy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
       - [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
-        
-- [CodeSpaces](https://github.com/features/codespaces)
-- [Gitpod](https://www.gitpod.io/)
 
 ## Contribute via Gitpod:
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Chimoney/Community-projects)
