@@ -143,8 +143,6 @@ This repo contains a bunch of small projects. Different projects deal with diffe
 ## Contribute via CodeSpaces:
 [![Open in Visual Studio Codespaces](https://github.com/Lymah123/chimoney-community-projects/blob/main/images/VSLogo2.png)](https://codespaces.new/Chimoney/chimoney-community-projects)
 
-- Check out how to get started [here](https://docs.github.com/en/codespaces)
-
 ## Code of Conduct
 
 We expect all contributors to abide by our [Code of Conduct](https://github.com/Chimoney/chimoney-community-projects/blob/main/CODE_OF_CONDUCT.md). Please ensure your behavior is respectful and inclusive.
