@@ -90,6 +90,78 @@ The Chimoney Slack Bot inherently supports multi-workspace configurations. This 
 
 It only needs to be deployed once and can be installed on any workspace using OAuth.
 
+## Deploying the Slackbot(Optional)
+
+This section provides detailed steps on deploying your Slackbot on different platforms: Render, AWS, and Heroku. Choose the platform that best suits your requirements.
+
+### Deploying on Render
+
+1. **Create an Account on Render**: If you don't have one already, sign up on [Render](https://render.com/) and log in.
+
+2. **Create a New Web Service**:
+   - Choose a name for your service.
+   - Set your deployment region.
+   - Configure environment variables.
+   - Define the path to your Dockerfile and port.
+   - Click "Create Web Service."
+
+3. **Connect Your GitHub Repository (Optional)**: If your code is hosted on GitHub, connect your repository to Render.
+
+4. **Deploy Your Slackbot**:
+   - Click "Deploy" to initiate the deployment process.
+   - Render will build your Docker image, deploy it, and handle routing and SSL certificates.
+   - Once deployed, you'll receive a live URL for your Slackbot.
+
+5. **Configure Slack and Test**:
+   - Set up your Slack App with the appropriate Redirect URL.
+   - Invite your Slackbot to desired channels.
+   - Test your Slackbot using the Render-provided live URL.
+
+### Deploying on AWS
+
+1. **Set Up an AWS Account**: Sign up for an AWS account on [AWS](https://aws.amazon.com/).
+
+2. **Launch an EC2 Instance**:
+   - Use a Linux-based Amazon Machine Image (AMI).
+   - Configure security groups to allow traffic on the bot's port.
+   - Create and associate a key pair for access.
+
+3. **Connect to Your EC2 Instance**: Use SSH to connect and upload your Slackbot code.
+
+4. **Install Docker**:
+   - Update the instance and install Docker.
+   - Build and run your Slackbot container.
+
+5. **Set Up a Domain (Optional)**: Configure Route 53 or another domain registrar to point to your EC2 instance's public IP.
+
+6. **Configure Slack and Test**:
+   - Set up your Slack App with the appropriate Redirect URL.
+   - Invite your Slackbot to desired channels.
+   - Test your Slackbot using a custom domain or the EC2 instance's public IP.
+
+### Deploying on Heroku
+
+1. **Create a Heroku Account**: Sign up for a Heroku account at [Heroku](https://www.heroku.com/).
+
+2. **Install the Heroku CLI**: Download and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+
+3. **Prepare Your Slackbot**:
+   - Ensure you have a `Procfile` with appropriate content.
+
+4. **Deploy to Heroku**:
+   - Open a terminal in your Slackbot directory.
+   - Log in to Heroku using `heroku login`.
+   - Create a new Heroku app using `heroku create`.
+   - Deploy your Slackbot with Git.
+
+5. **Configure Slack and Test**:
+   - Set up your Slack App with the correct Redirect URL.
+   - Invite your Slackbot to desired channels.
+   - Test your Slackbot using the Heroku app's URL.
+
+Choose the platform that best suits your needs and configuration preferences.
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
