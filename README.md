@@ -91,7 +91,7 @@ This repo contains a bunch of small projects. Different projects deal with diffe
 - Clone your forked repository to your local machine.
 
   ### Contribute by Creating New Projects
-    - You can contribute by developing new projects that implements the Chimoney API.
+    - You can contribute by developing new projects that implement the Chimoney API.
     - After working on the solution, submit it in the [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) folder.
   ### Contribute to the Existing Projects
     - Navigate to your chosen project's directory within the [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) folder.
@@ -119,6 +119,11 @@ This repo contains a bunch of small projects. Different projects deal with diffe
       - [Chispend Widget](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
       - [Pay Paddy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
       - [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
+
+## Contribute via Gitpod:
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Chimoney/Community-projects)
+
+- Check out how to get started [here](https://www.gitpod.io/docs/introduction)
 
 ## Code of Conduct
 
