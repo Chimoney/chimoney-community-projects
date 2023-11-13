@@ -173,7 +173,7 @@ function App() {
               <p>{`Payment of ${confirmationData.valueInUSD} USD has been successfully sent to ${confirmationData.account_number}`}</p>
               <button onClick={() => setShowConfirmation(false)}>Close</button>
             </div>
-          }
+          )}
 
           <p className='mt-2 text-xs'>Powered by <span className='font-semibold text-purple-500'>Chimoney</span></p>
 
