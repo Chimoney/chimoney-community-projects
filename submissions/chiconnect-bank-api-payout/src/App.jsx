@@ -25,8 +25,16 @@ function App() {
 
   
   useEffect(() => {
+    const displayConfirmation = () => {
+      // Display the modal after a delay (you can adjust the delay time)
+      setTimeout(() => {
+        setShowConfirmation(false); // Close the modal after another delay (you can adjust the delay time)
+        setInfo('Payment successful'); // Show "Payment Successful" message
+      }, 2000); // Adjust the delay time (in milliseconds)
+    };
+
     if (showConfirmation && confirmationData) {
-      console.log("Displaying confirmation modal");
+      displayConfirmation();
     }
   }, [showConfirmation, confirmationData]);
 
