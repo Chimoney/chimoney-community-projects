@@ -23,6 +23,13 @@ function App() {
     setConfirmationData(data);
   }
 
+  
+  useEffect(() => {
+    if (showConfirmation && confirmationData) {
+      console.log("Displaying confirmation modal");
+    }
+  }, [showConfirmation, confirmationData]);
+
   const handleFormChange = (event) => {
     const { name, value } = event.target
     setPaymentData(prevData => {
