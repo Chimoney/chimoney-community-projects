@@ -18,7 +18,7 @@ It uses the pychimoney library to send the chimoney.
 - Tweet the bot with the following format
     - @chisendtest send amount to @username
 - The bot will you a direct message for confirmation and checkout
-- ChiSpend will send the amount to the user
+- Unispend will send the amount to the user
 
 FOR EXAMPLE
 @chisendtest send 100 to @chisendtest

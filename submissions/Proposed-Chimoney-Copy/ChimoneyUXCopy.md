@@ -2,16 +2,16 @@ Chimoney Updated Copy.
 
 Section 1
 Old navbar links: Benefits, Products, About, Testimonials
-New navbar links: Why choose Chispend?, Our features, About us, Our customer stories
+New navbar links: Why choose Unispend?, Our features, About us, Our customer stories
 
 Old heading: Unleash utility and engagement with one simple integration.
 New heading: Shop and spend from your crypto wallet - your crypto, your way!
 
 Old subheading: It's happening! You can buy gift cards, airtime, and more with tokens and NFTs in your wallet, app or protocol.
-New subheading:  Chispend lets you buy gift cards, airtime, and more with tokens and NFTs in your wallet, app, or protocol.
+New subheading:  Unispend lets you buy gift cards, airtime, and more with tokens and NFTs in your wallet, app, or protocol.
 
-Old CTA button1: Integrate Chispend
-New CTA button1: Chispend Integration
+Old CTA button1: Integrate Unispend
+New CTA button1: Unispend Integration
 
 Old CTA button2: Spend your tokens
 New CTA button2: Start spending
@@ -22,7 +22,7 @@ Old heading: None
 New heading: Multi-platform support
 
 Old subheading: None
-New subheading: Chispend has got you covered with a suite of crypto wallets to choose from. Select your preference and start shopping.
+New subheading: Unispend has got you covered with a suite of crypto wallets to choose from. Select your preference and start shopping.
 
 Card 1:  Xumm wallet
 Old CTA button: Use Xumm
@@ -86,7 +86,7 @@ Comment: In my opinion, I don’t think the text carousel is necessary.
 
 Section 5
 Old heading: None
-New heading: Why choose Chispend?
+New heading: Why choose Unispend?
 
 Card 1
 Old heading: Off-ramps
@@ -128,8 +128,8 @@ New heading: Our customer stories
 Old subheading: Embeddable shopping experience everyone loves
 New subheading: Nil
 
-Chispend old tag: Send and receive exactly what's needed.
-Chispend new tag: Shopping with crypto made 10X easier.
+Unispend old tag: Send and receive exactly what's needed.
+Unispend new tag: Shopping with crypto made 10X easier.
 
 General comments
 The UI needs to be configured for the clarity of ideas.
