@@ -81,4 +81,20 @@ describe("Redeem", () => {
       expect(error).toBeInstanceOf(ValueError);
     }
   });
+
+  test("loyalty: should throw Chi Money Error", async () => {
+    try {
+      await redeem.loyalty("testref", []);
+    } catch (error) {
+      expect(error).toBeInstanceOf(ChiMoneyError);
+    }
+  });
+
+  test("loyalty: should throw value error", async () => {
+    try {
+      await redeem.loyalty();
+    } catch (error) {
+      expect(error).toBeInstanceOf(ValueError);
+    }
+  });
 });
