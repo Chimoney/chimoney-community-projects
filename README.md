@@ -80,7 +80,20 @@ Here are some helpful resources to get you started:
 
 5. **Start Contributing:** With your API keys in place, you're ready to start contributing!
 
+## Contributing
 
+Contributing to Chimoney's Hacktoberfest is easy! Follow these steps:
+
+1. Fork the repository.
+2. Create a new branch with a relevant name for your work: `git checkout -b feature/my-contribution`.
+3. Make your changes and commit them to the **submissions** folder.
+4. Push your changes to your forked repository: `git push origin feature/my-contribution`.
+5. Create a pull request explaining your contribution.
+
+## Issues
+
+Browse the [list of available issues](https://github.com/Chimoney/chimoney-community-projects/issues) here to find an issue that interests you.
+=======
 ## Project Setup
 
 This repo contains a bunch of small projects. Different projects deal with different stacks and frameworks. The code for individual projects is located in separate directories within the [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) folder. You're welcome to contribute to any of these projects. Ready to dive in? Here's how to get started:
