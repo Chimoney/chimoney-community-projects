@@ -1,5 +1,5 @@
-# Chiconnect mobile-money api payout
-A mini project to demonstrate integration of Chiconnect mobile money api payout using React framework.
+# Chimoney API mobile-money payout
+A mini project to demonstrate the integration of mobile money payout using the React framework.
 
 ## Desktop preview
 ![Desktop preview](/src/assets/desktop-preview.png)
