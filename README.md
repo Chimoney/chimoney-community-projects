@@ -14,7 +14,7 @@
 
 <!-- # Chimoney Hacktoberfest 2023 -->
 
-English | [Spanish](README-ES.md) | [日本語](README-JP.md) | [한국인](README-KO.md) | [中国人](README-CN.md) | [German](README-GM.md) |
+English | [Spanish](README-ES.md) | [日本語](README-JP.md) | [한국인](README-KO.md) | [中国人](README-CN.md) | [German](README-GM.md) | [Hindi](README-HN.md)
 
 
 Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
@@ -35,20 +35,22 @@ Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete 
 
 ## Table of Contents
 
-- [Chimoney Hacktoberfest 2023](#chimoney-hacktoberfest-2023)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Prerequisites](#prerequisites)
-  - [Resources](#resources)
-  - [Obtaining API Keys](#obtaining-api-keys)
-  - [Project Setup](#project-setup)
-  - [Code of Conduct](#code-of-conduct)
-  - [Mentorship](#mentorship)
-  - [Prizes and Recognition](#prizes-and-recognition)
-  - [Live Events](#live-events)
-  - [License](#license)
-  - [Contact Information](#contact-information)
-  - [Additional Resources](#additional-resources)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Resources](#resources)
+- [Obtaining API Keys](#obtaining-api-keys)
+- [Project Setup](#project-setup)
+  - [Contribute by Creating New Projects](#contribute-by-creating-new-projects)
+  - [Contribute to the Existing Projects](#contribute-to-the-existing-projects)
+- [Code of Conduct](#code-of-conduct)
+- [Mentorship](#mentorship)
+- [Prizes and Recognition](#prizes-and-recognition)
+- [Live Events](#live-events)
+- [License](#license)
+- [Contact Information](#contact-information)
+- [Additional Resources](#additional-resources)
+- [Thanking all Awesome Contributors :heart:](#thanking-all-awesome-contributors-heart)
 
 ## Introduction
 
