@@ -6,6 +6,7 @@
     "dependencies": {
         "axios": "latest",
         "node-telegram-bot-api": "latest",
-        "telegraf": "latest"
+        "telegraf": "latest",
+        "express": "latest"
     }
 }
