@@ -8,12 +8,35 @@ function App() {
   const [error, setError] = useState('')
   const [info, setInfo] = useState('')
   const [banks, setBanks] = useState([])
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [confirmationData, setConfirmationData] = useState(null);
 
   const [paymentData, setPaymentData] = useState({
     bank: '',
     accountNumber: '',
     amount: ''
   })
+
+  const handlePaymentSuccess = (data) => {
+    setInfo('Payment successful');
+    setShowConfirmation(true);
+    setConfirmationData(data);
+  }
+
+  
+  useEffect(() => {
+    const displayConfirmation = () => {
+      // Display the modal after a delay (you can adjust the delay time)
+      setTimeout(() => {
+        setShowConfirmation(false); // Close the modal after another delay (you can adjust the delay time)
+        setInfo('Payment successful'); // Show "Payment Successful" message
+      }, 2000); // Adjust the delay time (in milliseconds)
+    };
+
+    if (showConfirmation && confirmationData) {
+      displayConfirmation();
+    }
+  }, [showConfirmation, confirmationData]);
 
   const handleFormChange = (event) => {
     const { name, value } = event.target
@@ -150,12 +173,22 @@ function App() {
             </span>
           }
 
-          <button onClick={handlePayClick}
-            className={`${error.length === 0 ? 'mt-8' : 'mt-2'} px-12 py-2 border shadow-sm text-white rounded-xl 
-            font-semibold bg-purple-500 hover:border-purple-500 tracking-wider
-            hover:bg-purple-50 hover:text-purple-500 hover:scale-95 transition-all`}>
-            PAY NOW
-          </button>
+        <button
+          onClick={handlePayClick}
+          className={`${error.length === 0 ? 'mt-8' : 'mt-2'} px-12 py-2 border shadow-sm text-white rounded-xl 
+          font-semibold bg-purple-500 hover:border-purple-500 tracking-wider
+          hover:bg-purple-50 hover:text-purple-500 hover:scale-95 transition-all`}
+        >
+          PAY NOW
+        </button>
+
+          {showConfirmation && confirmationData && (
+            <div className="modal">
+              <h2>Payment Confirmation</h2>
+              <p>{`Payment of ${confirmationData.valueInUSD} USD has been successfully sent to ${confirmationData.account_number}`}</p>
+              <button onClick={() => setShowConfirmation(false)}>Close</button>
+            </div>
+          )}
 
           <p className='mt-2 text-xs'>Powered by <span className='font-semibold text-purple-500'>Chimoney</span></p>
 
