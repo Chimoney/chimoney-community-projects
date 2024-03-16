@@ -169,5 +169,14 @@ We can't wait to see your contributions to Hacktoberfest 2023!
 Happy coding! 🚀
 
 ## Thanking all Awesome Contributors :heart:
-![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
+
+<table>
+  <tbody>
+   <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/thelimeskies"><img src="https://avatars.githubusercontent.com/u/45210985?v=4" width="100px;" alt="LimeSkies"/><br /><sub><b>Ben</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=limeskies" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ayo-Awe"><img src="https://avatars.githubusercontent.com/u/82258944?v=4" width="100px;" alt="Ayo-Awe"/><br /><sub><b>Ayo-Awe</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=Ayo-Awe" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/uchibeke"><img src="https://avatars.githubusercontent.com/u/5677552?v=4" width="100px;" alt="uchibeke"/><br /><sub><b>uchibeke</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=uchibeke" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/phyleria"><img src="https://avatars.githubusercontent.com/u/47274629?v=4" width="100px;" alt="phyleria"/><br /><sub><b>phyleria</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=phyleria" title="Code">💻</a></td>
+      </tr>
+  </tbody>
 [Back to the top &uparrow;](#initial)
