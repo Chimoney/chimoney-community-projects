@@ -192,6 +192,12 @@ Happy coding! 🚀
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/CyberGeni"><img src="https://avatars.githubusercontent.com/u/70205370?v=4" width="100px;" alt="CyberGeni"/><br /><sub><b>CyberGeni</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=CyberGeni" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Hauwarh"><img src="https://avatars.githubusercontent.com/u/101065854?v=4" width="100px;" alt="Hauwarh"/><br /><sub><b>Hauwarh</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=Hauwarh" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/davidongora"><img src="https://avatars.githubusercontent.com/u/65700137?v=4" width="100px;" alt="davidongora"/><br /><sub><b>davidongora</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=davidongora" title="Code">💻</a></td>
+      </tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ajiboso-Adeola"><img src="https://avatars.githubusercontent.com/u/79532937?v=4" width="100px;" alt="Ajiboso-Adeola"/><br /><sub><b>Ajiboso-Adeola</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=Ajiboso-Adeola" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/adarsh-jha-dev"><img src="https://avatars.githubusercontent.com/u/132337675?v=4"width="100px;" alt="adarsh-jha-dev"/><br /><sub><b>adarsh-jha-dev</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=adarsh-jha-dev" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/QuantuM410"><img src="https://avatars.githubusercontent.com/u/85943021?v=4"width="100px;" alt="QuantuM410"/><br /><sub><b>QuantuM410</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=QuantuM410" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/THEGAMECHANGER416"><img src="https://avatars.githubusercontent.com/u/95236897?v=4"width="100px;" alt="THEGAMECHANGER416"/><br /><sub><b>THEGAMECHANGE416</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=THEGAMECHANGER416" title="Code">💻</a></td>
+      
   </tbody>
-  
+
 [Back to the top &uparrow;](#initial)
