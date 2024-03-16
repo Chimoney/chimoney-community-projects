@@ -193,4 +193,5 @@ Happy coding! 🚀
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Hauwarh"><img src="https://avatars.githubusercontent.com/u/101065854?v=4" width="100px;" alt="Hauwarh"/><br /><sub><b>Hauwarh</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=Hauwarh" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/davidongora"><img src="https://avatars.githubusercontent.com/u/65700137?v=4" width="100px;" alt="davidongora"/><br /><sub><b>davidongora</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=davidongora" title="Code">💻</a></td>
   </tbody>
+  
 [Back to the top &uparrow;](#initial)
