@@ -16,5 +16,5 @@ for (( i=0; i<${#usernames[@]}; i++ )); do
     avatar_url="${avatar_urls[i]}"
     # Extract avatar ID from avatar URL
     avatar_id=$(basename "$avatar_url")
-    echo "<td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://github.com/$username\"><img src=\"$avatar_url\" width=\"100px;\" alt=\"$username\"/><br /><sub><b>$username</b></sub></a><br /><a href=\"https://github.com/Chimoney/chimoney-community-projects/commits?author=$username\" title=\"Code\">💻</a></td>" >> README.md
+    echo "<td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://github.com/$username\"><img src=\"$avatar_url\" width=\"100px;\" alt=\"$username\"/><sub><b>$username</b></sub></a><br /><a href=\"https://github.com/Chimoney/chimoney-community-projects/commits?author=$username\" title=\"Code\">💻</a></td>" >> README.md
 done
