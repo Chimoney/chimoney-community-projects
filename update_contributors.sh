@@ -1,45 +1,56 @@
+
+repo_url="https://api.github.com/repos/Chimoney/chimoney-community-projects"
+
 page=1
-per_page=100  #can handle 100 contributors
-response=$(curl -s "https://api.github.com/repos/Chimoney/chimoney-community-projects/contributors?page=${page}&per_page=${per_page}")
+per_page=100  # can handle 100 contributors
 
+update_readme() {
+    local readme_file=$1
 
-# Parse JSON response to extract usernames and avatar URLs
-usernames=($(echo "$response" | jq -r '.[].login'))
-avatar_urls=($(echo "$response" | jq -r '.[].avatar_url'))
+    # Fetch contributors
+    response=$(curl -s "${repo_url}/contributors?page=${page}&per_page=${per_page}")
 
-# Allow addition of more than 30 contributors(pagination)
+    # Parse JSON response to extract usernames and avatar URLs
+    usernames=($(echo "$response" | jq -r '.[].login'))
+    avatar_urls=($(echo "$response" | jq -r '.[].avatar_url'))
 
-while [ "$(jq '. | length' <<< "$response")" -gt 0 ]; do
-    response=$(curl -s "${repo_url}/contributors?page=$((++page))&per_page=100")
-    usernames+=($(echo "$response" | jq -r '.[].login'))
-    avatar_urls+=($(echo "$response" | jq -r '.[].avatar_url'))
-done
+    # Allow addition of more than 30 contributors (pagination)
+    while [ "$(jq '. | length' <<< "$response")" -gt 0 ]; do
+        response=$(curl -s "${repo_url}/contributors?page=$((++page))&per_page=100")
+        usernames+=($(echo "$response" | jq -r '.[].login'))
+        avatar_urls+=($(echo "$response" | jq -r '.[].avatar_url'))
+    done
 
-# Clear table
-sed -i '/<table>/,/<\/table>/d' README.md
+    # Clear table
+    sed -i '/<table>/,/<\/table>/d' "$readme_file"
 
-# Start the table structure in README.md
-echo "<table>" >> README.md
-echo "<tr>" >> README.md
+    # Start the table 
+    echo "<table>" >> "$readme_file"
+    echo "<tr>" >> "$readme_file"
 
-# Loop through contributors and append to README.md
-for (( i=0; i<${#usernames[@]}; i++ )); do
-    username="${usernames[i]}"
-    avatar_url="${avatar_urls[i]}"
-    avatar_id=$(basename "$avatar_url")
+    for (( i=0; i<${#usernames[@]}; i++ )); do
+        username="${usernames[i]}"
+        avatar_url="${avatar_urls[i]}"
 
-    # Append contributor information as a table cell
-    echo "<td align=\"center\" valign=\"top\" width=\"14.28%\">" >> README.md
-    echo "<a href=\"https://github.com/$username\"><img src=\"$avatar_url\" width=\"100px;\" alt=\"$username\"/><br /><sub><b>$username</b></sub></a><br />" >> README.md
-    echo "<a href=\"https://github.com/Chimoney/chimoney-community-projects/commits?author=$username\" title=\"Code\">💻</a>" >> README.md
-    echo "</td>" >> README.md
+        # Append contributor information as a table cell
+        echo "<td align=\"center\" valign=\"top\" width=\"14.28%\">" >> "$readme_file"
+        echo "<a href=\"https://github.com/$username\"><img src=\"$avatar_url\" width=\"100px;\" alt=\"$username\"/><br /><sub><b>$username</b></sub></a><br />" >> "$readme_file"
+        echo "<a href=\"https://github.com/Chimoney/chimoney-community-projects/commits?author=$username\" title=\"Code\">💻</a>" >> "$readme_file"
+        echo "</td>" >> "$readme_file"
 
-    # Add a new row after every 6 contributors
-    if (( (i + 1) % 6 == 0 )); then
-        echo "</tr><tr>" >> README.md
+        # Add a new row after every 6 contributors
+        if (( (i + 1) % 6 == 0 )); then
+            echo "</tr><tr>" >> "$readme_file"
+        fi
+    done
+
+    echo "</tr>" >> "$readme_file"
+    echo "</table>" >> "$readme_file"
+}
+
+# Iterate over all README files
+for readme_file in README*; do
+    if [[ -f "$readme_file" ]]; then
+        update_readme "$readme_file"
     fi
 done
-
-# Close row and table
-echo "</tr>" >> README.md
-echo "</table>" >> README.md
