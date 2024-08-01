@@ -49,7 +49,7 @@ update_readme() {
 }
 
 # Iterate over all README files
-for readme_file in README*; do
+for readme_file in READ*; do
     if [[ -f "$readme_file" ]]; then
         update_readme "$readme_file"
     fi
