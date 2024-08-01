@@ -10,7 +10,7 @@ avatar_urls=($(echo "$response" | jq -r '.[].avatar_url'))
 # Allow addition of more than 30 contributors(pagination)
 
 while [ "$(jq '. | length' <<< "$response")" -gt 0 ]; do
-    response=$(curl -s -H "Authorization: token YOUR_TOKEN" "${repo_url}/contributors?page=$((++page))&per_page=100")
+    response=$(curl -s "${repo_url}/contributors?page=$((++page))&per_page=100")
     usernames+=($(echo "$response" | jq -r '.[].login'))
     avatar_urls+=($(echo "$response" | jq -r '.[].avatar_url'))
 done
