@@ -24,48 +24,32 @@ update_readme() {
     # Clear table
     sed -i '/<table>/,/<\/table>/d' "$readme_file"
 
-    # Start the table
-    echo "<div style=\"display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 10px;\">" >> "$readme_file"
+    # Start the table 
+    echo "<table>" >> "$readme_file"
+    echo "<tr>" >> "$readme_file"
 
     for (( i=0; i<${#usernames[@]}; i++ )); do
         username="${usernames[i]}"
         avatar_url="${avatar_urls[i]}"
 
-        # Calculate width percentage for responsive design
-        num_columns=6
-        if (( (i + 1) % 6 == 0 )); then
-            num_columns=5
-        elif (( (i + 1) % 5 == 0 )); then
-            num_columns=4
-        elif (( (i + 1) % 4 == 0 )); then
-            num_columns=3
-        elif (( (i + 1) % 3 == 0 )); then
-            num_columns=2
-        else
-            num_columns=6
-        fi
-
-        width_percent=$(echo "100 / $num_columns - 20" | bc)
-        width_style="width: calc($width_percent% - 20px); flex: 1 1 $width_percent%"
-
-        echo "<div style=\"${width_style}; text-align: center;\">" >> "$readme_file"
-        echo "<a href=\"https://github.com/$username\">" >> "$readme_file"
-        echo "<img src=\"$avatar_url\" width=\"100px\" alt=\"$username\"/><br /><sub><b>$username</b></sub>" >> "$readme_file"
-        echo "</a><br />" >> "$readme_file"
+        # Append contributor information as a table cell
+        echo "<td align=\"center\" valign=\"top\" width=\"14.28%\">" >> "$readme_file"
+        echo "<a href=\"https://github.com/$username\"><img src=\"$avatar_url\" width=\"100px;\" alt=\"$username\"/><br /><sub><b>$username</b></sub></a><br />" >> "$readme_file"
         echo "<a href=\"https://github.com/Chimoney/chimoney-community-projects/commits?author=$username\" title=\"Code\">💻</a>" >> "$readme_file"
-        echo "</div>" >> "$readme_file"
+        echo "</td>" >> "$readme_file"
 
         # Add a new row after every 6 contributors
         if (( (i + 1) % 6 == 0 )); then
-            echo "<div style=\"flex-basis: 100%;\"></div>" >> "$readme_file"
+            echo "</tr><tr>" >> "$readme_file"
         fi
     done
 
-    echo "</div>" >> "$readme_file"
+    echo "</tr>" >> "$readme_file"
+    echo "</table>" >> "$readme_file"
 }
 
 # Iterate over all README files
-for readme_file in README*; do
+for readme_file in READ*; do
     if [[ -f "$readme_file" ]]; then
         update_readme "$readme_file"
     fi
