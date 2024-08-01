@@ -160,5 +160,4 @@
 愉快的编码！ 🚀
 
 ## 感谢所有出色的贡献者 :heart:
-![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
 [回到顶部 &uparrow;](#initial)

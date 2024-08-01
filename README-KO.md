@@ -161,5 +161,4 @@ Hacktoberfest 2023에 대한 여러분의 기여를 보고 싶습니다!
 즐거운 코딩하세요! 🚀
 
 ## 훌륭한 기여자 모두에게 감사드립니다 :heart:
-![기여자](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
 [맨 위로 돌아가기 &uparrow;](#initial)

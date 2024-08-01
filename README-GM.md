@@ -160,5 +160,4 @@ Wir freuen uns auf Ihre Beiträge zum Hacktoberfest 2023!
 Viel Spaß beim Programmieren! 🚀
 
 ## Ein herzliches Dankeschön an alle großartigen Beitragenden :heart:
-![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
 [Zurück zum Anfang &uparrow;](#initial)

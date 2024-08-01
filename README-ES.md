@@ -164,4 +164,3 @@ Para obtener más recursos e información, visite nuestro [sitio web](https://ch
 ¡Feliz codificación! 🚀
 
 ## Agradeciendo a todos los increíbles contribuyentes :corazón:
-![Colaboradores](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)

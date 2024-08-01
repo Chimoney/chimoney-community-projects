@@ -129,4 +129,3 @@ Hacktoberfest 2023への皆さんの貢献を楽しみにしています！
 ハッピーコーディング！ 🚀
 
 ## すべての素晴らしい貢献者に感謝します :heart:
-![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
