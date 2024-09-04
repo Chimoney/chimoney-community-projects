@@ -38,7 +38,7 @@ for (( i=0; i<${#usernames[@]}; i++ )); do
 
     # Append contributor information as a table cell
     echo "<td align=\"center\" valign=\"top\" width=\"14.28%\">" >> README.md
-    echo "<a href=\"https://github.com/$username\"><img src=\"$avatar_url\" class=\"contributor\" width=\"100px;\" alt=\"$username\"/><br /><sub><b>$username</b></sub></a><br />" >> README.md
+    echo "<a href=\"https://github.com/$username\"><img src=\"$avatar_url\" width=\"100px;\" alt=\"$username\"/><br /><sub><b>$username</b></sub></a><br />" >> README.md
     echo "<a href=\"https://github.com/Chimoney/chimoney-community-projects/commits?author=$username\" title=\"Code\">💻</a>" >> README.md
     echo "</td>" >> README.md
 
