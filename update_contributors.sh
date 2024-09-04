@@ -7,10 +7,10 @@ response=$(curl -s https://api.github.com/repos/Chimoney/chimoney-community-proj
 usernames=($(echo "$response" | jq -r '.[].login'))
 avatar_urls=($(echo "$response" | jq -r '.[].avatar_url'))
 
-# Remove existing table structure in README.md
-sed -i '/<table>/,/<\/table>/d' README.md
+# Clear existing contributors section in README.md between <tbody> and </tbody>
+sed -i '/<tbody>/,/<\/tbody>/d' README.md
 
-# Start the new table structure in README.md
+# Start the table structure in README.md
 echo "<table>" >> README.md
 
 # Loop through contributors and append to README.md
@@ -19,10 +19,8 @@ for (( i=0; i<${#usernames[@]}; i++ )); do
     avatar_url="${avatar_urls[i]}"
     avatar_id=$(basename "$avatar_url")
 
-    if (( i > 0 && i % 6 == 0 )); then
+    if (( (i + 1) % 6 == 0 )); then
         echo "</tr><tr>" >> README.md
-    elif (( i == 0 )); then
-        echo "<tr>" >> README.md
     fi
 
     # Append contributor information as a table cell
@@ -31,10 +29,10 @@ for (( i=0; i<${#usernames[@]}; i++ )); do
     echo "<a href=\"https://github.com/Chimoney/chimoney-community-projects/commits?author=$username\" title=\"Code\">💻</a>" >> README.md
     echo "</td>" >> README.md
 
+    # Add a new row after every 6 contributors
+   
 done
-
-# Close the last row of the table in README.md
-echo "</tr>" >> README.md
 
 # Close the table structure in README.md
 echo "</table>" >> README.md
+
