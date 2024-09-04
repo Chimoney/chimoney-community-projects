@@ -1,6 +1,6 @@
 
 # Fetch contributors data from GitHub API
-response=$(curl -s https://api.github.com/repos/Chimoney/chimoney-community-projects/contributors?page=1&per_page=100)
+response=$(curl -s https://api.github.com/repos/Chimoney/chimoney-community-projects/contributors)
 
 # Parse JSON response to extract usernames and avatar URLs
 usernames=($(echo "$response" | jq -r '.[].login'))
@@ -8,7 +8,7 @@ avatar_urls=($(echo "$response" | jq -r '.[].avatar_url'))
 
 # Allow addition of more than 30 contributors(pagination)
 
-while [ "$(jq '. | length' <<< "$response")" -gt 0 ]; do
+while [ "$(jq '. | length' <<< "$response")" -gt 30 ]; do
     response=$(curl -s -H "Authorization: token YOUR_TOKEN" "${repo_url}/contributors?page=$((++page))&per_page=100")
     usernames+=($(echo "$response" | jq -r '.[].login'))
     avatar_urls+=($(echo "$response" | jq -r '.[].avatar_url'))
