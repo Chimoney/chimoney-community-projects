@@ -200,7 +200,7 @@ Happy coding! 🚀
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/adarsh-jha-dev"><img src="https://avatars.githubusercontent.com/u/132337675?v=4"width="100px;" alt="adarsh-jha-dev"/><br /><sub><b>adarsh-jha-dev</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=adarsh-jha-dev" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/QuantuM410"><img src="https://avatars.githubusercontent.com/u/85943021?v=4"width="100px;" alt="QuantuM410"/><br /><sub><b>QuantuM410</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=QuantuM410" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/THEGAMECHANGER416"><img src="https://avatars.githubusercontent.com/u/95236897?v=4"width="100px;" alt="THEGAMECHANGER416"/><br /><sub><b>THEGAMECHANGE416</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=THEGAMECHANGER416" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/elegant1T"><img src="https://avatars.githubusercontent.com/u/114580325?v=4"width="100px;" alt="elegant1T"/><br /><sub><b>elegant1T</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=elegant1T" title="Code">💻</a></td>
+      
   </tbody>
 
 [Back to the top &uparrow;](#initial)
