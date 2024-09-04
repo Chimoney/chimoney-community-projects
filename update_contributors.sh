@@ -1,6 +1,6 @@
-page=1
-per_page=100  # Adjust based on your repository's actual number of contributors
-response=$(curl -s "https://api.github.com/repos/Chimoney/chimoney-community-projects/contributors?page=${page}&per_page=${per_page}")
+
+# Fetch contributors data from GitHub API
+response=$(curl -s "https://github.com/Chimoney/chimoney-community-projects/contributors?page=1&per_page=100")
 
 
 # Parse JSON response to extract usernames and avatar URLs
