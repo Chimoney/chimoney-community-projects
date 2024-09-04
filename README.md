@@ -216,9 +216,7 @@ Happy coding! 🚀
        <td align="center" valign="top" width="14.28%"><a href="https://github.com/Abubakrce19"><img src="https://avatars.githubusercontent.com/u/104122959?v=4"width="100px;" alt="Abubakrce19"/><br /><sub><b>Abubakrce19</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=Abubakrce19" title="Code">💻</a></td>
        <td align="center" valign="top" width="14.28%"><a href="https://github.com/adeola-dev"><img src="https://avatars.githubusercontent.com/u/67130581?v=4"width="100px;" alt="adeola-dev"/><br /><sub><b>adeola-dev</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=adeola-dev" title="Code">💻</a></td>
        <td align="center" valign="top" width="14.28%"><a href="https://github.com/Khadeeejah"><img src="https://avatars.githubusercontent.com/u/52764879?v=4"width="100px;" alt="Khadeejah"/><br /><sub><b>Khadeejah</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=Khadeejah" title="Code">💻</a></td>
-       </tr>
-       <td align="center" valign="top" width="14.28%"><a href="https://github.com/salimcodes"><img src="https://avatars.githubusercontent.com/u/64667212?v=4"width="100px;" alt="salimcodes"/><br /><sub><b>salimcodes</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=salimcodes" title="Code">💻</a></td>
-       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Elozzy"><img src="https://avatars.githubusercontent.com/u/33532766?v=4"width="100px;" alt="Elozzy"/><br /><sub><b>Elozzy</b></sub></a><br /><a href="https://github.com/Chimoney/chimoney-community-projects/commits?author=Elozzy" title="Code">💻</a></td>
+       
   </tbody>
 
 [Back to the top &uparrow;](#initial)
