@@ -1,5 +1,5 @@
 page=1
-per_page=100  #can handle 100 contributors
+per_page=100  # Adjust based on your repository's actual number of contributors
 response=$(curl -s "https://api.github.com/repos/Chimoney/chimoney-community-projects/contributors?page=${page}&per_page=${per_page}")
 
 
