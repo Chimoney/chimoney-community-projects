@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # Fetch contributors data from GitHub API
 response=$(curl -s https://api.github.com/repos/Chimoney/chimoney-community-projects/contributors)
@@ -6,7 +7,7 @@ response=$(curl -s https://api.github.com/repos/Chimoney/chimoney-community-proj
 usernames=($(echo "$response" | jq -r '.[].login'))
 avatar_urls=($(echo "$response" | jq -r '.[].avatar_url'))
 
-# Clear table
+# Clear existing contributors section in README.md between <table> and </table>
 sed -i '/<table>/,/<\/table>/d' README.md
 
 # Start the table structure in README.md
@@ -31,6 +32,6 @@ for (( i=0; i<${#usernames[@]}; i++ )); do
     fi
 done
 
-# Close row and table
+# Close the last table row and table structure in README.md
 echo "</tr>" >> README.md
 echo "</table>" >> README.md
