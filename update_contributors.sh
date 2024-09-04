@@ -19,10 +19,6 @@ for (( i=0; i<${#usernames[@]}; i++ )); do
     avatar_url="${avatar_urls[i]}"
     avatar_id=$(basename "$avatar_url")
 
-    if (( (i + 1) % 6 == 0 )); then
-        echo "</tr><tr>" >> README.md
-    fi
-
     # Append contributor information as a table cell
     echo "<td align=\"center\" valign=\"top\" width=\"14.28%\">" >> README.md
     echo "<a href=\"https://github.com/$username\"><img src=\"$avatar_url\" width=\"100px;\" alt=\"$username\"/><sub><b>$username</b></sub></a><br />" >> README.md
@@ -30,7 +26,9 @@ for (( i=0; i<${#usernames[@]}; i++ )); do
     echo "</td>" >> README.md
 
     # Add a new row after every 6 contributors
-   
+    if (( (i + 1) % 6 == 0 )); then
+        echo "</tr><tr>" >> README.md
+    fi
 done
 
 # Close the table structure in README.md
