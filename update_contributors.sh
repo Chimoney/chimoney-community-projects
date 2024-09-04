@@ -20,6 +20,7 @@ sed -i '/<table>/,/<\/table>/d' README.md
 
 # Start the table structure in README.md
 echo "<table>" >> README.md
+
 echo "<tr>" >> README.md
 
 # Loop through contributors and append to README.md
