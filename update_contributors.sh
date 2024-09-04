@@ -1,7 +1,6 @@
 
 # Fetch contributors data from GitHub API
-response=$(curl -s "https://github.com/Chimoney/chimoney-community-projects/contributors?page=1&per_page=100")
-
+response=$(curl -s https://api.github.com/repos/Chimoney/chimoney-community-projects/contributors?page=1&per_page=100)
 
 # Parse JSON response to extract usernames and avatar URLs
 usernames=($(echo "$response" | jq -r '.[].login'))
