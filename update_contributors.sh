@@ -25,7 +25,7 @@ for (( i=0; i<${#usernames[@]}; i++ )); do
     echo "<a href=\"https://github.com/Chimoney/chimoney-community-projects/commits?author=$username\" title=\"Code\">💻</a>" >> README.md
     echo "</td>" >> README.md
 
-    # Add a new row after every 6 contributors
+    # Add a new table row after every 6 contributors
     if (( (i + 1) % 6 == 0 )); then
         echo "</tr><tr>" >> README.md
     fi
