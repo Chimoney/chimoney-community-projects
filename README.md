@@ -32,10 +32,10 @@ You can view this README in your preferred language:
 
 ---
 
- <p align="center">
+<p align="center">
 <a href="https://chimoney.readme.io/reference/introduction" rel="dofollow"><strong>Explore the docs »</strong></a>
 </p>
- <p align="center">
+<p align="center">
 <a href="https://chimoney.readme.io/reference/introduction" rel="dofollow">
   <img src="https://img.shields.io/badge/Chimoney%20API%20Docs%20%E2%96%BA-670c78" alt="Chimoney API Docs">
 </a>
@@ -44,13 +44,14 @@ You can view this README in your preferred language:
 
    <br />
     <br />
-   <a href="https://chimoney.io/toolkit/"><u>Developer Toolkit</u></a>. 
-    <a href="https://discord.gg/Q3peDrPG95"><u>Discord Community</u></a>
+ <p align="center">
+<a href="https://chimoney.io/toolkit/"><u>Developer Toolkit</u></a>. 
+<a href="https://discord.gg/Q3peDrPG95"><u>Discord Community</u></a>
     ·
-    <a href="https://chimoney.io/api-use-cases/"><u>API Use Cases</u></a>. 
-    <a href="https://x.com/chimoney_io"><u>Twitter (X)</u></a>
+<a href="https://chimoney.io/api-use-cases/"><u>API Use Cases</u></a>. 
+<a href="https://x.com/chimoney_io"><u>Twitter (X)</u></a>
     ·
-    <a href="mailto:community@chimoney.com"><u>Email</u></a>
+<a href="mailto:community@chimoney.com"><u>Email</u></a>
   </p>
 
 ## Table of Contents
@@ -109,9 +110,14 @@ New to open source? No problem! We provide mentorship to help you get started. S
 1. **Download the Chimoney App & Sign Up:**
 - Visit the [Chimoney App website](https://chimoney.app/download) to download the app. Sign up with your email or phone number and verify your account.
 
-1. **Create Your Payment Profile:**
+2. **Create Your Payment Profile:**
 - After successfully creating your account and verifying your email, your payment profile will be automatically generated. Be sure to add the link to your Chimoney payment profile on your GitHub profile(_Reference the attached image_). This will ensure that, when your contribution is eligible for a reward after a pull request is merged, your email will be retrieved from your payment profile and the payout will be sent directly to your email.
+ <p align="center">
+
 ![alt text](image.png)
+
+<p align="center">
+
 
 ---
 
