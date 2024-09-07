@@ -19,7 +19,7 @@ Welcome to Hacktoberfest 2024 brought to you by Chimoney! This is your complete 
 
 ---
 
-## Available in Multiple Languages
+### Available in Multiple Languages
 
 You can view this README in your preferred language:
 
@@ -55,7 +55,6 @@ You can view this README in your preferred language:
 
 ## Table of Contents
 
-- [Available in Multiple Languages](#available-in-multiple-languages)
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Obtaining API Keys](#obtaining-api-keys)
