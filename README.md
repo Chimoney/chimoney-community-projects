@@ -8,16 +8,16 @@
 
 <h1 align = "center">Chimoney Community Projects</h1>
 
-<p align="center">🎉 We're participating in Hacktoberfest 2023! 🎉</p>
+<p align="center">🎉 We're participating in Hacktoberfest 2024! 🎉</p>
 
-<h1 align = "center">Chimoney Hacktoberfest 2023</h1>
+<h1 align = "center">Chimoney Hacktoberfest 2024</h1>
 
-<!-- # Chimoney Hacktoberfest 2023 -->
+<!-- # Chimoney Hacktoberfest 2024-->
 
 English | [Spanish](README-ES.md) | [日本語](README-JP.md) | [한국인](README-KO.md) | [中国人](README-CN.md) | [German](README-GM.md) |
 
 
-Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
+Welcome to Hacktoberfest 2024 brought to you by Chimoney! This is your complete guide to contributing to Chimoney's open-source projects.
 
 > ⭐️ If you're new to Hacktoberfest, you can learn more and register to participate [here](https://hacktoberfest.com/participation/). Registration is from **September 26th - October 31st**.
 
@@ -35,23 +35,20 @@ Welcome to Hacktoberfest 2023 brought to you by Chimoney! This is your complete 
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Introduction](#introduction)
-- [Prerequisites](#prerequisites)
-- [Resources](#resources)
-- [Obtaining API Keys](#obtaining-api-keys)
-- [Project Setup](#project-setup)
-  - [Contribute by Creating New Projects](#contribute-by-creating-new-projects)
-  - [Contribute to the Existing Projects](#contribute-to-the-existing-projects)
-- [Contribute via Gitpod:](#contribute-via-gitpod)
-- [Code of Conduct](#code-of-conduct)
-- [Mentorship](#mentorship)
-- [Prizes and Recognition](#prizes-and-recognition)
-- [Live Events](#live-events)
-- [License](#license)
-- [Contact Information](#contact-information)
-- [Additional Resources](#additional-resources)
-- [Thanking all Awesome Contributors :heart:](#thanking-all-awesome-contributors-heart)
+- [Chimoney Hacktoberfest 2024](#chimoney-hacktoberfest-2024)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Prerequisites](#prerequisites)
+  - [Resources](#resources)
+  - [Obtaining API Keys](#obtaining-api-keys)
+  - [Project Setup](#project-setup)
+  - [Code of Conduct](#code-of-conduct)
+  - [Mentorship](#mentorship)
+  - [Prizes and Recognition](#prizes-and-recognition)
+  - [Live Events](#live-events)
+  - [License](#license)
+  - [Contact Information](#contact-information)
+  - [Additional Resources](#additional-resources)
 
 ## Introduction
 
@@ -167,7 +164,7 @@ If you need assistance or have questions, please contact us at [community@chimon
 
 For more resources and information, visit our [website](https://chimoney.io/) and [documentation](https://chimoney.readme.io/reference/introduction).
 
-We can't wait to see your contributions to Hacktoberfest 2023!
+We can't wait to see your contributions to Hacktoberfest 2024!
 
 Happy coding! 🚀
 
