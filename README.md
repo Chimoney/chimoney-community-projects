@@ -61,6 +61,8 @@ You can view this README in your preferred language:
 - [Project Setup](#project-setup)
 - [Contribute via Gitpod](#contribute-via-gitpod)
 - [Mentorship](#mentorship)
+- [⚠️ Important: Create Your Chimoney Payment Profile](#️-important-create-your-chimoney-payment-profile)
+  - [Steps to Create Your Chimoney Payment Profile:](#steps-to-create-your-chimoney-payment-profile)
 - [License](#license)
 - [Contact \& Resources](#contact--resources)
 - [A Big Thank You to All Our Awesome Contributors ❤️](#a-big-thank-you-to-all-our-awesome-contributors-️)
@@ -97,6 +99,23 @@ This repository contains various small projects, each using different stacks and
 
 ## Mentorship
 New to open source? No problem! We provide mentorship to help you get started. Simply join us on [Discord](https://discord.gg/Q3peDrPG95) to connect with a mentor and begin your journey.
+
+## ⚠️ Important: Create Your Chimoney Payment Profile
+
+> **Note:** To receive rewards for your contributions during Hacktoberfest 2024, it is **mandatory** to create a Chimoney payment profile.
+
+### Steps to Create Your Chimoney Payment Profile:
+
+1. **Download the Chimoney App & Sign Up:**
+- Visit the [Chimoney App website](https://chimoney.app/download) to download the app. Sign up with your email or phone number and verify your account.
+
+1. **Create Your Payment Profile:**
+- After successfully creating your account and verifying your email, your payment profile will be automatically generated. Be sure to add the link to your Chimoney payment profile on your GitHub profile(_Reference the attached image_). This will ensure that, when your contribution is eligible for a reward after a pull request is merged, your email will be retrieved from your payment profile and the payout will be sent directly to your email.
+![alt text](image.png)
+
+---
+
+Be sure to complete these steps to be eligible for rewards!
 
 ## License
 
