@@ -88,7 +88,7 @@ Join us for a month of coding, learning, and contributing to Chimoney's open-sou
 This repository contains various small projects, each using different stacks and frameworks. The code for each project is located in its own directory within the [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) folder. You are welcome to contribute to any project or suggest your own. Here's how to get started:
 
 - Explore the list of available [issues](https://github.com/Chimoney/chimoney-community-projects/issues) in Chimoney community projects. You can also create an issue with a project/suggestion you would like to work on.
-- Select an issue and ask to be assigned to it. Tag @phyleria @adebayoileri.
+- Select an issue and ask to be assigned to it. Tag @phyleria
 - After implementing your contribution, submit a pull request, ensuring it follows our contribution guidelines.
 
 ## [Contribute via Gitpod](https://www.gitpod.io/docs/introduction)
@@ -100,28 +100,6 @@ This repository contains various small projects, each using different stacks and
 
 ## Mentorship
 New to open source? No problem! We provide mentorship to help you get started. Simply join us on [Discord](https://discord.gg/Q3peDrPG95) to connect with a mentor and begin your journey.
-
-## ⚠️ Important: Create Your Chimoney Payment Profile
-
-> **Note:** To receive rewards for your contributions during Hacktoberfest 2024, it is **mandatory** to create a Chimoney payment profile.
-
-### Steps to Create Your Chimoney Payment Profile:
-
-1. **Download the Chimoney App & Sign Up:**
-- Visit the [Chimoney App website](https://chimoney.app/download) to download the app. Sign up with your email or phone number and verify your account.
-
-2. **Create Your Payment Profile:**
-- After successfully creating your account and verifying your email, your payment profile will be automatically generated. Be sure to add the link to your Chimoney payment profile on your GitHub profile(_Reference the attached image_). This will ensure that, when your contribution is eligible for a reward after a pull request is merged, your email will be retrieved from your payment profile and the payout will be sent directly to your email.
- <p align="center">
-
-![alt text](image.png)
-
-<p align="center">
-
-
----
-
-Be sure to complete these steps to be eligible for rewards!
 
 ## License
 
