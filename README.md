@@ -72,6 +72,15 @@ You can view this README in your preferred language:
 
 Join us for a month of coding, learning, and contributing to Chimoney's open-source projects!
 
+## Chimoney Rewards
+At Chimoney, we value your contributions, and to show our appreciation, we will be offering Chimoney rewards for pull requests that are successfully merged into our open-source projects.
+
+- For every substantial merged Pull Request (PR), contributors will receive a Chimoney reward of $10, sent via email. Please note that minor contributions, such as typo fixes or other small changes, will not qualify for rewards. Some issues may have specific reward amounts, which are clearly indicated in the issue labels. The amount displayed on the label reflects the payout for those specific, more complex issues.
+  
+- Every contributor will receive a digital badge as a token of recognition for their contribution.
+
+- Contributors with up to 4 merged PRs will also receive a Chimoney t-shirt! Since we have a limited supply, t-shirts will be distributed based on the quality and impact of contributions.
+
 ## Obtaining API Keys
 
 1. **Sign up for a Chimoney Developer Account:** See the Sandbox Access Instruction [here](https://sandbox.chimoney.io/developers). If you don't already have one, you'll need to sign up for a Chimoney developer account sandbox access at [sandbox.chimoney.io](https://chimoney.readme.io/reference/sandbox-environment).
