@@ -1,5 +1,5 @@
 # Chimoney-Redeem-Airtime
-Redeem chimoney as airtime using chiconnect api
+Redeem chimoney as airtime using the Chimoney api
 
 view the deployed project [here](https://chimoney-redeem-airtime.vercel.app/)
 
