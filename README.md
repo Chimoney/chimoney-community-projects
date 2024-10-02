@@ -100,6 +100,13 @@ This repository contains various small projects, each using different stacks and
 - Select an issue and ask to be assigned to it. Tag @phyleria
 - After implementing your contribution, submit a pull request, ensuring it follows our contribution guidelines.
 
+## Submission Process
+
+- For **technical writers**, please submit your PR in the `submissions/dev-focused-articles` folder.
+- For **other contributions**, submit your PR in the general `submissions` folder.
+  
+Please make sure to follow our formatting guidelines, and provide relevant documentation to ensure smooth and efficient reviews of your pull requests.
+
 ## [Contribute via Gitpod](https://www.gitpod.io/docs/introduction)
 <p align="center">
   <a href="https://gitpod.io/#https://github.com/Chimoney/Community-projects">
