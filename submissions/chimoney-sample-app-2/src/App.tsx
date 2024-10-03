@@ -50,37 +50,22 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className=" w-screen p-4">
       <h1>Chimoney Sample App</h1>
 
       <h2>Make a Payment</h2>
       <PaymentForm
         onSubmit={handlePayment}
-        customStyle={{
-          backgroundColor: "#f0f0f0",
-          padding: "20px",
-          borderRadius: "5px",
-        }}
+        className={"flex gap-4 text-black w-full p-4"}
       />
 
-      <h2>Transaction History</h2>
       <TransactionList
         transactions={transactions}
-        customStyle={{ listStyle: "none", padding: 0 }}
+        className={" w-full flex flex-col"}
       />
 
       <h2>Update Account</h2>
-      <UserAccountForm
-        onSubmit={handleAccountUpdate}
-        customStyle={{
-          backgroundColor: "#e0e0e0",
-          padding: "20px",
-          borderRadius: "5px",
-          display: "flex",
-          gap: "10px",
-          flex: "column",
-        }}
-      />
+      <UserAccountForm onSubmit={handleAccountUpdate} className={""} />
     </div>
   );
 }
