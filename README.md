@@ -128,7 +128,7 @@ If you need assistance or have questions, please contact us at [community@chimon
 
 For more resources and information, visit our [website](https://chimoney.io/) and [documentation](https://chimoney.readme.io/reference/introduction).
 
-We can't wait to see your contributions to Hacktoberfest 2023!
+We can't wait to see your contributions to Hacktoberfest 2024!
 
 Happy coding! 🚀
 
