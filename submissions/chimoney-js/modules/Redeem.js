@@ -121,6 +121,45 @@ async function chimoney(chimoneys, subAccount = null) {
 }
 
 /**
+ * This function allows loyalty program members to redeem their earned rewards as Chimoney payouts
+ * @param {string} chiRef The Chi reference
+ * @param {object} loyaltyRewards An array of loyalty rewards to be redeemed as Chimoney payouts
+ * @param {string?} subAccount The subAccount of the transaction
+ * @returns The response from the Chi Money API
+ */
+async function loyalty(chiRef, loyaltyRewards, subAccount = null) {
+  // Define validation schema
+  const schema = Joi.object({
+    chiRef: Joi.string().required(), // Chi reference should be a string and is required.
+    loyaltyRewards: Joi.array().items(Joi.object().keys({
+      // Loyalty rewards should be an array of objects with specific properties.
+      rewardName: Joi.string().required(), // Define the properties of the loyalty reward.
+      rewardPoints: Joi.number().required(),
+      // Add more properties as needed for your loyalty rewards.
+    })).min(1).required(), // At least one loyalty reward is required.
+    subAccount: Joi.string().allow(null).optional(), // SubAccount is optional and can be a string or null.
+  });
+
+  // Validate input
+  const { value, error } = schema.validate(
+    { chiRef, loyaltyRewards, subAccount },
+    { abortEarly: false }
+  );
+
+  if (error) throw new ValueError("input error(s)", formatJoiErrors(error));
+
+  const payload = { ...value };
+
+  if (subAccount) payload.subAccount = subAccount;
+
+  return handleRequest({
+    method: HTTPMETHODS.POST,
+    payload,
+    path: "/v0.2/redeem/loyalty",
+  });
+}
+
+/**
  * This function allows you to redeem giftcard
  * @param {string} chiRef The Chi reference
  * @param {object} redeemOptions The data needed to redeem the transaction
@@ -192,4 +231,5 @@ module.exports = {
   giftCard,
   any,
   chimoney,
+  loyalty,
 };

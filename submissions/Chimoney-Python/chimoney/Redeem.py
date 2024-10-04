@@ -73,6 +73,36 @@ class Redeem(BaseAPI):
 
         return self._handle_request("POST", "/v0.2/redeem/any", payload)
 
+    def loyalty(self, chi_ref, loyalty_rewards, sub_account=None):
+        """
+        This function handles the loyalty program redemption API.
+
+        Args:
+            chi_ref(str): The Chimoney reference for the transaction.
+            loyalty_rewards(list): A list of dictionaries containing the details of loyalty rewards to be redeemed.
+            sub_account(str): The subaccount to be used.
+
+        example:
+            loyalty_rewards = [
+                {
+                    "rewardName": "Loyalty Reward 1",
+                    "rewardPoints": 100,
+                    # Add more properties as needed for your loyalty rewards.
+                }
+            ]
+
+        Return:
+            The JSON response from the Chimoney API.
+        """
+        payload = {
+            "chiRef": chi_ref,
+            "loyaltyRewards": loyalty_rewards,
+        }
+        if sub_account:
+            payload["subAccount"] = sub_account
+
+        return self._handle_request("POST", "/v0.2/redeem/loyalty", payload)
+
     def chimoney(self, chimoneys, sub_account=None):
         """
         This function handles the initiate chimoney API.
