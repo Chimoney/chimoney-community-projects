@@ -81,14 +81,16 @@ Chimoney offers **gift card payouts** in over 20 countries, with more than 200 g
 
 - [Payout Gift Card API Documentation](https://chimoney.readme.io/reference/post_v0-2-payouts-gift-card-1)
 
-### 6. **XRPL Payments**
-Chimoney supports **XRPL (XRP Ledger) payments**, enabling businesses to leverage blockchain technology for fast and secure payouts. This feature provides an innovative way to handle digital asset transactions on a global scale.
+### 6. **Interledger Payment Pointers for Web Monetization**
+Chimoney supports **Interledger Payment Pointers for Web Monetization**, enabling businesses to leverage blockchain technology for fast and secure payouts. This feature provides an innovative way to handle digital asset transactions on a global scale.
 
-- [Payout XRPL API Documentation](https://chimoney.readme.io/reference/post_v0-2-payouts-initiate-chimoney-1)
+- [Payout API Documentation](https://chimoney.readme.io/reference/post_v0-2-payouts-initiate-chimoney-1)
 
 ---
 
 ## Getting Started with the Chimoney API
+
+Chimoney's Global Payouts API provides a seamless way for businesses to execute global payments effortlessly. This guide is tailored for developers, featuring step-by-step instructions on how to integrate Chimoney's API. Let's dive into the services you can harness the power of Chimoney's Global Payouts API to enhance your payment infrastructure. You will just need Chimoney account with API access , [Get Sandbox Access here](https://chimoney.readme.io/reference/sandbox-environment).
 
 ### Services Offered by Chimoney API:
 
