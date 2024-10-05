@@ -105,7 +105,8 @@ class BaseAPI(object):
         """
         return self.base_url + path
 
-    def _handle_request(self, method_type, path, data=None, params=None, timeout=None, retry_count=0):
+    def _handle_request(
+            self, method_type, path, data=None, params=None, timeout=None, retry_count=0):
         """
         Handle requests to the API.
 
