@@ -63,8 +63,8 @@ class BaseAPI(object):
         self._default_timeout = 10
 
         self.session = requests.Session()
-        retries = Retry(total=3, backoff_factor=0.3, status_forcelist=[500, 502, 503, 504])
-        self.session.mount("https://", HTTPAdapter(max_retries=retries))
+        self.retries = Retry(total=3, backoff_factor=0.3, status_forcelist=[500, 502, 503, 504])
+        self.session.mount("https://", HTTPAdapter(max_retries=self.retries))
 
     def headers(self):
         """
@@ -105,7 +105,7 @@ class BaseAPI(object):
         """
         return self.base_url + path
 
-    def _handle_request(self, method_type, path, data=None, params=None, timeout=None):
+    def _handle_request(self, method_type, path, data=None, params=None, timeout=None, retry_count=0):
         """
         Handle requests to the API.
 
@@ -118,11 +118,7 @@ class BaseAPI(object):
         Returns:
             dict: The response from the Chi Money API.
         """
-
-        # if data:
-        #     payload = json.dumps(data)
-        # else:
-        #     payload = None
+        max_retries = 3
 
         logging.info("Request: %s %s | Data: %s | Params: %s",
                       method_type, self._url(path), data, params)
@@ -132,7 +128,7 @@ class BaseAPI(object):
         timeout = timeout or self._default_timeout
 
         try:
-            response = requests.request(
+            response = self.session.request(
                 method=method_type,
                 url=self._url(path),
                 headers=self.headers(),
@@ -142,21 +138,21 @@ class BaseAPI(object):
             )
             response.raise_for_status()
 
-            # if response.status_code == 400:
-            #     return self.parse_json(response)
-            # elif response.status_code in [200, 201]:
-            #     return self.parse_json(response)
-            # elif response.status_code == 404:
-            #     response = {"error": "BUG FIX ME", "status": 404}
-            #     return response
-            # else:
-            #     return self.parse_json(response)
-
             if response.status_code == 429:
+                # retry_after = int(response.headers.get('Retry-After', 60))
+                # logging.warning("Rate limit exceeded. Retrying after %d seconds.", retry_after)
+                # time.sleep(retry_after)
+                # return self._handle_request(method_type, path, data, params, timeout)
                 retry_after = int(response.headers.get('Retry-After', 60))
                 logging.warning("Rate limit exceeded. Retrying after %d seconds.", retry_after)
-                time.sleep(retry_after)
-                return self._handle_request(method_type, path, data, params, timeout)
+                if retry_count < max_retries:
+                    time.sleep(retry_after)
+                    return self._handle_request(
+                        method_type, path, data, params, timeout, retry_count + 1)
+                else:
+                    return APIResponse(
+                        data=None, status_code=429, success=False, error="Max retries exceeded.")
+
 
             logging.info("Response: %d | %s", response.status_code, response.json())
             return APIResponse(data=response.json(), status_code=response.status_code)
@@ -165,9 +161,6 @@ class BaseAPI(object):
             return APIResponse(data=None,
                                status_code=response.status_code, success=False, error=str(http_err))
         except (ConnectTimeout, ConnectionError) as exc:
-            raise ConnectTimeout("There was a connection timeout.") or ConnectionError(
-                "There was a connection error"
-            ) from exc
-        except Exception as err:
-            logging.error("Other error occurred: %s", err)
-            raise
+            logging.error("Connection error occurred: %s", exc)
+            return APIResponse(data=None,
+                       status_code=None, success=False, error=str(exc))
