@@ -43,9 +43,13 @@ Chimoney provides a comprehensive global payout API that offers unmatched flexib
 While there are many payout APIs in the market, Chimoney's flexibility and global reach make it stand out. However, here’s how some other solutions compare:
 
 - **PayPal** offers global payouts, but primarily focuses on traditional payment methods like bank transfers and digital wallets, lacking support for mobile money and airtime.
-- **Stripe** is known for its payment processing capabilities, but it does not offer as many options for payout diversity, such as airtime or gift cards.
+- [Comparison Paypal vs Chimoney](https://chimoney.io/using/paypal/for-sending/mass-payments/vs-using/chimoney/)
+
 - **Wise** (formerly TransferWise) specializes in low-cost international money transfers, but doesn’t offer gift cards or mobile money payouts.
+- [Comparsion Wise vs Chimoney](https://chimoney.io/using/wise/for-sending/cross-border-payout/vs-using/chimoney/)
+
 - **Payoneer** supports global payments, but its focus is more on freelancer payments and business-to-business (B2B) transfers, limiting its payout method variety.
+-  [Comparison Payoneer vs Chimoney](https://chimoney.io/using/payoneer/for-sending/contractor-payments/vs-using/chimoney/)
 
 ---
 
@@ -90,21 +94,21 @@ Chimoney supports **Interledger Payment Pointers for Web Monetization**, enablin
 
 ## Getting Started with the Chimoney API
 
-Chimoney's Global Payouts API provides a seamless way for businesses to execute global payments effortlessly. This guide is tailored for developers, featuring step-by-step instructions on how to integrate Chimoney's API. Let's dive into the services you can harness the power of Chimoney's Global Payouts API to enhance your payment infrastructure. You will just need Chimoney account with API access , [Get Sandbox Access here](https://chimoney.readme.io/reference/sandbox-environment).
+Chimoney's Global Payouts API provides a seamless way for businesses to execute global payments effortlessly. This guide is tailored for developers, featuring step-by-step instructions on how to integrate Chimoney's API. Let's dive into the services you can harness the power of Chimoney's Global Payouts API to enhance your payment infrastructure. You will just need Chimoney account with API access.
+Here's the description in markdown format:
 
-### Services Offered by Chimoney API:
+- **Get Sandbox Access**:  
+Before integrating Chimoney's Global Payouts API into your live environment, start by accessing the **Sandbox** environment. This allows you to safely test your payment solutions in a simulated setting, ensuring everything runs smoothly without affecting real transactions. You can [Get Sandbox Access here](https://chimoney.readme.io/reference/sandbox-environment) and begin experimenting with API calls right away.
 
-- **Payout Chimoney**: Send flexible rewards (Chimoney) that can be redeemed for airtime, mobile money, gift cards, and more. [Payout Chimoney API Documentation](https://chimoney.readme.io/reference/post_v0-2-payouts-chimoney-1)
-- **Payout Mobile Money**: Send mobile money payments to 10+ countries. [Payout Mobile Money API Documentation](https://chimoney.readme.io/reference/post_v0-2-payouts-mobile-money-1)
-- **Payout Airtime**: Reward users with airtime in over 10 countries. [Payout Airtime API Documentation](https://chimoney.readme.io/reference/post_v0-2-payouts-airtime-1)
-- **Payout Bank**: Transfer funds to bank accounts in 130+ countries. [Payout Bank API Documentation](https://chimoney.readme.io/reference/post_v0-2-payouts-bank-1)
-- **Payout Gift Cards**: Provide gift cards in 20+ countries with 200+ gift card options. [Payout Gift Card API Documentation](https://chimoney.readme.io/reference/post_v0-2-payouts-gift-card-1)
-- **Payout XRPL**: Leverage blockchain for XRPL payments. [Payout XRPL API Documentation](https://chimoney.readme.io/reference/post_v0-2-payouts-initiate-chimoney-1)
+- **Test Your Integration**:  
+Once you've set up your API in the sandbox environment, it's time to test. Run through various payment scenarios, simulate real transactions, and confirm that your integration meets your business requirements. Thoroughly testing in the sandbox ensures your payment infrastructure is robust and error-free before going live.
 
----
+- **Go Live!**:  
+After successful testing in the sandbox environment, you're ready to launch your payment system in the live environment. Switching to live mode is straightforward and enables real transactions, allowing you to harness the full power of Chimoney’s Global Payouts API for seamless global payments. Ensure that you have completed all checks before flipping the switch to provide your users with an uninterrupted payment experience.
+
+
 
 ## Conclusion
 
 Choosing the right payout API depends on several factors, such as security, ease of integration, and global support. Chimoney’s API offers a robust solution for businesses that need flexible, secure, and scalable payouts across multiple methods and countries. With support for mobile money, airtime, gift cards, bank transfers, and even XRPL payments, Chimoney stands out as a reliable and versatile choice for global payouts.
-
-For more information on how to get started with Chimoney, visit the [Chimoney API Documentation](https://chimoney.io).
+Interested in learning more about how the Chimoney API can streamline your payouts? Book a [demo session](https://chimoney.io/?book_a_demo=1) with us today.
