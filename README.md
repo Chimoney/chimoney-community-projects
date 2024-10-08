@@ -102,7 +102,7 @@ This repository contains various small projects, each using different stacks and
 
 ## Submission Process
 
-- For **technical writers**, please submit your PR within the `Articles` folder. *Instructions are included [here](https://github.com/Chimoney/chimoney-community-projects/submissions/Articles/README.md)* 
+- For **technical writers**, please submit your PR within the `Articles` folder. *Instructions are included [here](https://github.com/Chimoney/chimoney-community-projects/submissions/Articles)* 
 - For **other contributions**, submit your PR in the general `submissions` folder.
   
 Please make sure to follow our formatting guidelines, and provide relevant documentation to ensure smooth and efficient reviews of your pull requests.
