@@ -6,6 +6,8 @@ const {
   getCollaboratorPermissions,
   resolveUsernameToEmail,
   extractPayoutCommandArgs,
+  notifyMaintainerOfPaymentStatus,
+  handlePaymentErrors,             
 } = require("./utils");
 const MIN_PAYOUT = 1;
 const MAX_PAYOUT = 100;
@@ -18,7 +20,6 @@ module.exports = (app) => {
   // Your code here
 
   app.on("pull_request.closed", pullRequestClosedHandler);
-
   commands(app, "payout", payoutCommandHandler);
 };
 
@@ -46,7 +47,7 @@ async function payoutCommandHandler(context, command) {
     context,
     commenterUsername
   );
-
+  
   const isAdminOrMaintainer = permissions?.admin || permissions?.maintain;
 
   if (!isAdminOrMaintainer) {
@@ -69,14 +70,23 @@ async function payoutCommandHandler(context, command) {
     return await addComment(context, "Unable to retrieve contributor's email");
   }
 
-  const response = await payouts.initiateChimoney([
-    { valueInUSD: amount, email: recepientEmail },
-  ]);
+  try {
+    const response = await payouts.initiateChimoney([
+      { valueInUSD: amount, email: recepientEmail },
+    ]);
 
-  const message = `@${commenterUsername}, you have initiated a reward payment of $${amount} using the\
-Chimoney GitHub bot.\nPlease, click on the payment link to complete the Payment using Chimoney. ${response.data.paymentLink}`;
+    const message = `@${commenterUsername}, you have initiated a reward payment of $${amount} using the\
+    Chimoney GitHub bot.\nPlease, click on the payment link to complete the Payment using Chimoney. ${response.data.paymentLink}`;
 
-  await addComment(context, message);
+    
+    await addComment(context, message);
+    // Notify the maintainer of successful payment
+    await notifyMaintainerOfPaymentStatus(context, recepientUsername, amount);
+
+  } catch (error) {
+    // Handle payment errors
+    await handlePaymentErrors(context, error);
+  }
 }
 
 async function pullRequestClosedHandler(context) {

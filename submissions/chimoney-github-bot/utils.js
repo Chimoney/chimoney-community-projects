@@ -47,10 +47,26 @@ function extractPayoutCommandArgs(arguments) {
   return { amount, username };
 }
 
+async function notifyMaintainerOfPaymentStatus(context, username, amount) {
+  const maintainer = await findMaintainer(context);
+  
+  if (maintainer) {
+    const message = `@${maintainer.login}, a payment of $${amount} has been successfully initiated for @${username}.`;
+    await addComment(context, message);
+  }
+}
+
+async function handlePaymentErrors(context, error) {
+  const message = `An error occurred during the payout process: ${error.message}`;
+  await addComment(context, message);
+}
+
 module.exports = {
   getCollaboratorPermissions,
   findMaintainer,
   resolveUsernameToEmail,
   addComment,
   extractPayoutCommandArgs,
+  notifyMaintainerOfPaymentStatus,
+  handlePaymentErrors,             
 };
