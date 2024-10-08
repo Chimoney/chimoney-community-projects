@@ -42,14 +42,11 @@ Chimoney provides a comprehensive global payout API that offers unmatched flexib
 
 While there are many payout APIs in the market, Chimoney's flexibility and global reach make it stand out. However, here’s how some other solutions compare:
 
-- **PayPal** offers global payouts, but primarily focuses on traditional payment methods like bank transfers and digital wallets, lacking support for mobile money and airtime.
-- [Comparison Paypal vs Chimoney](https://chimoney.io/using/paypal/for-sending/mass-payments/vs-using/chimoney/)
+- **[PayPal](https://chimoney.io/using/paypal/for-sending/mass-payments/vs-using/chimoney/)** offers global payouts, but primarily focuses on traditional payment methods like bank transfers and digital wallets, lacking support for mobile money and airtime.
 
-- **Wise** (formerly TransferWise) specializes in low-cost international money transfers, but doesn’t offer gift cards or mobile money payouts.
-- [Comparsion Wise vs Chimoney](https://chimoney.io/using/wise/for-sending/cross-border-payout/vs-using/chimoney/)
+- **[Wise](https://chimoney.io/using/wise/for-sending/cross-border-payout/vs-using/chimoney/)** (formerly TransferWise) specializes in low-cost international money transfers, but doesn’t offer gift cards or mobile money payouts.
 
-- **Payoneer** supports global payments, but its focus is more on freelancer payments and business-to-business (B2B) transfers, limiting its payout method variety.
--  [Comparison Payoneer vs Chimoney](https://chimoney.io/using/payoneer/for-sending/contractor-payments/vs-using/chimoney/)
+- **[Payoneer](https://chimoney.io/using/payoneer/for-sending/contractor-payments/vs-using/chimoney/)** supports global payments, but its focus is more on freelancer payments and business-to-business (B2B) transfers, limiting its payout method variety.
 
 ---
 
@@ -95,7 +92,7 @@ Chimoney supports **Interledger Payment Pointers for Web Monetization**, enablin
 ## Getting Started with the Chimoney API
 
 Chimoney's Global Payouts API provides a seamless way for businesses to execute global payments effortlessly. This guide is tailored for developers, featuring step-by-step instructions on how to integrate Chimoney's API. Let's dive into the services you can harness the power of Chimoney's Global Payouts API to enhance your payment infrastructure. You will just need Chimoney account with API access.
-Here's the description in markdown format:
+To get started with the Chimoney API, follow this process:
 
 - **Get Sandbox Access**:  
 Before integrating Chimoney's Global Payouts API into your live environment, start by accessing the **Sandbox** environment. This allows you to safely test your payment solutions in a simulated setting, ensuring everything runs smoothly without affecting real transactions. You can [Get Sandbox Access here](https://chimoney.readme.io/reference/sandbox-environment) and begin experimenting with API calls right away.
