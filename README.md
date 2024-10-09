@@ -58,12 +58,12 @@ You can view this README in your preferred language:
 
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
+- [Chimoney Rewards](#chimoney-rewards)
 - [Obtaining API Keys](#obtaining-api-keys)
 - [Project Setup](#project-setup)
+- [Submission Process](#submission-process)
 - [Contribute via Gitpod](#contribute-via-gitpod)
 - [Mentorship](#mentorship)
-- [⚠️ Important: Create Your Chimoney Payment Profile](#️-important-create-your-chimoney-payment-profile)
-  - [Steps to Create Your Chimoney Payment Profile:](#steps-to-create-your-chimoney-payment-profile)
 - [License](#license)
 - [Contact \& Resources](#contact--resources)
 - [A Big Thank You to All Our Awesome Contributors ❤️](#a-big-thank-you-to-all-our-awesome-contributors-️)
@@ -102,7 +102,7 @@ This repository contains various small projects, each using different stacks and
 
 ## Submission Process
 
-- For **technical writers**, please submit your PR in the `submissions/dev-focused-articles` folder.
+- For **technical writers**, please submit your PR within the `Articles` folder. *Instructions are included [here](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Articles)* 
 - For **other contributions**, submit your PR in the general `submissions` folder.
   
 Please make sure to follow our formatting guidelines, and provide relevant documentation to ensure smooth and efficient reviews of your pull requests.
@@ -128,7 +128,7 @@ If you need assistance or have questions, please contact us at [community@chimon
 
 For more resources and information, visit our [website](https://chimoney.io/) and [documentation](https://chimoney.readme.io/reference/introduction).
 
-We can't wait to see your contributions to Hacktoberfest 2023!
+We can't wait to see your contributions to Hacktoberfest 2024!
 
 Happy coding! 🚀
 
