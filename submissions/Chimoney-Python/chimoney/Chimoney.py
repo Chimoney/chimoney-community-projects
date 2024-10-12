@@ -39,7 +39,7 @@ Example usage:
 """
 
 import os
-from chimoney import Info, Account, Payouts, SubAccount, Wallet, Redeem
+from chimoney import Info, Account, Payments, Payouts, SubAccount, Wallet, Redeem, AI
 
 
 class Chimoney:
@@ -83,6 +83,8 @@ class Chimoney:
         self.subaccount = SubAccount()
         self.wallet = Wallet()
         self.redeem = Redeem()
+        self.payment = Payments()
+        self.ai = AI()
 
         if sandbox:
             os.environ["CHIMONEY_SANDBOX"] = "True"
