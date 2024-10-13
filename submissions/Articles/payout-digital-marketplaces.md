@@ -103,7 +103,8 @@ const data = {
 };
 
 axios
-  .post("https://api.chimoney.io/v1/payouts", data, {
+  .post("
+  https://api.chimoney.io/v0.2/payouts/bank", data, {
     headers: {
       Authorization: `Bearer YOUR_API_KEY`,
     },
