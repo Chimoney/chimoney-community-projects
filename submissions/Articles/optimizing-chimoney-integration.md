@@ -43,18 +43,18 @@ Before you start contributing, make sure you have:
 
 1. Fork the Chimoney repository you want to contribute to by clicking the "Fork" button on GitHub.
 
-![Fork Repo](../../fork_a_repo.png)
+![Fork Repo](../../images/fork_a_repo.png)
 
 2. Clone your forked repository to your local machine:
 
-![Clone Repo](../../clone_repo.png)
+![Clone Repo](../../images/clone_repo.png)
 
 ```bash
 git clone https://github.com/your-username/repository-name.git
 cd repository-name
 ```
 
-![Cd Repo](../../cd_repo.png)
+![Cd Repo](../../images/cd_repo.png)
 
 #### Running the Project Locally
 
@@ -313,3 +313,7 @@ Your contributions help Chimoney:
 - Propose and lead new initiatives or features within the Chimoney ecosystem
 
 By contributing to Chimoney's open-source projects, you're not just improving your skills and building your portfolio—you're also making a tangible impact on global financial inclusivity and innovation. We look forward to your contributions and can't wait to see what we can achieve together during Hacktoberfest 2024 and beyond!
+
+## About the Author
+### Daniel Oladepo
+Daniel Oladepo is a passionate backend developer and software engineer with a strong foundation in mechanical engineering. With a keen interest in web technologies and server-side development, Daniel has contributed to various projects, from creating reusable templates to developing full-fledged messaging systems. His diverse skill set spans multiple programming languages and frameworks, making him a versatile developer capable of tackling complex challenges. Daniel's experience in both academic and professional settings demonstrates his commitment to continuous learning and innovation in the field of software development.
