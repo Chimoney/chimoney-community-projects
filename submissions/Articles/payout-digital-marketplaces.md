@@ -57,7 +57,7 @@ Integrating Chimoney’s API is a straightforward process. Follow these steps to
 
 ### Step 1: Access Chimoney’s API Documentation
 
-Visit the [Chimoney API Documentation](https://docs.chimoney.io) to get all the resources you need. The documentation offers step-by-step instructions and code samples to help developers integrate the API seamlessly.
+Visit the [Chimoney API Documentation](https://chimoney.readme.io/reference/getting-started-with-your-api) to get all the resources you need. The documentation offers step-by-step instructions and code samples to help developers integrate the API seamlessly.
 
 ### Step 2: Get Your API Key
 
@@ -130,7 +130,7 @@ By integrating Chimoney, you can focus on building and scaling your marketplace,
 
 ## Get Started with Chimoney Today
 
-Ready to simplify global payouts? Visit the [Chimoney API Documentation](https://docs.chimoney.io) to learn more and start building a seamless payout solution for your marketplace.
+Ready to simplify global payouts? Visit the [Chimoney API Documentation](https://chimoney.readme.io/reference/getting-started-with-your-api) to learn more and start building a seamless payout solution for your marketplace.
 
 ---
 
