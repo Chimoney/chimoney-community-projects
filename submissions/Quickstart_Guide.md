@@ -74,7 +74,7 @@ The Chimoney API provides several key functionalities, including:
 - **Payouts**: With Chimoney’s API, you can initiate seamless payouts to over 130 countries via bank, mobile money, airtime, or even Interledger-enabled accounts.
 - **Multi-Currency Wallets**: Manage balances in multiple currencies, enabling smooth cross-border payments and better control over currency exchanges.
 - **Payment Requests**: Request payments from customers or clients, making invoicing and collections easier with a streamlined API integration.
-- **Redemption of Value**: Offer users the ability to redeem Chimoney value into services or products, giving them flexibility on how they use their balance.
+- **Redemption of Value**: Offer users the ability to redeem Chimoney through options such as bank transfers, Mobile Money, gift cards, or airtime.
 
 For more detailed information, please refer to the [API Documentation](https://chimoney.io/developers-api/).
 
