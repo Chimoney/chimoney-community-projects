@@ -1,7 +1,9 @@
 
 # How Global Payouts Can Empower Communities and Non-profits
 
-You’re hosting a charity baking event, raising funds to help an underserved community overseas gain access to 24/7 electricity and clean water. After reaching your monetary goal, you send the money using a platform like PayPal, feeling accomplished. But a few days later, when you check for updates, there's no clear sign that the funds have reached the community. The excitement of making a difference turns into frustration and uncertainty. A possible solution to this issue is global payouts. They are the transfer of funds between two parties in different countries and/or involving two different currencies. Still uncertain about this method? No worries, this article will explore how global payouts empower your non-profits and community initiatives.
+
+You’re hosting a charity baking event, raising funds to help an underserved community overseas gain access to 24/7 electricity and clean water. After reaching your monetary goal, you send the money using a platform like PayPal, feeling accomplished. But a few days later, when you check for updates, there's no clear sign that the funds have reached the community. The excitement of making a difference turns into frustration and uncertainty. A possible solution to this issue is using Chimoney. Chimoney allows global payouts to 130+ countries via the recipient's email and in this case the community you're sending to will be able to redeem the recieved payment to their own registered bank account, or mobile money near instantly depending on their location. This article will explore how global payouts can empower non-profits and community initiatives, using Chimoney as a solution to streamline international transfers.
+
 
 ## How Global Payouts Offer Transparency and Save You Money
 
@@ -13,7 +15,7 @@ When it comes to funding money overseas, a common issue that nonprofits and comm
 
 ## How Global Payouts Can Make Your Transactions Quick
 
-As cliche as it is to say, “Time is money”, it truly is important for users to get their money on time. Sadly, traditional banking institutions tend to have long delivery processes. For example, [Wise users receives their payment depending on the country and currency](https://wise.com/help/articles/2978029/how-long-does-it-take-to-receive-money-into-a-balance). This can put nonprofits at a disadvantage as it can cause the communities they serve to financially help them in a timely manner.  Unlike their traditional counterparts, global payout systems don’t have a waiting period. Once person sends money, the other person gets its instantly. Nonprofits can benefit greatly from this as they don’t have to worry about the communities they serve not getting the funding they sent.  For instance, [AfricaHacks' collaboration with Chimoney for their hackathon rewards to the winners due to having a feature where they can send people money in just one click](https://chimoney.io/blogs/5-types-of-people-who-should-use-chimoneys-bulk-gift-cards-feature/).  Now before you go, there’s just one more benefit of using global payout systems for nonprofit funding.
+As cliche as it is to say, “Time is money”, it truly is important for users to get their money on time. Sadly, traditional banking institutions tend to have long delivery processes. For example, [Wise users receives their payment depending on the country and currency](https://wise.com/help/articles/2978029/how-long-does-it-take-to-receive-money-into-a-balance). This can put nonprofits at a disadvantage as it can cause the communities they serve to financially help them in a timely manner.  Unlike their traditional counterparts, global payout systems the waiting periods are always shorter and often times payment is instant. Nonprofits can benefit greatly from this as they don’t have to worry about the communities they serve not getting the funding they sent.  For instance, [AfricaHacks uses Chimoney's bulk payout feature](https://chimoney.io/blogs/5-types-of-people-who-should-use-chimoneys-bulk-gift-cards-feature/) to reward their hackathon winners.With a single click, all winners receive their payments instantly and can redeem them through multiple options, including bank transfers, mobile money, airtime, and gift cards.  Now before you go, there’s just one more benefit of using global payout systems for nonprofit funding.
 
 ## How Global Payouts Can Give You Multiple Ways To Send Money
 
@@ -21,8 +23,12 @@ Global payouts provide the necessary infrastructure for non-profits to send fina
 
 ## How Chimoney Empowers Communities and Non-profits
 
-Before you go to your computer or mobile device and do a long search of global payout platforms, consider checking out Chimoney. In addition to having their own platform where users can facilitate their transactions, they also partner with other platforms to help non-profits reach more clients. For example, [OpenGiving](https://donations.chimoney.io/), a platform helps non-profits and communities around the world can receive donations and get paid easily in various methods applicable to the donor through Chimoney’s payout feature.
+Before you go to your computer or mobile device and do a long search of global payout platforms, consider checking out Chimoney. In addition to having their own platform where users can facilitate their transactions, they also partner with other platforms to help non-profits reach more clients. For example, [OpenGiving](https://donations.chimoney.io/), a platform built by Chimoney helps non-profits and communities around the world to receive donations and get paid easily in various methods applicable to the donor through Chimoney.
 
 ## Now It's Your Turn
 
 Whether it’s ensuring timely financial support reaches communities in need or increasing transparency for donors, global payout solutions can be the key to empowering your non-profit or community initiative to serve people in transformative ways. Take the first step towards making a greater impact and discover how Chimoney can help you unlock new possibilities for your community.
+
+## About the Author 
+
+Christine Belzie is a technical writer and open source maintainer. Her articles have been featured on websites like FreeCodeCamp and Pieces For Developers. If you want to connect with her, check out her socials on [Linktree](https://linktr.ee/ChrissyCodes). 
