@@ -152,7 +152,7 @@ Consider writing technical articles or guides about:
 - Keep the first line short (50 characters or less) and descriptive
 - Use the body of the commit message to explain the "why" behind the changes
 
-## Code of Conduct
+[Code of Conduct](https://github.com/Chimoney/chimoney-community-projects/blob/main/CODE_OF_CONDUCT.md)
 
 ### Our Pledge
 
@@ -303,8 +303,8 @@ Your contributions help Chimoney:
 
 ### Staying Involved in the Chimoney Community
 
-- Join Chimoney's developer community on platforms like [Discord](https://discord.gg/TsyKnzT4qV)
-- Attend Chimoney's events [here](https://lu.ma/Chimoney) to connect with its global community and be updated with the community initiatives.
+- Join Chimoney's developer community on [Discord](https://discord.gg/TsyKnzT4qV)
+- Attend Chimoney's events [here](https://lu.ma/Chimoney) to connect with its global community and be updated on the community initiatives.
 
 ### Opportunities for Continuous Contributions
 
