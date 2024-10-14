@@ -26,9 +26,9 @@ async function getBadgeInfo(username) {
   const prCount = mergedPRs.length;
 
   return {
-    firstTime: prCount === 1,
-    everyMerge: true && prCount > 1 && prCount < 4,
-    fourthMerge: prCount === 4,
+    firstPR: prCount === 1,
+    secondOrThirdPR: prCount === 2 || prCount === 3,
+    fourthPR: prCount === 4,
     prCount: prCount,
   };
 }
@@ -51,32 +51,26 @@ async function sendEmail(email, message, badgeInfo) {
     },
   });
 
-  const badgeAttachments = [];
-  if (badgeInfo.firstTime) {
-    badgeAttachments.push({
-      filename: "PR1.png",
-      path: path.join(__dirname, "../badges/PR1.png"),
-    });
+  let badgeFilename;
+  if (badgeInfo.firstPR) {
+    badgeFilename = "PR1.png";
+  } else if (badgeInfo.secondOrThirdPR) {
+    badgeFilename = `PR${badgeInfo.prCount}.png`;
+  } else if (badgeInfo.fourthPR) {
+    badgeFilename = "PR4.png";
   }
-  if (badgeInfo.everyMerge) {
-    badgeAttachments.push({
-      filename: "every-pr-badge.png",
-      path: path.join(__dirname, "../badges/every-pr-badge.png"),
-    });
-  }
-  if (badgeInfo.fourthMerge) {
-    badgeAttachments.push({
-      filename: "fourth-pr-badge.png",
-      path: path.join(__dirname, "../badges/PR4.png"),
-    });
-  }
+
+  const badgeAttachment = {
+    filename: badgeFilename,
+    path: path.join(__dirname, `../badges/${badgeFilename}`),
+  };
 
   await transporter.sendMail({
     from: process.env.EMAIL_USER,
     to: email,
     subject: "Congratulations on your merged PR!",
     text: message,
-    attachments: badgeAttachments,
+    attachments: [badgeAttachment],
   });
 }
 
@@ -100,10 +94,13 @@ async function main() {
   const badgeInfo = await getBadgeInfo(username);
 
   let commentMessage = "";
-  if (badgeInfo.firstTime) commentMessage += BADGE_MESSAGES.firstTime + "\n\n";
-  if (badgeInfo.fourthMerge)
-    commentMessage += BADGE_MESSAGES.fourthMerge + "\n\n";
-  commentMessage += BADGE_MESSAGES.everyMerge;
+  if (badgeInfo.firstPR) {
+    commentMessage = BADGE_MESSAGES.firstTime;
+  } else if (badgeInfo.secondOrThirdPR) {
+    commentMessage = BADGE_MESSAGES.everyMerge;
+  } else if (badgeInfo.fourthPR) {
+    commentMessage = BADGE_MESSAGES.fourthMerge;
+  }
 
   await postGitHubComment(issueNumber, commentMessage);
 
