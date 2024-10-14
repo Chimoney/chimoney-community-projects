@@ -103,3 +103,9 @@ Here are a few implementations of the Chimoney API built and maintained by our C
 - **Chimap**: [Chimap](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimap)
 
 For more examples and resources, visit the [Chimoney Community Projects](https://github.com/Chimoney/chimoney-community-projects).
+
+## Author
+
+- **Brijesh Thummar**
+
+I am Brijesh Thummar, a second-year Computer Science student graduating in 2027, with a focus on becoming a Quant Developer. I am proficient in C, Java, Rust, Scala, and Swift, and currently working on mastering algorithms, data structures, and object-oriented programming. I have experience with Java Swing, JDBC, Maven, and MySQL. I enjoy problem-solving, building software solutions, and contributing to open-source projects.
