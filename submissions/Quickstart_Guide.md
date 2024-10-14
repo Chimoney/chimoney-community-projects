@@ -72,8 +72,9 @@ print('Payout successful:', response)
 The Chimoney API provides several key functionalities, including:
 
 - **Payouts**: Send funds to users quickly and easily.
-- **Balance Retrieval**: Check your available balance in real time.
-- **Transaction History**: Retrieve a log of all your transactions.
+- **Multi-Currency Wallets**: Manage balances in multiple currencies, enabling smooth cross-border payments and better control over currency exchanges.
+- **Payment Requests**: Request payments from customers or clients, making invoicing and collections easier with a streamlined API integration.
+- **Redemption of Value**: Offer users the ability to redeem Chimoney value into services or products, giving them flexibility on how they use their balance.
 
 For more detailed information, please refer to the [API Documentation](https://chimoney.io/developers-api/).
 
