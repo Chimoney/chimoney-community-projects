@@ -1,0 +1,29 @@
+name: PR Merge Badge Automation
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  badge_automation:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: npm install @octokdit/rest nodemailer
+
+      - name: Run badge automation script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+        run: |
+          node .github/scripts/badge-automation.js
