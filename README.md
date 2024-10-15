@@ -75,7 +75,7 @@ Join us for a month of coding, learning, and contributing to Chimoney's open-sou
 ## Chimoney Rewards
 At Chimoney, we value your contributions, and to show our appreciation, we will be offering Chimoney rewards for pull requests that are successfully merged into our open-source projects.
 
-- For every substantial merged Pull Request (PR), contributors will receive a Chimoney reward of $10, sent via email. Please note that minor contributions, such as typo fixes or other small changes, will not qualify for rewards. Some issues may have specific reward amounts, which are clearly indicated in the issue labels. The amount displayed on the label reflects the payout for those specific, more complex issues.
+- For every substantial merged Pull Request (PR), contributors will receive a Chimoney reward of $10, sent via email. Please note that minor contributions, such as typo fixes or minor fixes to other user contributions and single lines fixes will not qualify for rewards. Some issues may have specific reward amounts, which are clearly indicated in the issue labels. The amount displayed on the label reflects the payout for those specific, more complex issues.
   
 - Every contributor will receive a digital badge as a token of recognition for their contribution.
 
@@ -102,7 +102,7 @@ This repository contains various small projects, each using different stacks and
 
 ## Submission Process
 
-- For **technical writers**, please submit your PR within the `Articles` folder. *Instructions are included [here](https://github.com/Chimoney/chimoney-community-projects/submissions/Articles/README.md)* 
+- For **technical writers**, please submit your PR within the `Articles` folder. *Instructions are included [here](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Articles)* 
 - For **other contributions**, submit your PR in the general `submissions` folder.
   
 Please make sure to follow our formatting guidelines, and provide relevant documentation to ensure smooth and efficient reviews of your pull requests.
