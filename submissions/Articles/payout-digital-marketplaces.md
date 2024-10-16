@@ -97,12 +97,23 @@ const options = {
     Authorization: "Bearer YOUR_API_KEY", // Replace with your actual API key
   },
   data: {
-    amount: 100,
-    currency: "USD",
-    recipient_bank_details: {
-      account_number: "123456789",
-      bank_code: "001",
-    },
+    subAccount: "yourSubAccountID", // Optional: Wallet account to payout from
+    turnOffNotification: false, // Optional: set to true to disable notifications
+    debitCurrency: "USD", // Currency to debit from
+    banks: [
+      {
+        countryToSend: "NG", // Payout country
+        account_bank: "044", // Bank code
+        account_number: "1234567890", // Recipient account number
+        valueInUSD: 100, // Payout value in USD
+        amount: 100, // Payout amount in specified currency
+        reference: "txn123456", // Unique transaction reference
+        fullname: "John Doe", // Full name of the beneficiary
+        branch_code: "", // Optional: Required for some countries, not Nigeria
+        narration: "Payout for services", // Description for the user
+        collectionPaymentIssueID: "issue123", // Optional: Issue ID for payment
+      },
+    ],
   },
 };
 
