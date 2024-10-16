@@ -1,12 +1,12 @@
 # A Chimoney Guide to Payouts for Digital Marketplaces
 
-In the fast-paced world of digital marketplaces, providing a smooth user experience is key to success. One of the most crucial parts of this experience is offering reliable payouts. Whether you’re running a platform for freelancers, e-commerce sellers, or service providers, ensuring seamless and timely payments helps keep your users happy and engaged. In this guide, we’ll show you how Chimoney’s API can simplify global payouts and ensure that your marketplace runs smoothly.
+Welcome to the Chimoney guide on payouts for digital marketplaces! If you run a platform that connects buyers and sellers, you know how important it is to handle payments smoothly. This guide will explain how Chimoney can help you make payouts easy and reliable for your users.
 
 ---
 
-## Why Seamless Payouts Matter for Digital Marketplaces
+## Why Payouts Matter for Digital Marketplaces
 
-Digital marketplaces act as intermediaries between buyers and sellers, connecting them in a way that benefits everyone. Whether your platform focuses on products or services, handling both incoming payments from customers and outgoing payouts to your users is crucial.
+Payouts ensure that sellers, freelancers, or service providers are paid accurately and on time. Delays or issues with payments can damage trust and impact the growth of your platform. A smooth payout system means vendors stay engaged, and your business operates seamlessly.
 
 Here’s why seamless payouts are important:
 
@@ -21,7 +21,7 @@ Here’s why seamless payouts are important:
 Managing payouts on a global scale isn’t without its challenges. Some of the most common issues include:
 
 1. **Currency and Exchange Rates**: Users in different countries often need payouts in their local currencies. Converting currencies can result in poor exchange rates and fees, making the payout less valuable for your users.
-2. **Tax Compliance**: Cross-border transactions come with tax obligations. Platforms need to ensure compliance with various tax regulations, which can be complicated when managing global payouts.
+2. **Regulation and compliance:** Each country has unique financial laws, such as anti-money laundering (AML) regulations, data privacy rules, and tax requirements, which businesses must follow to process payouts legally.
 
 3. **Payment Preferences**: Different regions favor different payment methods. Offering limited payout options might alienate users from certain areas, making your platform less appealing globally.
 
@@ -35,11 +35,11 @@ Chimoney’s API is designed to solve the complex challenges of handling global 
 
 ### 1. Multiple Currencies and Payout Methods
 
-Chimoney’s API supports a variety of currencies and payout methods, including bank transfers, mobile money, digital wallets, gift cards, and cryptocurrency. This flexibility allows you to cater to users worldwide, ensuring they get paid in their preferred currency and method.
+Chimoney’s API supports a variety of currencies and payout methods, including bank transfers, mobile money, digital wallets and gift cards. This flexibility allows you to cater to users worldwide, ensuring they get paid in their preferred currency and method.
 
-### 2. Built-in Tax Compliance
+### 2. Regulatory Compliance
 
-Chimoney simplifies tax compliance by offering tools that handle tax information for cross-border payouts. Whether you need to manage withholding taxes or generate tax forms, Chimoney’s API helps your platform comply with local regulations, reducing the complexity of tax management.
+Chimoney's API is designed with compliance in mind, ensuring that all transactions adhere to the regulatory requirements of each country involved.
 
 ### 3. Faster Payouts with Automation
 
@@ -61,11 +61,11 @@ Visit the [Chimoney API Documentation](https://chimoney.readme.io/reference/gett
 
 ### Step 2: Get Your API Key
 
-Create an API key to authenticate your marketplace. This key is used to securely communicate with Chimoney’s servers and manage your payouts.
+Create an API key to authenticate your marketplace.
 
 ### Step 3: Configure Payout Options
 
-Customize the payout options available on your platform. Chimoney’s API allows you to support multiple currencies and payment methods. Configure the options that best suit your user base and regions.
+Customize the payout options available on your platform to best suit your user base. Chimoney offers allows you to support multiple currencies (USD, CAD, NGN) and different payment methods such as bank, Mobile Money, [Interac](https://chimoney.io/blogs/interac-e-transfer-bulk-for-canadian-businesses-integration-and-api/), Airtime and Gift cards
 
 ### Step 4: Automate Payouts
 
@@ -88,50 +88,47 @@ Here’s a simple code sample demonstrating how to make a payout request using C
 ```javascript
 const axios = require("axios");
 
-const data = {
-  amount: 100,
-  currency: "USD",
-  recipient: {
-    email: "user@example.com",
-    method: "bank_transfer",
-    bank_account: {
-      account_number: "1234567890",
-      routing_number: "012345678",
-      swift_code: "CHASUS33",
+const options = {
+  method: "POST",
+  url: "https://api.chimoney.io/v0.2/payouts/bank",
+  headers: {
+    accept: "application/json",
+    "content-type": "application/json",
+    Authorization: "Bearer YOUR_API_KEY", // Replace with your actual API key
+  },
+  data: {
+    amount: 100,
+    currency: "USD",
+    recipient_bank_details: {
+      account_number: "123456789",
+      bank_code: "001",
     },
   },
 };
 
 axios
-  .post("
-  https://api.chimoney.io/v0.2/payouts/bank", data, {
-    headers: {
-      Authorization: `Bearer YOUR_API_KEY`,
-    },
+  .request(options)
+  .then(function (response) {
+    console.log(response.data);
   })
-  .then((response) => {
-    console.log("Payout successful:", response.data);
-  })
-  .catch((error) => {
-    console.error("Error making payout:", error);
+  .catch(function (error) {
+    console.error(error);
   });
 ```
 
-This code sends a payout request for $100 USD to a recipient’s bank account using Chimoney’s API. Make sure to replace `YOUR_API_KEY` with your actual Chimoney API key.
+This code sends a payout request for $100 USD to a recipient's bank account using Chimoney's API.
 
 ---
 
 ## Why Chimoney Is the Right Choice for Your Marketplace
 
-In today’s global economy, marketplaces need flexible and reliable payout systems to thrive. Chimoney’s API provides the tools you need to handle multiple currencies, offer various payout methods, and ensure faster payments — all while simplifying compliance and scaling with your platform’s growth.
-
-By integrating Chimoney, you can focus on building and scaling your marketplace, while Chimoney takes care of the complexities of global payouts.
+Digital marketplaces need flexible and reliable payout systems to thrive and Chimoney’s API provides the tools you need to handle multiple currencies, offering various payout methods, and ensuring faster payments — all while simplifying compliance and scaling with your platform’s growth.
 
 ---
 
 ## Get Started with Chimoney Today
 
-Ready to simplify global payouts? Visit the [Chimoney API Documentation](https://chimoney.readme.io/reference/getting-started-with-your-api) to learn more and start building a seamless payout solution for your marketplace.
+Ready to make payouts easier? Visit the [Chimoney API Documentation](https://chimoney.readme.io/reference/getting-started-with-your-api) to learn more and start building an efficient payout solution for your marketplace.
 
 ---
 
