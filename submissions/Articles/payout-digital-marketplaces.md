@@ -8,12 +8,6 @@ Welcome to the Chimoney guide on payouts for digital marketplaces! If you run a 
 
 Payouts ensure that sellers, freelancers, or service providers are paid accurately and on time. Delays or issues with payments can damage trust and impact the growth of your platform. A smooth payout system means vendors stay engaged, and your business operates seamlessly.
 
-Here’s why seamless payouts are important:
-
-- **Boosts User Trust**: Sellers and service providers need fast and secure payouts. If payments are delayed or fail, users may lose trust in your platform and look for alternatives.
-- **Supports Global Reach**: Running a global marketplace means dealing with multiple currencies, local payment methods, and tax regulations across different countries. A reliable payout system simplifies these challenges, allowing you to operate efficiently worldwide.
-- **Helps You Scale**: As your marketplace grows, manual payouts become impractical. Automating payments with a flexible and reliable system ensures that your platform can handle more users without additional stress.
-
 ---
 
 ## Common Payout Challenges for Marketplaces
