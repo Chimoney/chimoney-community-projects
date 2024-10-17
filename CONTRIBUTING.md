@@ -1,12 +1,4 @@
-# Contribution Guidelines
-:+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
-
-
----
-
-
-Before contributing to this repository, please read this [article](https://hashnode.com/post/clneirt08000309ihcpx41vxs) 
-
+Before contributing to this repository, you can either [visit this article](https://hashnode.com/post/clneirt08000309ihcpx41vxs) to understand more about contributing to Chimoney's projects or simply continue reading the guidelines below.
 
 ---
 
@@ -64,7 +56,7 @@ Follow this simple branching strategy:
 
 ## Testing Your Contribution  
 Ensure that all contributions are tested. If you're using the **Chimoney API**, test using the Chimoney Sandbox:
-- **Sign up for Chimoney Sandbox** [here](https://chimoney-sandbox-url).  
+- **Sign up for Chimoney Sandbox** [here](https://chimoney.readme.io/reference/sandbox-environment).  
 - **Use your API keys** to test transactions and integration.
 
 ## Code of Conduct  
@@ -72,10 +64,4 @@ We are committed to maintaining a welcoming and inclusive community. By particip
 
 ## Additional Resources  
 - [GitHub Flow Guide](https://guides.github.com/introduction/flow/)  
-- [Chimoney API Documentation](https://chimoney-api-docs-url)  
-- [Issue Templates](https://chimoney-repo-url/issues/new/choose)
-
----
-
-
-Before contributing to this repository, please read this [article](https://hashnode.com/post/clneirt08000309ihcpx41vxs) 
+- [Chimoney API Documentation](https://chimoney.readme.io/reference/getting-started-with-your-api)
