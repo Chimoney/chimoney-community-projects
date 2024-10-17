@@ -29,6 +29,7 @@ You can view this README in your preferred language:
 - [Korean (한국어)](README-KO.md)
 - [Chinese (中文)](README-CN.md)
 - [German (Deutsch)](README-GM.md)
+- [Hindi (हिन्दी)](README-HN.md)
 
 ---
 
