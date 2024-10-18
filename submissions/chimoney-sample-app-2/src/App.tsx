@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {
-  PaymentForm,
+  ChimoneyPayment,
   TransactionList,
   UserAccountForm,
 } from "chimoney-react-components";
@@ -50,14 +50,16 @@ function App() {
   };
 
   return (
-    <div className=" w-screen p-4">
+    <div className=" w-screen p-12 ">
       <h1>Chimoney Sample App</h1>
 
-      <h2>Make a Payment</h2>
-      <PaymentForm
-        onSubmit={handlePayment}
-        className={"flex gap-4 text-black w-full p-4"}
-      />
+      <h2 className=" text-green-400">Make a Payment</h2>
+      <div className="p-4">
+        <ChimoneyPayment
+          onSubmit={handlePayment}
+          testMode={true} // Set to false for production
+        />
+      </div>
 
       <TransactionList
         transactions={transactions}
