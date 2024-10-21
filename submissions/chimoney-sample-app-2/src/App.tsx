@@ -4,6 +4,7 @@ import {
   TransactionList,
   UserAccountForm,
 } from "chimoney-react-components";
+import "chimoney-react-components/styles.css";
 import "./App.css";
 
 function App() {
@@ -57,7 +58,8 @@ function App() {
       <div className="p-4">
         <ChimoneyPayment
           onSubmit={handlePayment}
-          testMode={true} // Set to false for production
+          testMode={false} // Set to false for production
+          className="px-6 flex flex-col gap-4"
         />
       </div>
 

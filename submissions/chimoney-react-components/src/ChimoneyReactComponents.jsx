@@ -200,7 +200,7 @@ export const PaymentForm = ({ onSubmit, className }) => {
 // TransactionList component
 export const TransactionList = ({ transactions, className }) => {
   return (
-    <ul className={`space-y-2  ${className || ""}`}>
+    <ul className={`space-y-2   ${className || ""}`}>
       {transactions.map((transaction) => (
         <li key={transaction.id} className="px-4 py-2 bg-gray-100 rounded-md">
           {transaction.amount} {transaction.currency} - {transaction.date}

@@ -33,24 +33,25 @@ export const ChimoneyPayment: React.FC<ChimoneyPaymentProps> = ({
 
   return (
     <div
-      className={`w-full max-w-md mx-auto rounded-3xl shadow-lg p-6 flex  ${className}`}
+      className={`w-full max-w-md mx-auto rounded-3xl shadow-lg  flex  p-4  ${className}`}
     >
-      <div className="space-y-6 bg-green-700">
+      <div className="space-y-6">
         {/* Header */}
         <div className="space-y-2">
-          <h2 className="text-2xl font-semibold text-gray-800">
+          <h2 className="text-2xl font-semibold text-blue-800 ">
             Send Chimoney
           </h2>
+
           <p className="text-sm text-purple-500">
             to anyone, anywhere, securely.
           </p>
         </div>
 
         {/* Payment Type Selector */}
-        <div className="flex text-green-400 rounded-full p-1 gap-4 bg-red-500">
+        <div className="flex rounded-full py-2 gap-4">
           <button
             onClick={() => setPaymentType("email")}
-            className={`flex-1 py-2 px-4 rounded-full text-sm font-medium transition-colors
+            className={`flex-1 py-2 px-4 rounded-full text-sm font-medium transition-colors hover:bg-violet-500
               ${
                 paymentType === "email"
                   ? "bg-white text-gray-800 shadow-sm"
@@ -87,7 +88,7 @@ export const ChimoneyPayment: React.FC<ChimoneyPaymentProps> = ({
                 step="0.01"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                className="block w-full border-2 px-4 outline-none  border-gray-300 rounded-md focus:ring-2"
+                className=" border-2 px-4 outline-none  border-gray-300 rounded-md focus:ring-2"
                 placeholder="0.00"
               />
               <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
