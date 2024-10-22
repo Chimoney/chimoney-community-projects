@@ -14,23 +14,35 @@ function App() {
       amount: 100,
       currency: "USD",
       date: "2/3/2024",
+      type: "Email",
+      paymentTo: "basilica.benji@gmail.com",
     },
     {
       id: 2,
       amount: 140,
       currency: "USD",
       date: "2/8/2024",
+      type: "Email",
+      paymentTo: "kitongabenja34@gmail.com",
     },
     {
       id: 3,
       amount: 200,
       currency: "USD",
       date: "2/9/2024",
+      type: "Phonenumber",
+      paymentTo: "+254792981115",
     },
   ]);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handlePayment = (paymentData: { amount: any; currency: any }) => {
+  const handlePayment = (paymentData: {
+    amount: any;
+    currency: any;
+    paymentTo: any;
+    emails: any;
+    paymentType: any;
+  }) => {
     // In a real app, you would send this data to your backend
     console.log("Processing payment:", paymentData);
     // For demo purposes, we'll add it to our transactions
@@ -41,6 +53,8 @@ function App() {
         amount: paymentData.amount,
         currency: paymentData.currency,
         date: new Date().toISOString().split("T")[0],
+        type: paymentData.paymentType,
+        paymentTo: paymentData.emails,
       },
     ]);
   };
@@ -52,13 +66,10 @@ function App() {
 
   return (
     <div className=" w-screen p-12 ">
-      <h1>Chimoney Sample App</h1>
-
-      <h2 className=" text-green-400">Make a Payment</h2>
       <div className="p-4">
         <ChimoneyPayment
           onSubmit={handlePayment}
-          testMode={false} // Set to false for production
+          testMode={true} // Set to false for production
           className="px-6 flex flex-col gap-4"
         />
       </div>
