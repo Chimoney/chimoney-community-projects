@@ -7,20 +7,49 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      
+
       - name: Adding README - Chinese Traditional
         uses: dephraiim/translate-readme@main
         with:
           LANG: zh-TW
+
       - name: Adding README - Hindi
         uses: dephraiim/translate-readme@main
         with:
           LANG: hi
+
       - name: Adding README - Arabic
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: ar
+
+      - name: Adding README - French
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: fr
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions"
+          git checkout -b translate-update
+          git add .
+          git commit -m "Translated README files"
+          git push origin translate-update
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: translate-update
+          title: "Translated README Files"
+          body: "This PR adds translated README files for multiple languages."
+
         uses: dephraiim/translate-readme@main
         with:
           LANG: ar
