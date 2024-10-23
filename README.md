@@ -134,4 +134,9 @@ Happy coding! 🚀
 
 ## A Big Thank You to All Our Awesome Contributors ❤️
 ![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
-[![Back to Top](https://private-user-images.githubusercontent.com/100835504/377992821-71b4faf5-c0b1-4979-95fe-7f413b3b8e02.png)](#initial)
+<br>
+<p align="left">
+    <a href="#initial">
+        <img src="https://img.shields.io/badge/Back_to_Top-%23000000.svg?style=for-the-badge&logo=GitHub&logoColor=white" width="200" padding="#2d2c29" />
+    </a>
+</p>
