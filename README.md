@@ -134,7 +134,4 @@ Happy coding! 🚀
 
 ## A Big Thank You to All Our Awesome Contributors ❤️
 ![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
-<a href="#initial" style="position: fixed; bottom: 20px; right: 20px; padding: 10px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">
-    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub logo" width="16" />
-    BACK TO TOP
-</a>
+[![Back to Top](https://private-user-images.githubusercontent.com/100835504/377992821-71b4faf5-c0b1-4979-95fe-7f413b3b8e02.png)](#initial)
