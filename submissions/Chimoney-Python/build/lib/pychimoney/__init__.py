@@ -6,3 +6,5 @@ from .SubAccount import SubAccount
 from .Wallet import Wallet
 from .Redeem import Redeem
 from .Chimoney import Chimoney
+from .Payments import Payments
+from .AI import AI
