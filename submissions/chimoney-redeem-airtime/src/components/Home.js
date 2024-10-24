@@ -76,7 +76,9 @@ const HomeContainer = styled.div`
     text-transform: uppercase;
     font-size: 1.4rem;
     padding: 1rem;
-  }
+    display: inline-block;
+}
+
   .error {
     font-size: 1.2rem;
     margin-top: 0.3rem;
