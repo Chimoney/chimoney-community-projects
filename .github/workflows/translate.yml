@@ -1,9 +1,5 @@
 name: Chimoney Projects README Translator
-on:
-  push:
-    branches:
-      - main
-      - master
+on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
