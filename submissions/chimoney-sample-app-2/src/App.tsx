@@ -10,51 +10,73 @@ import "./App.css";
 function App() {
   const [transactions, setTransactions] = useState([
     {
-      id: 1,
-      amount: 100,
+      receiver: "kitongabenj343@gmail.com",
+      amount: 50.0,
       currency: "USD",
-      date: "2/3/2024",
-      type: "Email",
-      paymentTo: "basilica.benji@gmail.com",
+      initiator: "Benjamin Kitonga",
+      fee: 1,
+      paymentStatus: "redeemed",
+      deliveryStatus: "-",
+      transactionDate: "10/25/2024, 08:04:02 AM",
+      ref: "0831d653-3489-4db9-9bc2-dcd393478f5a",
     },
     {
-      id: 2,
-      amount: 140,
+      receiver: "+254799381115",
+      amount: 100.0,
       currency: "USD",
-      date: "2/8/2024",
-      type: "Email",
-      paymentTo: "kitongabenja34@gmail.com",
+      initiator: "Benjamin Kitonga",
+      fee: 1,
+      paymentStatus: "paid",
+      deliveryStatus: "-",
+      transactionDate: "10/25/2024, 07:58:08 AM",
+      ref: "1250eaad-fcb2-4c26-9fc2-34958929929",
     },
     {
-      id: 3,
-      amount: 200,
+      receiver: "+254799381115",
+      amount: 100.0,
       currency: "USD",
-      date: "2/9/2024",
-      type: "Phonenumber",
-      paymentTo: "+254792981115",
+      initiator: "Benjamin Kitonga",
+      fee: 1,
+      paymentStatus: "redeemed",
+      deliveryStatus: "success",
+      transactionDate: "10/25/2024, 07:42:26 AM",
+      ref: "6ef83423-6039-43a0-aebd-d1eb282754e",
+    },
+    {
+      receiver: "kitongabenj343@gmail.com",
+      amount: 100.0,
+      currency: "USD",
+      initiator: "Benjamin Kitonga",
+      fee: 1,
+      paymentStatus: "redeemed",
+      deliveryStatus: "success",
+      transactionDate: "10/25/2024, 07:35:56 AM",
+      ref: "86695f04-6757-49d1-ab42-7859f3b0f378a",
     },
   ]);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handlePayment = (paymentData: {
-    amount: any;
-    currency: any;
-    paymentTo: any;
-    emails: any;
-    paymentType: any;
-  }) => {
+    amount: number;
+    currency: string;
+    paymentTo: string;
+    emails: string;
+  }): void => {
     // In a real app, you would send this data to your backend
     console.log("Processing payment:", paymentData);
     // For demo purposes, we'll add it to our transactions
     setTransactions([
       ...transactions,
       {
-        id: transactions.length + 1,
         amount: paymentData.amount,
         currency: paymentData.currency,
-        date: new Date().toISOString().split("T")[0],
-        type: paymentData.paymentType,
-        paymentTo: paymentData.emails,
+        transactionDate: new Date().toISOString().split("T")[0],
+        initiator: paymentData.paymentTo,
+        receiver: paymentData.emails,
+        fee: 0,
+        paymentStatus: "",
+        deliveryStatus: "",
+        ref: "",
       },
     ]);
   };
@@ -69,15 +91,12 @@ function App() {
       <div className="p-4">
         <ChimoneyPayment
           onSubmit={handlePayment}
-          testMode={true} // Set to false for production
+          testMode={false} // Set to false for production
           className="px-6 flex flex-col gap-4"
         />
       </div>
 
-      <TransactionList
-        transactions={transactions}
-        className={" w-full flex flex-col"}
-      />
+      <TransactionList transactions={transactions} />
 
       <h2>Update Account</h2>
       <UserAccountForm onSubmit={handleAccountUpdate} className={""} />
