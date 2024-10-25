@@ -2,12 +2,20 @@ import React, { Children, useState } from "react";
 import { ChimoneyInput } from "./components/chimoneyInput";
 import { ChimoneyButton } from "./components/chimoneyButton";
 import "./styles/tailwind.css";
-import { ChevronDown, ChevronLeft, ChevronRight, Columns } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  Columns,
+  ChevronUp,
+  X,
+} from "lucide-react";
 // TransactionList component
 export const TransactionList = ({ transactions }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [isColumnMenuOpen, setIsColumnMenuOpen] = useState(false);
+  const [selectedTransaction, setSelectedTransaction] = useState(null);
 
   const [columns, setColumns] = useState([
     { id: "receiver", label: "Receiver", visible: true },
@@ -34,6 +42,82 @@ export const TransactionList = ({ transactions }) => {
   const toggleAllColumns = (value) => {
     setColumns(columns.map((col) => ({ ...col, visible: value })));
   };
+  const TransactionModal = ({ transaction, onClose }) => {
+    const [isRawDataOpen, setIsRawDataOpen] = useState(false);
+
+    return (
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="bg-white rounded-lg w-full max-w-md mx-4">
+          <div className="p-6 space-y-4">
+            <button
+              onClick={onClose}
+              className="w-full py-2 text-center border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50"
+            >
+              Close
+            </button>
+
+            <div className="text-2xl font-bold">
+              ${transaction.amount.toFixed(2)}
+            </div>
+
+            <div className="space-y-2">
+              <div className="flex justify-between">
+                <span className="text-gray-600">Receiver:</span>
+                <span className="font-medium">{transaction.receiver}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-600">Date Initiated:</span>
+                <span className="font-medium">
+                  {transaction.transactionDate}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-600">Status:</span>
+                <span className="font-medium">{transaction.paymentStatus}</span>
+              </div>
+              {transaction.redeemUrl && (
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Redeem URL:</span>
+                  <span className="font-medium break-all">
+                    {transaction.redeemUrl}
+                  </span>
+                </div>
+              )}
+            </div>
+
+            <button
+              onClick={() => setIsRawDataOpen(!isRawDataOpen)}
+              className="w-full py-2 text-center border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50"
+            >
+              Download Receipt
+            </button>
+
+            <div className="border rounded-lg">
+              <button
+                onClick={() => setIsRawDataOpen(!isRawDataOpen)}
+                className="w-full p-4 flex justify-between items-center hover:bg-gray-50"
+              >
+                <span className="font-medium">Raw Data</span>
+                {isRawDataOpen ? (
+                  <ChevronUp className="h-5 w-5" />
+                ) : (
+                  <ChevronDown className="h-5 w-5" />
+                )}
+              </button>
+              {isRawDataOpen && (
+                <div className="p-4 border-t bg-gray-50">
+                  <pre className="text-sm overflow-x-auto">
+                    {JSON.stringify(transaction, null, 2)}
+                  </pre>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="p-4">
       <div className="mb-4 flex justify-between items-center">
@@ -118,11 +202,12 @@ export const TransactionList = ({ transactions }) => {
             </tr>
           </thead>
           <tbody>
-            {transactions.map((transaction, index) => (
+            {transactions.map((transaction) => (
               <tr
                 key={transaction.ref}
+                onClick={() => setSelectedTransaction(transaction)}
                 className={`
-                  border-t
+                  border-t cursor-pointer
                   ${
                     transaction.paymentStatus === "paid"
                       ? "bg-pink-50"
@@ -177,6 +262,13 @@ export const TransactionList = ({ transactions }) => {
           </div>
         </div>
       </div>
+
+      {selectedTransaction && (
+        <TransactionModal
+          transaction={selectedTransaction}
+          onClose={() => setSelectedTransaction(null)}
+        />
+      )}
     </div>
   );
 };
