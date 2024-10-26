@@ -201,16 +201,20 @@ TypeScript
 Tailwind CSS
 
 Setup
-bashCopy# Clone the repository
+
+```
+Clone the repository
 git clone git@github.com:Benjamin-23/chimoney-community-projects.git
+cd chimoney-community-projects
+```
 
 # Install dependencies
 
-npm install
+` npm install`
 
 # Run development server
 
-npm run dev
+1`npm run dev`
 
 # Build for production
 
@@ -222,7 +226,7 @@ npm run build
 
 # Run tests
 
-npm test
+`npm test`
 Contributing
 We welcome contributions! Please follow these steps:
 
@@ -246,10 +250,3 @@ Acknowledgments
 Built with React and TypeScript
 Styled with Tailwind CSS
 Inspired by modern payment interfaces
-
-````
-
-```
-
-```
-````
