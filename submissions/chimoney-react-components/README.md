@@ -10,22 +10,30 @@ Features
 - 🔄 Real-time payment type switching
 
 Installation
+
+```
+# Using npm
+
 npm install chimoney-react-payment
+```
 
 # or using yarn
 
-yarn add chimoney-react-payment
+`yarn add chimoney-react-payment`
+
 Required Imports
 Make sure to import both the component and the required styles in your application:
 Import the styles (required)
-import "chimoney-react-components/styles.css";
 
+```
+import "chimoney-react-components/styles.css";
+```
+
+```
 // Import the components
 import {
 ChimoneyPayment,
 UserAccountForm,
-
-```
 ChimoneyTransactionList
 } from 'chimoney-react-payment';
 ```
@@ -33,6 +41,7 @@ ChimoneyTransactionList
 ⚠️ Important: The styles.css import is required for proper component styling and functionality.
 Quick Start
 
+```
 import "chimoney-react-components/styles.css";
 import { ChimoneyPayment } from 'chimoney-react-payment';
 
@@ -50,23 +59,36 @@ return (
     />
 );
 }
-Components
-ChimoneyPayment
+```
+
+# Components
+
+## ChimoneyPayment
+
 The main payment form component with support for multiple recipients and payment types.
-Props
+
+## Props
+
+```
 interface ChimoneyPaymentProps {
 onSubmit: (data: ChimoneyPaymentData) => void;
 className?: string;
 testMode?: boolean;
 }
 
+
 interface ChimoneyPaymentData {
 amount: string;
 emails: string[];
 paymentType: "email" | "phone";
 }
-ChimoneyInput
+```
+
+# ChimoneyInput
+
 Custom input component used within the payment form.
+
+```
 interface ChimoneyInputProps {
 type: string;
 value: string;
@@ -74,35 +96,70 @@ onChange: (e: React.ChangeEvent) => void;
 className?: string;
 placeholder?: string;
 }
+```
 
 # ChimoneyButton
 
 Custom button component for form submission.
+
+```
 interface ChimoneyButtonProps {
 type: "submit" | "button";
 className?: string;
 buttonName: string;
 onClick?: () => void;
 }
-Usage Examples
+```
+
+# Usage Examples
+
 Basic Payment Form
+
+```
 import { ChimoneyPayment } from 'chimoney-react-payment';
 
 function PaymentForm() {
-const handlePayment = (paymentData) => {
-const { amount, emails, paymentType } = paymentData;
-console.log(`Sending ${amount} to ${emails.length} recipients via ${paymentType}`);
-// Process payment
-};
+ const [transactions, setTransactions] = useState([])
+ const handlePayment = (paymentData: {
+    amount: number;
+    currency: string;
+    paymentTo: string;
+    emails: string;
+  }) => {
+    // In a real app, you would send this data to your backend
+    console.log("Processing payment:", paymentData);
+    // For demo purposes, we'll add it to our transactions
+    setTransactions([
+      ...transactions,
+      {
+        amount: paymentData.amount,
+        currency: paymentData.currency,
+        transactionDate: new Date().toISOString().split("T")[0],
+        initiator: paymentData.paymentTo,
+        receiver: paymentData.emails,
+        fee: 0,
+        paymentStatus: "",
+        deliveryStatus: "",
+        ref: "",
+      },
+    ]);
+  };
 
 return (
-<ChimoneyPayment
-      onSubmit={handlePayment}
-      className="max-w-lg mx-auto p-4"
-    />
-);
+ <ChimoneyPayment
+          onSubmit={handlePayment}
+          testMode={false} // Set to false for production
+          className="px-6 flex flex-col gap-4"
+/>
+)
 }
+
+export default PaymentForm;
+```
+
 Test Mode with Custom Styling
+
+```
 import { ChimoneyPayment } from 'chimoney-react-payment';
 
 function TestPaymentForm() {
@@ -114,8 +171,12 @@ className="bg-gray-50 p-8"
 />
 );
 }
+```
+
 User Account Form
-jsxCopyimport { UserAccountForm } from 'chimoney-react-payment';
+
+```
+import { UserAccountForm } from 'chimoney-react-payment';
 
 function AccountPage() {
 const handleAccountUpdate = (data) => {
@@ -130,8 +191,9 @@ return (
     />
 );
 }
-Development
-Prerequisites
+```
+
+# Development Prerequisites
 
 Node.js
 React
@@ -152,7 +214,11 @@ npm run dev
 
 # Build for production
 
+```
+# Build for production
 npm run build
+
+```
 
 # Run tests
 
@@ -160,19 +226,20 @@ npm test
 Contributing
 We welcome contributions! Please follow these steps:
 
-Fork the repository
-Create your feature branch (git checkout -b feature/amazing-feature)
-Commit your changes (git commit -m 'Add amazing feature')
-Push to the branch (git push origin feature/amazing-feature)
-Open a Pull Request
+# Fork the repository
+
+- Create your feature branch (git checkout -b feature/amazing-feature)
+- Commit your changes (git commit -m 'Add amazing feature')
+- Push to the branch (git push origin feature/amazing-feature)
+- Open a Pull Request
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 Support
 
-📫 Report a bug
-💬 Request a feature
-📧 Email: kitongabenja34@gmail.com
+- 📫 Report a bug
+- 💬 Request a feature
+- 📧 Email: kitongabenja34@gmail.com
 
 Acknowledgments
 
@@ -180,6 +247,9 @@ Built with React and TypeScript
 Styled with Tailwind CSS
 Inspired by modern payment interfaces
 
+````
+
 ```
 
 ```
+````
