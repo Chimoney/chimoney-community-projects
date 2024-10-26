@@ -79,6 +79,7 @@ buttonName: string;
 onClick?: () => void;
 }
 Usage Examples
+
 Basic Payment Form
 { ChimoneyPayment } from 'chimoney-react-payment';
 
@@ -107,6 +108,22 @@ testMode={true}
 className="bg-gray-50 p-8"
 />
 )}
+
+UserAccountForm
+A flexible form component for user account management
+
+import { UserAccountForm } from 'chimoney-react-payment';
+
+function AccountPage() {
+const handleAccountUpdate = (data) => {
+console.log('Account Data:', data);
+// Handle account update
+};
+
+return (
+<UserAccountForm onSubmit={handleAccountUpdate} />
+);
+}
 
 Development
 Prerequisites
