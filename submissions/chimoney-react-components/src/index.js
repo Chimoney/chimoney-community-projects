@@ -1,6 +1,6 @@
 import "./styles/tailwind.css";
 // import './styles.css';
-export { TransactionList, UserAccountForm } from "./ChimoneyReactComponents";
+export { UserAccountForm } from "./ChimoneyReactComponents";
 export { ChimoneyInput } from "./components/chimoneyInput";
-
-export { ChimoneyPayment } from "./components/PaymentForm";
+export { ChimoneyTransactionList } from "./components/ChimoneyTransactionList";
+export { ChimoneyPayment } from "./components/ChimoneyPaymentForm";

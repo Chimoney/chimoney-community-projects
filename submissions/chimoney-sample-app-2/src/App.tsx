@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {
   ChimoneyPayment,
-  TransactionList,
+  ChimoneyTransactionList,
   UserAccountForm,
 } from "chimoney-react-components";
 import "chimoney-react-components/styles.css";
@@ -61,7 +61,7 @@ function App() {
     currency: string;
     paymentTo: string;
     emails: string;
-  }): void => {
+  }) => {
     // In a real app, you would send this data to your backend
     console.log("Processing payment:", paymentData);
     // For demo purposes, we'll add it to our transactions
@@ -96,8 +96,7 @@ function App() {
         />
       </div>
 
-      <TransactionList transactions={transactions} />
-
+      <ChimoneyTransactionList transactions={transactions} />
       <h2>Update Account</h2>
       <UserAccountForm onSubmit={handleAccountUpdate} className={""} />
     </div>
