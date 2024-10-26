@@ -26,7 +26,7 @@ import { ChimoneyPayment } from 'chimoney-react-payment';
 
 Quick Start
 import "chimoney-react-components/styles.css";
-import { ChimoneyPayment } from 'chimoney-react-payment';
+import { ChimoneyPayment, UserAccountForm, ChimoneyTrasactionList } from 'chimoney-react-payment';
 
 function App() {
 const handlePayment = (paymentData) => {
@@ -42,7 +42,9 @@ return (
 Components
 ChimoneyPayment
 The main payment form component with support for multiple recipients and payment types.
+
 Props
+
 ChimoneyPaymentProps {
 onSubmit: (data: ChimoneyPaymentData) => void;
 className?: string;
@@ -59,7 +61,6 @@ ChimoneyInput
 
 Custom input component used within the payment form.
 
-typescriptCopy
 interface ChimoneyInputProps {
 type: string;
 value: string;
@@ -106,6 +107,7 @@ testMode={true}
 className="bg-gray-50 p-8"
 />
 )}
+
 Development
 Prerequisites
 
