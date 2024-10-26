@@ -189,14 +189,6 @@ const Redeem = () => {
 }
 
 const FormContainer = styled.div`
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    color: white;
     h1{
         text-align: center;
         font-size: 2.5rem;
