@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <HomeContainer className="home-page">
-      <h1>Welcome To Keeplite</h1>
+      <h1 className="page-title">Welcome To Keeplite</h1>
       <p>
         To redeem your Chimoney as Airtime, enter your <span>Ticket ID</span> or <span>Chi-REF</span> in the input below
       </p>
@@ -43,9 +43,6 @@ const Home = () => {
 };
 
 const HomeContainer = styled.div`
-  h1 {
-    font-size: 3rem;
-  }
   p {
     font-size: 1.5rem;
     margin-top: 2rem;

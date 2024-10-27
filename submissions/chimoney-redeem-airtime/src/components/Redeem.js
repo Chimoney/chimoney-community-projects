@@ -27,7 +27,6 @@ const Redeem = () => {
     axios(config)
       .then(function (response) {
         setCountries(response.data.data);
-        //   console.log(JSON.stringify(response.data.data));
       })
       .catch(function (error) {
         console.log(error);
@@ -132,7 +131,7 @@ const Redeem = () => {
 
   return (
     <FormContainer>
-      <h1>Convert Chimoney to Airtime</h1>
+      <h1 className="page-title">Convert Chimoney to Airtime</h1>
       <form onMouseDown={clearErrorMsg} onKeyDown={clearErrorMsg}>
         {errorMsg ? <p className="error">{errorMsg}</p> : ""}
 
@@ -182,7 +181,6 @@ const Redeem = () => {
               </div>
             ) : null}
           </div>
-          {/* <input type="text" name="countryToSend" onChange={handleChange} id="country" placeholder='e.g: nigeria' /> */}
         </div>
         <div className="button">
           <button type="submit" onClick={handleSubmit}>
@@ -195,10 +193,6 @@ const Redeem = () => {
 };
 
 const FormContainer = styled.div`
-    h1{
-        text-align: center;
-        font-size: 2.5rem;
-    }  
     form{
     padding: 1rem;
     margin: 0 auto;
@@ -236,63 +230,6 @@ const FormContainer = styled.div`
        }
        
     }
-    
-.select {
-    width: 50%;
-    font-size: 1.2rem;
-    padding: 1rem;
-    background-color: #f8f8f8;
-    color: black;
-    border: 1px solid #f8f8f8;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    cursor: context-menu;
-  }
-  .dropdown-arrow:after {
-    content: "";
-    border: solid black; /* Arrow color */
-    border-width: 0 3px 3px 0; /* Create a downward arrow */
-    display: inline-block;
-    padding: 3px;
-    margin-left: 5px; /* Space between text and arrow */
-    transform: rotate(45deg); /* Rotate to point down */
-  }
-  .option-area {
-    background-color: #f8f8f8;
-    width: 50%;
-    color: black;
-    font-size: 1.2rem;
-    border: 1px solid black;
-    position: absolute;
-    max-height: 128px;
-    overflow-y: auto;
-  }
-  .option {
-    padding: 0.3rem 1rem;
-  }
-  .select-area {
-    position: relative;
-    margin-bottom: 2rem;
-  }
-  .option:hover {
-    background-color: #1c64d4;
-    color: #f8f8f8;
-  }
-
-
- @media only screen and (max-width: 1199px) {
-    .option-area {
-      width: 225px;
-      max-height: 95px;
-      overflow-y: auto;
-    }
-
-    .select {
-      width: 225px;
-    }
-  }
 `;
 
 export default Redeem;
