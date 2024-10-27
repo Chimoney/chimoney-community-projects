@@ -41,7 +41,8 @@ body {
 }
 
 form {
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   margin: 0 auto;
   width: 50vw;
 }
@@ -89,7 +90,7 @@ input::placeholder {
 
 .button-area {
   text-align: center;
-  width: 90%;
+  width: 100%;
 }
 
 button {

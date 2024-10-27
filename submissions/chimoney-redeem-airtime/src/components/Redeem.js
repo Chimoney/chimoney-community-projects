@@ -93,7 +93,6 @@ const Redeem = () => {
       };
       axios(config)
         .then(function (response) {
-          // console.log(JSON.stringify(response.data));
           setLoading(false);
           setformDetails({});
           swal({
@@ -134,7 +133,6 @@ const Redeem = () => {
       <h1 className="page-title">Convert Chimoney to Airtime</h1>
       <form onMouseDown={clearErrorMsg} onKeyDown={clearErrorMsg}>
         {errorMsg ? <p className="error">{errorMsg}</p> : ""}
-
         <div>
           <p className="form-label">Ticket ID</p>
           <input
