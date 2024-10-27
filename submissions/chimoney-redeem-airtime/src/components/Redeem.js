@@ -130,29 +130,37 @@ const Redeem = () => {
   };
 
   return (
-    <FormContainer>
+    <div>
       <h1 className="page-title">Convert Chimoney to Airtime</h1>
       <form onMouseDown={clearErrorMsg} onKeyDown={clearErrorMsg}>
         {errorMsg ? <p className="error">{errorMsg}</p> : ""}
 
         <div>
-          <p>Ticket ID</p>
+          <p className="form-label">Ticket ID</p>
           <input
             type="text"
             value={formDetails.chiRef}
             name="chiRef"
             onChange={handleChange}
             id="country"
-            placeholder="enter ticket  id"
+            placeholder="Enter Ticket ID"
+            className="mb-2 w-90"
             disabled
           />
         </div>
         <div>
-          <p>Phone number (+2349023..)</p>
-          <input type="tel" name="phoneNumber" onChange={handleChange} id="phone-number" placeholder="enter phone number" />
+          <p className="form-label">Phone number (+2349023..)</p>
+          <input
+            type="tel"
+            name="phoneNumber"
+            onChange={handleChange}
+            id="phone-number"
+            placeholder="Enter Phone Number"
+            className="mb-2 w-90"
+          />
         </div>
         <div>
-          <p>Country</p>
+          <p className="form-label">Country</p>
           <div className="select-area">
             <div
               value={formDetails.countryToSend}
@@ -182,54 +190,14 @@ const Redeem = () => {
             ) : null}
           </div>
         </div>
-        <div className="button">
+        <div className="button-area">
           <button type="submit" onClick={handleSubmit}>
             {loading ? "Loading..." : "Redeem Airtime"}
           </button>
         </div>
       </form>
-    </FormContainer>
+    </div>
   );
 };
-
-const FormContainer = styled.div`
-    form{
-    padding: 1rem;
-    margin: 0 auto;
-    width: 50vw;
-    /* box-shadow: 0 5px 5px 0px #70dfd6e4; */
-    p{
-        font-size: 1.2rem;
-        margin-bottom: 0.3rem;
-    }
-    .error{
-        font-size: 1.1rem;
-        color: #1a04048f;
-        text-transform: capitalize;
-        padding: 1rem;
-        text-align: center;
-        font-weight: 600;
-    }
-    }
-
-    input, select{
-    width: 50%;
-    outline: none;
-    font-size: 1.2rem;
-    padding: 1rem;
-    border: 1px solid #f8f8f8;
-    background-color: #f8f8f8;
-    margin-bottom:2rem;
-    }
-    input{
-        width: 90%;
-    }
-    .button{
-        text-align: center;
-        width: 90%;
-       }
-       
-    }
-`;
 
 export default Redeem;
