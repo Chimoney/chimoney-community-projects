@@ -31,10 +31,12 @@ const Home = () => {
       <p>
         To redeem your Chimoney as Airtime, enter your <span>Ticket ID</span> or <span>Chi-REF</span> in the input below
       </p>
-      <Box onMouseDown={clearErrorMsg} onKeyDown={clearErrorMsg}>
+      <div onMouseDown={clearErrorMsg} onKeyDown={clearErrorMsg}>
         <input type="text" name="ChiREF" placeholder="Enter your Ticket ID or Chi-REF" onChange={handleChange} />
-        <Button onClick={handleSubmit}>Submit</Button>
-      </Box>
+        <button onClick={handleSubmit} className="button">
+          Submit
+        </button>
+      </div>
       {errorMsg ? <p className="error">{errorMsg}</p> : ""}
     </HomeContainer>
   );
@@ -78,31 +80,6 @@ const HomeContainer = styled.div`
     padding: 1rem;
     text-align: center;
     font-weight: 600;
-  }
-`;
-
-const Box = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Button = styled.button`
-  padding: 1rem 2rem;
-  box-shadow: 0 5px 5px 0px #70dfd6e4;
-  background: linear-gradient(135deg, rgba(142, 68, 173, 1) 0%, rgba(26, 188, 156, 1) 100%);
-  border: none;
-  text-transform: uppercase;
-  color: white;
-  font-size: 1rem;
-  transition: all ease-in 0.3s;
-  font-weight: 600;
-
-  :hover {
-    cursor: pointer;
-    font-size: 1.1rem;
-    background: linear-gradient(135deg, rgba(142, 68, 173, 1) 0%, rgba(22, 160, 133, 1) 100%);
-    transform: scale(1.05);
   }
 `;
 
