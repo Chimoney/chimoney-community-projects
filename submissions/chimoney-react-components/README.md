@@ -113,7 +113,9 @@ onClick?: () => void;
 
 # Usage Examples
 
-Basic Payment Form
+Basic transaction list component
+
+# chimoney
 
 ```
 import { ChimoneyPayment } from 'chimoney-react-payment';
@@ -171,6 +173,63 @@ className="bg-gray-50 p-8"
 />
 );
 }
+
+interface ChimoneyTransactionListProps {
+transactions: ChimoneyTransaction[];
+className?: string;
+}
+
+interface ChimoneyTransaction {
+amount: number;
+currency: string;
+transactionDate: string;
+initiator: string;
+receiver: string;
+fee: number;
+paymentStatus: string;
+deliveryStatus: string;
+ref: string;
+}
+```
+
+# Usage Example
+
+## ChimoneyTransactionList
+
+```
+import { ChimoneyTransactionList } from 'chimoney-react-payment';
+
+function TransactionHistory() {
+const transactions = [
+{
+amount: 100,
+currency: "USD",
+transactionDate: "2023-10-26",
+initiator: "John Doe",
+receiver: "Jane Doe",
+fee: 0,
+paymentStatus: "Completed",
+deliveryStatus: "Delivered",
+ref: "1234567890",
+},
+{
+amount: 50,
+currency: "KES",
+transactionDate: "2023-10-25",
+initiator: "Alice Smith",
+receiver: "Bob Johnson",
+fee: 0,
+paymentStatus: "Pending",
+deliveryStatus: "Pending",
+ref: "9876543210",
+},
+];
+
+return (
+<ChimoneyTransactionList transactions={transactions} className="max-w-md mx-auto" />
+);
+}
+
 ```
 
 User Account Form
@@ -191,21 +250,112 @@ return (
     />
 );
 }
+
 ```
 
 # Development Prerequisites
 
-Node.js
-React
-TypeScript
-Tailwind CSS
+- Node.js
+- React
+- TypeScript
+- Tailwind CSS#
+- Install Node.js
+  https://nodejs.org/en/download/
+
+# Install React
+
+`npm install -g create-react-app`
+
+# Install TypeScript
+
+`npm install -g typescript`
+
+# Install Tailwind CSS
+
+`npm install -D tailwindcss postcss autoprefixer`
+
+# Configuration
+
+1. Create a new React project with TypeScript support:
+
+`npx create-react-app my-chimoney-app --template typescript`
+
+2. Initialize Tailwind CSS:
+
+`npx tailwindcss init -p`
+
+3. Add the following to your `tailwind.config.js` file:
+
+```
+module.exports = {
+content: [
+"./index.html",
+"./src/**/*.{js,ts,jsx,tsx}",
+],
+theme: {
+extend: {},
+},
+plugins: [],
+}`
+```
+
+4. Add the following to your `postcss.config.js` file:
+
+```
+module.exports = {
+plugins: {
+tailwindcss: {},
+autoprefixer: {},
+},
+}
+
+```
+
+5. Install the Chimoney React components:
+
+`npm install chimoney-react-payment`
+
+6. Import the styles in your `index.css` file:
+
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+```
+
+import "chimoney-react-components/styles.css";
+
+```
+
+7. Start the development server:
+
+`npm run dev`
+
+# Building for Production
+
+```
+
+npm run build
+
+```
+
+# Testing
+
+## Running Tests
+
+```
+npm test
+```
 
 Setup
 
 ```
 Clone the repository
 git clone git@github.com:Benjamin-23/chimoney-community-projects.git
-cd chimoney-community-projects
+cd chimoney-community-projects/submission/chimoney-react-components
+
 ```
 
 # Install dependencies
@@ -214,19 +364,8 @@ cd chimoney-community-projects
 
 # Run development server
 
-1`npm run dev`
+`npm run dev`
 
-# Build for production
-
-```
-# Build for production
-npm run build
-
-```
-
-# Run tests
-
-`npm test`
 Contributing
 We welcome contributions! Please follow these steps:
 
@@ -250,3 +389,7 @@ Acknowledgments
 Built with React and TypeScript
 Styled with Tailwind CSS
 Inspired by modern payment interfaces
+
+```
+
+```
