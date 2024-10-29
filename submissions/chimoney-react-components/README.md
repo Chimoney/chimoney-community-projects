@@ -354,7 +354,7 @@ Setup
 ```
 Clone the repository
 git clone git@github.com:Benjamin-23/chimoney-community-projects.git
-cd chimoney-community-projects/submission/chimoney-react-components
+cd chimoney-community-projects/submissions/chimoney-react-components
 
 ```
 
