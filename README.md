@@ -75,7 +75,7 @@ Join us for a month of coding, learning, and contributing to Chimoney's open-sou
 ## Chimoney Rewards
 At Chimoney, we value your contributions, and to show our appreciation, we will be offering Chimoney rewards for pull requests that are successfully merged into our open-source projects.
 
-- For every substantial merged Pull Request (PR), contributors will receive a Chimoney reward of $10, sent via email. Please note that minor contributions, such as typo fixes or other small changes, will not qualify for rewards. Some issues may have specific reward amounts, which are clearly indicated in the issue labels. The amount displayed on the label reflects the payout for those specific, more complex issues.
+- For every substantial merged Pull Request (PR), contributors will receive a Chimoney reward of $10, sent via email. Please note that minor contributions, such as typo fixes or minor fixes to other user contributions and single lines fixes will not qualify for rewards. Some issues may have specific reward amounts, which are clearly indicated in the issue labels. The amount displayed on the label reflects the payout for those specific, more complex issues.
   
 - Every contributor will receive a digital badge as a token of recognition for their contribution.
 
@@ -134,5 +134,8 @@ Happy coding! 🚀
 
 ## A Big Thank You to All Our Awesome Contributors ❤️
 ![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
-[Back to the top &uparrow;](#initial)
-
+<div align="center">
+    <a href="#top">
+        <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
+    </a>
+</div>
