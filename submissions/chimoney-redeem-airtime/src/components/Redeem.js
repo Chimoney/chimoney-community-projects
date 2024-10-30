@@ -143,7 +143,7 @@ const Redeem = () => {
   return (
     <HomeContainer>
       <Header>
-        <h1>Welcome To Keeptile</h1>
+        <h1>Welcome To Keeplite</h1>
       </Header>
       
       <MainContent>
