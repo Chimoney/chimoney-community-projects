@@ -29,6 +29,7 @@ You can view this README in your preferred language:
 - [Korean (한국어)](README-KO.md)
 - [Chinese (中文)](README-CN.md)
 - [German (Deutsch)](README-GM.md)
+- [Hindi (हिन्दी)](README-HN.md)
 
 ---
 
@@ -134,9 +135,8 @@ Happy coding! 🚀
 
 ## A Big Thank You to All Our Awesome Contributors ❤️
 ![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
-<br>
-<p align="left">
-    <a href="#initial">
-        <img src="https://img.shields.io/badge/Back_to_Top-%23000000.svg?style=for-the-badge&logo=GitHub&logoColor=white" width="200" padding="#2d2c29" />
+<div align="center">
+    <a href="#top">
+        <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
     </a>
-</p>
+</div>
