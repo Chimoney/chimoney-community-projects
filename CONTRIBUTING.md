@@ -60,7 +60,7 @@ Ensure that all contributions are tested. If you're using the **Chimoney API**, 
 - **Use your API keys** to test transactions and integration.
 
 ## Code of Conduct  
-We are committed to maintaining a welcoming and inclusive community. By participating, you agree to follow our [Code of Conduct](link-to-code-of-conduct).
+We are committed to maintaining a welcoming and inclusive community. By participating, you agree to follow our [Code of Conduct](https://github.com/Chimoney/chimoney-community-projects/blob/main/CODE_OF_CONDUCT.md).
 
 ## Additional Resources  
 - [GitHub Flow Guide](https://guides.github.com/introduction/flow/)  
