@@ -30,6 +30,7 @@ You can view this README in your preferred language:
 - [Chinese (中文)](README-CN.md)
 - [German (Deutsch)](README-GM.md)
 - [Bangla (বাংলা)](README-BN.md)
+- [Hindi (हिन्दी)](README-HN.md)
 
 ---
 
@@ -73,7 +74,10 @@ You can view this README in your preferred language:
 
 Join us for a month of coding, learning, and contributing to Chimoney's open-source projects!
 
+We have also introduced a [Quickstart Guide](submissions/Quickstart_Guide.md) to help you get started with integrating the Chimoney API into your applications.
+
 ## Chimoney Rewards
+
 At Chimoney, we value your contributions, and to show our appreciation, we will be offering Chimoney rewards for pull requests that are successfully merged into our open-source projects.
 
 - For every substantial merged Pull Request (PR), contributors will receive a Chimoney reward of $10, sent via email. Please note that minor contributions, such as typo fixes or minor fixes to other user contributions and single lines fixes will not qualify for rewards. Some issues may have specific reward amounts, which are clearly indicated in the issue labels. The amount displayed on the label reflects the payout for those specific, more complex issues.
@@ -135,9 +139,8 @@ Happy coding! 🚀
 
 ## A Big Thank You to All Our Awesome Contributors ❤️
 ![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
-<br>
-<p align="left">
-    <a href="#initial">
-        <img src="https://img.shields.io/badge/Back_to_Top-%23000000.svg?style=for-the-badge&logo=GitHub&logoColor=white" width="200" padding="#2d2c29" />
+<div align="center">
+    <a href="#top">
+        <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
     </a>
-</p>
+</div>
