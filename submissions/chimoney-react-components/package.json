@@ -1,0 +1,51 @@
+{
+  "name": "chimoney-react-components",
+  "version": "1.1.4",
+  "main": "dist/chimoney-react-components.umd.js",
+  "module": "dist/chimoney-react-components.es.js",
+  "files": [
+    "dist"
+  ],
+  "style": "./dist/style.css",
+  "exports": {
+    ".": {
+      "import": "./dist/chimoney-react-components.es.js",
+      "require": "./dist/chimoney-react-components.umd.js"
+    },
+    "./styles.css": "./dist/style.css"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "lucide-react": "^0.453.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "@types/react": "^18.3.11",
+    "@vitejs/plugin-react": "^4.3.2",
+    "autoprefixer": "^10.4.20",
+    "babel-loader": "^9.2.1",
+    "tailwindcss": "^3.3.2",
+    "vite": "^5.4.8",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
