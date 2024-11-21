@@ -68,5 +68,7 @@ Chimoney’s API enables flexibility in payment structure and offers a wide vari
 Chimoney’s API provides wholesome and seamless cross-border payout solutions. It guarantees instant, secured and simplified payment options for workers in over 100 countries. Whether you are a [developer](https://dash.chimoney.io/auth/signin?next=/developers), a platform owner, or a gig worker, with [Chimoney’s API](https://chimoney.readme.io/reference/getting-started-with-your-api), your payout and disbursement needs are well covered. [Get started now](https://chimoney.readme.io/reference/getting-started-with-your-api).
 
 
+## About the Author
 
-
+**Chukwuemeka Abuba**
+A technical writer and frontend developer specializing in TypeScript and Next.js. Passionate about crafting clear documentation, building user-centric interfaces, and sharing knowledge with the developer community.
