@@ -77,9 +77,9 @@ async function sendEmail(email, message, badgeInfo) {
 async function getUserEmail(username) {
   try {
     const { data: user } = await octokit.users.getByUsername({ username });
-    return user.email || null;
+    return user.email;
   } catch (error) {
-    console.error(`Error fetching email for ${username}:`, error.message);
+    console.error(`Error fetching email for ${username}:`, error);
     return null;
   }
 }
