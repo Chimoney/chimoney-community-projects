@@ -18,12 +18,11 @@ jobs:
           node-version: "16.x"
 
       - name: Install dependencies
-        run: npm install @octokdit/rest nodemailer
+        run: npm install @octokit/rest nodemailer
 
       - name: Run badge automation script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
-        run: |
-          node .github/scripts/badge-automation.js
+        run: node .github/scripts/badge-automation.js
