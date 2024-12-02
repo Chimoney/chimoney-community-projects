@@ -18,7 +18,7 @@ jobs:
           node-version: "16.x"
 
       - name: Install dependencies
-        run: npm install @octokdit/rest nodemailer
+        run: npm install nodemailer
 
       - name: Run badge automation script
         env:
