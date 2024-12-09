@@ -2,7 +2,7 @@
 
 # Why Flexible Payout Solutions Matter for Marketplace and Gig Economies
 
-In today’s growing digital world, there has been a continuous shift in how employers connect with the workforce. The demand for gig workers has continued to grow since the [COVID-19](https://www.forbes.com/sites/rebeccahenderson/2020/12/10/how-covid-19-has-transformed-the-gig-economy/) pandemic. [Data from the World Bank shows that gig economy accounts for up to 12% of labor force globally](https://www.worldbank.org/en/news/press-release/2023/09/07/demand-for-online-gig-work-rapidly-rising-in-developing-countries). However, finding a payment service that enables gig workers to receive payment on their terms has become a recurring challenge.
+There has been a continuous shift in how employers connect with the workforce and the demand for gig workers has continued to grow since the [COVID-19](https://www.forbes.com/sites/rebeccahenderson/2020/12/10/how-covid-19-has-transformed-the-gig-economy/) pandemic. [Data from the World Bank shows that gig economy accounts for up to 12% of labor force globally](https://www.worldbank.org/en/news/press-release/2023/09/07/demand-for-online-gig-work-rapidly-rising-in-developing-countries). However, finding a payment service that enables gig workers to receive payment on their terms has become a recurring challenge.
 
 Challenges such as differences in currencies and payment systems between freelancers and employers that cause payout delays and other bottlenecks are factors why freelancers and platform owners should adopt Flexible Payout Solutions that facilitate faster payment in freelancers' preferred currencies.
 
