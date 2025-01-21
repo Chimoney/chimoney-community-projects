@@ -74,7 +74,7 @@ You can view this README in your preferred language:
 
 Join us for a month of coding, learning, and contributing to Chimoney's open-source projects!
 
-We have also introduced a [Quickstart Guide](submissions/Quickstart_Guide.md) to help you get started with integrating the Chimoney API into your applications.
+We have also introduced a [Quickstart Guide](submissions\Articles\Quickstart_Guide.md) to help you get started with integrating the Chimoney API into your applications.
 
 ## Chimoney Rewards
 
