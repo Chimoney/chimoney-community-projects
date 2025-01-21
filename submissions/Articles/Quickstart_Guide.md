@@ -106,48 +106,4 @@ For more examples and resources, visit the [Chimoney Community Projects](https:/
 
 ## Author
 
-# 👋 Hello, I’m Brijesh Thummar  
-
-### 🎓 Second-Year Computer Science Student | Class of 2027  
-
-💡 **Aspiring Quant Developer**  
-
----
-
-## 🚀 What Drives Me  
-
-With a strong passion for coding and problem-solving, I aim to merge the worlds of technology and finance to craft powerful, efficient software solutions.  
-
----
-
-## 🛠️ Proficiencies  
-
-- **Languages:**  
-  C, Java, Rust, Scala, Swift  
-- **Technologies & Tools:**  
-  Docker, Kubernetes, Java Swing, JDBC, Maven, MySQL  
-- **Core Strengths:**  
-  Algorithms, Data Structures, Object-Oriented Programming  
-
----
-
-## 🌱 Current Focus  
-
-Mastering advanced programming concepts while contributing to impactful open-source projects.  
-
----
-
-## 💻 What I Love  
-
-- Building innovative software solutions  
-- Tackling complex problems  
-- Collaborating with developers worldwide  
-
----
-
-🌟 **Let’s Connect & Create**  
-
-- **GitHub:** [Brijesh Thummar](https://github.com/Brijeshthummar02)  
-- **LinkedIn:** [Brijesh Thummar](https://www.linkedin.com/in/brijesh-thummar-30103a31a/)  
-
-Join me on this exciting journey as I strive to make meaningful contributions to technology and finance.  
+# I’m Brijesh Thummar, a second-year Computer Science student (Class of 2027) and aspiring Quant Developer. I love coding, solving complex problems, and building innovative software solutions. Let’s connect and create something impactful
