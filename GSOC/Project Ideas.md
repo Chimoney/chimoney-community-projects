@@ -41,7 +41,7 @@ The goal of this project is to develop plugins that integrate Chimoney’s globa
 
 **Difficulty:** Intermediate
 
-**Mentors:** [Mentor Name](@githubprofile), [Mentor Name](@githubprofile)
+**Mentors:** [Phylis](@githubprofile), [Ayomide](@githubprofile)
 
 ---
 
@@ -68,8 +68,66 @@ This project aims to develop an open-source Software Development Kit (SDK) for [
 - Familiarity with CI/CD practices
 - Experience with documentation tools and practices
 - **Difficulty:** Intermediate
-- **Mentors:** [Mentor Name](@githubprofile)
+- **Mentors:** [Phylis](@githubprofile)
 
+---
+
+### **Chimoney Payment Gateway for Open Source Projects**
+**Description**:
+Develop a lightweight payment gateway that enables open-source projects to receive 
+donations or payments via Chimoney [web monetization](https://drive.google.com/file/d/1sEpqXZByk8cflVTy2cRO0kljKIjWb7ki/view?usp=sharing) (which is [powered by interledger](https://webmonetization.org/)). This project will help developers monetize their projects using Chimoney’s API.
+
+**Expected Outcome:**
+
+- A working payment gateway with API integration
+- Open-source SDK for easy implementation
+- Documentation with examples for open-source contributors
+
+**Skills Required:**
+
+- JavaScript/Python for backend
+- API development
+- UI/UX experience
+- **Difficulty**: Intermediate
+- **Mentor**: Adebayo
+---
+
+### **Chimoney Bulk Payout CLI Tool**
+**Description**:
+Develop a command-line interface (CLI) tool that enables businesses to process bulk payments using Chimoney’s API, making it easy to handle large-scale transactions from the terminal.
+
+**Expected Outcome**:
+
+- A CLI tool that supports CSV uploads and bulk payment execution.
+- Logging and error-handling mechanisms.
+- Secure API authentication system.
+
+**Skills Required:**
+
+- Python, Go, or Node.js for CLI development.
+- API integration knowledge.
+- Security best practices for handling payment transactions.
+- **Difficulty**: Intermediate
+---
+
+### **Chimoney Payment SDK for Mobile (Android & iOS)**
+**Description:**
+Develop a mobile SDK for Android and iOS that allows developers to integrate Chimoney’s payment features into their mobile apps effortlessly. The SDK should include features like payouts, redemptions, transaction history, and multi-currency support.
+
+**Expected Outcome:**
+
+- Fully functional Chimoney SDK for Android (Kotlin) and iOS (Swift)
+- SDK documentation and integration guide
+- Sample applications demonstrating usage
+- Unit tests and integration tests
+
+**Skills Required:**
+
+- Kotlin (Android), Swift (iOS)
+- Mobile SDK development
+- API integration
+- Writing technical documentation
+- **Difficulty**: Intermediate
 ---
 
 ## Resources
