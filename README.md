@@ -78,6 +78,6 @@ Connect with others building with the Chimoney API on our [Discord server](https
 
 ## Contact
 
-This repository is actively maintained by [@phyleria](https://github.com/phyleria), with support from [@brijesh](https://github.com/brijesh) and [@daniel](https://github.com/daniel).
+This repository is actively maintained by [@phyleria](https://github.com/phyleria), with support from [@brijesh](https://github.com/brijesh) and [@Daniel](https://github.com/Danbaba1).
 
 For any questions or direct communication, please reach out via email at **community@chimoney.io**.
