@@ -70,8 +70,7 @@ We also offer rewards and recognition for meaningful contributions during Hackto
 Chimoney is participating in Hacktoberfest 2025!✨
 This year, along with our existing open-source projects, we’re introducing a brand-new project: **IaaS-k8s**
 
-IaaS-k8s is a comprehensive multi-cloud Kubernetes infrastructure deployment solution supporting AWS EKS and GCP GKE, built with Pulumi and TypeScript.
-Add setup guides and documentation for Kubernetes clusters on different providers.
+IaaS-k8s is a multi-cloud Kubernetes infrastructure deployment solution supporting AWS EKS and GCP GKE, built with Pulumi and TypeScript.
 
 ➝ _Learn more about the project and get started here:_ [_IaaS-k8s Project_](https://github.com/Chimoney/Iaas)
 
