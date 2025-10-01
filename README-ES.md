@@ -61,14 +61,12 @@ Para contribuir a los proyectos/problemas, debes tener:
 - Familiaridad con sistemas de control de versiones como Git.
 - Habilidades de redacción técnica (opcional)
 
-
 ## Recursos
 
 Aquí hay algunos recursos útiles para comenzar:
 
 - **Documentación API:** Explore la documentación API de Chimoney. Puede encontrar información detallada [aquí](https://chimoney.readme.io/reference/introduction).
   
-
 ## Obtención de claves API
 
 1. **Regístrese para obtener una cuenta de desarrollador de Chimoney:** Consulte las instrucciones de acceso a Sandbox [aquí](https://sandbox.chimoney.io/developers). Si aún no tiene una, deberá registrarse para obtener acceso a la zona de pruebas de una cuenta de desarrollador de Chimoney en [sandbox.chimoney.io](https://chimoney.readme.io/reference/sandbox-environment).
@@ -78,7 +76,6 @@ Aquí hay algunos recursos útiles para comenzar:
 2. **Cree una nueva aplicación:** Una vez que haya iniciado sesión, navegue hasta su panel de desarrollador y cree una nueva aplicación. Esto generará su clave API por usted.
 
 5. **Comience a contribuir:** Con sus claves API en su lugar, ¡está listo para comenzar a contribuir!
-
 
 ## Configuración del proyecto
 
@@ -90,35 +87,37 @@ Este repositorio contiene un montón de proyectos pequeños. Diferentes proyecto
 - Clona tu repositorio bifurcado en tu máquina local.
 
   ### Contribuya creando nuevos proyectos
-    - Puedes contribuir desarrollando nuevos proyectos que implementen la API de Chimoney.
-    - Después de trabajar en la solución, envíela a la carpeta [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions).
+
+  - Puedes contribuir desarrollando nuevos proyectos que implementen la API de Chimoney.
+  - Después de trabajar en la solución, envíela a la carpeta [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions).
 
   ### Contribuir a los proyectos existentes
-    - Navegue hasta el directorio del proyecto elegido dentro de la carpeta [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions).
-    - Siga las instrucciones de configuración específicas para cada proyecto en función de sus pilas. Las instrucciones detalladas se pueden encontrar en el directorio de cada proyecto.
-    - A continuación se muestran los enlaces a estos proyectos:
-      - [Comenzar](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/GetStarted)
-      - [Artículos centrados en desarrolladores](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Dev%20focused%20articles)
-      - [Blog simple](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/simple_blog)
-      - [Chimoney Python](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chimoney-Python)
-      - [Chisend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chisend)
-      - [Copia de chimenea propuesta](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Proposed-Chimoney-Copy)
-      - [Pago de API de Chiconnect Bank](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-bank-api-payout)
-      - [Pago con tarjeta de regalo de Chiconnect](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-giftcard-payout)
-      - [Aplicación web Chiconnect Laravel](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-laravel-web-app)
-      - [Pago de dinero móvil de Chiconnect](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-mobile-money-payout)
-      - [Artículo de desarrollo de Chiconnect](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect_dev_article)
-      - [Chimap](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimap)
-      - [Chimoney Discord Bot](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-discord-bot)
-      - [Chimoney JS](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-js)
-      - [Tiempo aire de pago de chimenea](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-payout-airtime)
-      - [Chimoney Canjear tiempo aire](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-redeem-airtime)
-      - [Presentación de Chispend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-presentation)
-      - [Copia propuesta de Chispend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-proposed-copy)
-      - [Aplicación Chispend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_app)
-      - [Widget Chispend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
-      - [Pagar Paddy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
-      - [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
+
+  - Navegue hasta el directorio del proyecto elegido dentro de la carpeta [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions).
+  - Siga las instrucciones de configuración específicas para cada proyecto en función de sus pilas. Las instrucciones detalladas se pueden encontrar en el directorio de cada proyecto.
+  - A continuación se muestran los enlaces a estos proyectos:
+    - [Comenzar](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/GetStarted)
+    - [Artículos centrados en desarrolladores](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Dev%20focused%20articles)
+    - [Blog simple](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/simple_blog)
+    - [Chimoney Python](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chimoney-Python)
+    - [Chisend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chisend)
+    - [Copia de chimenea propuesta](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Proposed-Chimoney-Copy)
+    - [Pago de API de Chiconnect Bank](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-bank-api-payout)
+    - [Pago con tarjeta de regalo de Chiconnect](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-giftcard-payout)
+    - [Aplicación web Chiconnect Laravel](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-laravel-web-app)
+    - [Pago de dinero móvil de Chiconnect](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-mobile-money-payout)
+    - [Artículo de desarrollo de Chiconnect](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect_dev_article)
+    - [Chimap](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimap)
+    - [Chimoney Discord Bot](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-discord-bot)
+    - [Chimoney JS](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-js)
+    - [Tiempo aire de pago de chimenea](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-payout-airtime)
+    - [Chimoney Canjear tiempo aire](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-redeem-airtime)
+    - [Presentación de Chispend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-presentation)
+    - [Copia propuesta de Chispend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-proposed-copy)
+    - [Aplicación Chispend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_app)
+    - [Widget Chispend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
+    - [Pagar Paddy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
+    - [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
 
 ## Código de conducta
 
@@ -163,5 +162,6 @@ Para obtener más recursos e información, visite nuestro [sitio web](https://ch
 
 ¡Feliz codificación! 🚀
 
-## Agradeciendo a todos los increíbles contribuyentes :corazón:
+## Agradeciendo a todos los increíbles contribuyentes :corazón
+
 ![Colaboradores](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)

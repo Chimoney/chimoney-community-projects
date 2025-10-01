@@ -1,5 +1,5 @@
 <div align="center">
-  
+
 [![Docs](https://img.shields.io/badge/docs-chimoney.readme.io-blue)](https://chimoney.readme.io/reference/introduction)
 [![MIT License](https://img.shields.io/badge/license-MIT-green)](https://github.com/Chimoney/chimoney-community-projects?tab=MIT-1-ov-file)
 [![Open Issues](https://img.shields.io/github/issues/Chimoney/chimoney-community-projects)](https://github.com/Chimoney/chimoney-community-projects/issues)
@@ -23,10 +23,23 @@
 </h3>
 
 <div align="center">
-  
+
   [Documentation](https://chimoney.readme.io/reference/introduction) • [Developer toolkit](https://chimoney.io/toolkit/) • [API use cases](https://chimoney.io/api-use-cases/) • [Join us on Discord](https://discord.gg/TsyKnzT4qV) • [Connect on X](https://x.com/chimoney_io)
-  
+
 </div>
+
+---
+
+## Table of Contents
+
+- [About Chimoney](#about-chimoney)
+- [About Chimoney API](#about-chimoney-api)
+- [About Chimoney Community Projects](#about-chimoney-community-projects)
+- [Getting Started with the Chimoney API](#getting-started-with-the-chimoney-api)
+- [Contributing](#contributing)
+- [Chimoney Hacktoberfest](#chimoney-hacktoberfest)
+- [Join our Community](#join-our-community)
+- [Contact](#contact)
 
 ---
 
@@ -44,7 +57,7 @@ The [Chimoney API](https://chimoney.readme.io/reference/introduction) lets you p
 
 Chimoney Community Projects are open-source contributions made by developers, writers, and community members using the Chimoney API. They include SDKs in different programming languages, sample applications, integrations, and technical articles that highlight real-world use cases.
 
-**Note:** Chimoney Community Projects are built using different programming languages and tech stacks. As a result, each project includes its own setup instructions in its individual README file. Be sure to check the specific README for guidance on running or contributing to that project.
+> **Note:** Chimoney Community Projects are built using different programming languages and tech stacks. As a result, each project includes its own setup instructions in its individual README file. Be sure to check the specific README for guidance on running or contributing to that project.
 
 ## Getting Started with the Chimoney API
 
@@ -52,9 +65,21 @@ To get started with the Chimoney API, sign up for a developer account at [sandbo
 
 ## Contributing
 
-Chimoney Community Projects are open to developers, writers and designers who want to build with, write or create around the Chimoney API. You can contribute by submitting SDKs, integrations, example apps, or technical articles showing real-world use cases. To get started, explore the [open issues](https://github.com/Chimoney/chimoney-community-projects/issues) in this repo or propose your own idea.
+Chimoney Community Projects are open to developers, writers and designers who want to build with, write or create around the Chimoney API.
+
+### Ways to Contribute
+
+You can contribute by submitting SDKs, integrations, example apps, or technical articles showing real-world use cases.
+
+### Getting Started
+
+To get started, explore the [open issues](https://github.com/Chimoney/chimoney-community-projects/issues) in this repo or propose your own idea.
+
+### Submission Process
 
 When you're ready to make a submission, fork the repo, create a branch, make your changes, and open a pull request. Be sure to include a clear description and follow the project folder structure; all contributions go into the `submissions/` directory, with your specific contribution placed in its relevant subfolder (e.g. articles in the `articles/` folder, SDKs in the `SDKs/` folder).
+
+### Additional Resources
 
 You can also read the full [Contribution Guidelines](/CONTRIBUTING.md) here to understand how to contribute effectively.
 
@@ -74,6 +99,6 @@ Connect with others building with the Chimoney API on our [Discord server](https
 
 ## Contact
 
-This repository is actively maintained by [@phyleria](https://github.com/phyleria), with support from [@brijesh](https://github.com/brijesh) and [@Daniel](https://github.com/Danbaba1).
+This repository is actively maintained by [@phyleria](https://github.com/phyleria), with support from [@brijesh](https://github.com/Brijeshthummar02) and [@Daniel](https://github.com/Danbaba1).
 
-For any questions or direct communication, please reach out via email at **community@chimoney.io**.
+For any questions or direct communication, please reach out via email at **<community@chimoney.io>**.

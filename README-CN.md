@@ -87,34 +87,37 @@
 - 将您分叉的存储库克隆到您的本地计算机。
 
   ### 通过创建新项目进行贡献
-    - 您可以通过开发实现Chimoney API的新项目来做出贡献。
-    - 在解决方案上工作后，将其提交到[submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions)文件夹。
+
+  - 您可以通过开发实现Chimoney API的新项目来做出贡献。
+  - 在解决方案上工作后，将其提交到[submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions)文件夹。
+
   ### 对现有项目进行贡献
-    - 转到[submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions)文件夹内您选择的项目目录。
-    - 根据各个项目的堆栈，遵循特定的设置说明。每个项目的详细说明可以在项目的目录中找到。
-    - 以下是这些项目的链接：
-      - [开始](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/GetStarted)
-      - [开发相关文章](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Dev%20focused%20articles)
-      - [简单博客](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/simple_blog)
-      - [Chimoney Python](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chimoney-Python)
-      - [Chisend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chisend)
-      - [建议的Chimoney复制](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Proposed-Chimoney-Copy)
-      - [Chiconnect银行API付款](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-bank-api-payout)
-      - [Chiconnect礼品卡支付](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-giftcard-payout)
-      - [Chiconnect Laravel Web App](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-laravel-web-app)
-      - [Chiconnect手机支付](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-mobile-money-payout)
-      - [Chiconnect开发文章](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect_dev_article)
-      - [Chimap](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimap)
-      - [Chimoney Discord机器人](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-discord-bot)
-      - [Chimoney JS](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-js)
-      - [Chimoney付款空中充值](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-payout-airtime)
-      - [Chimoney兑换空中充值](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-redeem-airtime)
-      - [Chispend演示](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-presentation)
-      - [Chispend建议的复制](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-proposed-copy)
-      - [Chispend应用程序](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_app)
-      - [Chispend小部件](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
-      - [Pay Paddy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
-      - [TopDelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
+
+  - 转到[submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions)文件夹内您选择的项目目录。
+  - 根据各个项目的堆栈，遵循特定的设置说明。每个项目的详细说明可以在项目的目录中找到。
+  - 以下是这些项目的链接：
+    - [开始](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/GetStarted)
+    - [开发相关文章](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Dev%20focused%20articles)
+    - [简单博客](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/simple_blog)
+    - [Chimoney Python](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chimoney-Python)
+    - [Chisend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chisend)
+    - [建议的Chimoney复制](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Proposed-Chimoney-Copy)
+    - [Chiconnect银行API付款](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-bank-api-payout)
+    - [Chiconnect礼品卡支付](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-giftcard-payout)
+    - [Chiconnect Laravel Web App](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-laravel-web-app)
+    - [Chiconnect手机支付](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-mobile-money-payout)
+    - [Chiconnect开发文章](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect_dev_article)
+    - [Chimap](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimap)
+    - [Chimoney Discord机器人](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-discord-bot)
+    - [Chimoney JS](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-js)
+    - [Chimoney付款空中充值](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-payout-airtime)
+    - [Chimoney兑换空中充值](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-redeem-airtime)
+    - [Chispend演示](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-presentation)
+    - [Chispend建议的复制](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-proposed-copy)
+    - [Chispend应用程序](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_app)
+    - [Chispend小部件](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
+    - [Pay Paddy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
+    - [TopDelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
 
 ## 行为准则
 
@@ -160,5 +163,6 @@
 愉快的编码！ 🚀
 
 ## 感谢所有出色的贡献者 :heart:
+
 ![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
 [回到顶部 &uparrow;](#initial)

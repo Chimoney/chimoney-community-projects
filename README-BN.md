@@ -45,10 +45,10 @@
 <br />
 <br />
 <p align="center">
-<a href="https://chimoney.io/toolkit/"><u>ডেভেলপার টুলকিট</u></a>. 
+<a href="https://chimoney.io/toolkit/"><u>ডেভেলপার টুলকিট</u></a>.
 <a href="https://discord.gg/Q3peDrPG95"><u>ডিস্কর্ড কমিউনিটি</u></a>
     ·
-<a href="https://chimoney.io/api-use-cases/"><u>এপিআই ব্যবহার কেস</u></a>. 
+<a href="https://chimoney.io/api-use-cases/"><u>এপিআই ব্যবহার কেস</u></a>.
 <a href="https://x.com/chimoney_io"><u>টুইটার (X)</u></a>
     ·
 <a href="mailto:community@chimoney.com"><u>ইমেইল</u></a>
@@ -136,6 +136,7 @@
 হ্যাপি কোডিং! 🚀
 
 ## আমাদের সকল অসাধারণ কন্ট্রিবিউটরদের প্রতি অনেক বড় ধন্যবাদ ❤️
+
 ![কন্ট্রিবিউটররা](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
 <div align="center">
     <a href="#top">

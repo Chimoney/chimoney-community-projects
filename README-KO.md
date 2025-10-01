@@ -77,7 +77,6 @@ Chimoney가 주최하는 Hacktoberfest 2023에 오신 것을 환영합니다! �
 
 3. **기여 시작:** API 키가 준비되면 기여를 시작할 준비가 되었습니다!
 
-
 ## 프로젝트 설정
 
 이 저장소에는 여러 개의 작은 프로젝트가 포함되어 있습니다. 다양한 프로젝트는 다양한 스택과 프레임워크를 처리합니다. 개별 프로젝트의 코드는 [제출물](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) 폴더 내의 별도 디렉터리에 있습니다. 이러한 프로젝트에 기여하는 것을 환영합니다. 다이빙할 준비가 되셨나요? 시작하는 방법은 다음과 같습니다.
@@ -88,34 +87,37 @@ Chimoney가 주최하는 Hacktoberfest 2023에 오신 것을 환영합니다! �
 - 포크된 저장소를 로컬 머신에 복제합니다.
 
   ### 새 프로젝트를 만들어 기여하세요
-    - Chimoney API를 구현하는 새로운 프로젝트를 개발하여 기여할 수 있습니다.
-    - 솔루션 작업 후 [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) 폴더에 제출해 주세요.
+
+  - Chimoney API를 구현하는 새로운 프로젝트를 개발하여 기여할 수 있습니다.
+  - 솔루션 작업 후 [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) 폴더에 제출해 주세요.
+
   ### 기존 프로젝트에 기여
-    - [제출물](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) 폴더 내에서 선택한 프로젝트 디렉터리로 이동합니다.
-    - 스택에 따라 각 프로젝트에 대한 특정 설정 지침을 따르십시오. 자세한 지침은 각 프로젝트의 디렉터리에서 확인할 수 있습니다.
-    - 아래는 해당 프로젝트에 대한 링크입니다:
-      - [시작하기](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/GetStarted)
-      - [개발자 중심 기사](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Dev%20focused%20articles)
-      - [간단한 블로그](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/simple_blog)
-      - [치머니 파이썬](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chimoney-Python)
-      - [치센드](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chisend)
-      - [제안된 Chimoney 사본](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Proposed-Chimoney-Copy)
-      - [Chiconnect Bank API 지급](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-bank-api-payout)
-      - [Chiconnect 기프트카드 지급](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-giftcard-payout)
-      - [Chiconnect Laravel 웹 앱](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-laravel-web-app)
-      - [치커넥트 모바일 머니 지급](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-mobile-money-payout)
-      - [Chiconnect 개발 기사](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect_dev_article)
-      - [치맵](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimap)
-      - [Chimoney Discord 봇](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-discord-bot)
-      - [치머니 JS](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-js)
-      - [치머니 지급 방송시간](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-payout-airtime)
-      - [치머니 교환 방송시간](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-redeem-airtime)
-      - [치스펜드 프레젠테이션](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-presentation)
-      - [Chispend 제안 사본](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-proposed-copy)
-      - [Chispend 앱](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_app)
-      - [Chispend 위젯](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
-      - [페이 패디](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
-      - [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
+
+  - [제출물](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) 폴더 내에서 선택한 프로젝트 디렉터리로 이동합니다.
+  - 스택에 따라 각 프로젝트에 대한 특정 설정 지침을 따르십시오. 자세한 지침은 각 프로젝트의 디렉터리에서 확인할 수 있습니다.
+  - 아래는 해당 프로젝트에 대한 링크입니다:
+    - [시작하기](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/GetStarted)
+    - [개발자 중심 기사](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Dev%20focused%20articles)
+    - [간단한 블로그](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/simple_blog)
+    - [치머니 파이썬](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chimoney-Python)
+    - [치센드](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chisend)
+    - [제안된 Chimoney 사본](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Proposed-Chimoney-Copy)
+    - [Chiconnect Bank API 지급](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-bank-api-payout)
+    - [Chiconnect 기프트카드 지급](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-giftcard-payout)
+    - [Chiconnect Laravel 웹 앱](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-laravel-web-app)
+    - [치커넥트 모바일 머니 지급](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-mobile-money-payout)
+    - [Chiconnect 개발 기사](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect_dev_article)
+    - [치맵](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimap)
+    - [Chimoney Discord 봇](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-discord-bot)
+    - [치머니 JS](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-js)
+    - [치머니 지급 방송시간](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-payout-airtime)
+    - [치머니 교환 방송시간](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-redeem-airtime)
+    - [치스펜드 프레젠테이션](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-presentation)
+    - [Chispend 제안 사본](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-proposed-copy)
+    - [Chispend 앱](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_app)
+    - [Chispend 위젯](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
+    - [페이 패디](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
+    - [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
 
 ## 행동 강령
 
@@ -161,5 +163,6 @@ Hacktoberfest 2023에 대한 여러분의 기여를 보고 싶습니다!
 즐거운 코딩하세요! 🚀
 
 ## 훌륭한 기여자 모두에게 감사드립니다 :heart:
+
 ![기여자](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
 [맨 위로 돌아가기 &uparrow;](#initial)
