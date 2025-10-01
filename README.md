@@ -8,6 +8,7 @@
 
 &nbsp;
 
+
 <div align="center" id="initial">
   <a href="https://chimoney.io/" target="_blank">
   <picture>
@@ -28,7 +29,19 @@
   
 </div>
 
----
+___
+<div align="center">
+
+<u>[Deutsch (German)](README-GM.md)</u> | 
+<u>[Español (Spanish)](README-ES.md)</u> | 
+<u>[日本語 (Japanese)](README-JP.md)</u> | 
+<u>[हिन्दी (Hindi)](README-HN.md)</u> | 
+<u>[中文 (Chinese)](README-CN.md)</u> | 
+<u>[বাংলা (Bengali)](README-BN.md)</u>
+
+</div>
+
+___
 
 ## About Chimoney
 
