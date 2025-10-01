@@ -44,7 +44,7 @@ The [Chimoney API](https://chimoney.readme.io/reference/introduction) lets you p
 
 Chimoney Community Projects are open-source contributions made by developers, writers, and community members using the Chimoney API. They include SDKs in different programming languages, sample applications, integrations, and technical articles that highlight real-world use cases.
 
-**Note:** Chimoney Community Projects are built using different programming languages and tech stacks. As a result, each project includes its own setup instructions in its individual README file. Be sure to check the specific README for guidance on running or contributing to that project.
+> **Note:** Chimoney Community Projects are built using different programming languages and tech stacks. As a result, each project includes its own setup instructions in its individual README file. Be sure to check the specific README for guidance on running or contributing to that project.
 
 ## Getting Started with the Chimoney API
 
@@ -66,7 +66,16 @@ Each October, we create beginner-friendly **`Hacktoberfest`** issues to make it 
 
 We also offer rewards and recognition for meaningful contributions during Hacktoberfest. To explore our past Hacktoberfest recaps, see how you can get involved, and make the most of contributing to Chimoney's open-source projects, read more here.
 
----
+### Hcktoberfest 2025
+Chimoney is participating in Hacktoberfest 2025!✨
+This year, along with our existing open-source projects, we’re introducing a brand-new project: **IaaS-k8s**
+
+IaaS-k8s is a comprehensive multi-cloud Kubernetes infrastructure deployment solution supporting AWS EKS and GCP GKE, built with Pulumi and TypeScript.
+Add setup guides and documentation for Kubernetes clusters on different providers.
+
+➝ _Learn more about the project and get started here:_ [_IaaS-k8s Project_](https://github.com/Chimoney/Iaas)
+
+As always, we’ll still have open issues available in this repo for contributors of all levels.
 
 ## Join our Community
 
@@ -74,6 +83,6 @@ Connect with others building with the Chimoney API on our [Discord server](https
 
 ## Contact
 
-This repository is actively maintained by [@phyleria](https://github.com/phyleria), with support from [@brijesh](https://github.com/brijesh) and [@Daniel](https://github.com/Danbaba1).
+This repository is actively maintained by [@phyleria](https://github.com/phyleria), with support from [@brijesh](https://github.com/brijeshthummar02) and [@Daniel](https://github.com/Danbaba1).
 
 For any questions or direct communication, please reach out via email at **community@chimoney.io**.
