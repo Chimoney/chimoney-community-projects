@@ -89,4 +89,4 @@ Treten Sie mit anderen, die mit der Chimoney API entwickeln, in unserem [Discord
 
 Dieses Repository wird aktiv von [@phyleria](https://github.com/phyleria) gepflegt, mit Unterstützung von [@brijesh](https://github.com/brijeshthummar02) und [@Daniel](https://github.com/Danbaba1).  
 
-Bei Fragen oder direkter Kommunikation kontaktieren Sie uns bitte per E-Mail unter **community@chimoney.io**  
+Bei Fragen oder direkter Kommunikation kontaktieren Sie uns bitte per E-Mail unter **<community@chimoney.io>**  

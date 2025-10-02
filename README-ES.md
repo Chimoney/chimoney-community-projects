@@ -61,6 +61,7 @@ Puedes contribuir enviando SDKs, integraciones, aplicaciones de ejemplo o artíc
 Para comenzar, explora los [issues abiertos](https://github.com/Chimoney/chimoney-community-projects/issues) en este repositorio o propone tu propia idea.  
 
 Cuando estés listo para hacer una contribución:  
+
 1. Haz un fork del repositorio.  
 2. Crea una rama.  
 3. Realiza tus cambios.  
@@ -80,6 +81,7 @@ También ofrecemos recompensas y reconocimiento por contribuciones significativa
 Para explorar nuestros resúmenes pasados, ver cómo puedes participar y aprovechar al máximo tu contribución a los proyectos de código abierto de Chimoney, lee más aquí.
 
 ### Hacktoberfest 2025  
+
 ¡Chimoney está participando en Hacktoberfest 2025! ✨  
 Este año, junto con nuestros proyectos de código abierto existentes, estamos presentando un nuevo proyecto: **IaaS-k8s**
 
@@ -98,4 +100,4 @@ Por favor, lee nuestro [Código de Conducta](https://github.com/Chimoney/chimone
 
 Este repositorio es mantenido activamente por [@phyleria](https://github.com/phyleria), con el apoyo de [@brijesh](https://github.com/brijeshthummar02) y [@Daniel](https://github.com/Danbaba1).  
 
-Para cualquier pregunta o comunicación directa, por favor contáctanos por correo a **community@chimoney.io**.
+Para cualquier pregunta o comunicación directa, por favor contáctanos por correo a **<community@chimoney.io>**.

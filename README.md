@@ -8,7 +8,6 @@
 
 &nbsp;
 
-
 <div align="center" id="initial">
   <a href="https://chimoney.io/" target="_blank">
   <picture>
@@ -32,28 +31,42 @@
 ___
 <div align="center">
 
-<u>[Deutsch (German)](README-GM.md)</u> | 
-<u>[Español (Spanish)](README-ES.md)</u> | 
-<u>[日本語 (Japanese)](README-JP.md)</u> | 
-<u>[हिन्दी (Hindi)](README-HN.md)</u> | 
-<u>[中文 (Chinese)](README-CN.md)</u> | 
+<u>[Deutsch (German)](README-GM.md)</u> |
+<u>[Español (Spanish)](README-ES.md)</u> |
+<u>[日本語 (Japanese)](README-JP.md)</u> |
+<u>[हिन्दी (Hindi)](README-HN.md)</u> |
+<u>[中文 (Chinese)](README-CN.md)</u> |
 <u>[বাংলা (Bengali)](README-BN.md)</u>
 
 </div>
 
 ___
 
-## About Chimoney
+## Table of Contents
+
+- [About](#about)
+  - [Chimoney](#chimoney)
+  - [Chimoney API](#chimoney-api)
+  - [Chimoney Community Projects](#chimoney-community-projects)
+- [Getting Started with the Chimoney API](#getting-started-with-the-chimoney-api)
+- [Contributing](#contributing)
+- [Chimoney Hacktoberfest](#chimoney-hacktoberfest)
+- [Join our Community](#join-our-community)
+- [Contact](#contact)
+
+## About
+
+### Chimoney
 
 [Chimoney](https://chimoney.io/) is a global payments infrastructure provider that enables businesses, organizations and communities to send bulk payments instantly in over 130 countries. Payouts can be redeemed via bank transfers, mobile money, gift cards, and airtime.
 
-## About Chimoney API
+### Chimoney API
 
 The [Chimoney API](https://chimoney.readme.io/reference/introduction) lets you programmatically send, receive, and collect payments across borders with support for multiple channels including bank accounts, mobile money wallets, gift cards, and airtime.
 
 [Here's a video](https://www.youtube.com/watch?v=VItvZbPH9cU&t=4s) to learn more about the Chimoney API.
 
-## About Chimoney Community Projects
+### Chimoney Community Projects
 
 Chimoney Community Projects are open-source contributions made by developers, writers, and community members using the Chimoney API. They include SDKs in different programming languages, sample applications, integrations, and technical articles that highlight real-world use cases.
 
@@ -65,9 +78,28 @@ To get started with the Chimoney API, sign up for a developer account at [sandbo
 
 ## Contributing
 
-Chimoney Community Projects are open to developers, writers and designers who want to build with, write or create around the Chimoney API. You can contribute by submitting SDKs, integrations, example apps, or technical articles showing real-world use cases. To get started, explore the [open issues](https://github.com/Chimoney/chimoney-community-projects/issues) in this repo or propose your own idea.
+Chimoney Community Projects are open to developers, writers and designers who want to build with, write or create around the Chimoney API. You can contribute by submitting:
 
-When you're ready to make a submission, fork the repo, create a branch, make your changes, and open a pull request. Be sure to include a clear description and follow the project folder structure; all contributions go into the `submissions/` directory, with your specific contribution placed in its relevant subfolder (e.g. articles in the `articles/` folder, SDKs in the `SDKs/` folder).
+- SDKs
+- integrations
+- example apps
+- or technical articles showing real-world use cases.
+
+To get started, explore the [open issues](https://github.com/Chimoney/chimoney-community-projects/issues) in this repo or propose your own idea.
+
+When you're ready to make a submission:
+
+- fork the repo
+- create a branch
+- make your changes
+- and open a pull request.
+
+Be sure to include a clear description and follow the project folder structure; all contributions go into the `submissions/` directory, with your specific contribution placed in its relevant subfolder (e.g.
+
+- articles in the `articles/` folder
+- SDKs in the `SDKs/` folder
+
+).
 
 You can also read the full [Contribution Guidelines](/CONTRIBUTING.md) here to understand how to contribute effectively.
 
@@ -80,6 +112,7 @@ Each October, we create beginner-friendly **`Hacktoberfest`** issues to make it 
 We also offer rewards and recognition for meaningful contributions during Hacktoberfest. To explore our past Hacktoberfest recaps, see how you can get involved, and make the most of contributing to Chimoney's open-source projects, read more here.
 
 ### Hcktoberfest 2025
+
 Chimoney is participating in Hacktoberfest 2025!✨
 This year, along with our existing open-source projects, we’re introducing a brand-new project: **IaaS-k8s**
 
@@ -97,4 +130,4 @@ Connect with others building with the Chimoney API on our [Discord server](https
 
 This repository is actively maintained by [@phyleria](https://github.com/phyleria), with support from [@brijesh](https://github.com/brijeshthummar02) and [@Daniel](https://github.com/Danbaba1).
 
-For any questions or direct communication, please reach out via email at **community@chimoney.io**.
+For any questions or direct communication, please reach out via email at **<community@chimoney.io>**.
