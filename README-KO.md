@@ -1,3 +1,13 @@
+<div align="center">
+  
+[![Docs](https://img.shields.io/badge/docs-chimoney.readme.io-blue)](https://chimoney.readme.io/reference/introduction)
+[![MIT License](https://img.shields.io/badge/license-MIT-green)](https://github.com/Chimoney/chimoney-community-projects?tab=MIT-1-ov-file)
+[![Open Issues](https://img.shields.io/github/issues/Chimoney/chimoney-community-projects)](https://github.com/Chimoney/chimoney-community-projects/issues)
+
+</div>
+
+&nbsp;
+
 <div align="center" id="initial">
   <a href="https://chimoney.io/" target="_blank">
   <picture>
@@ -6,163 +16,76 @@
   </a>
 </div>
 
-<h1 align = "center">Chimoney 커뮤니티 프로젝트</h1>
+<h3 align="center">
+  글로벌 결제.
+  <br/>
+  하나의 API로 130개 이상의 국가에 접근하세요. <br/>
+</h3>
 
-<p align="center">🎉 Hacktoberfest 2023에 참여합니다! 🎉</p>
+<div align="center">
+  
+  [문서](https://chimoney.readme.io/reference/introduction) • [개발자 도구](https://chimoney.io/toolkit/) • [API 사용 사례](https://chimoney.io/api-use-cases/) • [Discord에 참여하기](https://discord.gg/TsyKnzT4qV) • [X에서 소통하기](https://x.com/chimoney_io)
+  
+</div>
 
-<h1 align = "center">Chimoney 핵토버페스트 2023</h1>
+---
 
-<!-- # Chimoney Hacktoberfest 2023 -->
+## Chimoney 소개
 
-[English](README.md) | [Spanish](README-ES.md) | [日本語](README-JP.md) | 한국인
+[Chimoney](https://chimoney.io/)는 전 세계 130개 이상의 국가에서 기업, 조직, 커뮤니티가 대량 결제를 즉시 보낼 수 있도록 지원하는 글로벌 결제 인프라 제공업체입니다. 송금은 은행 이체, 모바일 머니, 기프트 카드, 에어타임을 통해 수령할 수 있습니다.
 
-Chimoney가 주최하는 Hacktoberfest 2023에 오신 것을 환영합니다! 이것은 Chimoney의 오픈 소스 프로젝트에 기여하기 위한 완벽한 가이드입니다.
+## Chimoney API 소개
 
-> ⭐️ Hacktoberfest에 처음 오신 분이라면 자세한 내용을 알아보고 참가 등록을 하실 수 있습니다 [여기](https://hacktoberfest.com/participation/). 등록 기간은 **9월 26일부터 10월 31일**까지입니다.
+[Chimoney API](https://chimoney.readme.io/reference/introduction)를 사용하면 은행 계좌, 모바일 머니 지갑, 기프트 카드, 에어타임 등 다양한 채널을 통해 국경을 넘어 결제를 송수신하고 수금할 수 있습니다.  
 
- <p align="center">
-    <br />
-    <a href="https://chimoney.readme.io/reference/introduction" rel="dofollow"><strong>문서 살펴보기 »</strong></a>
-    <br />
-    <br />
-    <a href="https://discord.gg/Q3peDrPG95">다음으로 연결 Discord</a>
-    ·
-    <a href="https://x.com/chimoney_io">우리를 따라 오세요 X</a>
-    ·
-    <a href="mailto:community@chimoney.com">Email</a>
-  </p>
+더 자세히 알아보려면 [이 영상](https://www.youtube.com/watch?v=VItvZbPH9cU&t=4s)을 확인하세요.
 
-## 목차
+## Chimoney 커뮤니티 프로젝트 소개
 
-- [치머니 핵토버페스트 2023](#chimoney-hacktoberfest-2023)
-  - [목차](#목차)
-  - [소개](#소개)
-  - [전제조건](#prerequisites)
-  - [자원](#resources)
-  - [API 키 얻기](#obtaining-api-keys)
-  - [프로젝트 설정](#project-setup)
-  - [행동강령](#행동강령)
-  - [멘토십](#멘토십)
-  - [상 및 표창](#prizes-and-recognition)
-  - [라이브 이벤트](#live-events)
-  - [라이센스](#license)
-  - [연락처 정보](#연락처-정보)
-  - [추가 리소스](#additional-resources)
+Chimoney 커뮤니티 프로젝트는 개발자, 작가, 커뮤니티 구성원이 Chimoney API를 활용해 만든 오픈소스 기여물입니다. 여기에는 다양한 언어의 SDK, 샘플 애플리케이션, 통합, 실제 사용 사례를 다룬 기술 문서가 포함됩니다.
 
-## 소개
+> **참고:** Chimoney 커뮤니티 프로젝트는 서로 다른 프로그래밍 언어와 기술 스택을 기반으로 구축됩니다. 따라서 각 프로젝트에는 개별 `README` 파일에 자체 설정 지침이 포함되어 있습니다. 반드시 해당 프로젝트의 `README`를 확인하세요.
 
-한 달 동안 Chimoney의 오픈 소스 프로젝트에 코딩하고, 학습하고, 기여해 보세요!
+## Chimoney API 시작하기
 
-## 전제 조건
+Chimoney API를 시작하려면 [sandbox.chimoney.io](https://sandbox.chimoney.io)에서 개발자 계정을 등록하세요. [이 단계별 가이드](https://www.loom.com/share/436303eb69c44f0d9757ea0c655bed89?sid=b6a0f661-721c-4731-9873-ae6f2d25780)를 통해 계정 생성, API 키 발급, 샌드박스 환경에서 첫 테스트 송금까지 과정을 안내받을 수 있습니다.  
 
-프로젝트/문제에 기여하려면 다음이 있어야 합니다.
+준비가 끝나면 Chimoney API를 탐색하고 요청을 보내며 실제 사용 사례에 기반한 프로젝트를 구축할 수 있습니다.
 
-- 프로그래밍 언어(예: Python, JavaScript)에 대한 기본 지식.
-- Git 등의 버전 관리 시스템에 대한 지식이 있으신 분
-- 기술적인 글쓰기 능력 (선택)
+## 기여하기
 
-## 자원
+Chimoney 커뮤니티 프로젝트는 Chimoney API를 기반으로 빌드, 작성, 창작을 하고자 하는 개발자, 작가, 디자이너에게 열려 있습니다. SDK, 통합, 예제 앱, 실제 사용 사례를 다루는 기술 문서를 제출하여 기여할 수 있습니다.  
 
-다음은 시작하는 데 도움이 되는 몇 가지 리소스입니다.
+먼저 이 저장소의 [오픈 이슈](https://github.com/Chimoney/chimoney-community-projects/issues)를 확인하거나 직접 아이디어를 제안하세요.  
 
-- **API 문서:** Chimoney의 API 문서를 살펴보세요. 자세한 내용은 [여기](https://chimoney.readme.io/reference/introduction)에서 확인하실 수 있습니다.
+준비가 되면 저장소를 fork하고, 브랜치를 만든 뒤 변경 사항을 작성해 pull request를 열어주세요. 명확한 설명을 포함하고 프로젝트 폴더 구조를 따르는 것이 중요합니다. 모든 기여물은 `submissions/` 디렉토리에 제출되며, 유형별로 적절한 하위 폴더에 배치됩니다(예: 글은 `articles/`, SDK는 `SDKs/`).
 
-## API 키 얻기
+자세한 방법은 전체 [기여 가이드라인](/CONTRIBUTING.md)을 참고하세요.
 
-1. **Chimoney 개발자 계정에 가입하세요:** [여기](https://sandbox.chimoney.io/developers)에서 샌드박스 액세스 지침을 참조하세요. 아직 없는 경우 [sandbox.chimoney.io](https://chimoney.readme.io/reference/sandbox-environment)에서 Chimoney 개발자 계정 샌드박스 액세스에 등록해야 합니다.
+## Chimoney Hacktoberfest
 
-- API 키를 얻는 방법은 [여기](https://community-chimoney.hashnode.dev/getting-started-with-chimoneys-api-chiconnect)에서 확인하실 수 있습니다.
+Chimoney는 2022년부터 매년 [Hacktoberfest](https://hacktoberfest.com/)에 참여하여 개발자, 작가, 디자이너가 오픈소스 커뮤니티에 기여할 수 있도록 해왔습니다.  
 
-2. **새 애플리케이션 만들기:** 로그인한 후 개발자 대시보드로 이동하여 새 애플리케이션을 만듭니다. 그러면 API 키가 생성됩니다.
+매년 10월, 초보자와 숙련된 기여자 모두가 쉽게 참여할 수 있도록 **`Hacktoberfest`** 친화적인 이슈를 생성합니다.  
 
-3. **기여 시작:** API 키가 준비되면 기여를 시작할 준비가 되었습니다!
+Hacktoberfest 기간 동안 의미 있는 기여를 해주신 분들께는 보상과 인정을 제공합니다. 지난 Hacktoberfest 기록과 참여 방법을 확인하고, Chimoney 오픈소스 프로젝트에 기여해 보세요.
 
-## 프로젝트 설정
+### Hacktoberfest 2025
+Chimoney는 Hacktoberfest 2025에 참여합니다!✨  
+올해는 기존 오픈소스 프로젝트와 함께 **IaaS-k8s**라는 새로운 프로젝트를 소개합니다.  
 
-이 저장소에는 여러 개의 작은 프로젝트가 포함되어 있습니다. 다양한 프로젝트는 다양한 스택과 프레임워크를 처리합니다. 개별 프로젝트의 코드는 [제출물](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) 폴더 내의 별도 디렉터리에 있습니다. 이러한 프로젝트에 기여하는 것을 환영합니다. 다이빙할 준비가 되셨나요? 시작하는 방법은 다음과 같습니다.
+IaaS-k8s는 Pulumi와 TypeScript로 구축된 멀티 클라우드 Kubernetes 인프라 배포 솔루션으로, AWS EKS와 GCP GKE를 지원합니다.  
 
-- Chimoney 커뮤니티 프로젝트에서 사용 가능한 [문제](https://github.com/Chimoney/chimoney-community-projects/issues) 목록을 살펴보세요. 작업하고 싶은 프로젝트/제안으로 이슈를 만들 수도 있습니다.
-- 이슈를 선택하고 할당을 요청하세요. @phyleria @adebayoileri를 태그하세요.
-- [Chimoney 커뮤니티 프로젝트 저장소](https://github.com/Chimoney/chimoney-community-projects.git)를 포크합니다.
-- 포크된 저장소를 로컬 머신에 복제합니다.
+➝ _프로젝트에 대해 더 알아보고 시작하려면 여기를 클릭하세요:_ [_IaaS-k8s 프로젝트_](https://github.com/Chimoney/Iaas)
 
-  ### 새 프로젝트를 만들어 기여하세요
+기존과 마찬가지로, 이 저장소에서는 모든 수준의 기여자가 참여할 수 있는 오픈 이슈를 준비해 두었습니다.
 
-  - Chimoney API를 구현하는 새로운 프로젝트를 개발하여 기여할 수 있습니다.
-  - 솔루션 작업 후 [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) 폴더에 제출해 주세요.
+## 커뮤니티 참여하기
 
-  ### 기존 프로젝트에 기여
+[Discord 서버](https://discord.gg/TsyKnzT4qV)에서 Chimoney API를 활용하는 다른 개발자들과 소통하세요. 참여 전 반드시 [행동 강령](https://github.com/Chimoney/chimoney-community-projects/blob/main/CODE_OF_CONDUCT.md)을 읽어주세요.
 
-  - [제출물](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions) 폴더 내에서 선택한 프로젝트 디렉터리로 이동합니다.
-  - 스택에 따라 각 프로젝트에 대한 특정 설정 지침을 따르십시오. 자세한 지침은 각 프로젝트의 디렉터리에서 확인할 수 있습니다.
-  - 아래는 해당 프로젝트에 대한 링크입니다:
-    - [시작하기](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/GetStarted)
-    - [개발자 중심 기사](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Dev%20focused%20articles)
-    - [간단한 블로그](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/simple_blog)
-    - [치머니 파이썬](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chimoney-Python)
-    - [치센드](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chisend)
-    - [제안된 Chimoney 사본](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Proposed-Chimoney-Copy)
-    - [Chiconnect Bank API 지급](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-bank-api-payout)
-    - [Chiconnect 기프트카드 지급](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-giftcard-payout)
-    - [Chiconnect Laravel 웹 앱](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-laravel-web-app)
-    - [치커넥트 모바일 머니 지급](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-mobile-money-payout)
-    - [Chiconnect 개발 기사](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect_dev_article)
-    - [치맵](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimap)
-    - [Chimoney Discord 봇](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-discord-bot)
-    - [치머니 JS](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-js)
-    - [치머니 지급 방송시간](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-payout-airtime)
-    - [치머니 교환 방송시간](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-redeem-airtime)
-    - [치스펜드 프레젠테이션](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-presentation)
-    - [Chispend 제안 사본](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-proposed-copy)
-    - [Chispend 앱](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_app)
-    - [Chispend 위젯](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
-    - [페이 패디](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
-    - [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
+## 문의하기
 
-## 행동 강령
+이 저장소는 [@phyleria](https://github.com/phyleria)가 주도적으로 관리하며, [@brijesh](https://github.com/brijeshthummar02), [@Daniel](https://github.com/Danbaba1)의 지원을 받고 있습니다.  
 
-우리는 모든 기여자가 [행동 강령](https://github.com/Chimoney/chimoney-community-projects/blob/main/CODE_OF_CONDUCT.md)을 준수할 것을 기대합니다. 귀하의 행동이 정중하고 포용적이 되도록 하십시오.
-
-## 멘토링
-
-오픈소스가 처음이더라도 걱정하지 마세요! 우리는 당신이 시작할 수 있도록 멘토링을 제공합니다. 멘토와 연결하려면 [Discord](https://discord.gg/Q3peDrPG95)에 문의하세요.
-
-## 수상 및 표창
-
-우리는 최고의 기여자에게 흥미로운 상과 표창을 제공합니다!
-
-- 병합된 각 PR당 25달러(기여는 상당해야 하며 오타 수정과 같은 사소한 변경 이상이어야 합니다. 버그 수정, 새로운 기능/프로젝트 또는 기존 기능/프로젝트 개선과 관련된 문제에 대해 작업하는 것이 좋습니다.)
-- 최대 4개의 PR을 통합한 기여자를 위한 독점 Chimoney Hacktoberfest 티셔츠와 스티커
-
-- 총 4개의 PR을 병합한 경우 최대 $100에 Hacktoberfest 혜택까지 받을 수 있는 기회가 있습니다.
-
-- **'기고자 스포트라이트 시리즈'**에 소개될 기회도 있습니다.
-
-## 라이브 이벤트
-
-라이브 세션을 놓치지 마세요
-
-- 주간 업무 시간 통화 - **매주 화요일(4일~25일)** **오후 5시 30분 EAT | 오후 3시 30분 WAT | 오전 10시(동부 표준시)**
-
-이 세션에 등록하려면 [여기](https://forms.gle/aNyegaMbbuHtKoRV8)
-
-## 라이센스
-
-이 프로젝트는 [MIT 라이선스](https://github.com/Chimoney/chimoney-community-projects/blob/main/LICENSE)에 따라 라이선스가 부여됩니다.
-
-## 연락처 정보
-
-도움이 필요하거나 질문이 있는 경우 [community@chimoney.com](mailto:community@chimoney.com)으로 문의해 주세요.
-
-## 추가 리소스
-
-더 많은 리소스와 정보를 보려면 [웹사이트](https://chimoney.io/) 및 [문서](https://chimoney.readme.io/reference/introduction)를 방문하세요.
-
-Hacktoberfest 2023에 대한 여러분의 기여를 보고 싶습니다!
-
-즐거운 코딩하세요! 🚀
-
-## 훌륭한 기여자 모두에게 감사드립니다 :heart:
-
-![기여자](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
-[맨 위로 돌아가기 &uparrow;](#initial)
+문의사항이나 직접 연락이 필요한 경우 **community@chimoney.io**로 이메일을 보내주세요.

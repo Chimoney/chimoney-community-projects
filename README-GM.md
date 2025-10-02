@@ -1,3 +1,13 @@
+<div align="center">
+  
+[![Docs](https://img.shields.io/badge/docs-chimoney.readme.io-blue)](https://chimoney.readme.io/reference/introduction)
+[![MIT License](https://img.shields.io/badge/license-MIT-green)](https://github.com/Chimoney/chimoney-community-projects?tab=MIT-1-ov-file)
+[![Open Issues](https://img.shields.io/github/issues/Chimoney/chimoney-community-projects)](https://github.com/Chimoney/chimoney-community-projects/issues)
+
+</div>
+
+&nbsp;
+
 <div align="center" id="initial">
   <a href="https://chimoney.io/" target="_blank">
   <picture>
@@ -6,163 +16,77 @@
   </a>
 </div>
 
-<h1 align = "center">Chimoney Gemeinschaftsprojekte</h1>
+<h3 align="center">
+  वैश्विक भुगतान।  
+  <br/>
+  एक API, 130+ देशों तक पहुँच। <br/>
+</h3>
 
-<p align="center">🎉 Wir nehmen am Hacktoberfest 2023 teil! 🎉</p>
+<div align="center">
+  
+  [प्रलेखन](https://chimoney.readme.io/reference/introduction) • [डेवलपर टूलकिट](https://chimoney.io/toolkit/) • [API उपयोग केस](https://chimoney.io/api-use-cases/) • [हमसे Discord पर जुड़ें](https://discord.gg/TsyKnzT4qV) • [X पर कनेक्ट करें](https://x.com/chimoney_io)
+  
+</div>
 
-<h1 align = "center">Chimoney Hacktoberfest 2023</h1>
+---
 
-<!-- # Chimoney Hacktoberfest 2023 -->
+## Chimoney के बारे में  
 
-English | [Spanisch](README-ES.md) | [日本語](README-JP.md) | [German](README-GM.md)
+[Chimoney](https://chimoney.io/) एक वैश्विक भुगतान अवसंरचना प्रदाता है जो व्यवसायों, संगठनों और समुदायों को 130+ देशों में तुरंत थोक भुगतान भेजने में सक्षम बनाता है। भुगतान बैंक ट्रांसफ़र, मोबाइल मनी, गिफ्ट कार्ड और एयरटाइम के माध्यम से रिडीम किए जा सकते हैं।  
 
-Willkommen beim Hacktoberfest 2023, präsentiert von Chimoney! Hier ist Ihre umfassende Anleitung, wie Sie zu den Open-Source-Projekten von Chimoney beitragen können.
+## Chimoney API के बारे में  
 
-> ⭐️ Wenn Sie neu beim Hacktoberfest sind, können Sie mehr erfahren und sich zur Teilnahme [hier](https://hacktoberfest.com/participation/) registrieren. Die Anmeldung ist vom **26. September bis 31. Oktober** möglich.
+[Chimoney API](https://chimoney.readme.io/reference/introduction) आपको प्रोग्रामेटिक तरीके से भुगतान भेजने, प्राप्त करने और एकत्रित करने की सुविधा देता है। यह कई चैनलों का समर्थन करता है, जिनमें बैंक खाते, मोबाइल मनी वॉलेट, गिफ्ट कार्ड और एयरटाइम शामिल हैं।  
 
- <p align="center">
-    <br />
-    <a href="https://chimoney.readme.io/reference/introduction" rel="dofollow"><strong>Erkunden Sie die Dokumentation »</strong></a>
-    <br />
-    <br />
-    <a href="https://discord.gg/Q3peDrPG95">Link zum Discord</a>
-    ·
-    <a href="https://x.com/chimoney_io">Folgen Sie uns auf X</a>
-    ·
-    <a href="mailto:community@chimoney.com">E-Mail</a>
-  </p>
+[यहाँ एक वीडियो](https://www.youtube.com/watch?v=VItvZbPH9cU&t=4s) है जो Chimoney API के बारे में और जानकारी देता है।  
 
-## Inhaltsverzeichnis
+## Chimoney कम्युनिटी प्रोजेक्ट्स के बारे में  
 
-- [Chimoney Hacktoberfest 2023](#chimoney-hacktoberfest-2023)
-  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
-  - [Einleitung](#einleitung)
-  - [Voraussetzungen](#voraussetzungen)
-  - [Ressourcen](#ressourcen)
-  - [API-Schlüssel erhalten](#api-schlüssel-erhalten)
-  - [Projektsetup](#projektsetup)
-  - [Verhaltenskodex](#verhaltenskodex)
-  - [Mentoring](#mentoring)
-  - [Preise und Anerkennung](#preise-und-anerkennung)
-  - [Live-Veranstaltungen](#live-veranstaltungen)
-  - [Lizenz](#lizenz)
-  - [Kontaktinformationen](#kontaktinformationen)
-  - [Zusätzliche Ressourcen](#zusätzliche-ressourcen)
+Chimoney कम्युनिटी प्रोजेक्ट्स ओपन-सोर्स योगदान हैं जिन्हें डेवलपर्स, राइटर्स और कम्युनिटी सदस्यों ने Chimoney API का उपयोग करके बनाया है। इनमें विभिन्न प्रोग्रामिंग भाषाओं में SDKs, सैंपल एप्लिकेशन्स, इंटीग्रेशन और तकनीकी लेख शामिल हैं जो वास्तविक दुनिया के उपयोग मामलों को उजागर करते हैं।  
 
-## Einleitung
+> **नोट:** Chimoney कम्युनिटी प्रोजेक्ट्स अलग-अलग प्रोग्रामिंग भाषाओं और टेक स्टैक का उपयोग करके बनाए गए हैं। प्रत्येक प्रोजेक्ट की अपनी README फाइल होती है जिसमें सेटअप निर्देश शामिल हैं। कृपया योगदान या रन करने से पहले उस प्रोजेक्ट की README ज़रूर देखें।  
 
-Machen Sie mit bei einem Monat voller Programmierung, Lernen und Beitrag zu den Open-Source-Projekten von Chimoney!
+## Chimoney API के साथ शुरुआत करना  
 
-## Voraussetzungen
+Chimoney API के साथ शुरुआत करने के लिए, [sandbox.chimoney.io](https://sandbox.chimoney.io) पर एक डेवलपर खाता बनाएँ। यह [स्टेप-बाय-स्टेप गाइड](https://www.loom.com/share/436303eb69c44f0d9757ea0c655bed89?sid=b6a0f661-721c-4731-9873-ae6f2d25780) आपको खाता बनाने, API key जनरेट करने और sandbox environment का उपयोग करके अपनी पहली टेस्ट पेआउट करने की प्रक्रिया दिखाएगा।  
 
-Um zu den Projekten/Problemen beizutragen, sollten Sie folgendes haben:
+एक बार सेटअप पूरा हो जाने के बाद, आप Chimoney API को एक्सप्लोर करना शुरू कर सकते हैं, अनुरोध भेज सकते हैं और वास्तविक दुनिया के उपयोग मामलों वाले प्रोजेक्ट बना सकते हैं।  
 
-- Grundkenntnisse in Programmiersprachen (z.B. Python, JavaScript).
-- Vertrautheit mit Versionskontrollsystemen wie Git.
-- Technische Schreibfähigkeiten (optional).
+## योगदान करना  
 
-## Ressourcen
+Chimoney कम्युनिटी प्रोजेक्ट्स डेवलपर्स, राइटर्स और डिज़ाइनर्स के लिए खुले हैं जो Chimoney API के साथ निर्माण करना, लिखना या बनाना चाहते हैं। आप SDKs, इंटीग्रेशन, उदाहरण एप्लिकेशन्स, या तकनीकी लेख देकर योगदान कर सकते हैं।  
 
-Hier sind einige hilfreiche Ressourcen, um Ihnen den Einstieg zu erleichtern:
+शुरू करने के लिए, इस रिपॉजिटरी के [open issues](https://github.com/Chimoney/chimoney-community-projects/issues) देखें या अपना विचार प्रस्तावित करें।  
 
-- **API-Dokumentation:** Erforschen Sie die API-Dokumentation von Chimoney. Detaillierte Informationen finden Sie [hier](https://chimoney.readme.io/reference/introduction).
+जब आप सबमिशन करने के लिए तैयार हों, तो रिपॉजिटरी को fork करें, एक branch बनाएँ, अपने बदलाव करें और एक pull request खोलें। कृपया एक स्पष्ट विवरण शामिल करें और प्रोजेक्ट फ़ोल्डर संरचना का पालन करें। सभी योगदान `submissions/` डायरेक्टरी में जाएंगे, जहाँ आपका योगदान संबंधित सबफ़ोल्डर में रखा जाएगा (जैसे कि लेख `articles/` फ़ोल्डर में, SDKs `SDKs/` फ़ोल्डर में)।  
 
-## API-Schlüssel erhalten
+पूरी [Contribution Guidelines](/CONTRIBUTING.md) यहाँ पढ़ें ताकि आप प्रभावी ढंग से योगदान कर सकें।  
 
-1. **Registrieren Sie sich für ein Chimoney Developer-Konto:** Siehe die Anleitung zum Zugriff auf die Sandbox [hier](https://sandbox.chimoney.io/developers). Wenn Sie noch kein Konto haben, müssen Sie sich für ein Chimoney-Entwicklerkonto für den Sandbox-Zugang unter [sandbox.chimoney.io](https://chimoney.readme.io/reference/sandbox-environment) registrieren.
+## Chimoney Hacktoberfest  
 
-- Sie können auch diesen Artikel lesen, um herauszufinden, wie Sie API-Schlüssel erhalten: [hier](https://community-chimoney.hashnode.dev/getting-started-with-chimoneys-api-chiconnect).
+Chimoney ने [Hacktoberfest](https://hacktoberfest.com/) में 2022 से भाग लिया है, और डेवलपर्स, राइटर्स और डिज़ाइनर्स का स्वागत किया है कि वे हमारे ओपन-सोर्स समुदाय में योगदान दें।  
 
-2. **Erstellen Sie eine neue Anwendung:** Nach der Anmeldung navigieren Sie zu Ihrem Entwickler-Dashboard und erstellen eine neue Anwendung. Dadurch wird Ihr API-Schlüssel generiert.
+हर अक्टूबर, हम शुरुआती-अनुकूल **`Hacktoberfest`** issues बनाते हैं ताकि नए और अनुभवी योगदानकर्ताओं दोनों के लिए योगदान करना आसान हो।  
 
-5. **Beginnen Sie mit dem Beitrag:** Mit Ihren API-Schlüsseln können Sie jetzt mit dem Beitrag beginnen!
+हम Hacktoberfest के दौरान सार्थक योगदानों के लिए पुरस्कार और मान्यता भी प्रदान करते हैं। हमारे पिछले Hacktoberfest recaps देखने और योगदान करने के तरीकों को जानने के लिए यहाँ पढ़ें।  
 
-## Projektsetup
+### Hacktoberfest 2025  
 
-Dieses Repository enthält eine Reihe kleiner Projekte. Unterschiedliche Projekte verwenden unterschiedliche Stacks und Frameworks. Der Code für einzelne Projekte befindet sich in separaten Verzeichnissen im [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions)-Ordner. Sie sind herzlich eingeladen, zu diesen Projekten beizutragen. Bereit, einzutauchen? So geht's los:
+Chimoney, Hacktoberfest 2025 में भाग ले रहा है! ✨  
+इस साल, मौजूदा ओपन-सोर्स प्रोजेक्ट्स के साथ, हम एक नया प्रोजेक्ट पेश कर रहे हैं: **IaaS-k8s**  
 
-- Erkunden Sie die Liste der verfügbaren [Issues](https://github.com/Chimoney/chimoney-community-projects/issues) in den Gemeinschaftsprojekten von Chimoney. Sie können auch ein Issue mit einem Projektvorschlag erstellen, an dem Sie arbeiten möchten.
-- Wählen Sie ein Issue aus und bitten Sie darum, zugewiesen zu werden. Markieren Sie @phyleria @adebayoileri.
-- Forken Sie das [Repository der Gemeinschaftsprojekte von Chimoney](https://github.com/Chimoney/chimoney-community-projects.git).
-- Klonen Sie Ihr geforktes Repository auf Ihre lokale Maschine.
+IaaS-k8s एक मल्टी-क्लाउड Kubernetes अवसंरचना परिनियोजन समाधान है, जो AWS EKS और GCP GKE को सपोर्ट करता है। यह Pulumi और TypeScript से बनाया गया है।  
 
-  ### Beitrag durch Erstellung neuer Projekte
+➝ _प्रोजेक्ट के बारे में और जानें और यहाँ से शुरुआत करें:_ [_IaaS-k8s Project_](https://github.com/Chimoney/Iaas)  
 
-  - Sie können beitragen, indem Sie neue Projekte entwickeln, die die Chimoney API implementieren.
-  - Nachdem Sie an der Lösung gearbeitet haben, reichen Sie sie im [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions)-Ordner ein.
+जैसा हमेशा, इस रिपॉजिटरी में सभी स्तरों के योगदानकर्ताओं के लिए open issues उपलब्ध रहेंगे।  
 
-  ### Beitrag zu bestehenden Projekten
+## हमारी कम्युनिटी से जुड़ें  
 
-  - Navigieren Sie zu dem Verzeichnis Ihres ausgewählten Projekts im [submissions](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions)-Ordner.
-  - Befolgen Sie spezifische Setup-Anweisungen für jedes Projekt basierend auf deren Stacks. Detaillierte Anweisungen finden Sie in jedem Projektverzeichnis.
-  - Hier sind die Links zu diesen Projekten:
-    - [Loslegen](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/GetStarted)
-    - [Auf die Entwicklung fokussierte Artikel](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Dev%20focused%20articles)
-    - [Einfaches Blog](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/simple_blog)
-    - [Chimoney Python](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chimoney-Python)
-    - [Chisend](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Chisend)
-    - [Vorgeschlagener Chimoney-Text](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/Proposed-Chimoney-Copy)
-    - [Chiconnect Bank API-Auszahlung](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-bank-api-payout)
-    - [Chiconnect Giftcard-Auszahlung](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-giftcard-payout)
-    - [Chiconnect Laravel Webanwendung](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-laravel-web-app)
-    - [Chiconnect Mobile Money-Auszahlung](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect-mobile-money-payout)
-    - [Chiconnect Dev-Artikel](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chiconnect_dev_article)
-    - [Chimap](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimap)
-    - [Chimoney Discord-Bot](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-discord-bot)
-    - [Chimoney JS](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-js)
-    - [Chimoney Auszahlung Airtime](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-payout-airtime)
-    - [Chimoney Einlösen Airtime](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chimoney-redeem-airtime)
-    - [Chispend-Präsentation](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-presentation)
-    - [Chispend Vorgeschlagener Text](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend-proposed-copy)
-    - [Chispend App](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_app)
-    - [Chispend Widget](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/chispend_widget)
-    - [Zahle Paddy](https://github.com/Chimoney/chimoney-community-projects/tree/main/submissions/pay-paddy)
-    - [Topdelivr @ 715aafe](https://github.com/KelvinNjiraini/TopDelivr/tree/715aafe5f78a5ea29634f80be1ceb0983fa86558)
+Chimoney API के साथ निर्माण कर रहे अन्य लोगों से हमारे [Discord server](https://discord.gg/TsyKnzT4qV) पर जुड़ें। कृपया भाग लेने से पहले हमारा [Code of Conduct](https://github.com/Chimoney/chimoney-community-projects/blob/main/CODE_OF_CONDUCT.md) पढ़ें।  
 
-## Verhaltenskodex
+## संपर्क  
 
-Wir erwarten, dass alle Beitragenden sich an unseren [Verhaltenskodex](https://github.com/Chimoney/chimoney-community-projects/blob/main/CODE_OF_CONDUCT.md) halten. Bitte achten Sie darauf, dass Ihr Verhalten respektvoll und inklusiv ist.
+यह रिपॉजिटरी सक्रिय रूप से [@phyleria](https://github.com/phyleria) द्वारा प्रबंधित की जाती है, और [@brijesh](https://github.com/brijeshthummar02) और [@Daniel](https://github.com/Danbaba1) द्वारा सहयोग प्रदान किया जाता है।  
 
-## Mentoring
-
-Wenn Sie neu im Open-Source-Bereich sind, keine Sorge! Wir bieten Mentoring an, um Ihnen den Einstieg zu erleichtern. Melden Sie sich auf [Discord](https://discord.gg/Q3peDrPG95), um sich mit einem Mentor zu vernetzen.
-
-## Preise und Anerkennung
-
-Wir haben spannende Preise und Anerkennungen für Top-Beitragende!
-
-- $25 für jeden gemergten PR (Beiträge sollten wesentlich sein und über geringfügige Änderungen wie Tippfehler hinausgehen. Wir ermutigen Sie, an Issues zu arbeiten, die Fehlerbehebungen, neue Funktionen/Projekte oder Verbesserungen an bestehenden Funktionen/Projekten beinhalten.)
-- Exklusive Chimoney Hacktoberfest-T-Shirts und Aufkleber für Beitragende mit bis zu 4 gemergten PRs
-
-- Sie haben die Chance, bis zu $100 plus Hacktoberfest-Vorteile zu gewinnen, wenn Sie insgesamt 4 gemergte PRs haben.
-
-- Sie haben auch die Chance, in unserer **'Contributor Spotlight Series'** vorgestellt zu werden.
-
-## Live-Veranstaltungen
-
-Verpassen Sie nicht unsere Live-Sessions
-
-- Wöchentliche Bürostunden-Anrufe - **Jeden Dienstag (vom 4. bis 25.)** um **17:30 Uhr EAT | 15:30 Uhr WAT | 10:00 Uhr EST**
-
-Melden Sie sich für diese Sitzungen [hier](https://forms.gle/aNyegaMbbuHtKoRV8) an.
-
-## Lizenz
-
-Dieses Projekt steht unter der [MIT-Lizenz](https://github.com/Chimoney/chimoney-community-projects/blob/main/LICENSE).
-
-## Kontaktinformationen
-
-Wenn Sie Hilfe benötigen oder Fragen haben, kontaktieren Sie uns bitte unter [community@chimoney.com](mailto:community@chimoney.com).
-
-## Zusätzliche Ressourcen
-
-Für mehr Ressourcen und Informationen besuchen Sie unsere [Website](https://chimoney.io/) und [Dokumentation](https://chimoney.readme.io/reference/introduction).
-
-Wir freuen uns auf Ihre Beiträge zum Hacktoberfest 2023!
-
-Viel Spaß beim Programmieren! 🚀
-
-## Ein herzliches Dankeschön an alle großartigen Beitragenden :heart:
-
-![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
-[Zurück zum Anfang &uparrow;](#initial)
+किसी भी प्रश्न या सीधे संपर्क के लिए, कृपया ईमेल करें: **community@chimoney.io**  
