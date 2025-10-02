@@ -71,6 +71,7 @@ Chimoney는 2022년부터 매년 [Hacktoberfest](https://hacktoberfest.com/)에 
 Hacktoberfest 기간 동안 의미 있는 기여를 해주신 분들께는 보상과 인정을 제공합니다. 지난 Hacktoberfest 기록과 참여 방법을 확인하고, Chimoney 오픈소스 프로젝트에 기여해 보세요.
 
 ### Hacktoberfest 2025
+
 Chimoney는 Hacktoberfest 2025에 참여합니다!✨  
 올해는 기존 오픈소스 프로젝트와 함께 **IaaS-k8s**라는 새로운 프로젝트를 소개합니다.  
 
@@ -88,4 +89,4 @@ IaaS-k8s는 Pulumi와 TypeScript로 구축된 멀티 클라우드 Kubernetes 인
 
 이 저장소는 [@phyleria](https://github.com/phyleria)가 주도적으로 관리하며, [@brijesh](https://github.com/brijeshthummar02), [@Daniel](https://github.com/Danbaba1)의 지원을 받고 있습니다.  
 
-문의사항이나 직접 연락이 필요한 경우 **community@chimoney.io**로 이메일을 보내주세요.
+문의사항이나 직접 연락이 필요한 경우 **<community@chimoney.io>**로 이메일을 보내주세요.

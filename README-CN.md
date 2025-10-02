@@ -64,6 +64,7 @@ Chimoney 社区项目欢迎开发者、作者和设计师围绕 Chimoney API 进
 开始时，你可以浏览本仓库的 [开放 issues](https://github.com/Chimoney/chimoney-community-projects/issues)，或提出你自己的想法。  
 
 准备好提交时，请按照以下步骤操作：  
+
 1. Fork 仓库。  
 2. 创建一个分支。  
 3. 完成你的更改。  
@@ -83,6 +84,7 @@ Chimoney 社区项目欢迎开发者、作者和设计师围绕 Chimoney API 进
 想要了解我们以往的 Hacktoberfest 总结，看看你如何参与并充分发挥作用，请阅读更多内容。
 
 ### Hacktoberfest 2025  
+
 Chimoney 将参加 Hacktoberfest 2025！✨  
 今年，除了现有的开源项目外，我们还推出了一个全新项目：**IaaS-k8s**  
 
@@ -101,4 +103,4 @@ IaaS-k8s 是一个多云 Kubernetes 基础设施部署解决方案，支持 AWS 
 
 该仓库由 [@phyleria](https://github.com/phyleria) 积极维护，[@brijesh](https://github.com/brijeshthummar02) 和 [@Daniel](https://github.com/Danbaba1) 提供支持。  
 
-如有任何问题或直接沟通，请通过邮箱 **community@chimoney.io** 联系我们。
+如有任何问题或直接沟通，请通过邮箱 **<community@chimoney.io>** 联系我们。
