@@ -1,132 +1,83 @@
-# Chimoney Hacktoberfest 2023
+<div align="center">
+  
+[![Docs](https://img.shields.io/badge/docs-chimoney.readme.io-blue)](https://chimoney.readme.io/reference/introduction)
+[![MIT License](https://img.shields.io/badge/license-MIT-green)](https://github.com/Chimoney/chimoney-community-projects?tab=MIT-1-ov-file)
+[![Open Issues](https://img.shields.io/github/issues/Chimoney/chimoney-community-projects)](https://github.com/Chimoney/chimoney-community-projects/issues)
 
-[English](README.md) | [日本語](README-JP.md) |
+</div>
 
-ChimoneyのHacktoberfest 2023へようこそ！これはChimoneyによって提供されるHacktoberfest 2023の完全なガイドです。Chimoneyのオープンソースプロジェクトへの貢献についての情報が含まれています。
+&nbsp;
 
-## 目次
+<div align="center" id="initial">
+  <a href="https://chimoney.io/" target="_blank">
+  <picture>
+    <img src="https://chimoney.io/assets/icons/chimoney-purple-logo.svg" width="280" alt="Logo"/>
+  </picture>
+  </a>
+</div>
 
-- [Chimoney Hacktoberfest 2023](#chimoney-hacktoberfest-2023)
-  - [目次](#目次)
-  - [はじめに](#はじめに)
-  - [前提条件](#前提条件)
-  - [はじめに](#はじめに)
-  - [リソース](#リソース)
-  - [APIキーの取得](#apiキーの取得)
-  - [貢献](#貢献)
-  - [課題](#課題)
-  - [行動規範](#行動規範)
-  - [コミュニケーション](#コミュニケーション)
-  - [メンターシップ](#メンターシップ)
-  - [賞品と認識](#賞品と認識)
-  - [ライブイベント](#ライブイベント)
-  - [ライセンス](#ライセンス)
-  - [連絡先情報](#連絡先情報)
-  - [追加リソース](#追加リソース)
+<h3 align="center">
+  グローバル決済。
+  <br/>
+  1つのAPIで、130以上の国にアクセス。<br/>
+</h3>
 
-## はじめに
+<div align="center">
+  
+  [ドキュメント](https://chimoney.readme.io/reference/introduction) • [開発者ツールキット](https://chimoney.io/toolkit/) • [APIユースケース](https://chimoney.io/api-use-cases/) • [Discordに参加](https://discord.gg/TsyKnzT4qV) • [Xでつながる](https://x.com/chimoney_io)
+  
+</div>
 
-一か月のコーディング、学習、Chimoneyのオープンソースプロジェクトへの貢献に参加しましょう！
+---
 
-## 前提条件
+## Chimoneyについて
 
-プロジェクト/課題への貢献には以下が必要です：
+[Chimoney](https://chimoney.io/) は、世界130カ国以上で即時にバルクペイメントを送信できるグローバル決済インフラプロバイダーです。銀行振込、モバイルマネー、ギフトカード、エアタイムなど多様な方法で受け取りが可能です。
 
-- プログラミング言語の基本知識（例：Python、JavaScript）。
-- Gitなどのバージョン管理システムの基礎知識。
-- テクニカルライティングのスキル（オプション）。
+## Chimoney APIについて
 
-## はじめに
+[Chimoney API](https://chimoney.readme.io/reference/introduction) を使えば、プログラムから国境を越えて送金や受け取り、集金が可能です。銀行口座、モバイルマネーウォレット、ギフトカード、エアタイムなど、複数のチャネルをサポートしています。
 
-さあ始めましょう！以下は始める方法です：
+[こちらの動画](https://www.youtube.com/watch?v=VItvZbPH9cU&t=4s)で、Chimoney APIの概要をご覧いただけます。
 
-1. [Chimoney Hacktoberfest リポジトリ](https://github.com/Chimoney/chimoney-community-projects.git)をフォークしてください。
-2. フォークしたリポジトリをローカルマシンにクローンしてください。
-3. ChimoneyのSDKプロジェクトで利用可能な課題のリストを探索します。
-4. 取り組みたい課題を選び、それに割り当ててもらうよう依頼してください。タグを付けてください：@phyleria @adebayoileri
-5. 変更を行う際には、[貢献ガイドライン](#contributing)に従ってください。
-6. 貢献を提出する準備ができたら、プルリクエストを作成してください。
+## Chimoney Community Projectsについて
 
-## リソース
+Chimoney Community Projects は、開発者やライター、コミュニティメンバーが Chimoney API を活用して作成したオープンソース貢献です。SDK、サンプルアプリケーション、統合プロジェクト、実際のユースケースを紹介する技術記事などが含まれます。
 
-以下はスタートするのに役立つリソースです：
+> **注意:** Chimoney Community Projects はさまざまなプログラミング言語や技術スタックを使用して構築されています。そのため、それぞれのプロジェクトには専用の README があり、セットアップ手順が記載されています。必ず各 README を確認してください。
 
-- **APIドキュメンテーション:** ChimoneyのAPIドキュメンテーションを探索します。詳細な情報は[こちら](https://chimoney.readme.io/reference/introduction)で確認できます。
+## Chimoney APIを始めるには
 
-## APIキーの取得
+[Sandbox環境](https://sandbox.chimoney.io) で開発者アカウントを作成し、APIキーを生成してテスト送金を行うことで Chimoney API をすぐに試すことができます。[こちらのステップバイステップガイド](https://www.loom.com/share/436303eb69c44f0d9757ea0c655bed89?sid=b6a0f661-721c-4731-9873-ae6f2d25780) をご覧ください。
 
-1. **Chimoney開発者アカウントのサインアップ:** [こちら](https://sandbox.chimoney.io/developers)からSandbox Accessの手順を参照してください。まだ持っていない場合は、[sandbox.chimoney.io](https://chimoney.readme.io/reference/sandbox-environment)でChimoney開発者アカウントのサンドボックスアクセスにサインアップする必要があります。
+## 貢献について
 
-- また、APIキーの取得方法については[こちらの記事](https://community-chimoney.hashnode.dev/getting-started-with-chimoneys-api-chiconnect)も参照できます。
+開発者、ライター、デザイナーは誰でも Chimoney API を活用したSDK、統合、サンプルアプリ、技術記事を貢献できます。[オープンイシュー](https://github.com/Chimoney/chimoney-community-projects/issues) を確認するか、自分のアイデアを提案してください。
 
-2. **新しいアプリケーションの作成:** ログインしたら、開発者ダッシュボードに移動し、新しいアプリケーションを作成します。これによりAPIキーが生成されます。
+準備ができたら、リポジトリをフォークし、ブランチを作成、変更を加えてプルリクエストを送ってください。詳細は [コントリビューションガイド](/CONTRIBUTING.md) をご覧ください。
 
-5. **貢献を始める:** APIキーが準備できたら、貢献を開始できます！
+## Chimoney Hacktoberfest
 
-## 貢献
+Chimoney は 2022 年から [Hacktoberfest](https://hacktoberfest.com/) に参加しており、開発者、ライター、デザイナーのオープンソース貢献を歓迎しています。  
+毎年10月には、初心者から経験者まで参加しやすい **`Hacktoberfest`** イシューを公開しています。
 
-ChimoneyのHacktoberfestへの貢献は簡単です！以下の手順に従ってください：
+### Hacktoberfest 2025
 
-1. リポジトリをフォークしてください。
-2. 作業に適した名前の新しいブランチを作成します：`git checkout -b feature/my-contribution`。
-3. 変更を行い、それらを**submissions**フォルダにコミットします。
-4. 変更をフォークしたリポジトリにプッシュします：`git push origin feature/my-contribution`。
+Chimoney は Hacktoberfest 2025 に参加します！✨  
+今年は既存のオープンソースプロジェクトに加えて、新しいプロジェクト **IaaS-k8s** を導入しました。
 
-5. 貢献内容を説明するプルリクエストを作成します。
+IaaS-k8s は、Pulumi と TypeScript を使用して構築された、AWS EKS と GCP GKE をサポートするマルチクラウド Kubernetes インフラ展開ソリューションです。
 
-## 課題
+➝ _詳細とスタートはこちら:_ [_IaaS-k8s Project_](https://github.com/Chimoney/Iaas)
 
-興味を持つオープンな課題の[リスト](https://github.com/Chimoney/chimoney-community-projects/issues)を参照してください。
+このリポジトリにも、初心者から上級者まで参加できるオープンイシューを用意しています。
 
-## 行動規範
+## コミュニティに参加する
 
-すべての貢献者には、[行動規範](https://github.com/Chimoney/chimoney-community-projects/blob/main/CODE_OF_CONDUCT.md)を守ることを期待しています。行動が尊重され、包括的であることを確認してください。
+[Discordサーバー](https://discord.gg/TsyKnzT4qV) で他の開発者とつながりましょう。参加前に [Code of Conduct](https://github.com/Chimoney/chimoney-community-projects/blob/main/CODE_OF_CONDUCT.md) をご確認ください。
 
-## コミュニケーション
+## 連絡先
 
-会話に参加しましょう！以下で利用可能です：
+このリポジトリは [@phyleria](https://github.com/phyleria) が主体となってメンテナンスし、[@brijesh](https://github.com/brijeshthummar02) と [@Daniel](https://github.com/Danbaba1) がサポートしています。
 
-- Discord - [Discordへのリンク](https://discord.gg/Q3peDrPG95)
-- Email - community@chimoney.io
-
-## メンターシップ
-
-オープンソースが初めての場合、心配いりません！私たちはメンターシップを提供して、始めるのを手伝います。[Discord](https://discord.gg/Q3peDrPG95)でメンターに連絡してください。
-
-## 賞品と認識
-
-最高の貢献者には素晴らしい賞品と認識があります！
-
-- 合併されたPRごとに$25
-- 最大4つの合併されたPRを持つ貢献者には、独占的なChimoney Hacktoberfest Tシャツとステッカーが進呈されます
-
-- 4つの合併されたPRがある場合、最大$100とHacktoberfestの特典を獲得するチャンスがあります
-
-- また、私たちの**'Contributor Spotlight Series'**に掲載されるチャンスもあります。
-
-## ライブイベント
-
-ライブセッションをお見逃しなく
-
-- 毎週オフィスアワーコール - **毎週火曜日（4日から25日まで）** 午後 **5:30 EAT | 3:30 WAT | 10 AM EST**
-
-これらのセッションに登録するには[こちら](https://forms.gle/aNyegaMbbuHtKoRV8)
-
-## ライセンス
-
-このプロジェクトは[MITライセンス](link-to-license)の下でライセンスされています。
-
-## 連絡先情報
-
-お手伝いが必要な場合やご質問がある場合は、[community@chimoney.com](mailto:community@chimoney.com)までお問い合わせください。
-
-## 追加リソース
-
-さらなるリソースや情報については、私たちの[ウェブサイト](https://chimoney.io/)と[ドキュメンテーション](https://chimoney.readme.io/reference/introduction)をご覧ください。
-
-Hacktoberfest 2023への皆さんの貢献を楽しみにしています！
-
-ハッピーコーディング！ 🚀
-
-## すべての素晴らしい貢献者に感謝します :heart:
-![Contributors](https://contrib.rocks/image?repo=Chimoney/chimoney-community-projects)
+質問や連絡は **community@chimoney.io** までお願いします。
