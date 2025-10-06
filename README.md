@@ -76,6 +76,26 @@ Chimoney Community Projects are open-source contributions made by developers, wr
 
 To get started with the Chimoney API, sign up for a developer account at [sandbox.chimoney.io](https://sandbox.chimoney.io). This [step-by-step guide](https://www.loom.com/share/436303eb69c44f0d9757ea0c655bed89?sid=b6a0f661-721c-4731-9873-ae6f2d25780) will take you through the process of creating an account, generating your API key, and making your first test payout using the sandbox environment. Once your setup is complete, you can begin exploring the Chimoney API, making requests, and building projects with real-world use cases.
 
+## 🚀 Setup Instructions
+
+1. Clone the repository:
+   git clone https://github.com/<your-username>/<repo-name>.git
+   cd <repo-name>
+
+2. Install dependencies:
+   npm install
+
+3. Copy .env.example to .env and add your Chimoney API key:
+   cp .env.example .env
+
+4. Start the server:
+   npm start
+
+5. Visit in your browser:
+   - http://localhost:3000 → Welcome message
+   - http://localhost:3000/health → Server status JSON
+
+
 ## Contributing
 
 Chimoney Community Projects are open to developers, writers and designers who want to build with, write or create around the Chimoney API. You can contribute by submitting:
