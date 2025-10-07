@@ -64,9 +64,11 @@ ___
 
 The [Chimoney API](https://chimoney.readme.io/reference/introduction) lets you programmatically send, receive, and collect payments across borders with support for multiple channels including bank accounts, mobile money wallets, gift cards, and airtime.
 
-[Here's a video](https://www.youtube.com/watch?v=VItvZbPH9cU&t=4s) to learn more about the Chimoney API.
+
 
 Through the integration of the Interledger Protocol (ILP), Chimoney also enables interoperable payments across networks. Developers can issue Interledger Wallet Addresses (Payment Pointers) and allow users to send and receive payments globally, powering use cases like Web Monetization and Open Payments. Learn more [**here.**](https://chimoney.io/blogs/a-developer-s-guide-to-enabling-ilp-payments-with-chimoney/)
+
+[Here's a video](https://www.youtube.com/watch?v=VItvZbPH9cU&t=4s) to learn more about the Chimoney API.
 
 ### Chimoney Community Projects
 
