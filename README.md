@@ -98,12 +98,9 @@ When you're ready to make a submission:
 - make your changes
 - and open a pull request.
 
-Be sure to include a clear description and follow the project folder structure; all contributions go into the `submissions/` directory, with your specific contribution placed in its relevant subfolder (e.g.
-
-- articles in the `articles/` folder
-- SDKs in the `SDKs/` folder
-
-).
+Be sure to include a clear description and follow the project folder structure; all contributions go into the submissions/ directory, with your specific contribution placed in its relevant subfolder, for example: 
+- Articles in the articles/ folder 
+- SDKs in the SDKs/ folder
 
 You can also read the full [Contribution Guidelines](/CONTRIBUTING.md) here to understand how to contribute effectively.
 
