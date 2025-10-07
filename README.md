@@ -122,6 +122,12 @@ IaaS-k8s is a multi-cloud Kubernetes infrastructure deployment solution supporti
 
 As always, we’ll still have open issues available in this repo for contributors of all levels.
 
+### Rewards for Contributors
+
+To recognize meaningful contributions during Hacktoberfest 2025, we’ll award $10 per substantial contribution (merged PRs that add value). Contributors will also be highlighted on our website and social channels.
+
+> “Substantial contributions” include feature additions, integrations, SDKs, or technical articles. Minor edits/fixes or formatting changes are not eligible.
+
 ## Join our Community
 
 Connect with others building with the Chimoney API on our [Discord server](https://discord.gg/TsyKnzT4qV). Please read our [Code of Conduct](https://github.com/Chimoney/chimoney-community-projects/blob/main/CODE_OF_CONDUCT.md) before participating.
