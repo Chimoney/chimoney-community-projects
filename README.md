@@ -66,6 +66,8 @@ The [Chimoney API](https://chimoney.readme.io/reference/introduction) lets you p
 
 [Here's a video](https://www.youtube.com/watch?v=VItvZbPH9cU&t=4s) to learn more about the Chimoney API.
 
+Through the integration of the Interledger Protocol (ILP), Chimoney also enables interoperable payments across networks. Developers can issue Interledger Wallet Addresses (Payment Pointers) and allow users to send and receive payments globally, powering use cases like Web Monetization and Open Payments. Learn more [**here.**](https://chimoney.io/blogs/a-developer-s-guide-to-enabling-ilp-payments-with-chimoney/)
+
 ### Chimoney Community Projects
 
 Chimoney Community Projects are open-source contributions made by developers, writers, and community members using the Chimoney API. They include SDKs in different programming languages, sample applications, integrations, and technical articles that highlight real-world use cases.
