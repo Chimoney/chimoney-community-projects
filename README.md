@@ -112,11 +112,6 @@ Each October, we create beginner-friendly **`Hacktoberfest`** issues to make it 
 
 We also offer rewards and recognition for meaningful contributions during Hacktoberfest. To explore our past Hacktoberfest recaps, see how you can get involved, and make the most of contributing to Chimoney's open-source projects, read more here.
 
-## Community Events Calendar
-
-Stay connected with our community through upcoming Hacktoberfest events, contributor meetups, and live sessions.
-
-→ [View the full Chimoney Community Calendar here](https://luma.com/calendar/manage/cal-uGd7p3LVZ350i8C).
 
 ### Hcktoberfest 2025
 
@@ -129,6 +124,11 @@ IaaS-k8s is a multi-cloud Kubernetes infrastructure deployment solution supporti
 
 As always, we’ll still have open issues available in this repo for contributors of all levels.
 
+## Community Events Calendar
+
+Stay connected with our community through upcoming Hacktoberfest events, contributor meetups, and live sessions.
+
+→ [View the full Chimoney Community Calendar here](https://luma.com/calendar/manage/cal-uGd7p3LVZ350i8C).
 ### Rewards for Contributors
 
 To recognize meaningful contributions during Hacktoberfest 2025, we’ll award $10 per substantial contribution (merged PRs that add value). Contributors will also be highlighted on our website and social channels.
