@@ -48,3 +48,20 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+.wallet-widget-root {
+  background: var(--background-color, #eef2fa);
+  font-family: var(--font-family, Inter, sans-serif);
+  font-size: var(--font-size-base, 1rem);
+}
+.bg-primary {
+  background: var(--primary-color);
+}
+.bg-secondary {
+  background: var(--secondary-color);
+}
+.bg-surface {
+  background: var(--surface-color);
+}
+.rounded-xl {
+  border-radius: var(--border-radius, 1.5rem);
+}

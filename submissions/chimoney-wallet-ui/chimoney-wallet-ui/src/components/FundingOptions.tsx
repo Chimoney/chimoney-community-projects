@@ -8,6 +8,7 @@ interface FundingMethod {
   fee: string;
   time: string;
 }
+
 interface FundingOptionsProps {
   onFund?: (data: { amount: number; method: string; timestamp: string }) => Promise<void> | void;
   disabled?: boolean;
@@ -21,7 +22,6 @@ const fundingMethods: FundingMethod[] = [
 
 export default function FundingOptions({ onFund, disabled = false }: FundingOptionsProps) {
   const theme = useWalletTheme();
-  const isGlass = (theme.name && theme.name.toLowerCase().includes("glass")); // reliably detect glassmorphic
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [amount, setAmount] = useState("");
@@ -64,7 +64,7 @@ export default function FundingOptions({ onFund, disabled = false }: FundingOpti
         onClick={() => setShowModal(true)}
         disabled={disabled}
         className={`w-full py-3 px-4 font-semibold rounded-2xl shadow-lg focus:outline-none transform transition-all duration-300 
-        ${theme.buttonBg} ${isGlass ? "text-white" : theme.buttonText} hover:scale-105 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed`}
+        ${theme.buttonBg} ${theme.buttonText} hover:scale-105 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed`}
       >
         💰 Fund Wallet
       </button>
@@ -110,44 +110,38 @@ export default function FundingOptions({ onFund, disabled = false }: FundingOpti
             <div className="mb-6">
               <label className={`block text-sm ${theme.textSecondary} mb-3`}>Payment Method</label>
               <div className="space-y-2">
-  {fundingMethods.map((method) => {
-    const isSelected = selectedMethod === method.id;
-    return (
-      <label
-        key={method.id}
-        className={[
-          "flex items-center p-3 rounded-xl border cursor-pointer transition-all",
-          isSelected
-            ? isGlass
-              // Dark highlight with strong white text
-                ? "border-slate-900 bg-slate-800 text-white"
-                : "border-blue-500 bg-blue-50 text-blue-900"
-            : isGlass
-                // Dim glass background, visible white text
-                ? "border-slate-600 bg-white/10 text-white"
-                : "border-gray-200 bg-white text-gray-900",
-        ].join(" ")}
-      >
-        <input
-          type="radio"
-          name="method"
-          value={method.id}
-          checked={isSelected}
-          onChange={(e) => setSelectedMethod(e.target.value)}
-          className="sr-only"
-        />
-        <span className="text-2xl mr-3">{method.icon}</span>
-        <div className="flex-1">
-          <p className={"font-medium " + (isSelected ? " " : "")}>{method.name}</p>
-          <p className="text-sm opacity-80">
-            {method.time} • {method.fee}
-          </p>
-        </div>
-      </label>
-    );
-  })}
-</div>
-</div>
+                {fundingMethods.map((method) => {
+                  const isSelected = selectedMethod === method.id;
+                  return (
+                    <label
+                      key={method.id}
+                      className={[
+                        "flex items-center p-3 rounded-xl border cursor-pointer transition-all",
+                        isSelected
+                          ? "border-blue-500 bg-blue-50 text-blue-900"
+                          : "border-gray-200 bg-white text-gray-900",
+                      ].join(" ")}
+                    >
+                      <input
+                        type="radio"
+                        name="method"
+                        value={method.id}
+                        checked={isSelected}
+                        onChange={(e) => setSelectedMethod(e.target.value)}
+                        className="sr-only"
+                      />
+                      <span className="text-2xl mr-3">{method.icon}</span>
+                      <div className="flex-1">
+                        <p className={"font-medium"}>{method.name}</p>
+                        <p className="text-sm opacity-80">
+                          {method.time} • {method.fee}
+                        </p>
+                      </div>
+                    </label>
+                  );
+                })}
+              </div>
+            </div>
 
             {/* Error */}
             {error && (
@@ -174,7 +168,7 @@ export default function FundingOptions({ onFund, disabled = false }: FundingOpti
                 onClick={handleFund}
                 disabled={loading || !amount}
                 className={`w-full py-3 px-4 font-semibold rounded-2xl shadow-lg focus:outline-none transform transition-all duration-300 
-                ${theme.buttonBg} ${isGlass ? "text-white" : theme.buttonText} hover:scale-105 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed`}
+                ${theme.buttonBg} ${theme.buttonText} hover:scale-105 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed`}
               >
                 {loading ? "Processing..." : "Add Funds"}
               </button>

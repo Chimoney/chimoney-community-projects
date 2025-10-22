@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useWalletTheme } from "./WalletContainer";
 
-// Status and category mappings
+// Status and category mappings with Tailwind classes
 const statusColors: Record<string, string> = {
   Success: "text-green-500 bg-green-50 border-green-200",
   Pending: "text-yellow-600 bg-yellow-50 border-yellow-200",
   Failed: "text-red-500 bg-red-50 border-red-200",
 };
 
+// Category icons
 const categoryIcons: Record<string, string> = {
   Transfer: "↔️",
   Cash: "💵",
@@ -17,7 +18,7 @@ const categoryIcons: Record<string, string> = {
   Shopping: "🛍️",
 };
 
-// Exported Transaction interface
+// Transaction interface
 export interface Transaction {
   id?: string | number;
   type?: string;
@@ -29,13 +30,16 @@ export interface Transaction {
   status?: string;
 }
 
-// Props type
 interface TransactionHistoryProps {
   transactions?: Transaction[];
+  textPrimary?: string;
+  textSecondary?: string;
 }
 
 export default function TransactionHistory({
   transactions = [],
+  textPrimary,
+  textSecondary,
 }: TransactionHistoryProps) {
   const theme = useWalletTheme();
   const [filter, setFilter] = useState<"all" | "income" | "expenses" | "pending">("all");
@@ -49,18 +53,20 @@ export default function TransactionHistory({
     return true;
   });
 
+  // Use passed textPrimary/textSecondary or theme defaults
+  const textPrimaryClass = textPrimary || theme.textPrimary;
+  const textSecondaryClass = textSecondary || theme.textSecondary;
+
   return (
     <section className="mb-6">
       <div className="flex justify-between items-center mb-4">
-        <h3 className={`text-lg font-semibold ${theme.textPrimary}`}>
+        <h3 className={`text-lg font-semibold ${textPrimaryClass}`}>
           Transaction History
         </h3>
         <select
           value={filter}
-          onChange={(e) =>
-            setFilter(e.target.value as "all" | "income" | "expenses" | "pending")
-          }
-          className={`text-xs px-2 py-1 rounded-lg border ${theme.textSecondary} bg-white/90 focus:outline-none focus:ring-2 focus:ring-blue-500`}
+          onChange={(e) => setFilter(e.target.value as "all" | "income" | "expenses" | "pending")}
+          className={`text-xs px-2 py-1 rounded-lg border ${textSecondaryClass} bg-white/90 focus:outline-none focus:ring-2 focus:ring-blue-500`}
         >
           <option value="all">All</option>
           <option value="income">Income</option>
@@ -71,7 +77,7 @@ export default function TransactionHistory({
 
       <div className={`${theme.card} rounded-2xl p-4 max-h-80 overflow-y-auto`}>
         {filteredTransactions.length === 0 ? (
-          <p className={`text-center ${theme.textSecondary} py-8`}>
+          <p className={`text-center ${textSecondaryClass} py-8`}>
             No transactions found
           </p>
         ) : (
@@ -86,13 +92,13 @@ export default function TransactionHistory({
                     {categoryIcons[txn.category || ""] || "💳"}
                   </div>
                   <div>
-                    <h4 className={`font-medium ${theme.textPrimary} text-sm`}>
+                    <h4 className={`font-medium ${textPrimaryClass} text-sm`}>
                       {txn.type || "Transaction"}
                     </h4>
-                    <p className={`text-xs ${theme.textSecondary} truncate max-w-32`}>
+                    <p className={`text-xs ${textSecondaryClass} truncate max-w-32`}>
                       {txn.description || "No description"}
                     </p>
-                    <p className={`text-xs ${theme.textSecondary}`}>
+                    <p className={`text-xs ${textSecondaryClass}`}>
                       {txn.date || "Unknown date"} • {txn.time || "Unknown time"}
                     </p>
                   </div>

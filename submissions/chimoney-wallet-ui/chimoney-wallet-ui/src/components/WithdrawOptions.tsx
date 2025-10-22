@@ -39,34 +39,29 @@ export default function WithdrawOptions({
   const [amount, setAmount] = useState("");
   const [selectedMethod, setSelectedMethod] = useState("bank");
   const [error, setError] = useState("");
-  const isGlass = theme.name && theme.name.toLowerCase().includes("glass");
+
   const handleWithdraw = async () => {
     setError("");
-
     const withdrawAmount = parseFloat(amount);
 
     if (!amount || isNaN(withdrawAmount) || withdrawAmount <= 0) {
       setError("Please enter a valid amount");
       return;
     }
-
     if (withdrawAmount > balance) {
       setError("Insufficient balance");
       return;
     }
-
     const method = withdrawalMethods.find(m => m.id === selectedMethod);
     if (method && (withdrawAmount < method.min || withdrawAmount > method.max)) {
       setError(`Amount must be between $${method.min} and $${method.max.toLocaleString()}`);
       return;
     }
-
     const withdrawData: WithdrawData = {
       amount: withdrawAmount,
       method: selectedMethod,
       timestamp: new Date().toISOString()
     };
-
     setLoading(true);
     try {
       if (onWithdraw) {
@@ -93,7 +88,7 @@ export default function WithdrawOptions({
         disabled={disabled || balance <= 0}
         className={`w-full py-3 px-4 font-semibold rounded-2xl shadow-lg focus:outline-none transform transition-all duration-300 
         ${theme.buttonBg} ${theme.buttonText} hover:scale-105 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed`}
-    >
+      >
         💸 Withdraw Funds
       </button>
 
@@ -140,44 +135,37 @@ export default function WithdrawOptions({
 
             <div className="mb-6">
               <label className={`block text-sm ${theme.textSecondary} mb-3`}>Withdrawal Method</label>
-
-
-<div className="space-y-2">
-  {withdrawalMethods.map(method => {
-    const isSelected = selectedMethod === method.id;
-    return (
-      <label
-        key={method.id}
-        className={[
-          "flex items-center p-3 rounded-xl border cursor-pointer transition-all",
-          isSelected
-            ? isGlass
-              ? "border-slate-900 bg-slate-800 text-white"
-              : "border-blue-500 bg-blue-50 text-blue-900"
-            : isGlass
-              ? "border-slate-600 bg-white/10 text-white"
-              : "border-gray-200 bg-white text-gray-900"
-        ].join(" ")}
-      >
-        <input
-          type="radio"
-          name="method"
-          value={method.id}
-          checked={isSelected}
-          onChange={(e) => setSelectedMethod(e.target.value)}
-          className="sr-only"
-        />
-        <span className="text-2xl mr-3">{method.icon}</span>
-        <div className="flex-1">
-          <p className="font-medium">{method.name}</p>
-          <p className="text-sm opacity-80">{method.time} • {method.fee}</p>
-          <p className="text-xs opacity-70">Limit: ${method.min} - ${method.max.toLocaleString()}</p>
-        </div>
-      </label>
-    );  
-  })}
-</div>
-
+              <div className="space-y-2">
+                {withdrawalMethods.map(method => {
+                  const isSelected = selectedMethod === method.id;
+                  return (
+                    <label
+                      key={method.id}
+                      className={[
+                        "flex items-center p-3 rounded-xl border cursor-pointer transition-all",
+                        isSelected
+                          ? "border-blue-500 bg-blue-50 text-blue-900"
+                          : "border-gray-200 bg-white text-gray-900"
+                      ].join(" ")}
+                    >
+                      <input
+                        type="radio"
+                        name="method"
+                        value={method.id}
+                        checked={isSelected}
+                        onChange={(e) => setSelectedMethod(e.target.value)}
+                        className="sr-only"
+                      />
+                      <span className="text-2xl mr-3">{method.icon}</span>
+                      <div className="flex-1">
+                        <p className="font-medium">{method.name}</p>
+                        <p className="text-sm opacity-80">{method.time} • {method.fee}</p>
+                        <p className="text-xs opacity-70">Limit: ${method.min} - ${method.max.toLocaleString()}</p>
+                      </div>
+                    </label>
+                  );
+                })}
+              </div>
             </div>
 
             {error && (
@@ -203,7 +191,7 @@ export default function WithdrawOptions({
                 disabled={loading || !amount || parseFloat(amount) <= 0}
                 className={`w-full py-3 px-4 font-semibold rounded-2xl shadow-lg focus:outline-none transform transition-all duration-300 
                 ${theme.buttonBg} ${theme.buttonText} hover:scale-105 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed`}
-            >
+              >
                 {loading ? "Processing..." : "Withdraw"}
               </button>
             </div>

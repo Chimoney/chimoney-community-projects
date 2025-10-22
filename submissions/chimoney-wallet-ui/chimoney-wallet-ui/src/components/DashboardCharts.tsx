@@ -13,7 +13,7 @@ const SimpleLineChart: React.FC<SimpleLineChartProps> = ({
   data = [],
   labels = [],
   height = 200,
-  color = "#6366f1",
+  color = "var(--primary-color)", // Uses CSS variable by default for live theming!
   onDetails,
 }) => {
   const theme = useWalletTheme();
@@ -43,12 +43,9 @@ const SimpleLineChart: React.FC<SimpleLineChartProps> = ({
   };
 
   // SVG chart logic as before...
-  // Added pointer events for interactivity
-
   const max = Math.max(...data);
   const min = Math.min(...data);
   const range = max - min || 1;
-
   const points = data.map((value, index) => {
     const x = (index / (data.length - 1)) * containerWidth;
     const y = height - ((value - min) / range) * (height - 40);
@@ -74,9 +71,6 @@ const SimpleLineChart: React.FC<SimpleLineChartProps> = ({
         className="overflow-visible"
         preserveAspectRatio="xMidYMid meet"
       >
-        {/* grid, fill, line as before... */}
-
-        {/* Line and shaded area */}
         <defs>
           <pattern id="grid" width="50" height="40" patternUnits="userSpaceOnUse">
             <path d="M 50 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="0.5" opacity="0.1" />
@@ -113,7 +107,6 @@ const SimpleLineChart: React.FC<SimpleLineChartProps> = ({
           );
         })}
 
-        {/* Vertical hover line */}
         {activeIndex !== null && data[activeIndex] !== undefined && (
           <>
             <line
@@ -178,7 +171,7 @@ const SimpleLineChart: React.FC<SimpleLineChartProps> = ({
   );
 };
 
-// Daily label generator
+// Helper for generating day labels
 const generateLastNDaysLabels = (n: number) => {
   const labels: string[] = [];
   const today = new Date();
@@ -194,9 +187,10 @@ const generateLastNDaysLabels = (n: number) => {
 
 interface DashboardChartsProps {
   balanceHistory?: number[];
+  accent?: string;
   incomeData?: number[];
   expenseData?: number[];
-  dayLabels?: string[]; // allow overriding
+  dayLabels?: string[];
   onDetails?: (type: string, index: number) => React.ReactNode;
 }
 
@@ -211,6 +205,7 @@ const DashboardCharts: React.FC<DashboardChartsProps> = ({
   balanceHistory = [],
   incomeData = [],
   expenseData = [],
+  accent,
   dayLabels,
   onDetails
 }) => {
@@ -224,13 +219,12 @@ const DashboardCharts: React.FC<DashboardChartsProps> = ({
     expense: expenseData,
   };
 
-  // Generate N dynamic labels/days to match data length
   const dataLen = chartData[activeTab]?.length || 5;
   const labels = dayLabels || generateLastNDaysLabels(dataLen);
 
   const tabs: Tab[] = [
-    { id: "balance", name: "Balance", color: "#6366f1", icon: "📊" },
-    { id: "income", name: "Income", color: "#10b981", icon: "📈" },
+    { id: "balance", name: "Balance", color: "var(--primary-color)", icon: "📊" },
+    { id: "income", name: "Income", color: "var(--secondary-color)", icon: "📈" },
     { id: "expense", name: "Expenses", color: "#f59e0b", icon: "📉" },
   ];
 

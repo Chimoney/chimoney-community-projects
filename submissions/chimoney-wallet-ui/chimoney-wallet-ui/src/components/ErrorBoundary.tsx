@@ -33,16 +33,40 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
-          <div className="text-center p-8 bg-white rounded-lg shadow-lg max-w-md">
+        <div
+          className="min-h-screen flex items-center justify-center"
+          style={{
+            background: "var(--background-color, #eef2fa)",
+            fontFamily: "var(--font-family, Inter, sans-serif)",
+            color: "var(--primary-color, #6366f1)",
+          }}
+        >
+          <div className="text-center p-8 rounded-lg shadow-lg max-w-md" style={{
+            background: "var(--surface-color, #fff)",
+            color: "var(--text-primary, #222)",
+            borderRadius: "var(--border-radius, 1.5rem)",
+          }}>
             <div className="text-6xl mb-4">⚠️</div>
-            <h1 className="text-2xl font-bold text-red-600 mb-4">Something went wrong</h1>
-            <p className="text-gray-600 mb-4">
+            <h1 className="text-2xl font-bold mb-4" style={{
+              color: "var(--primary-color, #6366f1)"
+            }}>Something went wrong</h1>
+            <p className="mb-4" style={{
+              color: "var(--text-secondary, #6b7280)"
+            }}>
               An error occurred while loading the wallet. Please try refreshing the page.
             </p>
             <button
               onClick={this.handleReload}
-              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+              style={{
+                background: "var(--primary-color, #6366f1)",
+                color: "var(--button-text, #fff)",
+                borderRadius: "var(--border-radius, 1.5rem)",
+                padding: "12px 24px",
+                fontWeight: 600,
+                fontSize: "1rem",
+                transition: "background 0.2s",
+              }}
+              className="hover:brightness-95 focus:outline-none"
             >
               Reload Page
             </button>
