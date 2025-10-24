@@ -12,6 +12,8 @@ Before you start, you'll need a Chimoney developer account and your API key.
 2. Log in and navigate to the "Developers" tab to create a new App.
 3. Your API Key will be generated. Copy it and keep it safe.
 
+**Note**: This tutorial covers all steps in sandbox mode. The sandbox base URL is https://api-v2-sandbox.chimoney.io/v0.2.4/ For those working on production, please replace the sandbox base URL with the production URL: https://api.chimoney.io/v0.2.4/
+
 ### Setting up your .env file
 
 Create a `.env` file in your project's root directory to store your API key securely.
@@ -32,7 +34,9 @@ npm install node-fetch
 
 ### Step 1: Send a Payment
 
-To send a payment to an Interledger Wallet Address, you will use the `POST /v0.2/payouts/interledger-wallet-address` endpoint.
+To send a payment to an Interledger Wallet Address, you will use the `POST /v0.2.4/payouts/interledger-wallet-address` endpoint.
+
+**EndPoint**:https://api.chimoney.io/v0.2.4/payouts/interledger-wallet-address
 
 #### Explanation
 
@@ -44,7 +48,7 @@ This endpoint allows you to initiate a payout to a user's Interledger Payment Po
 import fetch from 'node-fetch';
 
 const sendPayment = async () => {
-  const url = 'https://api-v2-sandbox.chimoney.io/v0.2/payouts/interledger-wallet-address';
+  const url = 'https://api-v2-sandbox.chimoney.io/v0.2.4/payouts/interledger-wallet-address';
   const options = {
     method: 'POST',
     headers: {
@@ -79,11 +83,13 @@ sendPayment();
 
 ### Step 2: Verify the Payment
 
-After sending a payment, you will receive an `issueID`. You can use this ID to verify the status of your transaction with the `POST /v0.2/payment/verify` endpoint.
+After sending a payment, you will receive an `issueID`. You can use this ID to verify the status of your transaction with the `POST /v0.2.4/payment/verify` endpoint.
+
+**EndPoint**:https://api.chimoney.io/v0.2.4/payment/verify
 
 #### Explanation
 
-This endpoint helps you confirm if a transaction was successful. You pass the `issueID` from the previous step in the request body.
+This endpoint helps you confirm if a transaction was successful. You pass the issueID from the previous step in the request body. This endpoint is particularly useful for verifying the final status of the transaction, as it will confirm one of these four states: "failed", "expired", "fraud", or "paid".
 
 #### Code Snippet (JavaScript)
 
@@ -91,7 +97,7 @@ This endpoint helps you confirm if a transaction was successful. You pass the `i
 import fetch from 'node-fetch';
 
 const verifyPayment = async (issueID) => {
-  const url = 'https://api-v2-sandbox.chimoney.io/v0.2/payment/verify';
+  const url = 'https://api-v2-sandbox.chimoney.io/v0.2.4/payment/verify';
   const options = {
     method: 'POST',
     headers: {
