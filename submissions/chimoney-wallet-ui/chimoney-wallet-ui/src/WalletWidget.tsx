@@ -6,13 +6,16 @@ import FundingOptions from "./components/FundingOptions";
 import WithdrawOptions from "./components/WithdrawOptions";
 import SettingsPanel from "./components/SettingsPanel";
 import DashboardCharts from "./components/DashboardCharts";
-import { WalletWidgetProps, WalletTheme, WalletWidgetConfig } from "./types";
+import { WalletWidgetProps, WalletTheme, WalletWidgetConfig, Transaction } from "./types";
 import { themes, ThemeType } from "./components/themes";
+import { chimoneyApi } from "./services/chimoneyApi";
 
 export default function WalletWidget({
   walletId,
-  wallet,
-  transactions,
+  wallet: walletProp,
+  transactions: transactionsProp,
+  apiKey, // Ensure apiKey is defined in WalletWidgetProps
+  sandbox = true,
   onFund,
   onWithdraw,
   onLogout,
@@ -35,6 +38,65 @@ export default function WalletWidget({
     enableLogout: true,
   });
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [wallet, setWallet] = useState(walletProp);
+  const [transactions, setTransactions] = useState<Transaction[]>(transactionsProp || []);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  // Auto-fetch wallet data from Chimoney API
+  useEffect(() => {
+    const fetchWalletData = async () => {
+      if (apiKey && walletId && !walletProp) {
+        setLoading(true);
+        setError(null);
+        
+        try {
+          const response = await chimoneyApi.getWalletDetails(walletId, {
+            apiKey,
+            sandbox,
+          });
+
+          if (response.status === "success" && response.data) {
+            const walletData = response.data;
+            
+            // Set wallet details
+            setWallet({
+              id: walletData.id || walletId,
+              balance: walletData.balance || 0,
+              currency: walletData.currency || "USD",
+              currencySymbol: walletData.currencySymbol || "$",
+              userName: walletData.ownerName || walletData.owner || "User",
+            });
+
+            // Format transaction history if available
+            if (walletData.transactions && Array.isArray(walletData.transactions)) {
+              const formattedTransactions: Transaction[] = walletData.transactions.map((txn: any) => ({
+                id: txn.id || txn.transactionID || Math.random().toString(),
+                type: txn.type || txn.transactionType || "Transfer",
+                description: txn.description || txn.narration || "Transaction",
+                category: txn.category || "General",
+                amount: parseFloat(txn.amount || txn.valueInUSD || 0),
+                status: txn.status || "Success",
+                date: new Date(txn.createdAt || txn.date || Date.now()).toLocaleDateString(),
+                time: new Date(txn.createdAt || txn.date || Date.now()).toLocaleTimeString(),
+              }));
+
+              setTransactions(formattedTransactions);
+            }
+          } else {
+            throw new Error(response.error || "Failed to fetch wallet data");
+          }
+        } catch (err) {
+          setError(err instanceof Error ? err.message : "Failed to fetch wallet data");
+          console.error("Error fetching wallet data:", err);
+        } finally {
+          setLoading(false);
+        }
+      }
+    };
+
+    fetchWalletData();
+  }, [apiKey, walletId, walletProp, sandbox]);
 
   useEffect(() => {
     if (config.theme && config.theme !== themeName) {
@@ -76,11 +138,12 @@ export default function WalletWidget({
   const handleSettingsSave = (newConfig: WalletWidgetConfig) => {
     setConfig(newConfig);
     if (onConfigChange) onConfigChange(newConfig);
-    setSettingsOpen(false); // Close panel on save
+    setSettingsOpen(false);
   };
 
   const { balanceHistory, incomeData, expenseData } = useMemo(() => {
-    // ...date logic as before
+    if (!wallet) return { balanceHistory: [], incomeData: [], expenseData: [] };
+    
     const days = 5;
     const bh: number[] = [];
     const id: number[] = [];
@@ -111,6 +174,41 @@ export default function WalletWidget({
     return { balanceHistory: bh, incomeData: id, expenseData: ed };
   }, [wallet, transactions]);
 
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-700 font-medium">Loading wallet data...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50">
+        <div className="text-center max-w-md p-6 bg-white rounded-xl shadow-lg">
+          <div className="text-red-600 mb-4">
+            <svg className="w-16 h-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <p className="font-bold text-lg mb-2">Error Loading Wallet</p>
+          <p className="text-gray-600">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!wallet) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-gray-600">No wallet data available</p>
+      </div>
+    );
+  }
+
   return (
     <div
       className={`wallet-widget-root min-h-screen bg-gradient-to-br ${currentTheme.background}`}
@@ -138,64 +236,42 @@ export default function WalletWidget({
 
       {/* Settings Toggle Button */}
       <button
-  style={{
-    position: "fixed",
-    top: "1rem",
-    right: "1.5rem",
-    zIndex: 50,
-    borderRadius: "0.75rem",
-    background: "#2563eb",
-    color: "#fff",
-    boxShadow: "0 3px 18px rgba(60, 60, 90, .12)",
-    fontWeight: 600,
-    padding: "0.6rem 1.2rem",
-    fontSize: "1rem",
-    border: "none",
-    cursor: "pointer",
-    transition: "all 0.12s"
-  }}
-  onClick={() => setSettingsOpen(true)}
->
-  Settings
-</button>
-
+        style={{
+          position: "fixed",
+          top: "1rem",
+          right: "1.5rem",
+          zIndex: 50,
+          borderRadius: "0.75rem",
+          background: "#2563eb",
+          color: "#fff",
+          boxShadow: "0 3px 18px rgba(60, 60, 90, .12)",
+          fontWeight: 600,
+          padding: "0.6rem 1.2rem",
+          fontSize: "1rem",
+          border: "none",
+          cursor: "pointer",
+          transition: "all 0.12s",
+        }}
+        onClick={() => setSettingsOpen(true)}
+      >
+        Settings
+      </button>
 
       {/* Settings Panel */}
       {settingsOpen && (
-  <>
-    {/* Overlay: underneath the panel */}
-    <div
-      className="fixed inset-0 bg-black/40 z-30"
-      onClick={() => setSettingsOpen(false)}
-      // Only covers background; panel z-40 will be above this.
-    />
-    {/* Panel: higher z-index, visible on the right */}
-    <div
-      className="fixed top-0 right-0 h-full w-80 shadow-xl z-40"
-      // Do NOT use theme-dependent colors here, use bg-white or a constant class for settings panel:
-      style={{
-        background: "#f8fafc", // Keep color constant (e.g. Tailwind's bg-slate-50, or bg-white)
-        boxShadow: "0 8px 40px rgba(0,0,0,0.11)",
-        borderRadius: "1.2rem 0 0 1.2rem",
-        minWidth: "18rem",
-        maxWidth: "98vw",
-        maxHeight: "100vh",
-        overflow: "hidden",
-        fontSize: "1rem"
-      }}
-    >
-      <SettingsPanel
-        config={config}
-        onConfigChange={handleConfigChange}
-        onClose={() => setSettingsOpen(false)}
-        onSave={handleSettingsSave}
-      />
-    </div>
-  </>
-)}
-
-
-
+        <>
+          <div
+            className="fixed inset-0 bg-black/40 z-30"
+            onClick={() => setSettingsOpen(false)}
+          />
+          <SettingsPanel
+            config={config}
+            onConfigChange={handleConfigChange}
+            onClose={() => setSettingsOpen(false)}
+            onSave={handleSettingsSave}
+          />
+        </>
+      )}
 
       {/* Main Content */}
       <WalletContainer wallet={wallet} walletId={walletId} customTheme={currentTheme}>
