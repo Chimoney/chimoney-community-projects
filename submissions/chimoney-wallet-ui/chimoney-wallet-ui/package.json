@@ -1,6 +1,6 @@
 {
   "name": "chimoney-wallet-ui",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A white-label React wallet UI component with secure authentication, theming, transactions, and analytics",
   "main": "dist/index.js",
   "type": "module",
