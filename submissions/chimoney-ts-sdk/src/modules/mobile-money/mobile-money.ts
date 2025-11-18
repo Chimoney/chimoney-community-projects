@@ -17,14 +17,14 @@ export function createMobileMoneyModule(http: HttpClient): MobileMoneyModule {
     getAllTransactions: (subAccount = null) =>
       http.request<ApiResponse<MobileMoneyTransaction[]>>({
         method: "POST",
-        path: "/v0.2/collections/mobile-money/all",
+        path: "/v0.2.4/collections/mobile-money/all",
         payload: subAccount ? { subAccount } : {},
       }),
 
     makePayment: (req) =>
       http.request<ApiResponse<MobileMoneyPaymentResponse>>({
         method: "POST",
-        path: "/v0.2/collections/mobile-money/collect",
+        path: "/v0.2.4/collections/mobile-money/collect",
         payload: {
           amount: req.amount,
           currency: req.currency,
@@ -40,7 +40,7 @@ export function createMobileMoneyModule(http: HttpClient): MobileMoneyModule {
     verifyPayment: (id, subAccount = null) =>
       http.request<ApiResponse<MobileMoneyTransaction>>({
         method: "POST",
-        path: "/v0.2/collections/mobile-money/verify",
+        path: "/v0.2.4/collections/mobile-money/verify",
         payload: {
           id,
           ...(subAccount ? { subAccount } : {}),

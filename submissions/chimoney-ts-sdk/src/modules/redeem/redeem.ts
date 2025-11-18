@@ -21,7 +21,7 @@ export function createRedeemModule(http: HttpClient): RedeemModule {
     airtime: (req) =>
       http.request<ApiResponse<unknown>>({
         method: "POST",
-        path: "/v0.2/redeem/airtime",
+        path: "/v0.2.4/redeem/airtime",
         payload: {
           chiRef: req.chiRef,
           phoneNumber: req.phoneNumber,
@@ -34,7 +34,7 @@ export function createRedeemModule(http: HttpClient): RedeemModule {
     giftCard: (req) =>
       http.request<ApiResponse<unknown>>({
         method: "POST",
-        path: "/v0.2/redeem/gift-card",
+        path: "/v0.2.4/redeem/gift-card",
         payload: {
           chiRef: req.chiRef,
           redeemOptions: req.redeemOptions,
@@ -45,7 +45,7 @@ export function createRedeemModule(http: HttpClient): RedeemModule {
     mobileMoney: (req) =>
       http.request<ApiResponse<unknown>>({
         method: "POST",
-        path: "/v0.2/redeem/mobile-money",
+        path: "/v0.2.4/redeem/mobile-money",
         payload: {
           chiRef: req.chiRef,
           redeemOptions: req.redeemOptions,
@@ -56,7 +56,7 @@ export function createRedeemModule(http: HttpClient): RedeemModule {
     any: (req) =>
       http.request<ApiResponse<unknown>>({
         method: "POST",
-        path: "/v0.2/redeem/any",
+        path: "/v0.2.4/redeem/any",
         payload: {
           chiRef: req.chiRef,
           redeemData: req.redeemData,
@@ -68,7 +68,7 @@ export function createRedeemModule(http: HttpClient): RedeemModule {
     chimoney: (req) =>
       http.request<ApiResponse<unknown>>({
         method: "POST",
-        path: "/v0.2/redeem/chimoney",
+        path: "/v0.2.4/redeem/chimoney",
         payload: {
           chimoneys: req.chimoneys,
           ...(req.subAccount ? { subAccount: req.subAccount } : {}),

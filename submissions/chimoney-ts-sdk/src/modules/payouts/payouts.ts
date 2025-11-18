@@ -24,49 +24,49 @@ export function createPayoutsModule(http: HttpClient): PayoutsModule {
     airtime: (airtimes, subAccount = null) =>
       http.request({
         method: "POST",
-        path: "/v0.2/payouts/airtime",
+        path: "/v0.2.4/payouts/airtime",
         payload: { airtime: airtimes, ...(subAccount ? { subAccount } : {}) },
       }),
 
     bank: (banks, subAccount = null) =>
       http.request({
         method: "POST",
-        path: "/v0.2/payouts/bank",
+        path: "/v0.2.4/payouts/bank",
         payload: { bank: banks, ...(subAccount ? { subAccount } : {}) },
       }),
 
     chimoney: (chimoneys, subAccount = null) =>
       http.request({
         method: "POST",
-        path: "/v0.2/payouts/chimoney",
+        path: "/v0.2.4/payouts/chimoney",
         payload: { chimoneys, ...(subAccount ? { subAccount } : {}) },
       }),
 
     mobileMoney: (momos, subAccount = null) =>
       http.request({
         method: "POST",
-        path: "/v0.2/payouts/mobile-money",
+        path: "/v0.2.4/payouts/mobile-money",
         payload: { momo: momos, ...(subAccount ? { subAccount } : {}) },
       }),
 
     giftCard: (giftCards, subAccount = null) =>
       http.request({
         method: "POST",
-        path: "/v0.2/payouts/gift-card",
+        path: "/v0.2.4/payouts/gift-card",
         payload: { gift_card: giftCards, ...(subAccount ? { subAccount } : {}) },
       }),
 
     status: (chiRef, subAccount = null) =>
       http.request({
         method: "POST",
-        path: "/v0.2/payouts/status",
+        path: "/v0.2.4/payouts/status",
         payload: { chiRef, ...(subAccount ? { subAccount } : {}) },
       }),
 
     initiateChimoney: (req) =>
       http.request({
         method: "POST",
-        path: "/v0.2/payouts/initiate-chimoney",
+        path: "/v0.2.4/payouts/initiate-chimoney",
         payload: {
           chimoneys: req.chimoneys,
           turnOffNotification: req.turnOffNotification ?? false,

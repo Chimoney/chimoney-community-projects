@@ -19,14 +19,14 @@ export function createAccountModule(http: HttpClient): AccountModule {
     getAllTransactions: (subAccount = null) =>
       http.request<ApiResponse<Transaction[]>>({
         method: "POST",
-        path: "/v0.2/accounts/transactions",
+        path: "/v0.2.4/accounts/transactions",
         payload: subAccount ? { subAccount } : {},
       }),
 
     getTransactionsByIssueID: (issueID, subAccount = null) =>
       http.request<ApiResponse<Transaction[]>>({
         method: "POST",
-        path: "/v0.2/accounts/issue-id-transactions",
+        path: "/v0.2.4/accounts/issue-id-transactions",
         params: { issueID },
         payload: subAccount ? { subAccount } : {},
       }),
@@ -34,7 +34,7 @@ export function createAccountModule(http: HttpClient): AccountModule {
     getTransactionByID: (transactionId, subAccount = null) =>
       http.request<ApiResponse<Transaction>>({
         method: "POST",
-        path: "/v0.2/accounts/transaction",
+        path: "/v0.2.4/accounts/transaction",
         params: { id: transactionId },
         payload: subAccount ? { subAccount } : {},
       }),
@@ -42,7 +42,7 @@ export function createAccountModule(http: HttpClient): AccountModule {
     accountTransfer: (req) =>
       http.request<ApiResponse<AccountTransferResponse>>({
         method: "POST",
-        path: "/v0.2/accounts/transfer",
+        path: "/v0.2.4/accounts/transfer",
         payload: {
           receiver: req.receiver,
           amount: req.amount,
@@ -54,7 +54,7 @@ export function createAccountModule(http: HttpClient): AccountModule {
     deleteUnpaidTransaction: (chiRef, subAccount = null) =>
       http.request<ApiResponse<unknown>>({
         method: "DELETE",
-        path: "/v0.2/accounts/delete-unpaid-transaction",
+        path: "/v0.2.4/accounts/delete-unpaid-transaction",
         payload: {
           chiRef,
           ...(subAccount ? { subAccount } : {}),

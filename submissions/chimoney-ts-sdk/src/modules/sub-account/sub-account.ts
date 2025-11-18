@@ -18,7 +18,7 @@ export function createSubAccountModule(http: HttpClient): SubAccountModule {
     create: (req) =>
       http.request<ApiResponse<CreateSubAccountResponse>>({
         method: "POST",
-        path: "/v0.2/sub-account/create",
+        path: "/v0.2.4/sub-account/create",
         payload: {
           name: req.name,
           email: req.email,
@@ -28,20 +28,20 @@ export function createSubAccountModule(http: HttpClient): SubAccountModule {
     getAll: () =>
       http.request<ApiResponse<SubAccount[]>>({
         method: "GET",
-        path: "/v0.2/sub-account/list",
+        path: "/v0.2.4/sub-account/list",
       }),
 
     getDetails: (id) =>
       http.request<ApiResponse<SubAccount>>({
         method: "GET",
-        path: "/v0.2/sub-account/get",
+        path: "/v0.2.4/sub-account/get",
         params: { id },
       }),
 
     deleteAccount: (id) =>
       http.request<ApiResponse<unknown>>({
         method: "DELETE",
-        path: "/v0.2/sub-account/delete",
+        path: "/v0.2.4/sub-account/delete",
         params: { id },
       }),
   };

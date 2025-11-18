@@ -17,21 +17,21 @@ export function createWalletModule(http: HttpClient): WalletModule {
     list: (subAccount = null) =>
       http.request<ApiResponse<Wallet[]>>({
         method: "POST",
-        path: "/v0.2/wallets/list",
+        path: "/v0.2.4/wallets/list",
         payload: subAccount ? { subAccount } : {},
       }),
 
     details: (id, subAccount = null) =>
       http.request<ApiResponse<Wallet>>({
         method: "POST",
-        path: "/v0.2/wallets/lookup",
+        path: "/v0.2.4/wallets/lookup",
         payload: subAccount ? { subAccount } : {},
       }),
 
     transfer: (req) =>
       http.request<ApiResponse<WalletTransferResponse>>({
         method: "POST",
-        path: "/v0.2/wallets/transfer",
+        path: "/v0.2.4/wallets/transfer",
         payload: {
           receiver: req.receiver,
           wallet: req.wallet,
