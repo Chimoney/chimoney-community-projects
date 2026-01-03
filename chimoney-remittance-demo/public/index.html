@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chimoney Remittance Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --chimoney-blue: #0070ba;
+      --chimoney-dark: #003087;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg, var(--chimoney-blue), var(--chimoney-dark));
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: white !important;
+      font-size: 1.4rem;
+      letter-spacing: 0.5px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card-header {
+      background: none;
+      font-weight: 600;
+      color: var(--chimoney-dark);
+      border-bottom: 1px solid #eee;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .btn-primary {
+      background-color: var(--chimoney-blue);
+      border-color: var(--chimoney-blue);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--chimoney-dark);
+    }
+
+    input, select, textarea {
+      border-radius: 10px !important;
+    }
+
+    pre {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 0.9rem;
+      overflow-x: auto;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #6c757d;
+      font-size: 0.9rem;
+    }
+
+    .section-title {
+      font-weight: 600;
+      color: #495057;
+      font-size: 1.1rem;
+      border-bottom: 2px solid #e3e6ea;
+      margin-bottom: 1rem;
+      padding-bottom: 0.3rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Chimoney Remittance</a>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h1 class="fw-bold">Remittance Demo Application</h1>
+      <p class="text-muted">
+        A professional demonstration of wallet creation, bank payouts, and payment verification using Chimoney API.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Create Wallet -->
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">STEP 1 — CREATE WALLET</div>
+          <div class="card-body">
+            <input id="wallet-name" class="form-control mb-3" placeholder="Wallet name (e.g. Business Account or Rahul’s Wallet)">
+            <button id="btn-create-wallet" class="btn btn-primary w-100 mb-3">Create Wallet</button>
+            <pre id="wallet-res">Response will appear here...</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bank Payout -->
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">STEP 2 — BANK PAYOUT</div>
+          <div class="card-body">
+            <input id="sourceWallet" class="form-control mb-2" placeholder="Source wallet ID (optional)">
+            <div class="row g-2 mb-2">
+              <div class="col"><input id="amount" class="form-control" placeholder="Amount (e.g. 5000)"></div>
+              <div class="col"><input id="currency" class="form-control" placeholder="Currency (e.g. INR or USD)"></div>
+            </div>
+            <div class="row g-2 mb-2">
+              <div class="col"><input id="ben-first" class="form-control" placeholder="First Name (e.g. Priya)"></div>
+              <div class="col"><input id="ben-last" class="form-control" placeholder="Last Name (e.g. Mehra)"></div>
+            </div>
+            <div class="row g-2 mb-2">
+              <div class="col"><input id="ben-account" class="form-control" placeholder="Account Number (e.g. 1234567890)"></div>
+              <div class="col"><input id="ben-bankcode" class="form-control" placeholder="Bank Code / IFSC (e.g. HDFC0001234)"></div>
+              <div class="col"><input id="ben-country" class="form-control" placeholder="Country (ISO2, e.g. IN)"></div>
+            </div>
+            <button id="btn-payout" class="btn btn-success w-100 mb-3">Send Bank Payout</button>
+            <pre id="payout-res">Response will appear here...</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verify Payment -->
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">STEP 3 — VERIFY PAYMENT</div>
+          <div class="card-body">
+            <input id="verify-payload" class="form-control mb-3" placeholder="e.g. pay_64b87a8f51b9f100148bcd3f (from payout response)">
+            <button id="btn-verify" class="btn btn-warning w-100 mb-3">Verify Payment</button>
+            <pre id="verify-res">Response will appear here...</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logs -->
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">APPLICATION LOGS</div>
+          <div class="card-body">
+            <pre id="log">App initialized.</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pt-4">
+      ──────────────────────────────────────────────────────────────<br>
+      © 2025 Chimoney Remittance Demo | Built with precision and care.
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const log = msg => {
+      const el = document.getElementById('log');
+      el.textContent = new Date().toISOString() + ' — ' + msg + '\n' + el.textContent;
+    };
+
+    document.getElementById('btn-create-wallet').onclick = async () => {
+      const name = document.getElementById('wallet-name').value || 'Demo Wallet';
+      const resEl = document.getElementById('wallet-res');
+      try {
+        const r = await fetch('/api/create-wallet', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({ name })
+        });
+        const j = await r.json();
+        resEl.textContent = JSON.stringify(j, null, 2);
+        log('create-wallet ' + (j.success ? 'OK' : 'ERR'));
+      } catch (e) {
+        resEl.textContent = e.toString();
+        log('create-wallet exception ' + e.toString());
+      }
+    };
+
+    document.getElementById('btn-payout').onclick = async () => {
+      const body = {
+        amount: document.getElementById('amount').value,
+        currency: document.getElementById('currency').value,
+        sourceWallet: document.getElementById('sourceWallet').value || undefined,
+        beneficiary: {
+          firstName: document.getElementById('ben-first').value,
+          lastName: document.getElementById('ben-last').value,
+          accountNumber: document.getElementById('ben-account').value,
+          bankCode: document.getElementById('ben-bankcode').value,
+          country: document.getElementById('ben-country').value
+        }
+      };
+      const resEl = document.getElementById('payout-res');
+      try {
+        const r = await fetch('/api/payout-bank', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify(body)
+        });
+        const j = await r.json();
+        resEl.textContent = JSON.stringify(j, null, 2);
+        log('payout-bank ' + (j.success ? 'OK' : 'ERR'));
+      } catch (e) {
+        resEl.textContent = e.toString();
+        log('payout-bank exception ' + e.toString());
+      }
+    };
+
+    document.getElementById('btn-verify').onclick = async () => {
+      const raw = document.getElementById('verify-payload').value;
+      const resEl = document.getElementById('verify-res');
+      try {
+        const payload = raw ? JSON.parse(raw) : { transactionID: raw };
+        const r = await fetch('/api/verify-payment', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify(payload)
+        });
+        const j = await r.json();
+        resEl.textContent = JSON.stringify(j, null, 2);
+        log('verify-payment ' + (j.success ? 'OK' : 'ERR'));
+      } catch (e) {
+        resEl.textContent = e.toString();
+        log('verify-payment exception ' + e.toString());
+      }
+    };
+  </script>
+</body>
+</html>
