@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                       // Modern target for async/await etc.
+    "module": "ESNext",                       // For Rollup tree-shaking
+    "lib": ["DOM", "ES2020"],                 // Includes DOM and ES2020 APIs
+    "jsx": "react-jsx",                       // New JSX transform for React 17+
+    "declaration": true,                      // Emit .d.ts declaration files
+    "declarationMap": true,                   // Sourcemaps for declaration files
+    "outDir": "./dist",                       // Output directory for build
+    "strict": true,                           // Enable all strict type-checking options
+    "esModuleInterop": true,                  // Allow default imports from CommonJS modules
+    "skipLibCheck": true,                     // Skip type checking of all declaration files
+    "moduleResolution": "node",               // Specifying Node resolution style
+    "resolveJsonModule": true,                // Support importing JSON files
+    "isolatedModules": true,                   // Ensure file is transpiled independently
+    "forceConsistentCasingInFileNames": true,  // Prevent case mismatch errors
+    "importHelpers": true,
+    "types": ["node", "react", "react-dom"],
+  },
+  "include": ["src"],                         // Compile all files under src
+  "exclude": ["node_modules", "dist"]         // Exclude dependencies and build output
+}
